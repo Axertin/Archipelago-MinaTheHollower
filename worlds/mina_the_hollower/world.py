@@ -1,18 +1,16 @@
 from typing import ClassVar, Dict, Any, Optional
 
 from BaseClasses import Tutorial, ItemClassification
-from worlds.mina_the_hollower import locations, items, tracker
-from worlds.mina_the_hollower.items import MinaTheHollowerItem,create_items, get_all_items
-from worlds.mina_the_hollower.regions import connect_random_entrances, connect_entrances, create_regions
-from worlds.mina_the_hollower.rules import set_rules
+from Utils import visualize_regions
+from rule_builder.rules import Has
+from . import locations, items, tracker
+from .items import MinaTheHollowerItem
+from .data.items import all_filler_items, all_items
+from .data.locations import all_locations
 
 from .world_base import MinaTheHollowerBase
 
-class MinaTheHollowerWorld(MinaTheHollowerBase):
-
-    item_name_to_id: ClassVar[Dict[str, int]] = {item_name: item_data.code for item_name, item_data in get_all_items().items()}
-
-    location_name_to_id: ClassVar[Dict[str, int]] = {item_name: item_code for item_name, item_code in locations.get_all_locations().items()}
+class MinaTheHollowerWorldBase(MinaTheHollowerBase):
 
     ut_can_gen_without_yaml = True
     tracker_world: ClassVar = {
@@ -28,38 +26,44 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         return slot_data
 
     def __init__(self, multiworld, player):
+        self.regions = {}
         self.itempool = []
-
         self.hints = {}
 
         super().__init__(multiworld, player)
 
     def generate_early(self) -> None:
-        self.set_rule()
+
         self.handle_ut_yamless(None)
 
     def create_regions(self):
-        create_regions(self)
-        if not self.options.entrance_rando.value:
-            connect_entrances(self)
+        self.regions = locations.get_regions(self)
+        locations.create_regions(self, self.regions)
+        locations.connect_entrances(self, self.regions)
 
-    def connect_entrances(self) -> None:
-        if self.options.entrance_rando.value:
-            connect_random_entrances(self)
+    # def connect_entrances(self) -> None:
+    #     if self.options.entrance_rando.value:
+    #         connect_random_entrances(self)
 
     def create_item(self, item: str) -> MinaTheHollowerItem:
-        if item in items.get_filler():
+        if item in all_filler_items.keys():
             return MinaTheHollowerItem(item, ItemClassification.filler, self.item_name_to_id[item], self.player)
         return MinaTheHollowerItem(item, ItemClassification.progression, self.item_name_to_id[item], self.player)
 
     def create_items(self):
-        starting_items = create_items(self)
+        starting_items = items.create_items(self)
         for item in starting_items:
-            # print(item.name)
             self.push_precollected(item)
 
     def set_rules(self):
-        set_rules(self)
+        self.set_completion_rule(Has("TrainPass"))
+
+    def generate_output(self, output_directory: str):
+        print("Generating Output")
+        visualize_regions(self.multiworld.get_region("Menu", self.player), f"Player{self.player}_output.puml",
+                          show_entrance_names=True,
+                          regions_to_highlight=self.multiworld.get_all_state(self.player).reachable_regions[
+                              self.player])
 
     def fill_slot_data(self) -> id:
         #print("Filling Slot Data")

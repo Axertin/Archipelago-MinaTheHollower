@@ -13,21 +13,24 @@ class EntranceType(IntEnum):
 class ItemData(NamedTuple):
     item_id: int
     classification: ItemClassification
+    amount: int = 1
 
 class MovementItemData(NamedTuple):
     item_id: int
     distance: int
     classification: ItemClassification
+    amount: int = 1
 
 class RegionConnectionData(NamedTuple):
     exiting_region: str
     entering_region: str
-    rule: CollectionRule | Rule[MinaTheHollowerBase]
+    rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()
     entrance_group: int = EntranceType.DO_NOT_RANDOMIZE_ENTRANCE
 
 class LocationData(NamedTuple):
-    progress_type: LocationProgressType
+    location_id: int
     region: str
-    rule: CollectionRule | Rule[MinaTheHollowerBase] = True_[MinaTheHollowerBase]()
+    rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()
+    progress_type: LocationProgressType = LocationProgressType.DEFAULT
 
 AnyItemData: type = Union[ItemData, MovementItemData]

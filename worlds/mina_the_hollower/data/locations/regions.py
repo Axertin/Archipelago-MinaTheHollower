@@ -1,8 +1,22 @@
 
 region_list: set[str] = {
     "Menu",
-    "Shipwreck",
-    "Blighted Docks 3",
-    "Blighted Docks 4",
-    "Blighted Docks 6 Residence"
+    "region18",
+    "introBeach",
+    "bayou",
+    "cryptB",
+    "boneBeachA",
+    "septemburgB",
+    "frozenTrainyardA",
+    "astralOrrery",
+    "mansion",
+    "hub",
+    "hub_overworld_east",
+    "hub_overworld_west",
+    "hub_overworld_south",
+    "hub_mansion",
+    "bayou_overworld",
+    "boneBeach_overworld",
+    "septemburg_overworld",
+    "crypt_overworld",
 }

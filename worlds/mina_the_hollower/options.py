@@ -28,13 +28,13 @@ class ShuffledSidearms(Toggle):
     """
     Sidearms are shuffled so each type always becomes the same other type
     """
-    display_name = "Auto Renovate"
+    display_name = "Shuffled Sidearms"
 
 class ShuffleEnemyLevel(Toggle):
     """
     Ememy attack and defense levels are randomized
     """
-    display_name = "Auto Renovate"
+    display_name = "Shuffle Enemy Level"
 
 class ShuffledItems(OptionDict):
     """
@@ -59,6 +59,8 @@ class ShuffledItems(OptionDict):
       "Duel Sidearm": "Enabled",
       "Disturbing Dance": "Enabled",
     }
+
+
 
 mina_the_hollower_option_groups= [
     OptionGroup("AP Options", [

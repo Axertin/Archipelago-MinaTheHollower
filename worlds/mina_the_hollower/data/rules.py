@@ -21,6 +21,8 @@ class CanJumpOneTile(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         # caching_enabled only needs to be passed in when your world inherits from CachedRuleBuilderWorld
         return Has("Jump", options=[OptionFilter(AbilityRando, AbilityRando.option_false, operator="ne") ]).resolve(world)
 
+
+
 @dataclasses.dataclass(kw_only=True)
 class CanJumpSevenTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
 
