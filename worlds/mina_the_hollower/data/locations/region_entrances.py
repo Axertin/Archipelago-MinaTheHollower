@@ -1,6 +1,6 @@
-from rule_builder.rules import Has, True_
-from .. import RegionConnectionData
-from ..rules import CanJumpOneTile, CanJumpSevenTiles
+from rule_builder.rules import Has, True_, CanReachLocation
+from .. import RegionConnectionData, EntranceType
+from ..rules.ability_rules import CanJumpOneTile, CanBurrow, CanJumpTiles
 from ...world_base import MinaTheHollowerBase
 
 connections: dict[str, RegionConnectionData] = {
@@ -22,4 +22,26 @@ connections: dict[str, RegionConnectionData] = {
     "bayou_overworld_boneBeach_overworld" : RegionConnectionData("bayou_overworld", "boneBeach_overworld"),
     "boneBeach_overworld_septemburg_overworld" : RegionConnectionData("boneBeach_overworld", "septemburg_overworld"),
     "septemburg_overworld_crypt_overworld" : RegionConnectionData("septemburg_overworld", "crypt_overworld"),
+}
+
+#"test_test" : RegionConnectionData("test", "test"),
+#"test_test" : RegionConnectionData("test", "LL Boardwalk"),
+game_connections: dict[str, RegionConnectionData] = {
+    #Loners landing
+    "Loners Landing_Shipwreck" : RegionConnectionData("Loners Landing", "ShipWreck", CanReachLocation("Thorne 1", parent_region_name="mansion"), EntranceType.DOORS),
+    "Shipwreck_Loners Landing" : RegionConnectionData("ShipWreck", "Loners Landing", entrance_group=EntranceType.DOORS),
+    "Bounce Rope_Loners Landing" : RegionConnectionData("LL Rope and Bounce Area", "Loners Landing", CanJumpOneTile() & CanBurrow()),
+    "Loners Landing_Bounce Rope" : RegionConnectionData("Loners Landing", "LL Rope and Bounce Area", CanJumpOneTile() & CanBurrow()),
+
+    "LL Boardwalk_Bounce Rope" : RegionConnectionData("LL Boardwalk", "LL Rope and Bounce Area", CanJumpTiles(distance=2) & Has("LL Boardwalk Kear")),
+    "Bounce Rope_LL Boardwalk" : RegionConnectionData("LL Rope and Bounce Area", "LL Boardwalk", CanJumpTiles(distance=2) & Has("LL Boardwalk Kear")),
+
+
+    #southern outskirts
+    "LL Boardwalk_Southern Outskirts" : RegionConnectionData("LL Boardwalk", "Southern Outskirts"),
+    "Southern Outskirts_LL Boardwalk" : RegionConnectionData("Southern Outskirts", "LL Boardwalk"),
+}
+
+menu_starts = {
+    "Menu_Loners Landing" : RegionConnectionData("Menu", "Loners Landing"),
 }

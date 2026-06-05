@@ -1,20 +1,113 @@
-from typing import ClassVar, Dict
+from typing import ClassVar, Dict, Any, Optional
 
-from .data.items import all_items
+from BaseClasses import ItemClassification
+from Utils import visualize_regions
+from rule_builder.rules import Has
+from . import locations, items, tracker
+from .items import MinaTheHollowerItem
+from .data.items import all_filler_items, all_items
 from .data.locations import all_locations
-from .world import MinaTheHollowerWorldBase
+
+from .world_base import MinaTheHollowerBase
+
 from .world_base import MinaTheHollowerWeb
 from .constants import MINA_THE_HOLLOWER
 
 
-class MinaTheHollowerWorld(MinaTheHollowerWorldBase):
+class MinaTheHollowerWorld(MinaTheHollowerBase):
     game = MINA_THE_HOLLOWER
     web = MinaTheHollowerWeb()
 
     item_name_to_id: ClassVar[Dict[str, int]] = {item_name: item_data.item_id for item_name, item_data in
                                                  all_items.items()}
-
     location_name_to_id: ClassVar[Dict[str, int]] = {loc_name: loc_data.location_id for loc_name, loc_data in all_locations.items()}
 
+    ut_can_gen_without_yaml = True
+
+    tracker_world: ClassVar = {
+        "map_page_folder": "tracker",
+        "map_page_maps": "maps/maps.json",
+        "map_page_locations": "locations/locations.json",
+        "map_page_index": tracker.map_page_index,
+        "map_page_setting_key": "mina_the_hollower_map_{team}_{player}",
+    }
+
+    @staticmethod
+    def interpret_slot_data(slot_data: Dict[str, Any]) -> Dict[str, Any]:
+        return slot_data
+
     def __init__(self, multiworld, player):
+        self.regions = {}
+        self.itempool = []
+        self.hints = {}
+
         super().__init__(multiworld, player)
+
+    def generate_early(self) -> None:
+
+        self.handle_ut_yamless(None)
+
+    def create_regions(self):
+        self.regions = locations.get_regions(self)
+        locations.create_regions(self, self.regions)
+        locations.connect_entrances(self, self.regions)
+
+    # def connect_entrances(self) -> None:
+    #     if self.options.entrance_rando.value:
+    #         connect_random_entrances(self)
+
+    def create_item(self, item: str) -> MinaTheHollowerItem:
+        if item in all_filler_items.keys():
+            return MinaTheHollowerItem(item, ItemClassification.filler, self.item_name_to_id[item], self.player)
+        return MinaTheHollowerItem(item, ItemClassification.progression, self.item_name_to_id[item], self.player)
+
+    def create_items(self):
+        starting_items = items.create_items(self)
+        for item in starting_items:
+            self.push_precollected(item)
+
+    def set_rules(self):
+        self.set_completion_rule(Has("TrainPass"))
+
+    def generate_output(self, output_directory: str):
+        print("Generating Output")
+        visualize_regions(self.multiworld.get_region("Menu", self.player), f"Player{self.player}_output.puml",
+                          show_entrance_names=True,
+                          regions_to_highlight=self.multiworld.get_all_state(self.player).reachable_regions[
+                              self.player])
+
+    def fill_slot_data(self) -> id:
+        #print("Filling Slot Data")
+        return {
+            "sem_ver": "0.1.0",
+            "goal" : self.options.goal.value,
+            "entrance_rando" : self.options.entrance_rando.value,
+            "death_link" : self.options.death_link.value,
+            "shuffled_sidearms" : self.options.shuffled_sidearms.value,
+            "shuffle_enemy_level" : self.options.shuffle_enemy_level.value,
+            "shuffled_items" : self.options.shuffled_items.value,
+        }
+
+    def extend_hint_information(self, hint_data: Dict[int, Dict[int, str]]):
+        hint_data[self.player] = self.hints
+
+
+    def handle_ut_yamless(self, slot_data: Optional[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+
+        if not slot_data \
+                and hasattr(self.multiworld, "re_gen_passthrough") \
+                and isinstance(self.multiworld.re_gen_passthrough, dict) \
+                and self.game in self.multiworld.re_gen_passthrough:
+            slot_data = self.multiworld.re_gen_passthrough[self.game]
+
+        if not slot_data:
+            return None
+
+        self.options.goal.value = slot_data["goal"]
+        self.options.death_link.value = slot_data["death_link"]
+        self.options.entrance_rando.value = slot_data["entrance_rando"]
+        self.options.shuffled_sidearms.value = slot_data["shuffled_sidearms"]
+        self.options.shuffle_enemy_level.value = slot_data["shuffle_enemy_level"]
+        self.options.shuffled_items.value = slot_data["shuffled_items"]
+
+        return slot_data

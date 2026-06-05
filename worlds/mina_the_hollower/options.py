@@ -16,11 +16,19 @@ class EntranceRando(Toggle):
     """
     display_name = "Entrance Rando"
 
+class EssexStart(Toggle):
+    """
+    Start In Essex
+    """
+    display_name = "Essex Start"
+
 class AbilityRando(Toggle):
     """
-    Randomize abilities
+    Randomize abilities. You will always start in Essex
     """
     display_name = "Abilty Rando"
+
+
 
 
 #game rando options

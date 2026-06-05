@@ -8,6 +8,8 @@
 ### Door Rando
 - Releasing later by game developers
 
+### settings
+- Bone Ups as checks
 
 ## Logic
 ### Planned
@@ -19,7 +21,7 @@
 - Add Hard modifiers and remove them with items
 - rope rando
 - Locking bosses until items
-- 
+- if trapped, chest should spawn the desert pillbug that can be in chests
 
 ## Tracker
 

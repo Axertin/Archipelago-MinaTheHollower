@@ -75,7 +75,7 @@ key_items: dict[str, ItemData] = {
     "SidearmKeeper" : ItemData(84, ItemClassification.progression),
     "TrainingDummy" : ItemData(85, ItemClassification.progression),
     "Phonograph" : ItemData(86, ItemClassification.progression),
-    "FishingRod" : ItemData(87, ItemClassification.progression),
+    "Upgrade_FishingRod" : ItemData(87, ItemClassification.progression),
     "FishingUpgrade1" : ItemData(88, ItemClassification.progression),
     "FishingRodGold" : ItemData(89, ItemClassification.progression),
     "WeirdDance" : ItemData(90, ItemClassification.progression),
