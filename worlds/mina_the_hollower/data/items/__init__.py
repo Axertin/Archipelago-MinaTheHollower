@@ -17,7 +17,7 @@ all_items: ChainMap[str, AnyItemData] = ChainMap(
     incrementals.filler,
     key_items.key_items,
     abilities.abilities,
-    kears.kears
+    kears.kears,
 )
 
 all_traps: ChainMap[str, AnyItemData] = ChainMap(
@@ -38,5 +38,4 @@ required_test_items: dict[str, AnyItemData] = {
     "Bounce" : ItemData(OFFSET_ABILITY_ITEMS+2, ItemClassification.progression),
     "Carry" : ItemData(OFFSET_ABILITY_ITEMS+3, ItemClassification.progression),
     "Climb" : ItemData(OFFSET_ABILITY_ITEMS+4, ItemClassification.progression),
-
 }

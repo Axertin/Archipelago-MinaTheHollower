@@ -43,7 +43,10 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
     tracker_world: ClassVar = {
         "map_page_folder": "tracker",
         "map_page_maps": "maps/maps.json",
-        "map_page_locations": "locations/locations.json",
+        "map_page_locations": {
+            "locations/eastern_hearth.json",
+            "locations/ossex.json",
+        },
         "map_page_index": tracker.map_page_index,
         "map_page_setting_key": "mina_the_hollower_map_{team}_{player}",
     }

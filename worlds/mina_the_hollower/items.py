@@ -5,6 +5,7 @@ from .constants import MINA_THE_HOLLOWER
 from .data.items.abilities import abilities
 from .data.items.incrementals import filler
 from .data.items.kears import kears
+from .data.items.trinkets import movement_trinkets
 
 
 class MinaTheHollowerItem(Item):
@@ -20,6 +21,8 @@ def create_items(world):
     #TODO: create logic for what items are in the world
     #TODO: calculate how much filler needs to go in the world
     #TODO: calculate traps
+    for item, data in movement_trinkets.items():
+        create_item(world, item, data)
     for item, data in kears.items():
         create_item(world, item, data)
     for item, data in required_test_items.items():

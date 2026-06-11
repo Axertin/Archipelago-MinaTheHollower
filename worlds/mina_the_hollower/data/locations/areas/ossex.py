@@ -13,6 +13,7 @@ regions: set[str] = {
     "Ossex Courtyard East",
     "Ossex Couple's Quarter",
     "Ossex Legovich's Arms",
+    "Ossex Legovich's Arms Basement",
     "Ossex Emporium",
     "Ossex Kear Institute",
     "Ossex Guild Hall",
@@ -129,6 +130,16 @@ transitions: dict[str, Transition] = {
     # --- Ossex Legovich's Arms ---
     "Ossex Legovichs Arms Door South": Transition("Ossex Legovichs Arms Door South", "Ossex Legovich's Arms",
                                                   "Ossex City Center Main", DirectionType.SOUTH, TransitionType.DOORS),
+
+
+    "Ossex Legovichs Arms Geyser Drop": Transition("Ossex Legovichs Arms Geyser Drop", "Ossex Legovich's Arms",
+                                                   "Ossex Legovich's Arms Basement", DirectionType.OVERWORLD,
+                                                   TransitionType.GEYSER_DOWN),
+    # --- Ossex Legovich's Arms Basement---
+    "Ossex Legovichs Arms Basement Geyser Up": Transition("Ossex Legovichs Arms Basement Geyser Up",
+                                                          "Ossex Legovich's Arms Basement",
+                                                          "Ossex Legovich's Arms", DirectionType.OVERWORLD,
+                                                          TransitionType.GEYSER_UP),
 
     # --- Ossex Emporium ---
     "Ossex Emporium Door South": Transition("Ossex Emporium Door South", "Ossex Emporium", "Ossex City Center Main",

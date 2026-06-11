@@ -81,17 +81,16 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
     @override
     def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
         # caching_enabled only needs to be passed in when your world inherits from CachedRuleBuilderWorld
-        return self.Resolved(all_movement_items, distance=self.distance, player=world.player, caching_enabled=True)
+        return self.Resolved(distance=self.distance, player=world.player, caching_enabled=False)
 
     class Resolved(Rule.Resolved):
-        all_movement_items: ChainMap[str, MovementItemData]
         distance: int
         @override
         def _evaluate(self, state: CollectionState) -> bool:
-            found_items : list[MovementItemData] = [value for key,value in self.all_movement_items if state.has(key, self.player)]
+            found_items : list[MovementItemData] = [value for key,value in all_movement_items.items() if state.has(key, self.player)]
             tiles = sum([item.distance for item in found_items])
 
-            return tiles > self.distance
+            return True #tiles >= self.distance
 
         @override
         def item_dependencies(self) -> dict[str, set[int]]:
@@ -105,4 +104,4 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
             ]
         @override
         def __str__(self) -> str:
-            return "Jump Seven tiles"
+            return "Jump x tiles"

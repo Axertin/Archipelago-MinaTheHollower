@@ -1,0 +1,31 @@
+[
+    {
+        "name": "Eastern Hearth",
+        "sections": [
+            {"name": "EH Grassland Trinket Bag"},
+            {"name": "EH Grassland Waterfall Windfall Charm"},
+            {"name": "EH Choppe Shoppe Chain Capacitor"},
+            {"name": "EH Grassland Waterfall Chest"},
+            {"name": "EH Buckler's Bluff Joule Box"},
+            {"name": "EH Under the Bridge Chest"},
+            {"name": "EH Grassland Riverbed Chest"},
+            {"name": "EH Grassland Bush Room Bonestone"},
+            {"name": "EH Grassland Horizontal Spinner Room Chest"},
+            {"name": "EH Grotto Chest"},
+            {"name": "EH Grassland Poppit Cave Chest"},
+            {"name": "EH Frozen Pass Chest"},
+            {"name": "EH Frozen Pass IceBlock"},
+            {"name": "EH Grassland Vertical Spinner Room Chest"},
+            {"name": "EH Grassland Poppit Cave Willow"},
+            {"name": "EH Grassland Poppit Cave Kear"},
+            {"name": "EH Grassland Dork Eyes"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Hearth",
+                "x": 440,
+                "y": 2300
+            }
+        ]
+    }
+]

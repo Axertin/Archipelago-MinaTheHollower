@@ -6,7 +6,7 @@ from .data import LocationData, RegionConnection, Transition, matching_transitio
 
 def create_region(world, name: str, hint: str = ""):
     region = Region(name, world.player, world.multiworld)
-
+    print(name)
     valid_locations: dict[str, (Location, LocationData)] = {}
     #TODO: dont loop through all locations for each region
     for loc_name, data in all_locations.items():

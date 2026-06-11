@@ -32,7 +32,8 @@ bosses: dict[str, LocationData] = {
 }
 regions: set[str] = {
     "Southern Outskirts Commons Ossex Entry",
-"Southern Outskirts Commons Western Pit Room"
+"Southern Outskirts Commons Western Pit Room",
+    "Southern Outskirts Moonbath",
 }
 transitions: dict[str, Transition] = {
 

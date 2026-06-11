@@ -5,15 +5,15 @@ from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanBounce, CanJump
 
 regions: set[str] = {
     "Mourner's Mile Knight's Rest",
-    "Mourner's Mile Statue Room",
-    "Mourner's Mile Shallow Tomb",
-    "Mourner's Mile Ring Tomb",
-    "Mourner's Mile Spike Vault",
-    "Mourner's Mile Spike Vault Hidden Room",
-    "Mourner's Mile Tower Tunnel",
-    "Mourner's Mile Knight's Stand",
-    "Mourner's Mile Mina's Grave",
-    "Mourner's Mile Spike Hell",
+    # "Mourner's Mile Statue Room",
+    # "Mourner's Mile Shallow Tomb",
+    # "Mourner's Mile Ring Tomb",
+    # "Mourner's Mile Spike Vault",
+    # "Mourner's Mile Spike Vault Hidden Room",
+    # "Mourner's Mile Tower Tunnel",
+    # "Mourner's Mile Knight's Stand",
+    # "Mourner's Mile Mina's Grave",
+    # "Mourner's Mile Spike Hell",
 }
 bosses: dict[str, LocationData] = {
 }

@@ -11,11 +11,13 @@ kears: dict[str, KeyItemData] = {
     "Western Wilds Foundry Kear": KeyItemData(OFFSET_KEAR_ITEMS+5, 247,ItemClassification.progression),
     "Astral Orrey Mirror Room Right Side": KeyItemData(OFFSET_KEAR_ITEMS+5, 277,ItemClassification.progression),
     "Astral Orrey Mirror Room Left Side": KeyItemData(OFFSET_KEAR_ITEMS+6, 278,ItemClassification.progression),
-    "Eastern Hearth Choppe Shoppe": KeyItemData(OFFSET_KEAR_ITEMS+7, 225,ItemClassification.progression),
+    "Choppe Shoppe Kear": KeyItemData(OFFSET_KEAR_ITEMS+7, 225,ItemClassification.progression),
     "Eastern Hearth Mountain Path": KeyItemData(OFFSET_KEAR_ITEMS+8, 222,ItemClassification.progression),
     "Eastern Hearth Bucklers Bluff": KeyItemData(OFFSET_KEAR_ITEMS+9, 224,ItemClassification.progression),
     "Mourners miles bike": KeyItemData(OFFSET_KEAR_ITEMS+10, 304, ItemClassification.progression),
     "Ossex Guild Secret Kear": KeyItemData(OFFSET_KEAR_ITEMS+11, 1, ItemClassification.progression),
+    "Eastern Hearth Waterfall Kear": KeyItemData(OFFSET_KEAR_ITEMS+12, 1, ItemClassification.progression),
+    "Eastern Hearth Grassland Bushroom Kear": KeyItemData(OFFSET_KEAR_ITEMS+13, 1, ItemClassification.progression),
 }
 
 

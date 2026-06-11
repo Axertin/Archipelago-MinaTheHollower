@@ -45,16 +45,21 @@ class RandomizeEntrances(OptionSet):
     valid_keys = []
     # valid_keys = ["Doors", "Stairs", "Area Transitions", "Screen Transitions"]
 
+class ExcludedAreas(OptionSet):
+    """
+    Each Region you add to this list will not have any location in them have any items. If it includes a Spark Generator Area, that generator will be marked complete
 
-class EntranceRando(OptionDict):
+    Valid Area Names
+    - **Mourner's Mile** -
+    - **Queensbury Crypt** -
     """
-    Randomize entrances
-    """
-    display_name = "Entrance Rando"
+    display_name = "Excluded Areas"
+    valid_keys = []
+    # valid_keys = ["Mourner's Mile", "Queensbury Crypt"]
 
 class KearRandomization(Choice):
     """
-    Vanilla: You are given kears in the ap world
+    Vanilla: Universal Kears are in the multiworld. Every Kear Lock you open before receiving all universal Kears will be OUT OF LOGIC
     AP Items: Each Kear Lock is removed by a unique AP item
     Area AP Items: All Kear Locks in an area are removed by a single AP Item
     """
@@ -75,7 +80,7 @@ class KearRandomization(Choice):
 mina_the_hollower_option_groups= [
     OptionGroup("AP Options", [
         Goal,
-        EntranceRando,
+        RandomizeEntrances,
         AbilityRando,
         DeathLink,
     ]),
@@ -84,7 +89,7 @@ mina_the_hollower_option_groups= [
 @dataclass
 class MinaTheHollowerOptions(PerGameCommonOptions):
     goal: Goal
-    entrance_rando: EntranceRando
+    entrance_rando: RandomizeEntrances
     ability_rando: AbilityRando
     death_link: DeathLink
     # shuffled_sidearms: ShuffledSidearms
