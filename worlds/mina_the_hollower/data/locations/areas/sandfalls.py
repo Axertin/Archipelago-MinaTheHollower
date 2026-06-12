@@ -4,17 +4,18 @@ from ... import RegionConnection, Transition, LocationData
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanBounce, CanJumpTiles, CanClimb, CanCarry
 
 regions: set[str] = {
-    "Sandfalls Hobo Holdout",
-    "Sandfalls Sifted Sands",
-    "Sandfalls Guiding Grains",
-    "Sandfalls Hidden Cave",
-    "Sandfalls Ring Dive Parlor",
-    "Sandfalls Shifty Seclusion",
-    "Sandfalls Payload Passage",
-    "Sandfalls Miner's Den",
-    "Sandfalls Shoreline Generator",
-    "Sandfalls Bone Junction",
-    "Sandfalls Train",
+    "Sandfalls Mining Passage Entrance"
+    # "Sandfalls Hobo Holdout",
+    # "Sandfalls Sifted Sands",
+    # "Sandfalls Guiding Grains",
+    # "Sandfalls Hidden Cave",
+    # "Sandfalls Ring Dive Parlor",
+    # "Sandfalls Shifty Seclusion",
+    # "Sandfalls Payload Passage",
+    # "Sandfalls Miner's Den",
+    # "Sandfalls Shoreline Generator",
+    # "Sandfalls Bone Junction",
+    # "Sandfalls Train",
 }
 
 transitions: dict[str, Transition] = {

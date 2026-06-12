@@ -108,20 +108,25 @@ finished_regions: set[str] = set.union(
     eastern_hearth.regions,
     southern_outskirts.regions,
     western_wilds.regions,
-    mourners_mile.regions
+    mourners_mile.regions,
+    loners_landing.regions,
+    sandfalls.regions,
 )
 
 finished_region_transitions: ChainMap[str, Transition] = ChainMap(
     ossex.transitions,
-    eastern_hearth.transitions
+    eastern_hearth.transitions,
+    southern_outskirts.transitions,
 )
 
 finished_locations: ChainMap[str, LocationData] = ChainMap(
     ossex.collectable_locations,
-    eastern_hearth.collectable_locations
+    eastern_hearth.collectable_locations,
+    southern_outskirts.collectable_locations,
 )
 
 finished_internal_region_connections: ChainMap[str, RegionConnection] = ChainMap(
     ossex.connections,
-    eastern_hearth.connections
+    eastern_hearth.connections,
+    southern_outskirts.connections,
 )

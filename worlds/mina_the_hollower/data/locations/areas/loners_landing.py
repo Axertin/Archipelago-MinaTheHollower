@@ -26,17 +26,18 @@ collectable_locations: dict[str, LocationData] = {
 }
 
 regions: set[str] = {
-"LL Shipwreck",
-"LL Blighted Docks Tall Room",
-"LL Blighted Docks Side Cave",
-"LL Blighted Docks Bridge",
-"LL Blighted Docks Residence",
-"LL Blighted Docks Burrow",
-"LL Boardwalk Fire Bounce",
-"LL Boardwalk Sandfalls Ledge",
-"LL Shipwreck Beach",
-"LL Belowdecks",
-"LL Boardwalk Fence Room",
+    "Loners Landing ???"
+# "LL Shipwreck",
+# "LL Blighted Docks Tall Room",
+# "LL Blighted Docks Side Cave",
+# "LL Blighted Docks Bridge",
+# "LL Blighted Docks Residence",
+# "LL Blighted Docks Burrow",
+# "LL Boardwalk Fire Bounce",
+# "LL Boardwalk Sandfalls Ledge",
+# "LL Shipwreck Beach",
+# "LL Belowdecks",
+# "LL Boardwalk Fence Room",
 }
 
 connections: dict[str, RegionConnection] = {

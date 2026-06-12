@@ -109,7 +109,6 @@ class RegionConnection(NamedTuple):
     rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()
 
 class Transition(NamedTuple):
-    name: str # Human-readable name
     exiting_screen: str
     entering_screen: str
     direction: int
