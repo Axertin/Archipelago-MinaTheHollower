@@ -2,7 +2,7 @@ from rule_builder.rules import Has, True_
 
 from ... import RegionConnection, Transition, DirectionType, TransitionType, LocationData
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanJumpTiles, CanBounce, HasVialsCount, CanClimb, \
-    ReachingSideArm
+    HasReachingSideArm
 
 
 collectable_locations: dict[str, LocationData] = {

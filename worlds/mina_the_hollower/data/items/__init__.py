@@ -40,5 +40,6 @@ required_test_items: dict[str, AnyItemData] = {
     "Carry" : ItemData(OFFSET_ABILITY_ITEMS+3, ItemClassification.progression),
     "Climb" : ItemData(OFFSET_ABILITY_ITEMS+4, ItemClassification.progression),
     "FishingRod" : ItemData(34, ItemClassification.progression),
-"TractionTreads" : ItemData(149, ItemClassification.progression),
+    "TractionTreads" : ItemData(149, ItemClassification.progression),
+    "BayouTicket" : ItemData(96, ItemClassification.progression),
 }

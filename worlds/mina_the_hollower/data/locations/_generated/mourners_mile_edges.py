@@ -7,7 +7,10 @@ from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, DirectionType, TransitionType
 from ...rules.ability_rules import (
     CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce,
-    HasVialsCount, CanJumpOneTile, CanJumpTiles, ReachingSideArm,
+    HasVialsCount, CanJumpOneTile, CanJumpTiles, HasReachingSideArm,
+)
+from ...rules.state_rules import (
+   HasLadder,
 )
 
 

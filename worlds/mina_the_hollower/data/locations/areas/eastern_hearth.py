@@ -2,7 +2,7 @@ from BaseClasses import LocationProgressType
 from rule_builder.options import OptionFilter
 from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, LocationData, TransitionType, DirectionType
-from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanJumpTiles, CanBounce, ReachingSideArm, CanClimb, \
+from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanJumpTiles, CanBounce, HasReachingSideArm, CanClimb, \
     CanSwim
 from ...rules.state_rules import HasCompletedOneSparkGenerator
 

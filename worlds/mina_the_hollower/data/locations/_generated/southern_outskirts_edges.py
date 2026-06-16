@@ -7,7 +7,10 @@ from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, DirectionType, TransitionType
 from ...rules.ability_rules import (
     CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce,
-    HasVialsCount, CanJumpOneTile, CanJumpTiles, ReachingSideArm,
+    HasVialsCount, CanJumpOneTile, CanJumpTiles, HasReachingSideArm,
+)
+from ...rules.state_rules import (
+   HasLadder,
 )
 
 
@@ -135,7 +138,7 @@ transitions: dict[str, Transition] = {
     'Southern Outskirts Commons Main East Transition': Transition('Southern Outskirts Commons Main', 'Southern Outskirts Commons Southern Pit Room Main', DirectionType.EAST, TransitionType.SCREENS),
     'Southern Outskirts Commons Main North Transition': Transition('Southern Outskirts Commons Main', 'Southern Outskirts Commons Ossex Entry', DirectionType.NORTH, TransitionType.SCREENS),
     'Southern Outskirts Commons Main Residence Door': Transition('Southern Outskirts Commons Main', 'Southern Outskirts Residence Main', DirectionType.NORTH, TransitionType.DOORS),
-    'Southern Outskirts Commons Main South Transition': Transition('Southern Outskirts Commons Main', 'Loners Landing ???', DirectionType.NORTH, TransitionType.AREA_SCREENS),
+    'Southern Outskirts Commons Main South Transition': Transition('Southern Outskirts Commons Main', "Loner's Landing Boardwalk Spike Gate", DirectionType.SOUTH, TransitionType.AREA_SCREENS),
     'Southern Outskirts Commons Ossex Entry East Transitions': Transition('Southern Outskirts Commons Ossex Entry', 'Southern Outskirts Commons East Ossex', DirectionType.EAST, TransitionType.SCREENS),
     'Southern Outskirts Commons Ossex Entry North Gate': Transition('Southern Outskirts Commons Ossex Entry', 'Ossex City Center Main', DirectionType.SOUTH, TransitionType.AREA_SCREENS),
     'Southern Outskirts Commons Ossex Entry South Transition': Transition('Southern Outskirts Commons Ossex Entry', 'Southern Outskirts Commons Main', DirectionType.SOUTH, TransitionType.SCREENS),

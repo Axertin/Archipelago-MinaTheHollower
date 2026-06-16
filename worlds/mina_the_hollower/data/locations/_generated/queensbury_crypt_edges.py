@@ -7,7 +7,10 @@ from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, DirectionType, TransitionType
 from ...rules.ability_rules import (
     CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce,
-    HasVialsCount, CanJumpOneTile, CanJumpTiles, ReachingSideArm,
+    HasVialsCount, CanJumpOneTile, CanJumpTiles, HasReachingSideArm,
+)
+from ...rules.state_rules import (
+   HasLadder,
 )
 
 
@@ -103,8 +106,8 @@ transitions: dict[str, Transition] = {
     'Queensbury Crypt Ancestral Chamber Ropes East East Transition': Transition('Queensbury Crypt Ancestral Chamber Ropes East', 'Queensbury Crypt Ancestral Chamber foyer West', DirectionType.EAST, TransitionType.SCREENS),
     'Queensbury Crypt Ancestral Chamber Ropes West South Transition': Transition('Queensbury Crypt Ancestral Chamber Ropes West', 'Queensbury Crypt Ancestral Chamber Roller West', DirectionType.SOUTH, TransitionType.SCREENS),
     'Queensbury Crypt Ancestral Chamber South Transition': Transition('Queensbury Crypt Ancestral Chamber', 'Queensbury Crypt Ancestral Chamber Hall', DirectionType.SOUTH, TransitionType.SCREENS),
-    'Queensbury Crypt Ancestral Chamber Trap North Transition West': Transition('Queensbury Crypt Ancestral Chamber Trap', 'Queensbury Crypt Ancestral Chamber Roller West', DirectionType.NORTH, TransitionType.SCREENS),
     'Queensbury Crypt Ancestral Chamber Trap North Transition East': Transition('Queensbury Crypt Ancestral Chamber Trap', 'Queensbury Crypt Ancestral Chamber Roller East', DirectionType.NORTH, TransitionType.SCREENS),
+    'Queensbury Crypt Ancestral Chamber Trap North Transition West': Transition('Queensbury Crypt Ancestral Chamber Trap', 'Queensbury Crypt Ancestral Chamber Roller West', DirectionType.NORTH, TransitionType.SCREENS),
     'Queensbury Crypt Ancestral Chamber foyer East South Transition': Transition('Queensbury Crypt Ancestral Chamber foyer East', 'Queensbury Crypt Ancestral Chamber Bridges North', DirectionType.SOUTH, TransitionType.SCREENS),
     'Queensbury Crypt Ancestral Chamber foyer West North Transition': Transition('Queensbury Crypt Ancestral Chamber foyer West', 'Queensbury Crypt Ancestral Chamber Hall', DirectionType.NORTH, TransitionType.SCREENS),
     'Queensbury Crypt Ancestral Chamber foyer West West Transition': Transition('Queensbury Crypt Ancestral Chamber foyer West', 'Queensbury Crypt Ancestral Chamber Ropes East', DirectionType.WEST, TransitionType.SCREENS),

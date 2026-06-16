@@ -23,6 +23,11 @@ kears: dict[str, KeyItemData] = {
     "Ossex Train Kear 1": KeyItemData(OFFSET_KEAR_ITEMS+16, 358, ItemClassification.progression),
     "Ossex Train Kear 2": KeyItemData(OFFSET_KEAR_ITEMS+17, 359, ItemClassification.progression),
     "Ossex East Garden Kear": KeyItemData(OFFSET_KEAR_ITEMS+18, 157, ItemClassification.progression),
+    "Pinky Kear": KeyItemData(OFFSET_KEAR_ITEMS+19, 284, ItemClassification.progression),
+    "Pinky Back Kear": KeyItemData(OFFSET_KEAR_ITEMS+20, 283, ItemClassification.progression),
+    "Loner's Landing Belowdecks Right Weapon Kear": KeyItemData(OFFSET_KEAR_ITEMS+18, 20, ItemClassification.progression),
+    "Loner's Landing Belowdecks Left Weapon Kear": KeyItemData(OFFSET_KEAR_ITEMS+19, 21, ItemClassification.progression),
+    "Loner's Landing Belowdecks Back Kear": KeyItemData(OFFSET_KEAR_ITEMS+20, 22, ItemClassification.progression),
 
 }
 

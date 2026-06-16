@@ -12,7 +12,7 @@ from ..items import all_movement_items
 from ...options import AbilityRando
 from ...world_base import MinaTheHollowerBase
 
-def ReachingSideArm():
+def HasReachingSideArm():
     return Has("ThrowingAxe")
 
 @dataclasses.dataclass(kw_only=True)
@@ -89,8 +89,8 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         def _evaluate(self, state: CollectionState) -> bool:
             found_items : list[MovementItemData] = [value for key,value in all_movement_items.items() if state.has(key, self.player)]
             tiles = sum([item.distance for item in found_items])
-
-            return True #tiles >= self.distance
+            print(tiles)
+            return tiles >= self.distance
 
         @override
         def item_dependencies(self) -> dict[str, set[int]]:

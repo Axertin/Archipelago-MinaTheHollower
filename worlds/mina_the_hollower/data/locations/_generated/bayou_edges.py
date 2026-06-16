@@ -15,13 +15,12 @@ from ...rules.state_rules import (
 
 
 regions: set[str] = {
-    'Sandfalls Mining Outlook',
+    "Nox's Bayou Boat Station",
 }
 
 connections: dict[str, RegionConnection] = {
 }
 
 transitions: dict[str, Transition] = {
-    'Sandfalls Mining Outlook': Transition('Sandfalls Mining Outlook', 'Southern Outskirts Four Flowers Sandfall', DirectionType.WEST, TransitionType.AREA_SCREENS),
-    'Sandfalls Mining Outlook Cave Stairs': Transition('Sandfalls Mining Outlook', 'Southern Outskirts Mining Passage Exit', DirectionType.NORTH, TransitionType.STAIRS),
+    "Nox's Bayou Boat Station East Area Transition": Transition("Nox's Bayou Boat Station", 'Backwaters Bayou Falls West', DirectionType.EAST, TransitionType.AREA_SCREENS),
 }

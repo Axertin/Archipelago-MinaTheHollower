@@ -37,7 +37,8 @@ MATCHABLE_DIRECTIONS = {
 RULE_ALLOWED_CALLS = {
     "Has", "True_", "CanReachLocation",
     "CanBurrow", "CanCarry", "CanClimb", "CanSwim", "CanBounce",
-    "HasVialsCount", "CanJumpOneTile", "CanJumpTiles", "ReachingSideArm",
+    "HasVialsCount", "CanJumpOneTile", "CanJumpTiles", "HasReachingSideArm",
+    "HasLadder"
 }
 
 

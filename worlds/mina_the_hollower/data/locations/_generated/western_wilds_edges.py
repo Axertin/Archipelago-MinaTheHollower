@@ -7,7 +7,10 @@ from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, DirectionType, TransitionType
 from ...rules.ability_rules import (
     CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce,
-    HasVialsCount, CanJumpOneTile, CanJumpTiles, ReachingSideArm,
+    HasVialsCount, CanJumpOneTile, CanJumpTiles, HasReachingSideArm,
+)
+from ...rules.state_rules import (
+   HasLadder,
 )
 
 
@@ -95,5 +98,5 @@ transitions: dict[str, Transition] = {
     'Western Wilds Secret Passage East Geyser Up': Transition('Western Wilds Secret Passageway East', 'Western Wilds Overgrown Path', DirectionType.OVERWORLD, TransitionType.GEYSER_UP, CanBurrow()),
     'Western Wilds Secret Passage West Geyser Up': Transition('Western Wilds Secret Passageway West', 'Western Wilds Western Pond', DirectionType.OVERWORLD, TransitionType.GEYSER_UP, CanBurrow()),
     'Western Wilds Western Pond Secret Pool Geyser': Transition('Western Wilds Western Pond', 'Western Wilds Secret Passageway West', DirectionType.OVERWORLD, TransitionType.GEYSER_DOWN, CanBurrow()),
-    'Western Wilds Western Pond South Swamp ???': Transition('Western Wilds Western Pond', 'Swamp ???', DirectionType.SOUTH, TransitionType.AREA_SCREENS),
+    'Western Wilds Western Pond South Area Transition': Transition('Western Wilds Western Pond', 'Backwaters Upper Swamp Entrance', DirectionType.SOUTH, TransitionType.AREA_SCREENS),
 }
