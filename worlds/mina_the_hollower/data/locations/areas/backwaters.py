@@ -31,38 +31,3 @@ boss_locations: dict[str, LocationData] = {
     "Defeat Fish Boss": LocationData(0, "Waterfall Backwaters"),
 }
 
-
-connections: dict[str, RegionConnection] = {
-    "Waterfall Backwaters_Western Wilds Occupied Bridge" : RegionConnection("Waterfall Backwaters", "Western Wilds Occupied Bridge", (CanSwim() | CanJumpTiles(distance=4)) & CanBurrow()),
-    "Lower Backwaters_Ossex Train Staion" : RegionConnection("Lower Backwaters", "Ossex Train Staion", Has("BayouTicket")),
-    "Lower Backwaters_Bayou Entrance": RegionConnection("Lower Backwaters", "Bayou Entrance", (CanSwim() | CanJumpTiles(distance=4)) & CanBurrow()),
-
-
-    "Upper Backwaters_Waterfall Backwaters" : RegionConnection("Upper Backwaters","Waterfall Backwaters", (CanSwim() | CanJumpTiles(distance=4))),
-    "Waterfall Backwaters_Upper Backwaters" : RegionConnection("Waterfall Backwaters","Upper Backwaters", (CanSwim() | CanJumpTiles(distance=4))),
-
-    "Upper Backwaters_Upper Backwaters Side Room" : RegionConnection("Upper Backwaters","Upper Backwaters Side Room", CanSwim()),
-    "Upper Backwaters Side Room_Upper Backwaters" : RegionConnection("Upper Backwaters Side Room","Upper Backwaters", CanSwim()),
-
-    "Upper Backwaters_Backwaters Lantern Cave" : RegionConnection("Upper Backwaters","Backwaters Lantern Cave", CanSwim() & Has("Spark", 1) & Has("Backwaters Lantern Cave Kear")),
-    "Backwaters Lantern Cave_Upper Backwaters" : RegionConnection("Backwaters Lantern Cave","Upper Backwaters", CanSwim() & Has("Spark", 1) & Has("Backwaters Lantern Cave Kear")),
-
-    "Upper Backwaters_Lower Backwaters" : RegionConnection("Upper Backwaters","Lower Backwaters", CanSwim()),
-    "Lower Backwaters_Upper Backwaters" : RegionConnection("Lower Backwaters","Upper Backwaters", CanSwim()),
-
-    "Lower Backwaters_Backwaters Fishing Hole" : RegionConnection("Lower Backwaters","Backwaters Fishing Hole"),
-    "Backwaters Fishing Hole_Lower Backwaters" : RegionConnection("Backwaters Fishing Hole","Lower Backwaters"),
-
-    "Lower Backwaters_Backwaters Lucky's Lair" : RegionConnection("Lower Backwaters","Backwaters Lucky's Lair"),
-    "Backwaters Lucky's Lair_Lower Backwaters" : RegionConnection("Backwaters Lucky's Lair","Lower Backwaters"),
-
-    "Backwaters Pinky's Parlor_Upper Backwaters" : RegionConnection("Backwaters Pinky's Parlor","Upper Backwaters", Has("Pinky Parlor Kear")),
-    "Upper Backwaters_Backwaters Pinky's Parlor" : RegionConnection("Upper Backwaters","Backwaters Pinky's Parlor", Has("Pinky Parlor Kear")),
-}
-bosses: dict[str, LocationData] = {
-}
-regions: set[str] = {
-}
-transitions: dict[str, Transition] = {
-
-}

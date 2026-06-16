@@ -1,4 +1,7 @@
 from collections import ChainMap
+
+from ._generated import eastern_hearth_edges, mourners_mile_edges, ossex_edges, queensbury_crypt_edges, \
+    southern_outskirts_edges, western_wilds_edges
 from .areas import astral_orrery, bayou, bone_beach, coltrane_peak, eastern_hearth, kindlewood, loners_landing, mourners_mile, ossex, queensbury_crypt, radient_manor, sandfalls, septemburg, southern_outskirts, backwaters, western_wilds
 from .. import LocationData, RegionConnection, Transition
 
@@ -22,22 +25,22 @@ western_wilds.collectable_locations,
 )
 
 all_bosses: ChainMap[str, LocationData] = ChainMap(
-    astral_orrery.bosses,
-    bayou.bosses,
-    bone_beach.bosses,
-    coltrane_peak.bosses,
-    eastern_hearth.bosses,
-    kindlewood.bosses,
-    loners_landing.bosses,
-    mourners_mile.bosses,
-    ossex.bosses,
-    queensbury_crypt.bosses,
-    radient_manor.bosses,
-    sandfalls.bosses,
-    septemburg.bosses,
-    southern_outskirts.bosses,
-    backwaters.bosses,
-    western_wilds.bosses,
+    astral_orrery.boss_locations,
+    bayou.boss_locations,
+    bone_beach.boss_locations,
+    coltrane_peak.boss_locations,
+    eastern_hearth.boss_locations,
+    kindlewood.boss_locations,
+    loners_landing.boss_locations,
+    mourners_mile.boss_locations,
+    ossex.boss_locations,
+    queensbury_crypt.boss_locations,
+    radient_manor.boss_locations,
+    sandfalls.boss_locations,
+    septemburg.boss_locations,
+    southern_outskirts.boss_locations,
+    backwaters.boss_locations,
+    western_wilds.boss_locations,
 )
 
 all_locations: ChainMap[str, LocationData] = ChainMap(
@@ -45,88 +48,70 @@ all_locations: ChainMap[str, LocationData] = ChainMap(
     all_bosses
 )
 
+temp_regions: set[str] = {
+    "Radiant Manor Foyer",
+    "Loners Landing ???",
+    "Sandfalls ???",
+    "Kindlewood Overgrowth entry region from WW",
+    "Swamp ???",
+    "Sandfalls ???? Bone junction)",
+    "Astral Orrey Mirror's End"
+}
 
 all_regions: set[str] = set.union(
-    astral_orrery.regions,
-    bayou.regions,
-    bone_beach.regions,
-    coltrane_peak.regions,
-    eastern_hearth.regions,
-    kindlewood.regions,
-    loners_landing.regions,
-    mourners_mile.regions,
-    ossex.regions,
-    queensbury_crypt.regions,
-    radient_manor.regions,
-    sandfalls.regions,
-    septemburg.regions,
-    southern_outskirts.regions,
-    backwaters.regions,
-    western_wilds.regions,
+    temp_regions,
+    # astral_orrery.regions,
+    # bayou.regions,
+    # bone_beach.regions,
+    # coltrane_peak.regions,
+    eastern_hearth_edges.regions,
+    # kindlewood.regions,
+    # loners_landing.regions,
+    mourners_mile_edges.regions,
+    ossex_edges.regions,
+    queensbury_crypt_edges.regions,
+    # radient_manor.regions,
+    # sandfalls.regions,
+    # septemburg.regions,
+    southern_outskirts_edges.regions,
+    # backwaters.regions,
+    # western_wilds.regions,
 )
 
 all_internal_region_connections: ChainMap[str, RegionConnection] = ChainMap(
-    astral_orrery.connections,
-    bayou.connections,
-    bone_beach.connections,
-    coltrane_peak.connections,
-    eastern_hearth.connections,
-    kindlewood.connections,
-    loners_landing.connections,
-    mourners_mile.connections,
-    ossex.connections,
-    queensbury_crypt.connections,
-    radient_manor.connections,
-    sandfalls.connections,
-    septemburg.connections,
-    southern_outskirts.connections,
-    backwaters.connections,
-    western_wilds.connections,
+    # astral_orrery.connections,
+    # bayou.connections,
+    # bone_beach.connections,
+    # coltrane_peak.connections,
+    eastern_hearth_edges.connections,
+    # kindlewood.connections,
+    # loners_landing.connections,
+    mourners_mile_edges.connections,
+    ossex_edges.connections,
+    queensbury_crypt_edges.connections,
+    # radient_manor.connections,
+    # sandfalls.connections,
+    # septemburg.connections,
+    southern_outskirts_edges.connections,
+    # backwaters.connections,
+    western_wilds_edges.connections,
 )
 
 all_region_transitions: ChainMap[str, Transition] = ChainMap(
-    astral_orrery.transitions,
-    bayou.transitions,
-    bone_beach.transitions,
-    coltrane_peak.transitions,
-    eastern_hearth.transitions,
-    kindlewood.transitions,
-    loners_landing.transitions,
-    mourners_mile.transitions,
-    ossex.transitions,
-    queensbury_crypt.transitions,
-    radient_manor.transitions,
-    sandfalls.transitions,
-    septemburg.transitions,
-    southern_outskirts.transitions,
-    backwaters.transitions,
-    western_wilds.transitions,
-)
-
-finished_regions: set[str] = set.union(
-    ossex.regions,
-    eastern_hearth.regions,
-    southern_outskirts.regions,
-    western_wilds.regions,
-    mourners_mile.regions,
-    loners_landing.regions,
-    sandfalls.regions,
-)
-
-finished_region_transitions: ChainMap[str, Transition] = ChainMap(
-    ossex.transitions,
-    eastern_hearth.transitions,
-    southern_outskirts.transitions,
-)
-
-finished_locations: ChainMap[str, LocationData] = ChainMap(
-    ossex.collectable_locations,
-    eastern_hearth.collectable_locations,
-    southern_outskirts.collectable_locations,
-)
-
-finished_internal_region_connections: ChainMap[str, RegionConnection] = ChainMap(
-    ossex.connections,
-    eastern_hearth.connections,
-    southern_outskirts.connections,
+    # astral_orrery.transitions,
+    # bayou.transitions,
+    # bone_beach.transitions,
+    # coltrane_peak.transitions,
+    eastern_hearth_edges.transitions,
+    # kindlewood.transitions,
+    # loners_landing.transitions,
+    mourners_mile_edges.transitions,
+    ossex_edges.transitions,
+    queensbury_crypt_edges.transitions,
+    # radient_manor.transitions,
+    # sandfalls.transitions,
+    # septemburg.transitions,
+    southern_outskirts_edges.transitions,
+    # backwaters.transitions,
+    western_wilds_edges.transitions,
 )

@@ -3,25 +3,8 @@ from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanBounce, CanJumpTiles, CanClimb, CanCarry
 
-regions: set[str] = {
-    "Mourner's Mile Knight's Rest",
-    # "Mourner's Mile Statue Room",
-    # "Mourner's Mile Shallow Tomb",
-    # "Mourner's Mile Ring Tomb",
-    # "Mourner's Mile Spike Vault",
-    # "Mourner's Mile Spike Vault Hidden Room",
-    # "Mourner's Mile Tower Tunnel",
-    # "Mourner's Mile Knight's Stand",
-    # "Mourner's Mile Mina's Grave",
-    # "Mourner's Mile Spike Hell",
-}
-bosses: dict[str, LocationData] = {
-}
-transitions: dict[str, Transition] = {
 
-}
-
-connections: dict[str, RegionConnection] = {
+boss_locations: dict[str, LocationData] = {
 }
 
 collectable_locations: dict[str, LocationData] = {

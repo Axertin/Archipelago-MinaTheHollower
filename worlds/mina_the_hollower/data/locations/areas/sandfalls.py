@@ -3,27 +3,6 @@ from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanBounce, CanJumpTiles, CanClimb, CanCarry
 
-regions: set[str] = {
-    "Sandfalls Mining Passage Entrance"
-    # "Sandfalls Hobo Holdout",
-    # "Sandfalls Sifted Sands",
-    # "Sandfalls Guiding Grains",
-    # "Sandfalls Hidden Cave",
-    # "Sandfalls Ring Dive Parlor",
-    # "Sandfalls Shifty Seclusion",
-    # "Sandfalls Payload Passage",
-    # "Sandfalls Miner's Den",
-    # "Sandfalls Shoreline Generator",
-    # "Sandfalls Bone Junction",
-    # "Sandfalls Train",
-}
-
-transitions: dict[str, Transition] = {
-
-}
-
-connections: dict[str, RegionConnection] = {
-}
 
 collectable_locations: dict[str, LocationData] = {
     "SF Hobo Holdout Puffer Beak": LocationData(82, "Sandfalls Hobo Holdout",
@@ -81,6 +60,6 @@ collectable_locations: dict[str, LocationData] = {
                                          CanBurrow()),
 }
 
-bosses: dict[str, LocationData] = {
+boss_locations: dict[str, LocationData] = {
 }
 

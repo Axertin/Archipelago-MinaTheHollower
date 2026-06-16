@@ -4,32 +4,6 @@ from rule_builder.rules import Has, True_
 from ... import RegionConnection, Transition, LocationData
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanJumpTiles, CanBounce, CanSwim, CanCarry, CanClimb
 
-regions: set[str] = {
-    "Nox's Bayou Boat Takeoff",
-    "Nox's Bayou Guard Room",
-    "Nox's Bayou First Flooder",
-    "Nox's Bayou Shallow Pool",
-    "Nox's Bayou Lagoon Burrow",
-    "Nox's Bayou Submerged Side Room",
-    "Nox's Bayou Swamp Shack",
-    "Nox's Bayou Moonlit Path",
-    "Nox's Bayou Moonlit Mosh",
-    "Nox's Bayou Moonlit Hideaway",
-    "Nox's Bayou Plant Passage",
-    "Nox's Bayou Twin Thicket",
-    "Nox's Bayou Hidden Cave",
-    "Nox's Bayou Grate Lake",
-    "Nox's Bayou Tainted Depths",
-    "Nox's Bayou Swampy Generator",
-    "Nox's Bayou Gutter Pipe",
-}
-
-transitions: dict[str, Transition] = {
-
-}
-
-connections: dict[str, RegionConnection] = {
-}
 
 collectable_locations: dict[str, LocationData] = {
     "NB Boat Takeoff Shrimpter Tail": LocationData(50, "Nox's Bayou Boat Takeoff",
@@ -102,7 +76,7 @@ collectable_locations: dict[str, LocationData] = {
 }
 
 
-bosses: dict[str, LocationData] = {
+boss_locations: dict[str, LocationData] = {
     # No ID available (N/A vanilla item)
     "NB Tainted Depths Nox's Beast": LocationData(0, "Nox's Bayou Tainted Depths",
                                                   CanBurrow() & CanSwim() & CanClimb()),

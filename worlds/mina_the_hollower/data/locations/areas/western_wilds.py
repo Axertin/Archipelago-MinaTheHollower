@@ -25,30 +25,5 @@ collectable_locations: dict[str, LocationData] = {
     "WW Occupied Bridge Cuddlepus Shell" : LocationData(259, "Western Wilds Occupied Bridge", Has("Fishing Rod")),
 }
 
-connections: dict[str, RegionConnection] = {
-
-    "Western Wilds Occupied Bridge_Southern Outskirts" : RegionConnection("Western Wilds Occupied Bridge","Southern Outskirts", CanJumpOneTile() & CanBurrow()),
-    "Western Wilds Occupied Bridge_Ossex" : RegionConnection("Western Wilds Occupied Bridge", "Ossex", CanJumpOneTile() & CanBurrow()),
-    "Western Wilds Occupied Bridge_Waterfall Shanty Swamp" : RegionConnection("Western Wilds Occupied Bridge","Waterfall Shanty Swamp", CanJumpOneTile() & CanBurrow()),
-
-    "Western Wilds Occupied Bridge_Western Wilds Secret Passageway" : RegionConnection("Western Wilds Occupied Bridge", "Western Wilds Secret Passageway"),
-    "Western Wilds Secret Passageway_Western Wilds Occupied Bridge" : RegionConnection("Western Wilds Secret Passageway", "Western Wilds Occupied Bridge"),
-    "Western Wilds Occupied Bridge_Western Wilds Molten Foundry" : RegionConnection("Western Wilds Occupied Bridge", "Western Wilds Molten Foundry"),
-    "Western Wilds Molten Foundry_Western Wilds Occupied Bridge" : RegionConnection("Western Wilds Molten Foundry","Western Wilds Occupied Bridge"),
-    "Western Wilds Occupied Bridge_Western Wilds Western Pond" : RegionConnection("Western Wilds Occupied Bridge", "Western Wilds Western Pond"),
-    "Western Wilds Western Pond_Western Wilds Occupied Bridge" : RegionConnection("Western Wilds Western Pond","Western Wilds Occupied Bridge"),
-    "Western Wilds Occupied Bridge_Western Wilds Balcony" : RegionConnection("Western Wilds Occupied Bridge", "Western Wilds Balcony"),
-    "Western Wilds Balcony_Western Wilds Occupied Bridge" : RegionConnection("Western Wilds Balcony","Western Wilds Occupied Bridge"),
-
-
-}
-
-bosses: dict[str, LocationData] = {
-}
-regions: set[str] = {
-    "Western Wilds Ossex Bridge",
-"Western Wilds Overgrown Path"
-}
-transitions: dict[str, Transition] = {
-
+boss_locations: dict[str, LocationData] = {
 }

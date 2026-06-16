@@ -3,26 +3,6 @@ from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanBounce, CanJumpTiles, CanClimb, CanCarry
 
-regions: set[str] = {
-    "Coltrane Peak Fateful Cliff",
-    "Coltrane Peak Frigid Station",
-    "Coltrane Peak Frozen Pass",
-    "Coltrane Peak Dead Man's Gorge",
-    "Coltrane Peak Frostbite Woods",
-    "Coltrane Peak Rail Yard",
-    "Coltrane Peak Icebound Cavern",
-    "Coltrane Peak Spiral Summit",
-    "Coltrane Peak Agnes Express",
-    "Coltrane Peak Maelstrom",
-    "Coltrane Peak Frozen Generator",
-}
-
-transitions: dict[str, Transition] = {
-
-}
-
-connections: dict[str, RegionConnection] = {
-}
 
 collectable_locations: dict[str, LocationData] = {
     # Check ID - Imported and guessed
@@ -95,7 +75,7 @@ collectable_locations: dict[str, LocationData] = {
 }
 
 
-bosses: dict[str, LocationData] = {
+boss_locations: dict[str, LocationData] = {
     # No ID available (N/A vanilla item)
     "CTP Icebound Cavern Frozen Horror Boss": LocationData(0, "Coltrane Peak Icebound Cavern",
                                                            CanBurrow() & CanClimb()),

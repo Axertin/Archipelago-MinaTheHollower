@@ -3,31 +3,6 @@ from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanBounce, CanJumpTiles, CanClimb, CanCarry
 
-regions: set[str] = {
-    "Astral Orrery Mirror's End",
-    "Astral Orrery Mirror's End Moving Platform Room",
-    "Astral Orrery Stellarium",
-    "Astral Orrery Gravity Zone Long Hallway",
-    "Astral Orrery Gravity Zone Secret Room #1",
-    "Astral Orrery Gravity Zone Secret Room #2",
-    "Astral Orrery Cog Chamber Secret Room #1",
-    "Astral Orrery Cog Chamber Secret Room #2",
-    "Astral Orrery Mutant Lab Secret Room #1",
-    "Astral Orrery Mutant Lab Secret Room #2",
-    "Astral Orrery Hall of Scholars Below Boss Chamber",
-    "Astral Orrery Hall of Scholars Boss Chamber",
-    "Astral Orrery Hall of Scholars Exit",
-    "Astral Orrery Sealed Archive Congealed Chamber",
-    "Astral Orrery Starry Generator",
-}
-
-transitions: dict[str, Transition] = {
-
-}
-
-connections: dict[str, RegionConnection] = {
-}
-
 collectable_locations: dict[str, LocationData] = {
     # Check ID - Imported and guessed
     "AO Mirror's End Beach Room Chest": LocationData(126, "Astral Orrery Mirror's End",
@@ -99,7 +74,7 @@ collectable_locations: dict[str, LocationData] = {
 
 
 }
-bosses: dict[str, LocationData] = {
+boss_locations: dict[str, LocationData] = {
     # No ID available (N/A vanilla item)
     "AO Sealed Archive The Congealed": LocationData(0, "Astral Orrery Sealed Archive"),
 

@@ -3,23 +3,6 @@ from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanBounce, CanJumpTiles, CanClimb, CanCarry
 
-regions: set[str] = {
-    "Kindlewood Overgrowth Bonfire",
-    "Kindlewood Residence Basement",
-    "Kindlewood Madd House",
-    "Kindlewood Behind Madd House",
-    "Kindlewood Train Station",
-    "Kindlewood Farm Crossing Shack",
-    "Kindlewood Wallower's Room",
-    "Kindlewood Rail Tunnel"
-}
-
-transitions: dict[str, Transition] = {
-
-}
-
-connections: dict[str, RegionConnection] = {
-}
 
 collectable_locations: dict[str, LocationData] = {
     # Check ID - Imported and guessed
@@ -63,7 +46,7 @@ collectable_locations: dict[str, LocationData] = {
                                               CanBurrow() & CanCarry() & Has("Pipes")),
 }
 
-bosses: dict[str, LocationData] = {
+boss_locations: dict[str, LocationData] = {
     "KW Madd House": LocationData(0, "Kindlewood Madd House"),
 }
 

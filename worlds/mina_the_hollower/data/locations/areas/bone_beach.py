@@ -3,15 +3,7 @@ from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanBounce, CanJumpTiles, CanClimb, CanCarry, CanSwim
 
-regions: set[str] = {
-}
 
-transitions: dict[str, Transition] = {
-
-}
-
-connections: dict[str, RegionConnection] = {
-}
 
 collectable_locations: dict[str, LocationData] = {
     # Check ID - Imported and guessed
@@ -98,7 +90,7 @@ collectable_locations: dict[str, LocationData] = {
 }
 
 
-bosses: dict[str, LocationData] = {
+boss_locations: dict[str, LocationData] = {
     "BB Brain Alcove Mined Mind": LocationData(0, "Bone Beach Brain Alcove",
                                                CanBurrow()),
 }
