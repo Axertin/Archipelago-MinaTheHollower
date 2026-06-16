@@ -1,0 +1,110 @@
+# AUTO-GENERATED -- DO NOT EDIT.
+# Regenerate from the spreadsheet export with:
+#   python -m worlds.mina_the_hollower.tools.generate_edges <edges.csv>
+# The spreadsheet is the source of truth, not this file.
+
+from rule_builder.rules import Has, True_, CanReachLocation
+from ... import RegionConnection, Transition, DirectionType, TransitionType
+from ...rules.ability_rules import (
+    CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce,
+    HasVialsCount, CanJumpOneTile, CanJumpTiles, ReachingSideArm,
+)
+
+
+regions: set[str] = {
+    "Mourner's Mile Dark Shallow Tomb Dark",
+    "Mourner's Mile Dark Shallow Tomb Peekhole",
+    "Mourner's Mile Graveyard",
+    "Mourner's Mile Graveyard ledge",
+    "Mourner's Mile Hidden Graves",
+    "Mourner's Mile Knight's Gate Button",
+    "Mourner's Mile Knight's Gate Main",
+    "Mourner's Mile Knight's Guard Bike",
+    "Mourner's Mile Knight's Guard Generator",
+    "Mourner's Mile Knight's Guard Hill",
+    "Mourner's Mile Knight's Guard Ledge",
+    "Mourner's Mile Knight's Guard Main",
+    "Mourner's Mile Knight's Rest Chest",
+    "Mourner's Mile Knight's Rest Main",
+    "Mourner's Mile Mina's Grave",
+    "Mourner's Mile Shallow Tomb",
+    "Mourner's Mile Spike Hell Mourner",
+    "Mourner's Mile Spike Hell Sandfall",
+    "Mourner's Mile Spike Vault Hidden",
+    "Mourner's Mile Spike Vault Hidden Room",
+    "Mourner's Mile Spike Vault Main",
+    "Mourner's Mile Spike Vault Upper",
+    "Mourner's Mile Stairs",
+    "Mourner's Mile Statue Room Main",
+    "Mourner's Mile Statue Room Rope",
+    "Mourner's Mile Tower Tunnel Dark",
+    "Mourner's Mile Tower Tunnel Main",
+}
+
+connections: dict[str, RegionConnection] = {
+    "Mourner's Mile Knight's Guard Generator_Mourner's Mile Knight's Guard Hill": RegionConnection("Mourner's Mile Knight's Guard Generator", "Mourner's Mile Knight's Guard Hill", CanBurrow()),
+    "Mourner's Mile Knight's Guard Generator_Mourner's Mile Knight's Guard Main": RegionConnection("Mourner's Mile Knight's Guard Generator", "Mourner's Mile Knight's Guard Main"),
+    "Mourner's Mile Knight's Guard Hill_Mourner's Mile Knight's Guard Generator": RegionConnection("Mourner's Mile Knight's Guard Hill", "Mourner's Mile Knight's Guard Generator", CanBurrow()),
+    "Mourner's Mile Knight's Guard Ledge_Mourner's Mile Knight's Guard Main": RegionConnection("Mourner's Mile Knight's Guard Ledge", "Mourner's Mile Knight's Guard Main", Has("Mourners miles bike Kear")),  # TODO UNDEFINED KEAR - placeholder item name, fix later
+    "Mourner's Mile Knight's Guard Main_Mourner's Mile Knight's Guard Bike": RegionConnection("Mourner's Mile Knight's Guard Main", "Mourner's Mile Knight's Guard Bike", Has("Mourners miles bike Kear")),  # TODO UNDEFINED KEAR - placeholder item name, fix later
+    "Mourner's Mile Knight's Rest Chest_Mourner's Mile Knight's Rest Main": RegionConnection("Mourner's Mile Knight's Rest Chest", "Mourner's Mile Knight's Rest Main", CanClimb()),
+    "Mourner's Mile Knight's Rest Main_Mourner's Mile Knight's Rest Chest": RegionConnection("Mourner's Mile Knight's Rest Main", "Mourner's Mile Knight's Rest Chest", CanJumpTiles(distance=2)),
+    "Mourner's Mile Spike Hell Mourner_Mourner's Mile Spike Hell Sandfall": RegionConnection("Mourner's Mile Spike Hell Mourner", "Mourner's Mile Spike Hell Sandfall", Has("Spike Boots")),
+    "Mourner's Mile Spike Hell Sandfall_Mourner's Mile Spike Hell Mourner": RegionConnection("Mourner's Mile Spike Hell Sandfall", "Mourner's Mile Spike Hell Mourner"),
+    "Mourner's Mile Spike Vault Hidden_Mourner's Mile Spike Vault Main": RegionConnection("Mourner's Mile Spike Vault Hidden", "Mourner's Mile Spike Vault Main"),
+    "Mourner's Mile Spike Vault Upper_Mourner's Mile Spike Vault Hidden": RegionConnection("Mourner's Mile Spike Vault Upper", "Mourner's Mile Spike Vault Hidden"),
+    "Mourner's Mile Spike Vault Upper_Mourner's Mile Spike Vault Main": RegionConnection("Mourner's Mile Spike Vault Upper", "Mourner's Mile Spike Vault Main"),
+    "Mourner's Mile Statue Room Rope_Mourner's Mile Statue Room Main": RegionConnection("Mourner's Mile Statue Room Rope", "Mourner's Mile Statue Room Main", CanClimb()),
+}
+
+transitions: dict[str, Transition] = {
+    "Mourner's Mile Dark Shallow Tomb Dark Geyser Up": Transition("Mourner's Mile Dark Shallow Tomb Dark", "Mourner's Mile Hidden Graves", DirectionType.OVERWORLD, TransitionType.GEYSER_UP, CanBurrow()),
+    "Mourner's Mile Dark Shallow Tomb Peekhole Geyser Up": Transition("Mourner's Mile Dark Shallow Tomb Peekhole", "Mourner's Mile Hidden Graves", DirectionType.OVERWORLD, TransitionType.GEYSER_UP, CanBurrow()),
+    "Mourner's Mile Graveyard Hidden Geyser": Transition("Mourner's Mile Graveyard", "Mourner's Mile Spike Vault Hidden", DirectionType.OVERWORLD, TransitionType.GEYSER_DOWN, CanBurrow()),
+    "Mourner's Mile Graveyard Main Geyser": Transition("Mourner's Mile Graveyard", "Mourner's Mile Spike Vault Main", DirectionType.OVERWORLD, TransitionType.GEYSER_DOWN, CanBurrow()),
+    "Mourner's Mile Graveyard Upper Door Geyser": Transition("Mourner's Mile Graveyard", "Mourner's Mile Spike Vault Upper", DirectionType.OVERWORLD, TransitionType.GEYSER_DOWN, CanBurrow()),
+    "Mourner's Mile Graveyard Upper Geyser": Transition("Mourner's Mile Graveyard", "Mourner's Mile Spike Vault Upper", DirectionType.OVERWORLD, TransitionType.GEYSER_DOWN, CanBurrow()),
+    "Mourner's Mile Graveyard West Transition": Transition("Mourner's Mile Graveyard", "Mourner's Mile Knight's Guard Main", DirectionType.WEST, TransitionType.SCREENS),
+    "Mourner's Mile Graveyard ledge West Transition North": Transition("Mourner's Mile Graveyard ledge", "Mourner's Mile Knight's Guard Ledge", DirectionType.WEST, TransitionType.SCREENS),
+    "Mourner's Mile Graveyard ledge West Transition South": Transition("Mourner's Mile Graveyard ledge", "Mourner's Mile Knight's Guard Main", DirectionType.WEST, TransitionType.SCREENS),
+    "Mourner's Mile Hidden Graves Left Geyser Drop": Transition("Mourner's Mile Hidden Graves", "Mourner's Mile Dark Shallow Tomb Dark", DirectionType.OVERWORLD, TransitionType.GEYSER_DOWN, CanBurrow()),
+    "Mourner's Mile Hidden Graves North Burrow": Transition("Mourner's Mile Hidden Graves", "Mourner's Mile Knight's Rest Main", DirectionType.NORTH, TransitionType.SCREENS, CanBurrow()),
+    "Mourner's Mile Hidden Graves Right Geyser Drop": Transition("Mourner's Mile Hidden Graves", "Mourner's Mile Dark Shallow Tomb Peekhole", DirectionType.OVERWORLD, TransitionType.GEYSER_DOWN, CanBurrow()),
+    "Mourner's Mile Hidden Graves West Transition": Transition("Mourner's Mile Hidden Graves", "Mourner's Mile Statue Room Rope", DirectionType.WEST, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Gate Button Door": Transition("Mourner's Mile Knight's Gate Button", "Mourner's Mile Spike Vault Upper", DirectionType.NORTH, TransitionType.DOORS),
+    "Mourner's Mile Knight's Gate Main Door": Transition("Mourner's Mile Knight's Gate Main", "Mourner's Mile Spike Vault Main", DirectionType.NORTH, TransitionType.DOORS),
+    "Mourner's Mile Knight's Gate Main East Transition": Transition("Mourner's Mile Knight's Gate Main", "Mourner's Mile Stairs", DirectionType.EAST, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Gate Main Geyser Drop": Transition("Mourner's Mile Knight's Gate Main", "Mourner's Mile Shallow Tomb", DirectionType.SOUTH, TransitionType.GEYSER_DOWN),
+    "Mourner's Mile Knight's Gate Main North Transition": Transition("Mourner's Mile Knight's Gate Main", "Mourner's Mile Knight's Guard Main", DirectionType.NORTH, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Gate Main South Burrow Transition": Transition("Mourner's Mile Knight's Gate Main", "Mourner's Mile Knight's Rest Chest", DirectionType.SOUTH, TransitionType.BURROW, CanBurrow()),
+    "Mourner's Mile Knight's Gate Main South Transition": Transition("Mourner's Mile Knight's Gate Main", "Mourner's Mile Knight's Rest Main", DirectionType.SOUTH, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Guard Bike Mina's Grave Door": Transition("Mourner's Mile Knight's Guard Bike", "Mourner's Mile Mina's Grave", DirectionType.NORTH, TransitionType.DOORS, CanJumpTiles(distance=2) & Has("SparkUpgrade", count=3)),
+    "Mourner's Mile Knight's Guard Generator Outside Door": Transition("Mourner's Mile Knight's Guard Generator", "Mourner's Mile Tower Tunnel Main", DirectionType.NORTH, TransitionType.STAIRS),
+    "Mourner's Mile Knight's Guard Ledge East Transition": Transition("Mourner's Mile Knight's Guard Ledge", "Mourner's Mile Graveyard ledge", DirectionType.EAST, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Guard Ledge West Burrow": Transition("Mourner's Mile Knight's Guard Ledge", "Mourner's Mile Tower Tunnel Dark", DirectionType.WEST, TransitionType.BURROW, CanBurrow()),
+    "Mourner's Mile Knight's Guard Main East Transition": Transition("Mourner's Mile Knight's Guard Main", "Mourner's Mile Graveyard", DirectionType.EAST, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Guard Main East Transition": Transition("Mourner's Mile Knight's Guard Main", "Mourner's Mile Graveyard ledge", DirectionType.EAST, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Guard Main South Transition": Transition("Mourner's Mile Knight's Guard Main", "Mourner's Mile Knight's Gate Main", DirectionType.SOUTH, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Rest Chest North Burrow": Transition("Mourner's Mile Knight's Rest Chest", "Mourner's Mile Knight's Gate Main", DirectionType.NORTH, TransitionType.BURROW, CanBurrow()),
+    "Mourner's Mile Knight's Rest Main North Transition": Transition("Mourner's Mile Knight's Rest Main", "Mourner's Mile Knight's Gate Main", DirectionType.NORTH, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Rest Main South Burrow": Transition("Mourner's Mile Knight's Rest Main", "Mourner's Mile Hidden Graves", DirectionType.SOUTH, TransitionType.BURROW, CanBurrow()),
+    "Mourner's Mile Knight's Rest Main South Transition": Transition("Mourner's Mile Knight's Rest Main", "Mourner's Mile Statue Room Main", DirectionType.SOUTH, TransitionType.SCREENS),
+    "Mourner's Mile Knight's Rest Main West Area Transition": Transition("Mourner's Mile Knight's Rest Main", 'Eastern Hearth Mourners Gate', DirectionType.WEST, TransitionType.SCREENS),
+    "Mourner's Mile Mina's Grave Exit": Transition("Mourner's Mile Mina's Grave", "Mourner's Mile Knight's Guard Bike", DirectionType.SOUTH, TransitionType.DOORS),
+    "Mourner's Mile Shallow Tomb Geyser Up": Transition("Mourner's Mile Shallow Tomb", "Mourner's Mile Knight's Gate Main", DirectionType.OVERWORLD, TransitionType.GEYSER_UP, CanBurrow()),
+    "Mourner's Mile Spike Hell Mourner North Burrow": Transition("Mourner's Mile Spike Hell Mourner", "Mourner's Mile Stairs", DirectionType.NORTH, TransitionType.SCREENS, CanBurrow()),
+    "Mourner's Mile Spike Hell Sandfall East Sandfalls ???? Bone junction)": Transition("Mourner's Mile Spike Hell Sandfall", 'Sandfalls ???? Bone junction)', DirectionType.EAST, TransitionType.SCREENS),
+    "Mourner's Mile Spike Vault Hidden Room East Transition": Transition("Mourner's Mile Spike Vault Hidden Room", "Mourner's Mile Spike Vault Hidden", DirectionType.EAST, TransitionType.SCREENS),
+    "Mourner's Mile Spike Vault Hidden West Transition": Transition("Mourner's Mile Spike Vault Hidden", "Mourner's Mile Spike Vault Hidden Room", DirectionType.WEST, TransitionType.SCREENS),
+    "Mourner's Mile Spike Vault Main Exit": Transition("Mourner's Mile Spike Vault Main", "Mourner's Mile Knight's Gate Main", DirectionType.SOUTH, TransitionType.DOORS),
+    "Mourner's Mile Spike Vault Upper Exit": Transition("Mourner's Mile Spike Vault Upper", "Mourner's Mile Knight's Gate Button", DirectionType.SOUTH, TransitionType.DOORS),
+    "Mourner's Mile Stairs East Area Transition": Transition("Mourner's Mile Stairs", 'Queensbury Crypt Old Entrance', DirectionType.EAST, TransitionType.AREA_SCREENS),
+    "Mourner's Mile Stairs South Burrow": Transition("Mourner's Mile Stairs", "Mourner's Mile Spike Hell Mourner", DirectionType.SOUTH, TransitionType.SCREENS, CanBurrow()),
+    "Mourner's Mile Stairs West Transition": Transition("Mourner's Mile Stairs", "Mourner's Mile Knight's Gate Main", DirectionType.WEST, TransitionType.SCREENS),
+    "Mourner's Mile Statue Room Main North Transition": Transition("Mourner's Mile Statue Room Main", "Mourner's Mile Knight's Rest Main", DirectionType.NORTH, TransitionType.SCREENS),
+    "Mourner's Mile Statue Room Main West Transition": Transition("Mourner's Mile Statue Room Main", 'Eastern Hearth East Corner Cliff', DirectionType.WEST, TransitionType.SCREENS),
+    "Mourner's Mile Statue Room Rope East Transition": Transition("Mourner's Mile Statue Room Rope", "Mourner's Mile Hidden Graves", DirectionType.EAST, TransitionType.SCREENS),
+    "Mourner's Mile Tower Tunnel Dark East Burrow": Transition("Mourner's Mile Tower Tunnel Dark", "Mourner's Mile Knight's Guard Ledge", DirectionType.EAST, TransitionType.BURROW, CanBurrow()),
+    "Mourner's Mile Tower Tunnel Main North Door": Transition("Mourner's Mile Tower Tunnel Main", 'Queensbury Crypt Solemn Generator', DirectionType.NORTH, TransitionType.STAIRS),
+    "Mourner's Mile Tower Tunnel Main Stairs": Transition("Mourner's Mile Tower Tunnel Main", "Mourner's Mile Knight's Guard Generator", DirectionType.NORTH, TransitionType.STAIRS),
+}
