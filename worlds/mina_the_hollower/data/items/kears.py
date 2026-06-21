@@ -49,25 +49,5 @@ unique_kears: dict[str, KeyItemData] = {
     "Kindlewood Train Tunnel Kear": KeyItemData(OFFSET_KEAR_ITEMS+26, 337, ItemClassification.progression),
     "Coltrane Rail Yard Kear": KeyItemData(OFFSET_KEAR_ITEMS+27, 115, ItemClassification.progression),
     "Astral Orrery Stellarium Kear": KeyItemData(OFFSET_KEAR_ITEMS+28, 127, ItemClassification.progression),
+    "Backwaters Fishing Kear": KeyItemData(OFFSET_KEAR_ITEMS+29, 293, ItemClassification.progression),
 }
-
-
-# "Astral Orrery Stellarium Kear",
-# "Astral Orrery Mirror's End Kear",
-# "Coltrane Peak Rail Yard Kear",
-# "Choppe Shoppe Kear",
-# "Eastern Heath Buckler's Bluff Kear"
-# "Grassland Grotto Kear"
-# "KW Wallower's Room Kear"
-# "LL Boardwalk Kear"
-# "Steady Soles Kear"
-# "Ossex Guild Kear"
-# "QC Old Graveyard Kear"
-# "SF Sifted Sands Kear"
-# "Backwaters Bonestone Block kear"
-# "Backwaters Bonestone Kear"
-# "Pinky Parlor Kear"
-# "Backwaters Lantern Cave Kear"
-# "SO Commons Ossex Entry Right Chest Kear"
-# "SO Cave Network Side Room Chest Kear"
-# "SO Cave Network Chest Kear"

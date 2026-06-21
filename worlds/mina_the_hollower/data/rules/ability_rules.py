@@ -78,6 +78,8 @@ simple_movement_items: dict[str, MovementItem] = {
 
 base_movements: dict[str, MovementItem] = {
     "Bicycle": MovementItem(5, True),
+    "SpiderB": MovementItem(3, True),
+    "Burrow" : MovementItem(2, True),
 }
 
 all_movement_items = {
@@ -102,7 +104,7 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         @override
         def _evaluate(self, state: CollectionState) -> bool:
             # Always have basic jump
-            best_distance = 1 if self.ability_rando else 2
+            best_distance = 1
 
             # Total additive bonuses
             additive_bonus = sum(
@@ -110,7 +112,6 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
                 for name, item in simple_movement_items.items()
                 if state.has(name, self.player)
             )
-
             # Check each owned base movement type
             for name, movement in base_movements.items():
                 if state.has(name, self.player):
@@ -118,7 +119,7 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
                         best_distance,
                         movement.distance + additive_bonus
                     )
-            return True #best_distance >= self.distance
+            return best_distance >= self.distance
 
         @override
         def item_dependencies(self) -> dict[str, set[int]]:
@@ -133,3 +134,61 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         @override
         def __str__(self) -> str:
             return "Jump x tiles"
+
+all_power_items = {
+    "Health Rose":2,
+    "Joule Box": 1,
+    "HealingVialFirst": 4,
+    "Burrow":1,
+    "Attack Bone Up Cap":1,
+    "Defense Bone Up Cap":1,
+    "Sidearm Bone Up Cap":1,
+}
+
+@dataclasses.dataclass(kw_only=True)
+class PowerLevelThreshold(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
+    power: int
+    @override
+    def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
+        # caching_enabled only needs to be passed in when your world inherits from CachedRuleBuilderWorld
+        return self.Resolved(power=self.power, player=world.player, caching_enabled=False)
+
+    class Resolved(Rule.Resolved):
+        power: int
+        ability_rando = False
+
+        @override
+        def _evaluate(self, state: CollectionState) -> bool:
+            # Always have basic jump
+
+            best_distance = 1 if self.ability_rando else 2
+
+            # Total additive bonuses
+            additive_bonus = sum(
+                item.distance
+                for name, item in simple_movement_items.items()
+                if state.has(name, self.player)
+            )
+            print(f"Target Distance: {self.distance }, Starting distance: {best_distance}, total: {best_distance+additive_bonus}")
+            # Check each owned base movement type
+            for name, movement in base_movements.items():
+                if state.has(name, self.player):
+                    best_distance = max(
+                        best_distance,
+                        movement.distance + additive_bonus
+                    )
+            return best_distance >= self.distance
+
+        @override
+        def item_dependencies(self) -> dict[str, set[int]]:
+            return  {key : {id(self)} for key in all_movement_items.keys()}
+
+        @override
+        def explain_json(self, state: CollectionState | None = None) -> list[JSONMessagePart]:
+            # this method can be overridden to display custom explanations
+            return [
+                {"type": "color", "color": "green" if state and self(state) else "salmon", "text": str(self)},
+            ]
+        @override
+        def __str__(self) -> str:
+            return "Power Level X Required"

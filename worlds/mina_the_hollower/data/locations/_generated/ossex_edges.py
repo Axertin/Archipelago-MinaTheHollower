@@ -85,7 +85,7 @@ connections: dict[str, RegionConnection] = {
     'Ossex Courtyard East Gap_Ossex Courtyard East': RegionConnection('Ossex Courtyard East Gap', 'Ossex Courtyard East', CanJumpTiles(distance=8) | CanBurrow()),
     'Ossex Courtyard East Manor Side Garden_Ossex Courtyard East Manor Side': RegionConnection('Ossex Courtyard East Manor Side Garden', 'Ossex Courtyard East Manor Side', HasVialsCount(count=3) & Has("Ossex East Garden Kear")),
     'Ossex Courtyard East Manor Side_Ossex Courtyard East Manor Side Garden': RegionConnection('Ossex Courtyard East Manor Side', 'Ossex Courtyard East Manor Side Garden', HasVialsCount(count=3) & Has("Ossex East Garden Kear")),
-    'Ossex Courtyard East_Ossex Courtyard East Gap': RegionConnection('Ossex Courtyard East', 'Ossex Courtyard East Gap', CanJumpTiles(distance=8)),
+    'Ossex Courtyard East_Ossex Courtyard East Gap': RegionConnection('Ossex Courtyard East', 'Ossex Courtyard East Gap', CanJumpTiles(distance=8) | (Has("WallowersGauntlets") & CanJumpTiles(distance=4) ) ),
     'Ossex Courtyard West Chest Breakable': RegionConnection('Ossex Courtyard West Chest', 'Ossex Courtyard West'),
     'Ossex High Street Balcony_Ossex High Street Main': RegionConnection('Ossex High Street Balcony', 'Ossex High Street Main', Has("Ossex Highstreet Balcony Kear")),
     'Ossex High Street Main_Ossex High Street Balcony': RegionConnection('Ossex High Street Main', 'Ossex High Street Balcony', Has("Ossex Highstreet Balcony Kear")),
