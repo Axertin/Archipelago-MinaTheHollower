@@ -6,7 +6,7 @@ from NetUtils import JSONMessagePart
 from rule_builder.options import OptionFilter
 from rule_builder.rules import Rule, Has, True_
 from ..items import Abilities, PlayerUpgrades, additive_movement_items, base_movement_items, all_movement_items, \
-    all_power_items, upgrade_powers, trinket_powers
+    all_power_items, upgrade_powers, trinket_powers, Trinkets, Sidearms
 
 from ...constants import MINA_THE_HOLLOWER
 from ...options import AbilityRando
@@ -67,11 +67,17 @@ class HasVialsCount(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         # caching_enabled only needs to be passed in when your world inherits from CachedRuleBuilderWorld
         return (Has(PlayerUpgrades.HEALING_VIAL_POUCH.value) & Has(PlayerUpgrades.HEALING_VIAL.value, count=self.count)).resolve(world)
 
-
+def HasBeastiumTransform():
+    return Has(PlayerUpgrades.TRINKET_BAG.value, count=5) & (Has(Trinkets.RECKLESS_BEASTIUM.value) &
+            Has(Trinkets.WARDING_BEASTIUM.value) &
+            Has(Trinkets.BURNING_BEASTIUM.value) &
+            Has(Trinkets.DRAINING_BEASTIUM.value) &
+            Has(Trinkets.STARVING_BEASTIUM.value) &
+            Has(Trinkets.VOLATILE_BEASTIUM.value))
 
 
 def HasFishingRod():
-    return True_()
+    return Has(Sidearms.FISHING_ROD.value)
 
 @dataclasses.dataclass(kw_only=True)
 class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
@@ -103,8 +109,6 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
                         movement_item.distance + additive_bonus
                     )
 
-            if self.distance == 8:
-                print(f"test {best_distance} >= {self.distance}")
             return best_distance >= self.distance
 
         @override

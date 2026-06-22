@@ -80,6 +80,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
 
     def generate_early(self) -> None:
         self.options.ability_rando.value = False
+        self.options.random_starting_items.value = False
         self.handle_ut_yamless(None)
 
     def create_regions(self):

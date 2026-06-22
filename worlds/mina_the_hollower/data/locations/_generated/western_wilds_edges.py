@@ -10,10 +10,11 @@ from ...rules.ability_rules import (
     HasVialsCount, CanJumpTiles, HasReachingSideArm, HasFishingRod, 
 )
 from ...rules.state_rules import (
-   HasLadder, HasRepairedShorelineGenerator, HasAccessToTorch,
+   HasLadder, HasRepairedShorelineGenerator, HasAccessToTorch, StartedInOssex, 
    AnyThreeAstralPlatforms, HasRepairedAllGenerators, InFinale, HasKear, 
    HasRepairedSolemnGenerator, HasRepairedSwampyGenerator, HasRepairedWindyGenerator,
    HasRepairedShorelineGenerator, HasRepairedFrozenGenerator, HasRepairedStarryGenerator,
+   HasRepairedOneGenerator,
 )
 from ...items.game_items import (
    PermanentUpgrades, PlayerUpgrades, Trinkets

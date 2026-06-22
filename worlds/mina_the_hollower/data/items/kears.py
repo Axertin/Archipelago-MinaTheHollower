@@ -38,9 +38,9 @@ class SingleKears(ItemTypeEnum):
     EASTERN_HEARTH_BUCKLERS_BLUFF_KEAR = ("Eastern Hearth Bucklers Bluff Kear", ITEMS_OFFSET_KEARS + 224, ItemClassification.progression)
     MOURNERS_MILES_BIKE_KEAR = ("Mourners miles bike Kear", ITEMS_OFFSET_KEARS + 307, ItemClassification.progression)
     EASTERN_HEARTH_WATERFALL_KEAR = ("Eastern Hearth Waterfall Kear", ITEMS_OFFSET_KEARS + 1, ItemClassification.progression)
-    EASTERN_HEARTH_GRASSLAND_BUSHROOM_KEAR = ("Eastern Hearth Grassland Bushroom Kear", ITEMS_OFFSET_KEARS + 1, ItemClassification.progression)
+    EASTERN_HEARTH_GRASSLAND_BUSHROOM_KEAR = ("Eastern Hearth Grassland Bushroom Kear", ITEMS_OFFSET_KEARS + 236, ItemClassification.progression)
     MOURNERS_MILE_AFTER_GENERATOR_KEAR = ("Mourners mile After Generator Kear", ITEMS_OFFSET_KEARS + 304, ItemClassification.progression)
-    QUEENSBURY_CRYPT_BONNET_TOMB_KEAR = ("Queensbury Crypt Bonnet Tomb Kear", ITEMS_OFFSET_KEARS + 1, ItemClassification.progression)
+    QUEENSBURY_CRYPT_BONNET_TOMB_KEAR = ("Queensbury Crypt Bonnet Tomb Kear", ITEMS_OFFSET_KEARS + 55, ItemClassification.progression)
     FROZEN_PASS_KEAR = ("Frozen Pass Kear", ITEMS_OFFSET_KEARS + 109, ItemClassification.progression)
     OSSEX_TRAIN_KEAR_1 = ("Ossex Train Kear 1", ITEMS_OFFSET_KEARS + 358, ItemClassification.progression)
     OSSEX_TRAIN_KEAR_2 = ("Ossex Train Kear 2", ITEMS_OFFSET_KEARS + 359, ItemClassification.progression)
@@ -54,13 +54,17 @@ class SingleKears(ItemTypeEnum):
     SANDFALL_CAVE_KEAR = ("Sandfall Cave Kear", ITEMS_OFFSET_KEARS + 320, ItemClassification.progression)
     SANDFALLS_PAYLOAD_PASSAGE_BOTTOM_KEAR = ("Sandfalls Payload Passage Bottom Kear", ITEMS_OFFSET_KEARS + 318, ItemClassification.progression) #lower case kea
     BONE_BEACH_MINING_CAMP_CAVE_KEAR = ("Bone Beach Mining Camp Cave Kear", ITEMS_OFFSET_KEARS + 69, ItemClassification.progression)
-    KINDLEWOOD_HOLLOWERS_PATH_TRINKET_KEAR = ("Kindlewood Hollowers Path Trinket Kear", ITEMS_OFFSET_KEARS + 344, ItemClassification.progression)
+    KINDLEWOOD_WALLOWERS_PATH_TRINKET_KEAR = ("Kindlewood Wallowers Path Trinket Kear", ITEMS_OFFSET_KEARS + 344, ItemClassification.progression)
     SEPTEMBURG_CROW_TOWN_TUNNEL_KEAR = ("Septemburg Crow Town Tunnel Kear", ITEMS_OFFSET_KEARS + 98, ItemClassification.progression)
     KINDLEWOOD_TOMATO_PATCH_KEAR = ("Kindlewood Tomato Patch Kear", ITEMS_OFFSET_KEARS + 338, ItemClassification.progression)
     KINDLEWOOD_TRAIN_TUNNEL_KEAR = ( "Kindlewood Train Tunnel Kear", ITEMS_OFFSET_KEARS + 337, ItemClassification.progression)
     COLTRANE_RAIL_YARD_KEAR = ("Coltrane Rail Yard Kear", ITEMS_OFFSET_KEARS + 115, ItemClassification.progression)
     ASTRAL_ORRERY_STELLARIUM_KEAR = ("Astral Orrery Stellarium Kear", ITEMS_OFFSET_KEARS + 127, ItemClassification.progression)
     BACKWATERS_FISHING_KEAR = ("Backwaters Fishing Kear", ITEMS_OFFSET_KEARS + 293, ItemClassification.progression)
+    LONERS_LANDING_BOARDWALK_KEAR = ("Loner's Landing Boarkwalk Kear", ITEMS_OFFSET_KEARS + 19, ItemClassification.progression)
+    WESTERN_WILDS_SECRET_PASSAGE_KEAR = ("Western Wilds Secret Passage Kear", ITEMS_OFFSET_KEARS + 248, ItemClassification.progression)
+    SANDFALLS_HIDDEN_CAVE_KEAR = ("Sandfalls Hidden Cave Kear", ITEMS_OFFSET_KEARS + 323, ItemClassification.progression)
+    RADIANT_MANOR_MEOWSTRO_ROOM_KEAR = ("Radiant Manor meowstro Room Kear", ITEMS_OFFSET_KEARS + 141, ItemClassification.progression)
 
 
 kear_area_lookup = {
@@ -93,11 +97,15 @@ kear_area_lookup = {
     SingleKears.SANDFALL_CAVE_KEAR.value : AreaKears.SANDFALLS_KEARS,
     SingleKears.SANDFALLS_PAYLOAD_PASSAGE_BOTTOM_KEAR.value : AreaKears.SANDFALLS_KEARS,
     SingleKears.BONE_BEACH_MINING_CAMP_CAVE_KEAR.value : AreaKears.BONE_BEACH_KEARS,
-    SingleKears.KINDLEWOOD_HOLLOWERS_PATH_TRINKET_KEAR.value : AreaKears.KINDLEWOOD_KEARS,
+    SingleKears.KINDLEWOOD_WALLOWERS_PATH_TRINKET_KEAR.value : AreaKears.KINDLEWOOD_KEARS,
     SingleKears.SEPTEMBURG_CROW_TOWN_TUNNEL_KEAR.value : AreaKears.SEPTEMBURG_KEARS,
     SingleKears.KINDLEWOOD_TOMATO_PATCH_KEAR.value : AreaKears.KINDLEWOOD_KEARS,
     SingleKears.KINDLEWOOD_TRAIN_TUNNEL_KEAR.value : AreaKears.KINDLEWOOD_KEARS,
     SingleKears.COLTRANE_RAIL_YARD_KEAR.value : AreaKears.COLTRANE_PEAK_KEARS,
     SingleKears.ASTRAL_ORRERY_STELLARIUM_KEAR.value : AreaKears.ASTRAL_ORRERY_KEARS,
     SingleKears.BACKWATERS_FISHING_KEAR.value : AreaKears.BACKWATER_KEARS,
+    SingleKears.LONERS_LANDING_BOARDWALK_KEAR.value : AreaKears.LONERS_LANDING_KEARS,
+    SingleKears.WESTERN_WILDS_SECRET_PASSAGE_KEAR.value : AreaKears.WESTERN_WILDS_KEARS,
+    SingleKears.SANDFALLS_HIDDEN_CAVE_KEAR.value : AreaKears.SANDFALLS_KEARS,
+    SingleKears.RADIANT_MANOR_MEOWSTRO_ROOM_KEAR.value : AreaKears.RADIANT_MANOR_KEARS,
 }

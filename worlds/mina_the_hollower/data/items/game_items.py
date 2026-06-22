@@ -167,8 +167,8 @@ class Trinkets(ItemTypeEnum):
 
 
 class BoneFiller(ItemTypeEnum):
-    BONE_DUST = ("BoneDust",50, ItemClassification.filler)
-    BONE_STONE = ("Bonestone",51, ItemClassification.filler)
+    # BONE_DUST = ("BoneDust",50, ItemClassification.filler)
+    # BONE_STONE = ("Bonestone",51, ItemClassification.filler)
     BONE_STONE_1 = ("Bonestone01", 52, ItemClassification.filler)
     BONE_STONE_2 = ("Bonestone02",53, ItemClassification.filler)
     BONE_STONE_3 = ("Bonestone03",54, ItemClassification.filler)

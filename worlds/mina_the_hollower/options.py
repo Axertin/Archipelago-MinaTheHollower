@@ -65,6 +65,7 @@ class RandomizeEntrances(OptionSet):
 
 class ExcludedAreas(OptionSet):
     """
+    NOT IMPLEMENTED WILL NOT BE USED
     Each Region you add to this list will not have any location in them have any items. That generator will be marked complete
 
     Example value: ["Astral Orrery", "Queensbury Crypt"]

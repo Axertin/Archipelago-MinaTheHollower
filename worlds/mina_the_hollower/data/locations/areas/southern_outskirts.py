@@ -7,18 +7,18 @@ from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanJumpTiles, CanB
 collectable_locations: dict[str, LocationData] = {
     "SO Commons Ossex Entry Left Chest" : LocationData(270, "Ossex Entry Western Wall Chest"),
     "SO Commons Ossex Entry Right Chest" : LocationData(266, "Ossex Entry Eastern Wall Chest"),
-    "SO Commons Chest" : LocationData(264, "Southern Outskirts Commons Main"), #needs burrow, float,
-    "SO Commons Crumblefin Head" : LocationData(274, "Southern Outskirts Commons Main"), #needs burrow, float, fishing rod,
+    "SO Commons Chest" : LocationData(264, "Southern Outskirts Commons Main", CanBurrow() & CanBounce()),
+    "SO Commons Crumblefin Head" : LocationData(274, "Southern Outskirts Commons Cliff"),
     "SO Cave Network Chest" : LocationData(265, "Southern Outskirts Cave Network Deep Exit"),
     "SO Cave Network Side Room Chest" : LocationData(268, "Southern Outskirts Cave Deep Arena"),
     "SO Poppit Keri" : LocationData(272, "Southern Outskirts Poppit"),
     "SO Poppit Kear" : LocationData(273, "Southern Outskirts Poppit"),
-    "SO Southern Pit Room Bonestone" : LocationData(261, "Southern Outskirts Commons Southern Pit Room Main"), #needs 5 tiles of air movement,
+    "SO Southern Pit Room Bonestone" : LocationData(261, "Southern Outskirts Commons Southern Pit Room Main", CanJumpTiles(distance=5)),
     "SO Western Pit Room Chest" : LocationData(267, "Southern Outskirts Commons Western Pit Room Main"),
     "SO Residence Primed Vial Pouch" : LocationData(269, "Southern Outskirts Residence Basement"),
     "SO Mining Passage Chest" : LocationData(331, "Southern Outskirts Mining Passage Secret"),
     "SO Moonbath Lace Glove" : LocationData(263, "Southern Outskirts Moonbath"),
-    "SO Four Flowers Chest" : LocationData(271, "Southern Outskirts Four Flowers Shortcut"), #needs burrow, bounce,
+    "SO Four Flowers Chest" : LocationData(271, "Southern Outskirts Four Flowers Shortcut", CanBurrow() & CanBounce()),
 }
 
 boss_locations: dict[str, LocationData] = {

@@ -1,21 +1,23 @@
-from rule_builder.rules import Has, True_
+from rule_builder.rules import Has
+from worlds.hk.Options import count
 
-from ... import RegionConnection, Transition, DirectionType, TransitionType, LocationData
-from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanJumpTiles, CanBounce, HasVialsCount, CanClimb, \
-    HasReachingSideArm
-
+from ... import LocationData
+from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneUps, GenericBoneUp, Trinkets, SingleKears
+from ...rules.ability_rules import CanBurrow, CanJumpTiles, CanBounce, HasVialsCount, CanClimb, \
+    HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform
+from ...rules.state_rules import HasAllKears, HasTrinketCount, HasRepairedWindyGenerator, HasKear
 
 collectable_locations: dict[str, LocationData] = {
-    "OS City Center Steady Soles" : LocationData(162, "Ossex City Center Main"), #needs kear, burrow,
-    "OS City Center Triple Flagellum" : LocationData(220, "Ossex City Center Main"), #needs fishing rod,
-    "OS City Center 2nd Race Kear" : LocationData(243, "Ossex City Center Main"), #needs burrow,
-    "OS City Center Final Race Bellows Bustle" : LocationData(322, "Ossex City Center Main"), #needs burrow, carry, float,
+    "OS City Center Steady Soles" : LocationData(162, "Ossex City Center Main"),
+    "OS City Center Triple Flagellum" : LocationData(220, "Ossex City Center Main", HasFishingRod()),
+    "OS City Center 2nd Race Kear" : LocationData(243, "Ossex City Center Main", CanBurrow()),
+    "OS City Center Final Race Bellows Bustle" : LocationData(322, "Ossex City Center Main", CanBounce() & CanBurrow() & CanCarry()),
     "OS Courtyard East Deboning Wand" : LocationData(161, "Ossex Courtyard East"),
-    "OS Courtyard West Weapon Upgrade" : LocationData(163, "Ossex Courtyard West Chest"), #needs 5 vials,
+    "OS Courtyard West Weapon Upgrade" : LocationData(163, "Ossex Courtyard West Chest", HasVialsCount(count=5)),
     "OS Courtyard Garden Warding Beastium" : LocationData(171, "Ossex Courtyard East Manor Side"),
     "OS Evra's Rest Health Rose" : LocationData(352, "Ossex Goddred's Grave End"),
-    "OS Couple's Quarter Chest" : LocationData(165, "Ossex Couple's Quarter"), #needs burrow,
-    "OS Couple's Quarter Thermal Pack" : LocationData(147, "Ossex Couple's Quarter"), #needs burrow,
+    "OS Couple's Quarter Chest" : LocationData(165, "Ossex Couple's Quarter", CanBurrow()),
+    "OS Couple's Quarter Thermal Pack" : LocationData(147, "Ossex Couple's Quarter", CanBurrow()),
     "OS Hollower's Guild Back Room Kear Chest" : LocationData(168, "Ossex Guild Back Room"),
     "OS Hollower's Guild Back Room Joule Alembic" : LocationData(210, "Ossex Guild Back Room"),
     "OS Hollower's Guild Back Room Isle Map" : LocationData(211, "Ossex Guild Back Room"),
@@ -26,7 +28,7 @@ collectable_locations: dict[str, LocationData] = {
     "OS Hollower's Guild Back Room Phonograph" : LocationData(216, "Ossex Guild Back Room"),
     "OS Hollower's Guild Back Room Enhanced Map" : LocationData(212, "Ossex Guild Back Room"),
     "OS Hollower's Guild Back Room All-Seeing Skull" : LocationData(213, "Ossex Guild Back Room"),
-    "OS Hollower's Guild Back Room Smack Muriel" : LocationData(146, "Ossex Guild Back Room"), #needs blastrike maul x3,
+    "OS Hollower's Guild Back Room Smack Muriel" : LocationData(146, "Ossex Guild Back Room", Has(Weapons.BLASTSTRIKE_MAUL.value, count=3)), #needs blastrike maul x3,
     "OS Kear Institute Kear #1" : LocationData(199, "Ossex Kear Institute"),
     "OS Kear Institute Kear #2" : LocationData(200, "Ossex Kear Institute"),
     "OS Kear Institute Kear #3" : LocationData(201, "Ossex Kear Institute"),
@@ -36,7 +38,7 @@ collectable_locations: dict[str, LocationData] = {
     "OS Kear Institute Kear #7" : LocationData(205, "Ossex Kear Institute"),
     "OS Kear Institute Kear #8" : LocationData(206, "Ossex Kear Institute"),
     "OS Kear Institute Kear #9" : LocationData(207, "Ossex Kear Institute"),
-    "OS Kear Institute Kear Completion" : LocationData(150, "Ossex Kear Institute"), #needs all kears+ all kear locks,
+    "OS Kear Institute Kear Completion" : LocationData(150, "Ossex Kear Institute", HasAllKears()),
     "OS Emporium Health Rose #1" : LocationData(186, "Ossex Emporium"),
     "OS Emporium Health Rose #2" : LocationData(187, "Ossex Emporium"),
     "OS Emporium Health Rose #3" : LocationData(188, "Ossex Emporium"),
@@ -55,22 +57,22 @@ collectable_locations: dict[str, LocationData] = {
     "OS Legovich's Arms Unchosen Weapon #2" : LocationData(176, "Ossex Legovich's Arms"),
     "OS Legovich's Arms Guardian Casket" : LocationData(178, "Ossex Legovich's Arms"),
     "OS Legovich's Arms Battery Buster" : LocationData(177, "Ossex Legovich's Arms"),
-    "OS Gutterways Bonestone" : LocationData(172, "Ossex Gutterways"), #needs 2 sparks, iron steed, burrow,
-    "OS High Street Valor Medallion" : LocationData(154, "Ossex High Street Main"), #needs kear, burrow, carry/throw,
-    "OS High Street Sewer Chest" : LocationData(164, "Ossex High Street Sewer"), #needs kear, burrow, carry/throw,
-    "OS Strategy Center Chest" : LocationData(167, "Ossex Strategy Center"), #needs reaching sidearm, burrow,
-    "OS Strategy Center Ophidio Bonestone" : LocationData(153, "Ossex Strategy Center"), #needs w&v lunge, burrow,
-    "OS Ossex Telescope Kear" : LocationData(155, "Ossex Balcony East"), #needs kear,
+    "OS Gutterways Bonestone" : LocationData(172, "Ossex Gutterways", Has(Sidearms.IRON_STEED.value)),
+    "OS High Street Valor Medallion" : LocationData(154, "Ossex High Street SE Garden", CanCarry()),
+    "OS High Street Sewer Chest" : LocationData(164, "Ossex High Street Sewer"),
+    "OS Strategy Center Chest" : LocationData(167, "Ossex Strategy Center", HasReachingSideArm() & CanBurrow()),
+    "OS Strategy Center Ophidio Bonestone" : LocationData(153, "Ossex Strategy Center", Has(Weapons.WHISPER_AND_VESPER.value, count=3) & CanBurrow()),
+    "OS Ossex Telescope Kear" : LocationData(155, "Ossex Balcony East"),
     "OS Attic Chest" : LocationData(166, "Ossex High Street Residence Upper Puzzle"),
-    "OS Atelier Chest" : LocationData(169, "Ossex Atelier"), #needs 3 tiles of air movement, burrow,
+    "OS Atelier Chest" : LocationData(169, "Ossex Atelier", CanJumpTiles(distance=3) & CanBurrow()),
     "OS Atelier Vitality Vest" : LocationData(208, "Ossex Atelier"),
-    "OS Atelier Custom Fit" : LocationData(209, "Ossex Atelier"), #needs vitality vest, safety shroud,
-    "OS Bowery Double Sidearm Permit" : LocationData(219, "Ossex Bowery Main"), #needs 5? sidearm levels,
-    "OS Bowery Upper Chest" : LocationData(173, "Ossex Bowery Upper"), #needs burrow, reaching sidearm/seismic belt/beastium transformation,
-    "OS Bowery New House Bonestone" : LocationData(159, "Ossex Bowery Tall Residence Upper Main"), #needs burrow,
-    "Ossex Bowery Residence Kear" : LocationData(156, "Ossex Bowery Tall Residence Upper Top Entrance"), #needs burrow,
-    "OS Music Hall Chest" : LocationData(170, "Ossex Music Hall"), #needs burrow,
-    "OS Music Hall Pneumatic Armlet" : LocationData(148, "Ossex Music Hall"), #needs burrow, climb, carry,
+    "OS Atelier Custom Fit" : LocationData(209, "Ossex Atelier", Has(PermanentUpgrades.VITALITY_VEST.value) & Has(PermanentUpgrades.SAFETY_SHROUD.value)),
+    "OS Bowery Double Sidearm Permit" : LocationData(219, "Ossex Bowery Main", Has(BoneUps.SIDEARM_BONE_UP_CAP.value, count=5) | Has(GenericBoneUp.ALL_BONE_UP_CAP.value, count=5)),
+    "OS Bowery Upper Chest" : LocationData(173, "Ossex Bowery Upper", CanBurrow() & (HasReachingSideArm() | Has(Trinkets.SEISMIC_BELT.value) | HasBeastiumTransform())),
+    "OS Bowery New House Bonestone" : LocationData(159, "Ossex Bowery Tall Residence Upper Main", CanBurrow()),
+    "Ossex Bowery Residence Kear" : LocationData(156, "Ossex Bowery Tall Residence Upper Top Entrance"),
+    "OS Music Hall Chest" : LocationData(170, "Ossex Music Hall"),
+    "OS Music Hall Pneumatic Armlet" : LocationData(148, "Ossex Music Hall", CanCarry() & CanClimb()),
     "OS Station Train Ticket" : LocationData(149, "Ossex Station"),
     "OS Station Underside Bell of Grace" : LocationData(158, "Ossex Station Underside Main"),
     "OS Trinket Bazaar Kear" : LocationData(160, "Ossex Trinket Bazaar"),
@@ -79,13 +81,13 @@ collectable_locations: dict[str, LocationData] = {
     "OS Trinket Bazaar Brisk Brew" : LocationData(181, "Ossex Trinket Bazaar"),
     "OS Trinket Bazaar Intrevenous Vial" : LocationData(182, "Ossex Trinket Bazaar"),
     "OS Trinket Bazaar Shock Flint" : LocationData(183, "Ossex Trinket Bazaar"),
-    "OS Trinket Bazaar Uranium Bracelet" : LocationData(25, "Ossex Trinket Bazaar"), #needs 15 trinkets,
-    "OS Trinket Bazaar Bubble Ring" : LocationData(184, "Ossex Trinket Bazaar"), #needs 15 trinkets,
-    "OS Trinket Bazaar Counter Vial" : LocationData(185, "Ossex Trinket Bazaar"), #needs ? trinkets,
-    "OS Trinket Bazaar Lightning Grip" : LocationData(334, "Ossex Trinket Bazaar"), #needs save """4""" students,
-    "OS Train Private Cabin Chest" : LocationData(360, "Ossex Train Private Cabin Left"), #needs burrow, 1 kear,
-    "OS Train Private Cabin Safety Shroud" : LocationData(357, "Ossex Train Private Cabin Left"), #needs burrow, 2 kear,
-    "OS Forgotten Cave Disturbing Dance" : LocationData(351, "Ossex City Center Main"), #needs burrow,
+    "OS Trinket Bazaar Uranium Bracelet" : LocationData(25, "Ossex Trinket Bazaar", HasTrinketCount(count=15)),
+    "OS Trinket Bazaar Bubble Ring" : LocationData(184, "Ossex Trinket Bazaar", HasTrinketCount(count=15)),
+    "OS Trinket Bazaar Counter Vial" : LocationData(185, "Ossex Trinket Bazaar", HasTrinketCount(count=15)),
+    "OS Trinket Bazaar Lightning Grip" : LocationData(334, "Ossex Trinket Bazaar", HasRepairedWindyGenerator()), #needs save """4""" students,
+    "OS Train Private Cabin Chest" : LocationData(360, "Ossex Train Private Cabin Left", CanBurrow() & HasKear(kear=SingleKears.OSSEX_TRAIN_KEAR_1.value)), #needs burrow, 1 kear,
+    "OS Train Private Cabin Safety Shroud" : LocationData(357, "Ossex Train Private Cabin Left", CanBurrow() & HasKear(kear=SingleKears.OSSEX_TRAIN_KEAR_1.value) & HasKear(kear=SingleKears.OSSEX_TRAIN_KEAR_2.value) ),
+    "OS Forgotten Cave Disturbing Dance" : LocationData(351, "Ossex City Center Main", CanBurrow() & CanBounce() & CanClimb()),
 }
 
 boss_locations: dict[str, LocationData] = {

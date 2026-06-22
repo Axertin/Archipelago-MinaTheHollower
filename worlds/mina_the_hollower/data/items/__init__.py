@@ -23,21 +23,21 @@ all_items: list[ItemTypeEnum] = [
 ]
 
 all_filler_items: list[ItemFiller] = [
-    ItemFiller(BoneFiller.BONE_DUST, 64),
-    ItemFiller(BoneFiller.BONE_STONE, 32),
+    # ItemFiller(BoneFiller.BONE_DUST, 64),
+    # ItemFiller(BoneFiller.BONE_STONE, 32),
     ItemFiller(BoneFiller.BONE_STONE_1, 16),
     ItemFiller(BoneFiller.BONE_STONE_2, 8),
     ItemFiller(BoneFiller.BONE_STONE_3, 4),
     ItemFiller(BoneFiller.BONE_STONE_4, 2),
     ItemFiller(BoneFiller.BONE_STONE_5, 1),
 
-    ItemFiller(JunkFiller.HEALING_VIAL_PICKUP, 8),
-    ItemFiller(JunkFiller.HEALING_VIAL_PACK_PICKUP, 4),
-    ItemFiller(JunkFiller.RED_FLOWER, 8),
-    ItemFiller(JunkFiller.YELLOW_FLOWER, 32),
+    ItemFiller(JunkFiller.HEALING_VIAL_PICKUP, 4),
+    ItemFiller(JunkFiller.HEALING_VIAL_PACK_PICKUP, 2),
+    ItemFiller(JunkFiller.RED_FLOWER, 2),
+    ItemFiller(JunkFiller.YELLOW_FLOWER, 4),
     ItemFiller(JunkFiller.MAGIC_LARGE, 4),
-    ItemFiller(JunkFiller.MAGIC_MEDIUM, 8),
-    ItemFiller(JunkFiller.MAGIC_SMALL, 16),
+    # ItemFiller(JunkFiller.MAGIC_MEDIUM, 8),
+    # ItemFiller(JunkFiller.MAGIC_SMALL, 16),
 ]
 
 base_items: list[ItemData] = [

@@ -19,13 +19,13 @@ def create_items(world):
     starting_items = []
     #starting items
     for item in base_items:
-        if world.options.random_starting_items:
+        if world.options.random_starting_items.value:
             create_item(world, item)
         else:
             for i in range(item.amount):
                 starting_items.append(Item(item.type.value, item.type.classification, item.type.item_id, world.player))
     for item_type in Abilities:
-        if world.options.random_starting_items:
+        if world.options.random_starting_items.value:
             create_single_item(world, item_type)
         else:
             starting_items.append(Item(item_type.value, item_type.classification, item_type.item_id, world.player))
@@ -96,10 +96,12 @@ def create_events(world):
         "Loner's Landing Shipwreck")
     for area, name in region_gen.items():
 
-        if area in world.options.excluded_areas.value:
-            region = starting_region
-        else:
-            region = world.get_region(area + " " + name + " Generator")
+        # if area in world.options.excluded_areas.value:
+        #     region = starting_region
+        # else:
+        region = world.get_region(area + " " + name + " Generator")
+
+
         event_loc = Location(world.player, "Repair" + area + "Generator", None, region)
         event_loc.place_locked_item(MinaTheHollowerItem("Repair " + name + " Generator", ItemClassification.progression, None, world.player))
         region.locations.append(event_loc)

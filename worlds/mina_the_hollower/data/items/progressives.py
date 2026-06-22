@@ -11,9 +11,9 @@ class Weapons(ItemTypeEnum):
     BATTERY_BUSTER = ("Battery Buster", ITEMS_OFFSET_PROGRESSIVES+4, ItemClassification.progression) #14, 15 and 16 are internal game ids
 
 class BoneUps(ItemTypeEnum):
-    ATTACK_BONE_UP_CAP = ("Progressive Attack Cap", ITEMS_OFFSET_PROGRESSIVES+4, ItemClassification.progression)
-    DEFENSE_BONE_UP_CAP = ("Progressive Defense Cap", ITEMS_OFFSET_PROGRESSIVES+4, ItemClassification.progression)
-    SIDEARM_BONE_UP_CAP = ("Progressive Sidearm Cap", ITEMS_OFFSET_PROGRESSIVES+4, ItemClassification.progression)
+    ATTACK_BONE_UP_CAP = ("Progressive Attack Cap", ITEMS_OFFSET_PROGRESSIVES+5, ItemClassification.progression)
+    DEFENSE_BONE_UP_CAP = ("Progressive Defense Cap", ITEMS_OFFSET_PROGRESSIVES+6, ItemClassification.progression)
+    SIDEARM_BONE_UP_CAP = ("Progressive Sidearm Cap", ITEMS_OFFSET_PROGRESSIVES+7, ItemClassification.progression)
 
 class GenericBoneUp(ItemTypeEnum):
-    ALL_BONE_UP_CAP = ("Progressive Bone Up Cap", ITEMS_OFFSET_PROGRESSIVES+4, ItemClassification.progression)
+    ALL_BONE_UP_CAP = ("Progressive Bone Up Cap", ITEMS_OFFSET_PROGRESSIVES+8, ItemClassification.progression)
