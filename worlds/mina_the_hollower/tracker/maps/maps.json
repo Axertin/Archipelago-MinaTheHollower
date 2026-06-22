@@ -1,4 +1,14 @@
 [
+  {"name": "World Map", "img": "area_images/overview/WorldMap.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "ShipWreck", "img": "area_images/loners_landing/0-17-18.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "ShipWreck Lower Decks", "img": "area_images/loners_landing/11.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Blighted Docks Landing", "img": "area_images/loners_landing/19.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Blighted Docks Fences", "img": "area_images/loners_landing/3-2-8-16.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Blighted Docks Bridge", "img": "area_images/loners_landing/6-4.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Blighted Docks Knights Room", "img": "area_images/loners_landing/9.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Blighted Docks Kear Room", "img": "area_images/loners_landing/13.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Boardwalk", "img": "area_images/loners_landing/14-7-10.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Sandwater Junction", "img": "area_images/loners_landing/23-22-28-21.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Ossex", "img": "area_images/ossex/ossex_main.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Eastern Hearth", "img": "area_images/eastern_hearth/eastern_hearth.png", "location_size": 32, "location_border_thickness": 2}
 ]

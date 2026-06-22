@@ -1,0 +1,158 @@
+[
+    {
+        "name": "Weapon Chest",
+        "sections": [
+            {"name": "LL Belowdecks Unchosen Weapon #1"}
+        ],
+        "map_locations": [
+            {
+                "map": "ShipWreck Lower Decks",
+                "x": 80,
+                "y": 527
+            }
+        ]
+    },
+    {
+        "name": "Weapon Chest",
+        "sections": [
+            {"name": "LL Belowdecks Unchosen Weapon #2"}
+        ],
+        "map_locations": [
+            {
+                "map": "ShipWreck Lower Decks",
+                "x": 142,
+                "y": 527
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "LL Belowdecks Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "ShipWreck Lower Decks",
+                "x": 206,
+                "y": 146
+            }
+        ]
+    },
+    {
+        "name": "Talk To Captain",
+        "sections": [
+            {"name": "LL Captain's Gift"}
+        ],
+        "map_locations": [
+            {
+                "map": "ShipWreck",
+                "x": 625,
+                "y": 430
+            }
+        ]
+    },
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "LL Shipwreck Beach Trigger Antennae"}
+        ],
+        "map_locations": [
+            {
+                "map": "ShipWreck",
+                "x": 200,
+                "y": 320
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "LL Blighted Docks Tall Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Blighted Docks Fences",
+                "x": 912,
+                "y": 686
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "LL Blighted Docks Side Cave Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Blighted Docks Fences",
+                "x": 50,
+                "y": 300
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "LL Blighted Docks Bridge Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Blighted Docks Bridge",
+                "x": 978,
+                "y": 144
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "LL Blighted Docks Residence Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Blighted Docks Knights Room",
+                "x": 83,
+                "y": 129
+            }
+        ]
+    },
+    {
+        "name": "Bubble",
+        "sections": [
+            {"name": "LL Blighted Docks Burrow Residence Bubble"}
+        ],
+        "map_locations": [
+            {
+                "map": "Blighted Docks Kear Room",
+                "x": 382,
+                "y": 70
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "LL Boardwalk Fire Bounce Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Boardwalk",
+                "x": 1553,
+                "y": 645
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "LL Boardwalk Sandfalls Ledge Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandwater Junction",
+                "x": 80,
+                "y": 586
+            }
+        ]
+    }
+]

@@ -29,9 +29,7 @@ def create_items(world):
             create_single_item(world, item_type)
         else:
             starting_items.append(Item(item_type.value, item_type.classification, item_type.item_id, world.player))
-    #for logic reasons, start with the sidearms
-    for item_type in Sidearms:
-        starting_items.append(Item(item_type.value, item_type.classification, item_type.item_id, world.player))
+
 
     for item_type in PermanentUpgrades:
         create_single_item(world, item_type)
@@ -83,6 +81,8 @@ def create_events(world):
     loc.place_locked_item(MinaTheHollowerItem(PlayerUpgrades.HEALING_VIAL_POUCH.value, ItemClassification.progression, PlayerUpgrades.HEALING_VIAL_POUCH.item_id,
     world.player))
 
+    # for logic reasons, start with the sidearms
+
     region_gen = {
         "Astral Orrery" : "Starry",
         "Queensbury Crypt" : "Solemn",
@@ -94,6 +94,14 @@ def create_events(world):
     starting_region = world.get_region(
         "Ossex City Center Main") if world.options.ossex_start.value else world.get_region(
         "Loner's Landing Shipwreck")
+
+    for item_type in Sidearms:
+        event_loc = Location(world.player, "Start " + item_type.value, None, starting_region)
+        event_loc.place_locked_item(
+            MinaTheHollowerItem(item_type.value, ItemClassification.progression, None, world.player))
+        starting_region.locations.append(event_loc)
+        # starting_items.append(Item(item_type.value, item_type.classification, item_type.item_id, world.player))
+
     for area, name in region_gen.items():
 
         # if area in world.options.excluded_areas.value:
@@ -139,4 +147,12 @@ def create_events(world):
         MinaTheHollowerItem(AstralPlatforms.PURPLE_ASTRAL_PLATFORMS.value, ItemClassification.progression, None,
                             world.player))
     purple_region.locations.append(event_loc_purple)
+
+
+    goal_region = world.get_region("Radiant Manor Prime Generator")
+    goal_event = Location(world.player, "Defeat Giga Lionel", None, goal_region)
+    goal_event.place_locked_item(
+        MinaTheHollowerItem("Victory", ItemClassification.progression, None,
+                            world.player))
+    purple_region.locations.append(goal_event)
 

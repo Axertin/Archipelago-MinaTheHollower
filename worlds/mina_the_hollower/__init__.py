@@ -6,6 +6,8 @@ from BaseClasses import ItemClassification, Location, Tutorial
 from entrance_rando import bake_target_group_lookup, randomize_entrances
 
 from Utils import visualize_regions
+from rule_builder.rules import Has
+from .data.rules.ability_rules import PowerLevelThreshold
 from .data.rules.state_rules import HasRepairedAllGenerators
 
 from ..AutoWorld import WebWorld
@@ -53,6 +55,8 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         loc_name: loc_data.location_id for loc_name, loc_data in all_locations.items()
     }
 
+    item_lookup = {item.value: item for item in all_items}
+
     ut_can_gen_without_yaml = True
 
     tracker_world: ClassVar = {
@@ -61,6 +65,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         "map_page_locations": {
             "locations/eastern_hearth.json",
             "locations/ossex.json",
+            "locations/loners_landing.json",
         },
         "map_page_index": tracker.map_page_index,
         "map_page_setting_key": "MTH_level_{team}_{player}",
@@ -95,14 +100,12 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             randomize_entrances(self, False, target_group_lookup)
 
     def create_item(self, item: str) -> MinaTheHollowerItem:
-        if item in all_filler_items.keys():
-            return MinaTheHollowerItem(
-                item, ItemClassification.filler, self.item_name_to_id[item], self.player
-            )
+        item_enum = self.item_lookup[item]
+
         return MinaTheHollowerItem(
             item,
-            ItemClassification.progression,
-            self.item_name_to_id[item],
+            item_enum.classification,
+            item_enum.item_id,
             self.player,
         )
 
@@ -112,7 +115,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             self.push_precollected(item)
 
     def set_rules(self):
-        self.set_completion_rule(HasRepairedAllGenerators())
+        self.set_completion_rule(Has("Victory") & PowerLevelThreshold(power=60))
 
     def generate_output(self, output_directory: str):
         print("Generating Output")
