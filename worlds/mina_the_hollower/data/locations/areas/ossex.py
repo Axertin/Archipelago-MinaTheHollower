@@ -5,7 +5,8 @@ from ... import LocationData
 from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneUps, GenericBoneUp, Trinkets, SingleKears
 from ...rules.ability_rules import CanBurrow, CanJumpTiles, CanBounce, HasVialsCount, CanClimb, \
     HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform
-from ...rules.state_rules import HasAllKears, HasTrinketCount, HasRepairedWindyGenerator, HasKear
+from ...rules.state_rules import HasAllKears, HasTrinketCount, HasRepairedWindyGenerator, HasKear, \
+    HasCompletedOneSparkGenerator
 
 collectable_locations: dict[str, LocationData] = {
     "OS City Center Steady Soles" : LocationData(162, "Ossex City Center Main"),
@@ -52,11 +53,11 @@ collectable_locations: dict[str, LocationData] = {
     "OS Emporium Vial Pouch #2" : LocationData(190, "Ossex Emporium"),
     "OS Emporium Vial Pouch #3" : LocationData(191, "Ossex Emporium"),
     "OS Emporium Spark Container" : LocationData(192, "Ossex Emporium"),
-    "OS Legovich's Arms Starting Weapon Upgrade" : LocationData(174, "Ossex Legovich's Arms"),
-    "OS Legovich's Arms Unchosen Weapon #1" : LocationData(175, "Ossex Legovich's Arms"),
-    "OS Legovich's Arms Unchosen Weapon #2" : LocationData(176, "Ossex Legovich's Arms"),
-    "OS Legovich's Arms Guardian Casket" : LocationData(178, "Ossex Legovich's Arms"),
-    "OS Legovich's Arms Battery Buster" : LocationData(177, "Ossex Legovich's Arms"),
+    "OS Legovich's Arms Starting Weapon Upgrade" : LocationData(174, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
+    "OS Legovich's Arms Unchosen Weapon #1" : LocationData(175, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
+    "OS Legovich's Arms Unchosen Weapon #2" : LocationData(176, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
+    "OS Legovich's Arms Guardian Casket" : LocationData(178, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
+    "OS Legovich's Arms Battery Buster" : LocationData(177, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
     "OS Gutterways Bonestone" : LocationData(172, "Ossex Gutterways", Has(Sidearms.IRON_STEED.value)),
     "OS High Street Valor Medallion" : LocationData(154, "Ossex High Street SE Garden", CanCarry()),
     "OS High Street Sewer Chest" : LocationData(164, "Ossex High Street Sewer"),
