@@ -116,6 +116,10 @@ class ItemPower:
     power: int
     requiredType: Optional[ItemTypeEnum] = None
 
+class ShortCutItem(NamedTuple):
+    type: ItemTypeEnum
+    access_rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()
+
 class RegionConnection(NamedTuple):
     exiting_region: str
     entering_region: str

@@ -4,19 +4,26 @@ from .. import ItemTypeEnum
 
 
 class Sidearms(ItemTypeEnum):
-    VOLT_HATCHET = ("Volt Hatchet", 21, ItemClassification.progression)
+    HOLLOWERS_ROCKS = ("Hollowers Rocks", 28, ItemClassification.progression)
     GYRO_DAGGER = ("Gyro Dagger", 22, ItemClassification.progression)
+    VOLT_HATCHET = ("Volt Hatchet", 21, ItemClassification.progression)
+
+    FOG_THROWER = ("FogThrower", 29, ItemClassification.progression)  # burrow
+    DEFLECTOR_PARASOL = ("BarrierParasol", 33, ItemClassification.progression)# burrow
+    MIST_JAR = ("Mist Jar", 31, ItemClassification.progression)# burrow
+    DRIVER_DRILL = ("ShieldBash", 25, ItemClassification.progression)# burrow
+
     RECALL_DISC = ("Recall Disc",23, ItemClassification.progression)
     DYNAMO_LANTURN = ("Dynamo Lanturn", 24, ItemClassification.progression)
-    DRIVER_DRILL = ("ShieldBash", 25, ItemClassification.progression)
+
     BOUNDING_BOMBS =("Bounding Bombs", 26, ItemClassification.progression)
-    IRON_STEED = ("Iron Steed", 27, ItemClassification.progression)
-    HOLLOWERS_ROCKS = ("Hollowers Rocks",28, ItemClassification.progression)
-    FOG_THROWER = ("FogThrower",29, ItemClassification.progression)
+    IRON_STEED = ("Iron Steed", 27, ItemClassification.progression) #2 sparks or train ticket and septemburg ticket
+
+
     BECKONING_COLLAR = ("Beckoning Collar",30, ItemClassification.progression)
-    MIST_JAR = ("Mist Jar", 31, ItemClassification.progression)
+
     GNAWING_GHOSTS = ("Gnawing Ghosts",32, ItemClassification.progression)
-    DEFLECTOR_PARASOL = ("BarrierParasol",33, ItemClassification.progression)
+
     FISHING_ROD = ("Fishing Rod",34, ItemClassification.progression) #103 is gold
     ANGLERS_RAFT = ("Angler's Raft", 102, ItemClassification.progression)
     # "FishingGoldPickup": ItemData(103, ItemClassification.progression),
@@ -195,7 +202,7 @@ class JunkFiller(ItemTypeEnum):
     # "HealingVial" : 17
     SPARK = ("Spark",73, ItemClassification.filler)
     HEALING_VIAL_PICKUP = ("Healing Vial Pickup",19, ItemClassification.filler)
-    HEALING_VIAL_PACK_PICKUP = ("HealingVialPackPickup",20, ItemClassification.filler)
+    # HEALING_VIAL_PACK_PICKUP = ("HealingVialPackPickup",20, ItemClassification.filler)
     YELLOW_FLOWER = ("Yellow Flower Heal",35, ItemClassification.filler)
     RED_FLOWER = ("Red Flower Heal",36, ItemClassification.filler)
     MAGIC_SMALL = ("MagicSmall",37, ItemClassification.filler)

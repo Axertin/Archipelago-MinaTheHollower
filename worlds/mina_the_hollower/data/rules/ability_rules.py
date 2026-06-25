@@ -105,19 +105,39 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         def _evaluate(self, state: CollectionState) -> bool:
             # Always have basic jump
             best_distance = 1
-            # Total additive bonuses
-            additive_bonus = sum(
-                movement_item.distance
-                for movement_item in additive_movement_items
-                if state.has(movement_item.type.value, self.player)
-            )
+            trinket_slots = state.count(PlayerUpgrades.TRINKET_BAG.value, self.player)
             # Check each owned base movement type
+            base_needs_trinket = False
             for movement_item in base_movement_items:
                 if state.has(movement_item.type.value, self.player):
-                    best_distance = max(
-                        best_distance,
-                        movement_item.distance + additive_bonus
-                    )
+                    needs_trinket = False
+                    if movement_item.type in Trinkets:
+                        if trinket_slots <= 0:
+                            continue
+                        else:
+                            needs_trinket = True
+                    if best_distance == movement_item.distance and base_needs_trinket is True and needs_trinket is False:
+                        base_needs_trinket = False
+                    if best_distance < movement_item.distance:
+                        best_distance = movement_item.distance
+                        base_needs_trinket = needs_trinket
+            if base_needs_trinket:
+                trinket_slots -= 1
+
+            additive_bonus = 0
+
+            for movement_item in additive_movement_items:
+                if not state.has(movement_item.type.value, self.player):
+                    continue
+
+                if trinket_slots == 0:
+                    continue
+
+                trinket_slots -= 1
+                additive_bonus += movement_item.distance
+
+            best_distance += additive_bonus
+
 
             return best_distance >= self.distance
 

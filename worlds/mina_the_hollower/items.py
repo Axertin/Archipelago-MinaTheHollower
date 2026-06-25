@@ -1,8 +1,13 @@
-from BaseClasses import Item, Location, ItemClassification
+from BaseClasses import Item, Location, ItemClassification, CollectionRule
+from rule_builder.rules import True_, Rule
+from .world_base import MinaTheHollowerBase
 from .constants import MINA_THE_HOLLOWER
 from .data import ItemData, ItemTypeEnum, ItemFiller
 from .data.items import Kear, SingleKears, AreaKears, base_items, Abilities, BoneUps, GenericBoneUp, all_filler_items, \
-    PermanentUpgrades, Sidearms, PlayerUpgrades, AstralPlatforms, upgrade_items, Trinkets
+    PermanentUpgrades, Sidearms, PlayerUpgrades, AstralPlatforms, upgrade_items, Trinkets, BASE_ITEM_TOTAL, \
+    trinket_powers, upgrade_powers, valid_power_types
+from .data.rules.ability_rules import CanJumpTiles
+from .data.rules.state_rules import sidearm_rules
 
 
 class MinaTheHollowerItem(Item):
@@ -10,35 +15,95 @@ class MinaTheHollowerItem(Item):
 
 def create_item(world, item: ItemData):
     for i in range(item.amount):
-        world.itempool.append(Item(item.type.value, item.type.classification, item.type.item_id, world.player))
+        world.itempool.append(MinaTheHollowerItem(item.type.value, item.type.classification, item.type.item_id, world.player))
 
 def create_single_item(world, item_type: ItemTypeEnum):
-    world.itempool.append(Item(item_type.value, item_type.classification, item_type.item_id, world.player))
+    world.itempool.append(MinaTheHollowerItem(item_type.value, item_type.classification, item_type.item_id, world.player))
 
 def create_items(world):
-    starting_items = []
+    is_ut = getattr(world.multiworld, "generation_is_fake", False)
+    all_items: list[ItemData] = []
+
+    for item in upgrade_items:
+        for _ in range(item.amount):
+            all_items.append(ItemData(item.type, 1))
+
+    for item_type in PermanentUpgrades:
+        all_items.append(ItemData(item_type, 1))
+    for item_type in Trinkets:
+        all_items.append(ItemData(item_type, 1))
+
+    #dont want to start
+    if world.options.bone_up_cap.value == 0:
+        for item_type in BoneUps:
+            for _ in range(9):
+                all_items.append(ItemData(item_type, 1))
+    else:
+        for _ in range(9):
+            all_items.append(ItemData(GenericBoneUp.ALL_BONE_UP_CAP, 1))
+
+    starting_items: list[Item] = [] if not is_ut else world.starting_items
     #starting items
-    for item in base_items:
-        if world.options.random_starting_items.value:
-            create_item(world, item)
+    print(f"random starting {world.options.random_starting_items.value}")
+    if world.options.random_starting_items.value:
+        for item in base_items:
+            for _ in range(item.amount):
+                all_items.append(ItemData(item.type, 1))
+        if is_ut:
+            for item in starting_items:
+                item_data = next(
+                    (x for x in all_items if x.type.item_id == item.code),
+                    None
+                )
+
+                if item_data is None:
+                    continue
+
+                item_data.amount -= 1
+
+                if item_data.amount <= 0:
+                    all_items.remove(item_data)
         else:
+            for i in range(BASE_ITEM_TOTAL):
+                if i < (BASE_ITEM_TOTAL * 2) // 3:
+                    valid_items = [
+                        item
+                        for item in all_items
+                        if item.type in valid_power_types
+                    ]
+
+                    item_data = world.random.choice(valid_items)
+                else:
+                    item_data = world.random.choice(all_items)
+                print(f"starting item {item_data.type.value}")
+                starting_items.append(
+                    MinaTheHollowerItem(
+                        item_data.type.value,
+                        item_data.type.classification,
+                        item_data.type.item_id,
+                        world.player,
+                    )
+                )
+
+                item_data.amount -= 1
+
+                if item_data.amount <= 0:
+                    all_items.remove(item_data)
+    else:
+        for item in base_items:
             for i in range(item.amount):
-                starting_items.append(Item(item.type.value, item.type.classification, item.type.item_id, world.player))
+                print(f"normal item {item.type.value}")
+                starting_items.append(MinaTheHollowerItem(item.type.value, item.type.classification, item.type.item_id, world.player))
+
     for item_type in Abilities:
         if item_type.value in world.options.ability_rando.value:
             create_single_item(world, item_type)
         else:
-            starting_items.append(Item(item_type.value, item_type.classification, item_type.item_id, world.player))
+            starting_items.append(MinaTheHollowerItem(item_type.value, item_type.classification, item_type.item_id, world.player))
 
-
-    for item_type in PermanentUpgrades:
-        create_single_item(world, item_type)
-
-    for item in upgrade_items:
+    for item in all_items:
         create_item(world, item)
 
-    for item_type in Trinkets:
-        create_single_item(world, item_type)
 
     if world.options.kear_rando.value == 0:
         create_item(world,ItemData(Kear.UNIVERSAL_KEAR, 50))
@@ -49,11 +114,7 @@ def create_items(world):
         for item_type in AreaKears:
             create_single_item(world, item_type)
 
-    if world.options.bone_up_cap.value == 0:
-        for item_type in BoneUps:
-            create_item(world, ItemData(item_type, 9))
-    else:
-        create_item(world, ItemData(GenericBoneUp.ALL_BONE_UP_CAP, 9))
+
 
 
     total_location_count = len(world.multiworld.get_unfilled_locations(world.player))
@@ -74,7 +135,12 @@ def create_items(world):
 
     return starting_items
 
-
+def create_event(world, region, item_name, rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()):
+    event_loc = Location(world.player, "Event " + item_name, None, region)
+    world.set_rule(event_loc, rule)
+    event_loc.place_locked_item(
+        MinaTheHollowerItem(item_name, ItemClassification.progression, None, world.player))
+    region.locations.append(event_loc)
 
 def create_events(world):
 
@@ -90,12 +156,12 @@ def create_events(world):
         "Ossex City Center Main") if world.options.ossex_start.value else world.get_region(
         "Loner's Landing Shipwreck")
 
-    for item_type in Sidearms:
-        event_loc = Location(world.player, "Start " + item_type.value, None, starting_region)
-        event_loc.place_locked_item(
-            MinaTheHollowerItem(item_type.value, ItemClassification.progression, None, world.player))
-        starting_region.locations.append(event_loc)
+    for itemShortcut in sidearm_rules:
+        create_event(world, starting_region, itemShortcut.type.value, itemShortcut.access_rule)
         # starting_items.append(Item(item_type.value, item_type.classification, item_type.item_id, world.player))
+
+    create_event(world, world.get_region("Backwaters Fishing Hole"), Sidearms.FISHING_ROD.value)
+    create_event(world, world.get_region("Sandfalls Sandwater Junction"), Sidearms.ANGLERS_RAFT.value, CanJumpTiles(distance=2))
 
     for area, name in region_gen.items():
 
@@ -149,4 +215,4 @@ def create_events(world):
     goal_event.place_locked_item(
         MinaTheHollowerItem("Victory", ItemClassification.progression, None,
                             world.player))
-    purple_region.locations.append(goal_event)
+    goal_region.locations.append(goal_event)

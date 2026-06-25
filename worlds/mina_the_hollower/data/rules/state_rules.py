@@ -5,8 +5,9 @@ from BaseClasses import CollectionState
 from NetUtils import JSONMessagePart
 from rule_builder.options import OptionFilter
 from rule_builder.rules import Rule, Has, True_, False_
-from .ability_rules import CanJumpTiles, CanSwim, CanCarry
-from ..items import Kear, SingleKears, AreaKears, Trinkets, AstralPlatforms
+from .ability_rules import CanJumpTiles, CanSwim, CanCarry, CanBurrow
+from .. import ShortCutItem
+from ..items import Kear, SingleKears, AreaKears, Trinkets, AstralPlatforms, Sidearms, PlayerUpgrades, PermanentUpgrades
 from ..items.kears import kear_area_lookup
 from ...constants import MINA_THE_HOLLOWER
 from ...world_base import MinaTheHollowerBase
@@ -165,3 +166,18 @@ def HasAccessToTorch():
 #figure out when screen rando exists
 def HasLadder():
     return Has(SingleKears.PINKY_KEAR.value) & Has(SingleKears.PINKY_BACK_KEAR.value) & (CanSwim() | CanJumpTiles(distance=3)) & CanCarry()
+
+sidearm_rules: list[ShortCutItem] = [
+    ShortCutItem(Sidearms.HOLLOWERS_ROCKS, True_()),
+    ShortCutItem(Sidearms.GYRO_DAGGER, True_()),
+    ShortCutItem(Sidearms.VOLT_HATCHET, True_()),
+    ShortCutItem(Sidearms.IRON_STEED, Has(PlayerUpgrades.SPARK_CONTAINER.value, 2) | ((Has(PermanentUpgrades.SEPTEMBURG_TICKET.value) & Has(PermanentUpgrades.TRAIN_PASS.value)) & CanBurrow())),
+    ShortCutItem(Sidearms.FOG_THROWER, CanBurrow()),
+    ShortCutItem(Sidearms.DEFLECTOR_PARASOL, CanBurrow()),
+    ShortCutItem(Sidearms.MIST_JAR, CanBurrow()),
+    ShortCutItem(Sidearms.DRIVER_DRILL, CanBurrow()),
+    ShortCutItem(Sidearms.RECALL_DISC, True_()),
+    ShortCutItem(Sidearms.BOUNDING_BOMBS, True_()),
+    ShortCutItem(Sidearms.BECKONING_COLLAR, True_()),
+    ShortCutItem(Sidearms.GNAWING_GHOSTS, True_()),
+]

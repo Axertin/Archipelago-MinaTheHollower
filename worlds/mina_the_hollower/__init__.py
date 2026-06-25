@@ -82,14 +82,12 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         self.itempool = []
         self.entrance_rando = False
         self.hints = {}
+        self.starting_items = []
 
         super().__init__(multiworld, player)
 
     def generate_early(self) -> None:
-        # self.options.ability_rando.value = False
-        self.options.random_starting_items.value = False
         self.handle_ut_yamless(None)
-        # Ability rando requires starting in Ossex
         if self.options.ability_rando.value:
             self.options.ossex_start.value = self.options.ossex_start.option_true
 
@@ -115,8 +113,8 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         )
 
     def create_items(self):
-        starting_items = items.create_items(self)
-        for item in starting_items:
+        self.starting_items = items.create_items(self)
+        for item in self.starting_items:
             self.push_precollected(item)
 
     def set_rules(self):
@@ -134,7 +132,6 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         )
 
     def fill_slot_data(self) -> id:
-        # print("Filling Slot Data")
         ability_rando = self.options.ability_rando.value
         return {
             "sem_ver": self.manifest["mod_version"],
@@ -149,6 +146,10 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
                 for option_key, slot_keys in ABILITY_RANDO_SLOT_KEYS.items()
                 for slot_key in slot_keys
             },
+            "starting_items": [
+                item.name
+                for item in self.starting_items
+            ]
         }
 
     def extend_hint_information(self, hint_data: Dict[int, Dict[int, str]]):
@@ -183,4 +184,6 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         # self.options.shuffle_enemy_level.value = slot_data["shuffle_enemy_level"]
         # self.options.shuffled_items.value = slot_data["shuffled_items"]
 
+        for item_name in slot_data["starting_items"]:
+            self.starting_items.append(MinaTheHollowerItem(item_name, ItemClassification.progression, self.item_name_to_id[item_name], self.player))
         return slot_data

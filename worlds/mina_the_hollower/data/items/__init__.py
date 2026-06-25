@@ -1,3 +1,4 @@
+from rule_builder.rules import True_, Has
 from .abilities import Abilities
 from .blockers import AstralPlatforms
 from .game_items import Sidearms, PermanentUpgrades, PlayerUpgrades, Trinkets, BoneFiller, JunkFiller
@@ -22,6 +23,11 @@ all_items: list[ItemTypeEnum] = [
     *GenericBoneUp
 ]
 
+item_name_to_type = {
+    item.value: item
+    for item in all_items
+}
+
 all_filler_items: list[ItemFiller] = [
     # ItemFiller(BoneFiller.BONE_DUST, 64),
     # ItemFiller(BoneFiller.BONE_STONE, 32),
@@ -41,13 +47,15 @@ all_filler_items: list[ItemFiller] = [
     ItemFiller(BoneFiller.TREASURE_JEWEL_LARGE, 8),
     ItemFiller(BoneFiller.TREASURE_JEWEL_LARGEST, 4),
     # ItemFiller(JunkFiller.HEALING_VIAL_PICKUP, 4),
-    ItemFiller(JunkFiller.HEALING_VIAL_PACK_PICKUP, 2),
+    # ItemFiller(JunkFiller.HEALING_VIAL_PACK_PICKUP, 2),
     ItemFiller(JunkFiller.RED_FLOWER, 10),
     # ItemFiller(JunkFiller.YELLOW_FLOWER, 4),
     ItemFiller(JunkFiller.MAGIC_LARGE, 4),
     # ItemFiller(JunkFiller.MAGIC_MEDIUM, 8),
     # ItemFiller(JunkFiller.MAGIC_SMALL, 16),
 ]
+
+BASE_ITEM_TOTAL = 15
 
 base_items: list[ItemData] = [
     ItemData(PlayerUpgrades.HEALTH_ROSE, 8),
@@ -76,7 +84,7 @@ upgrade_items: list[ItemData] = [
 additive_movement_items: list[ItemMovement] = [
     ItemMovement(Trinkets.KERI_THE_WISP, 1),
     ItemMovement(Trinkets.PIT_PRESERVER, 1),
-    ItemMovement(Trinkets.BELLOWS_BUSTLE, 1),
+    ItemMovement(Trinkets.BELLOWS_BUSTLE, 2),
 
 
 ]
@@ -96,6 +104,7 @@ all_movement_items: list[ItemMovement] = [
 item_powers_dependencies: list[ItemPower] = [
     ItemPower(PlayerUpgrades.TRINKET_BAG, 0),
 ]
+
 
 trinket_powers: list[ItemPower] = [
     ItemPower(Trinkets.LACE_GLOVE, 1),
@@ -122,7 +131,7 @@ trinket_powers: list[ItemPower] = [
     ItemPower(Trinkets.DODGING_PENDULUM, 6),
     ItemPower(Trinkets.RECKLESS_BEASTIUM, 2),
     ItemPower(Trinkets.VIAL_SALVO, 2, PermanentUpgrades.HEALING_VIAL_POUCH),
-    ItemPower(Trinkets.RECKLESS_BEASTIUM, 2),
+    ItemPower(Trinkets.WARDING_BEASTIUM, 2),
 ]
 
 upgrade_powers: list[ItemPower] = [
@@ -143,3 +152,8 @@ all_power_items: list[ItemPower] = [
     *trinket_powers,
     *item_powers_dependencies
 ]
+
+valid_power_types = {
+    power.type
+    for power in trinket_powers + upgrade_powers
+}
