@@ -20,7 +20,7 @@ Use [Universal Tracker](https://github.com/FarisTheAncient/Archipelago/releases?
 
 ### Tracker
 
-The [Universal Tracker](https://github.com/FarisTheAncient/Archipelago/releases?q=Tracker) Mmap tracker is currently complete for Loner's Landing, Southern Outskirts, and Eastern Hearth. Please limit map tracker feedback to these areas for now.
+The [Universal Tracker](https://github.com/FarisTheAncient/Archipelago/releases?q=Tracker) map tracker is currently complete for Loner's Landing, Southern Outskirts, and Eastern Hearth. Please limit map tracker feedback to these areas for now.
 
 We would also appreciate feedback on how the map tracker is organized and whether you find it useful as development continues.
 
@@ -41,7 +41,7 @@ Find more detailed setup instructions for the mod in the [Mod Readme](https://gi
 
 **NEVER LOAD INTO A SAVE AND THEN CONNECT**
 
-**NEVER LOAD INTO A VANNILA SAVE YOU DONT WANT MODIFIED**
+**NEVER LOAD INTO A VANILLA SAVE YOU DONT WANT MODIFIED**
 
 There is also a console you can access by presssing **F1**. type ```help``` to see commands
 
