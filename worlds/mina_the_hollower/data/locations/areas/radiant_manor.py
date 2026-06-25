@@ -6,7 +6,7 @@ from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanBounce, CanJump
 from ...rules.state_rules import HasKear
 
 collectable_locations: dict[str, LocationData] = {
-    "RM Foyer Library Chest" : LocationData(275, "Radiant Manor Foyer Library", CanJumpTiles(distance=2)),
+    "RM Foyer Library Chest" : LocationData(275, "Radiant Manor Foyer Library", CanJumpTiles(distance=2) & CanClimb()),
     "RM Mimic Chamber Dodging Pendulum" : LocationData(140, "Radiant Manor Mimic Chamber", CanBurrow()),
     "RM Rafters Chest" : LocationData(143, "Radiant Manor Rafters", CanBurrow()),
     "RM Servant's Quarters Spring Heels" : LocationData(145, "Radiant Manor Servant's Quarters", CanBurrow()),
