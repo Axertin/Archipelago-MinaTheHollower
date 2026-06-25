@@ -107,6 +107,7 @@ class KearRandomization(Choice):
     AP Items: Each Kear Lock is removed by a unique AP item
     Area AP Items: All Kear Locks in an area are removed by a single AP Item
     """
+    display_name = "Kear Rando"
     option_vanilla = 0
     option_apItems = 1
     # option_areaApItems = 2
