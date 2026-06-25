@@ -5,10 +5,10 @@ from ... import RegionConnection, Transition, LocationData, TransitionType, Dire
 from ...items import Trinkets, SingleKears
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanJumpTiles, CanBounce, HasReachingSideArm, CanClimb, \
     CanSwim, HasFishingRod
-from ...rules.state_rules import HasCompletedOneSparkGenerator, HasRepairedSolemnGenerator, HasKear
+from ...rules.state_rules import HasRepairedSolemnGenerator, HasKear, HasRepairedOneGenerator
 
 collectable_locations: dict[str, LocationData] = {
-    "EH Grassland Trinket Bag" : LocationData(221, "Eastern Hearth Grassland", HasCompletedOneSparkGenerator()),
+    "EH Grassland Trinket Bag" : LocationData(221, "Eastern Hearth Grassland", HasRepairedOneGenerator()),
     "EH Grassland Dork Eyes" : LocationData(241, "Eastern Hearth Grassland Bridge Right", HasFishingRod()), #needs fishing rod,
     "EH Grassland Ossex Patio Chest" : LocationData(231, "Eastern Hearth I Screen", CanBurrow()),
     "EH Grassland Bush Room Bonestone" : LocationData(236, "Eastern Hearth Bush Room", HasKear(kear=SingleKears.EASTERN_HEARTH_GRASSLAND_BUSHROOM_KEAR.value)), #needs kear,
@@ -28,5 +28,5 @@ collectable_locations: dict[str, LocationData] = {
 }
 
 boss_locations: dict[str, LocationData] = {
-    "EH Grassland Maxi": LocationData(1018, "Eastern Heath Grassland", HasCompletedOneSparkGenerator()),
+    "EH Grassland Maxi": LocationData(1018, "Eastern Heath Grassland", HasRepairedOneGenerator()),
 }

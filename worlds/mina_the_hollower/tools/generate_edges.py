@@ -54,7 +54,7 @@ GENERATED_INIT = (
 
 def _rule_suffix(rule: str) -> str:
     rule = rule.strip()
-    return f", {rule}" if rule else "True_()"
+    return f", {rule}" if rule else ", True_()"
 
 
 def _comment(notes: str) -> str:

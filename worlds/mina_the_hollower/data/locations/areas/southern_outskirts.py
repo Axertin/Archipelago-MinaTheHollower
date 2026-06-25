@@ -3,6 +3,7 @@ from rule_builder.options import OptionFilter
 from rule_builder.rules import Has, True_
 from ... import RegionConnection, Transition, LocationData, TransitionType, DirectionType
 from ...rules.ability_rules import CanBurrow, CanJumpOneTile, CanJumpTiles, CanBounce, HasVialsCount, CanClimb
+from ...rules.state_rules import HasRepairedOneGenerator
 
 collectable_locations: dict[str, LocationData] = {
     "SO Commons Ossex Entry Left Chest" : LocationData(270, "Ossex Entry Western Wall Chest"),
@@ -17,7 +18,7 @@ collectable_locations: dict[str, LocationData] = {
     "SO Western Pit Room Chest" : LocationData(267, "Southern Outskirts Commons Western Pit Room Main"),
     "SO Residence Trinket" : LocationData(269, "Southern Outskirts Residence Basement"),
     "SO Mining Passage Chest" : LocationData(331, "Southern Outskirts Mining Passage Secret"),
-    "SO Moonbath Lace Glove" : LocationData(263, "Southern Outskirts Moonbath"),
+    "SO Moonbath Lace Glove" : LocationData(263, "Southern Outskirts Moonbath", HasRepairedOneGenerator()),
     "SO Four Flowers Chest" : LocationData(271, "Southern Outskirts Four Flowers Shortcut", CanBurrow() & CanBounce()),
 }
 

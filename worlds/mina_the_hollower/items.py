@@ -171,7 +171,7 @@ def create_events(world):
         region = world.get_region(area + " " + name + " Generator")
 
 
-        event_loc = Location(world.player, "Repair" + area + "Generator", None, region)
+        event_loc = Location(world.player, "Repair " + area + "Generator", None, region)
         event_loc.place_locked_item(MinaTheHollowerItem("Repair " + name + " Generator", ItemClassification.progression, None, world.player))
         region.locations.append(event_loc)
 

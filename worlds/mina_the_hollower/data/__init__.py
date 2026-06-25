@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 from enum import Enum, IntEnum
-from typing import NamedTuple, Any, Union, Optional
+from typing import NamedTuple, Any, Union, Optional, Callable
 
-from BaseClasses import ItemClassification, LocationProgressType, CollectionState, CollectionRule
+from BaseClasses import ItemClassification, LocationProgressType, CollectionState, CollectionRule, Item
 from rule_builder.rules import Rule, True_
 from ..world_base import MinaTheHollowerBase
 
@@ -118,22 +118,23 @@ class ItemPower:
 
 class ShortCutItem(NamedTuple):
     type: ItemTypeEnum
-    access_rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()
+    access_rule: CollectionRule | Rule[MinaTheHollowerBase]
 
 class RegionConnection(NamedTuple):
     exiting_region: str
     entering_region: str
-    rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()
+    rule: CollectionRule | Rule[MinaTheHollowerBase]
 
 class Transition(NamedTuple):
     exiting_screen: str
     entering_screen: str
     direction: int
-    entrance_group: int = TransitionType.SCREENS
-    rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()
+    entrance_group: int
+    rule: CollectionRule | Rule[MinaTheHollowerBase]
 
 class LocationData(NamedTuple):
     location_id: int
     region: str
     rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()
     progress_type: LocationProgressType = LocationProgressType.DEFAULT
+    item_rule: Callable[[Item], bool] = lambda item: True

@@ -10,3 +10,6 @@ class Abilities(ItemTypeEnum):
     BOUNCE = ("Bounce", ITEMS_OFFSET_ABILITIES+3, ItemClassification.progression)
     SPRING = ("Spring", ITEMS_OFFSET_ABILITIES+4, ItemClassification.progression)
     CARRY = ("Carry", ITEMS_OFFSET_ABILITIES+5, ItemClassification.progression)
+
+
+ABILITY_NAMES = {a.value for a in Abilities}

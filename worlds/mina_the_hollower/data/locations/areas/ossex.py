@@ -2,14 +2,15 @@ from rule_builder.rules import Has
 from worlds.hk.Options import count
 
 from ... import LocationData
-from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneUps, GenericBoneUp, Trinkets, SingleKears
+from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneUps, GenericBoneUp, Trinkets, \
+    SingleKears
+from ...items.abilities import ABILITY_NAMES
 from ...rules.ability_rules import CanBurrow, CanJumpTiles, CanBounce, HasVialsCount, CanClimb, \
     HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform
-from ...rules.state_rules import HasAllKears, HasTrinketCount, HasRepairedWindyGenerator, HasKear, \
-    HasCompletedOneSparkGenerator
+from ...rules.state_rules import HasAllKears, HasTrinketCount, HasRepairedWindyGenerator, HasKear, HasRepairedOneGenerator
 
 collectable_locations: dict[str, LocationData] = {
-    "OS City Center Steady Soles" : LocationData(162, "Ossex City Center Main"),
+    "OS City Center Steady Soles" : LocationData(162, "Ossex High Street Residence Balcony West"),
     "OS City Center Triple Flagellum" : LocationData(220, "Ossex City Center Main", HasFishingRod()),
     "OS City Center 2nd Race Kear" : LocationData(243, "Ossex City Center Main", CanBurrow()),
     "OS City Center Final Race Bellows Bustle" : LocationData(322, "Ossex City Center Main", CanBounce() & CanBurrow() & CanCarry()),
@@ -31,33 +32,33 @@ collectable_locations: dict[str, LocationData] = {
     "OS Hollower's Guild Back Room All-Seeing Skull" : LocationData(213, "Ossex Guild Back Room"),
     "OS Hollower's Guild Back Room Smack Muriel" : LocationData(146, "Ossex Guild Back Room", Has(Weapons.BLASTSTRIKE_MAUL.value, count=3)), #needs blastrike maul x3,
     "OS Kear Institute Kear #1" : LocationData(199, "Ossex Kear Institute"),
-    "OS Kear Institute Kear #2" : LocationData(200, "Ossex Kear Institute"),
-    "OS Kear Institute Kear #3" : LocationData(201, "Ossex Kear Institute"),
-    "OS Kear Institute Kear #4" : LocationData(202, "Ossex Kear Institute"),
-    "OS Kear Institute Kear #5" : LocationData(203, "Ossex Kear Institute"),
-    "OS Kear Institute Kear #6" : LocationData(204, "Ossex Kear Institute"),
-    "OS Kear Institute Kear #7" : LocationData(205, "Ossex Kear Institute"),
-    "OS Kear Institute Kear #8" : LocationData(206, "Ossex Kear Institute"),
-    "OS Kear Institute Kear #9" : LocationData(207, "Ossex Kear Institute"),
+    "OS Kear Institute Kear #2" : LocationData(200, "Ossex Kear Institute", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Kear Institute Kear #3" : LocationData(201, "Ossex Kear Institute", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Kear Institute Kear #4" : LocationData(202, "Ossex Kear Institute", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Kear Institute Kear #5" : LocationData(203, "Ossex Kear Institute", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Kear Institute Kear #6" : LocationData(204, "Ossex Kear Institute", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Kear Institute Kear #7" : LocationData(205, "Ossex Kear Institute", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Kear Institute Kear #8" : LocationData(206, "Ossex Kear Institute", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Kear Institute Kear #9" : LocationData(207, "Ossex Kear Institute", item_rule=lambda item: item.name not in ABILITY_NAMES),
     "OS Kear Institute Kear Completion" : LocationData(150, "Ossex Kear Institute", HasAllKears()),
     "OS Emporium Health Rose #1" : LocationData(186, "Ossex Emporium"),
-    "OS Emporium Health Rose #2" : LocationData(187, "Ossex Emporium"),
-    "OS Emporium Health Rose #3" : LocationData(188, "Ossex Emporium"),
+    "OS Emporium Health Rose #2" : LocationData(187, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Emporium Health Rose #3" : LocationData(188, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
     "OS Emporium Joule Box #1" : LocationData(193, "Ossex Emporium"),
-    "OS Emporium Joule Box #2" : LocationData(194, "Ossex Emporium"),
-    "OS Emporium Joule Box #3" : LocationData(195, "Ossex Emporium"),
+    "OS Emporium Joule Box #2" : LocationData(194, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Emporium Joule Box #3" : LocationData(195, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
     "OS Emporium Trinket Bag #1" : LocationData(196, "Ossex Emporium"),
-    "OS Emporium Trinket Bag #2" : LocationData(197, "Ossex Emporium"),
-    "OS Emporium Trinket Bag #3" : LocationData(198, "Ossex Emporium"),
+    "OS Emporium Trinket Bag #2" : LocationData(197, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Emporium Trinket Bag #3" : LocationData(198, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
     "OS Emporium Vial Pouch #1" : LocationData(189, "Ossex Emporium"),
-    "OS Emporium Vial Pouch #2" : LocationData(190, "Ossex Emporium"),
-    "OS Emporium Vial Pouch #3" : LocationData(191, "Ossex Emporium"),
+    "OS Emporium Vial Pouch #2" : LocationData(190, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
+    "OS Emporium Vial Pouch #3" : LocationData(191, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
     "OS Emporium Spark Container" : LocationData(192, "Ossex Emporium"),
-    "OS Legovich's Arms Starting Weapon Upgrade" : LocationData(174, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
-    "OS Legovich's Arms Unchosen Weapon #1" : LocationData(175, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
-    "OS Legovich's Arms Unchosen Weapon #2" : LocationData(176, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
-    "OS Legovich's Arms Guardian Casket" : LocationData(178, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
-    "OS Legovich's Arms Battery Buster" : LocationData(177, "Ossex Legovich's Arms", HasCompletedOneSparkGenerator()),
+    "OS Legovich's Arms Starting Weapon Upgrade" : LocationData(174, "Ossex Legovich's Arms", HasRepairedOneGenerator()),
+    "OS Legovich's Arms Unchosen Weapon #1" : LocationData(175, "Ossex Legovich's Arms", HasRepairedOneGenerator()),
+    "OS Legovich's Arms Unchosen Weapon #2" : LocationData(176, "Ossex Legovich's Arms", HasRepairedOneGenerator()),
+    "OS Legovich's Arms Guardian Casket" : LocationData(178, "Ossex Legovich's Arms", HasRepairedOneGenerator()),
+    "OS Legovich's Arms Battery Buster" : LocationData(177, "Ossex Legovich's Arms", HasRepairedOneGenerator()),
     "OS Gutterways Bonestone" : LocationData(172, "Ossex Gutterways", Has(Sidearms.IRON_STEED.value)),
     "OS High Street Valor Medallion" : LocationData(154, "Ossex High Street SE Garden", CanCarry()),
     "OS High Street Sewer Chest" : LocationData(164, "Ossex High Street Sewer"),

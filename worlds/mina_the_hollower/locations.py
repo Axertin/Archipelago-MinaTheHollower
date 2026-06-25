@@ -12,6 +12,7 @@ def create_region(world, name: str, hint: str = ""):
             continue
         location = Location(world.player, loc_name, data.location_id, region)
         location.progress_type = data.progress_type
+        location.item_rule = data.item_rule
         valid_locations[loc_name] = (location, data)
         region.locations.append(location)
 
