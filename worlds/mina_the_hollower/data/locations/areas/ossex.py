@@ -1,5 +1,4 @@
 from rule_builder.rules import Has
-from worlds.hk.Options import count
 
 from ... import LocationData
 from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneUps, GenericBoneUp, Trinkets, \

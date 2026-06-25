@@ -32,6 +32,8 @@ def create_items(world):
         all_items.append(ItemData(item_type, 1))
     for item_type in Trinkets:
         all_items.append(ItemData(item_type, 1))
+    for item_type in PlayerUpgrades:
+        all_items.append(ItemData(item_type, 1))
 
     #dont want to start
     if world.options.bone_up_cap.value == 0:
@@ -44,7 +46,6 @@ def create_items(world):
 
     starting_items: list[Item] = [] if not is_ut else world.starting_items
     #starting items
-    print(f"random starting {world.options.random_starting_items.value}")
     if world.options.random_starting_items.value:
         for item in base_items:
             for _ in range(item.amount):
@@ -64,6 +65,7 @@ def create_items(world):
                 if item_data.amount <= 0:
                     all_items.remove(item_data)
         else:
+            added_trinket_pouch = False
             for i in range(BASE_ITEM_TOTAL):
                 if i < (BASE_ITEM_TOTAL * 2) // 3:
                     valid_items = [
@@ -73,9 +75,28 @@ def create_items(world):
                     ]
 
                     item_data = world.random.choice(valid_items)
+                    if not added_trinket_pouch and item_data.type in Trinkets:
+                        trinket_pouch = next(
+                            (x for x in all_items if x.type.value == PlayerUpgrades.TRINKET_BAG.value),
+                            None
+                        )
+                        starting_items.append(
+                            MinaTheHollowerItem(
+                                trinket_pouch.type.value,
+                                trinket_pouch.type.classification,
+                                trinket_pouch.type.item_id,
+                                world.player,
+                            )
+                        )
+
+
+                        trinket_pouch.amount -= 1
+                        if trinket_pouch.amount <= 0:
+                            all_items.remove(trinket_pouch)
+                        added_trinket_pouch = True
+
                 else:
                     item_data = world.random.choice(all_items)
-                print(f"starting item {item_data.type.value}")
                 starting_items.append(
                     MinaTheHollowerItem(
                         item_data.type.value,
@@ -87,12 +108,16 @@ def create_items(world):
 
                 item_data.amount -= 1
 
+                if item_data.type.value == PlayerUpgrades.TRINKET_BAG.value:
+                    added_trinket_pouch = True
+
                 if item_data.amount <= 0:
                     all_items.remove(item_data)
+
+
     else:
         for item in base_items:
             for i in range(item.amount):
-                print(f"normal item {item.type.value}")
                 starting_items.append(MinaTheHollowerItem(item.type.value, item.type.classification, item.type.item_id, world.player))
 
     for item_type in Abilities:

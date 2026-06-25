@@ -87,6 +87,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         super().__init__(multiworld, player)
 
     def generate_early(self) -> None:
+        # self.options.excluded_areas.value = False
         self.handle_ut_yamless(None)
         if self.options.ability_rando.value:
             self.options.ossex_start.value = self.options.ossex_start.option_true

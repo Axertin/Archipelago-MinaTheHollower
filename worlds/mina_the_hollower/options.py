@@ -16,7 +16,7 @@ class BoneUpCap(Choice):
     """
     How do you want your Bone Up Cap Items. A progressive each for attack, defense and Sidearms OR One progressive item for all
     """
-    display_name = "Goal"
+    display_name = "Bone Up Cap Type"
     option_perUpgrade = 0
     option_allUpgrade = 1
     default = 0
@@ -38,7 +38,7 @@ class OssexStart(DefaultOnToggle):
 
 class RandomizeStartingItems(Toggle):
     """
-    Take all starting health, spark, vials, Magic and randomize them
+    Take all starting health, spark, vials, Magic and randomize them. This increases the difficulty tenfold and can cause some cursed starts. You have been warned.
     """
     display_name = "Randomize Starting Items"
 
@@ -55,7 +55,7 @@ class AbilityRando(OptionSet):
     - **Carry** - The ability to carry objects.
     """
     display_name = "Abilty Rando"
-    default = ["Burrow", "Swim", "Climb", "Bounce", "Carry", "Spring"]
+    default = ["Swim", "Climb", "Bounce", "Carry", "Spring"]
     valid_keys = ["Burrow", "Swim", "Climb", "Bounce", "Carry", "Spring"]
 
 
@@ -109,7 +109,7 @@ class KearRandomization(Choice):
     """
     option_vanilla = 0
     option_apItems = 1
-    option_areaApItems = 2
+    # option_areaApItems = 2
     default = 1
 
 class ShuffledSidearms(Toggle):
@@ -139,7 +139,7 @@ class MinaTheHollowerOptions(PerGameCommonOptions):
     goal: Goal
     ossex_start: OssexStart
     kear_rando: KearRandomization
-    excluded_areas : ExcludedAreas
+    # excluded_areas : ExcludedAreas
     bone_up_cap: BoneUpCap
     random_starting_items: RandomizeStartingItems
     # entrance_rando: RandomizeEntrances
