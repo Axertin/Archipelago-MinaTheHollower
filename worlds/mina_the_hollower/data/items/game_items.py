@@ -116,7 +116,7 @@ class Trinkets(ItemTypeEnum):
     BRISK_BREW = ("Brisk Brew", 137, ItemClassification.progression)
     SEISMIC_BELT = ("Seismic Belt", 138, ItemClassification.progression)
     PLASMA_FUNNEL = ("Plasma Funnel", 139, ItemClassification.progression)
-    DEBONING_WAD = ("Deboning Wad", 140, ItemClassification.progression)
+    DEBONING_WAND = ("Deboning Wand", 140, ItemClassification.progression)
     STEADY_SOLES = ("Steady Soles", 141, ItemClassification.progression)
     VALOR_MEDALION = ("Valor Medallion", 142, ItemClassification.progression)
     BELL_OF_GRACE = ("Bell Of Grace", 143, ItemClassification.progression)
