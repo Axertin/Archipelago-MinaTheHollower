@@ -90,11 +90,14 @@ under_eastern_heath: dict[int, int] = {
 
 ossex_main: dict[int, int] = {
     10:0,
-    11:0,
-    12:0,
-    20:0,
     4:1,
+}
 
+ossex_courtyard: dict[int, int] = {
+    10: 0,
+    11: 0,
+    12: 0,
+    20: 0,
 }
 
 ossex_high_street: dict[int, int] = {
@@ -206,6 +209,7 @@ area_id_to_map: dict[int, MapData] = {
     52: MapData(cave_eastern_heath, 16),
     144: MapData(balcony, 17),
     153: MapData(ossex_main, 17),
+    145: MapData(ossex_courtyard, 17),
     151: MapData(ossex_high_street, 18),
     163: MapData(ossex_bowery, 18),
     147: MapData(goddred_tomb, 19),

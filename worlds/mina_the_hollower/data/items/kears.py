@@ -60,7 +60,7 @@ class SingleKears(ItemTypeEnum):
     KINDLEWOOD_TRAIN_TUNNEL_KEAR = ( "Kindlewood Train Tunnel Kear", ITEMS_OFFSET_KEARS + 337, ItemClassification.progression)
     COLTRANE_RAIL_YARD_KEAR = ("Coltrane Rail Yard Kear", ITEMS_OFFSET_KEARS + 115, ItemClassification.progression)
     ASTRAL_ORRERY_STELLARIUM_KEAR = ("Astral Orrery Stellarium Kear", ITEMS_OFFSET_KEARS + 127, ItemClassification.progression)
-    BACKWATERS_FISHING_KEAR = ("Backwaters Fishing Kear", ITEMS_OFFSET_KEARS + 248, ItemClassification.progression)
+    BACKWATERS_FISHING_KEAR = ("Backwaters Fishing Kear", ITEMS_OFFSET_KEARS + 285, ItemClassification.progression)
     LONERS_LANDING_BOARDWALK_KEAR = ("Loner's Landing Boarkwalk Kear", ITEMS_OFFSET_KEARS + 19, ItemClassification.progression)
     WESTERN_WILDS_SECRET_PASSAGE_KEAR = ("Western Wilds Secret Passage Kear", ITEMS_OFFSET_KEARS + 244, ItemClassification.progression)
     SANDFALLS_HIDDEN_CAVE_KEAR = ("Sandfalls Hidden Cave Kear", ITEMS_OFFSET_KEARS + 321, ItemClassification.progression)
