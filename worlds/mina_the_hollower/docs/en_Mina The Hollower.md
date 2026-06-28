@@ -43,13 +43,13 @@ Download the mod and the AP world. The mod will be a zip file with your OS name
 - [Latest AP World release](https://github.com/FyreDay/Archipelago-MinaTheHollower/releases/latest)
 
 ### Switch to the Experimental Modding Beta
- The mod requires a Steam copy of Mina the Hollower on the **experimental-modding Beta** (password `modsmodsmods`) It also requires 
+ The mod requires a Steam copy of Mina the Hollower on the **experimental-modding Beta** It also requires 
  `-mod -mod-allow-code` launch options set (this enables loading a mod's code library).
 
 If you have never done this before, 
-1. navigate to Steam->Mina The Hollower->Properties->Game Versions & Betas 
-2. Type in `modsmodsmods` into Private Versions field
-3. Select `experimental-modding` in the version list
+1. navigate to Steam->Mina The Hollower->Properties->Game Versions & Betas
+2. Select `experimental-modding` in the version list
+
 ### Windows
 
 Unzip the mod.zip (containing a `apclient` folder with a `mod.dll` and `mod.yc`) inside into:

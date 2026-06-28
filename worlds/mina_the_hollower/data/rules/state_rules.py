@@ -5,7 +5,7 @@ from BaseClasses import CollectionState
 from NetUtils import JSONMessagePart
 from rule_builder.options import OptionFilter
 from rule_builder.rules import Rule, Has, True_, False_
-from .ability_rules import CanJumpTiles, CanSwim, CanCarry, CanBurrow
+from .ability_rules import CanJumpTiles, CanSwim, CanCarry, CanBurrow, CanClimb
 from .. import ShortCutItem
 from ..items import Kear, SingleKears, AreaKears, Trinkets, AstralPlatforms, Sidearms, PlayerUpgrades, PermanentUpgrades
 from ..items.kears import kear_area_lookup
@@ -192,9 +192,9 @@ sidearm_rules: list[ShortCutItem] = [
     ShortCutItem(Sidearms.VOLT_HATCHET, True_()),
     ShortCutItem(Sidearms.IRON_STEED, CanBurrow() & Has(PlayerUpgrades.SPARK_CONTAINER.value, 2) | ((Has(PermanentUpgrades.SEPTEMBURG_TICKET.value) & Has(PermanentUpgrades.TRAIN_PASS.value)) & CanBurrow())),
     ShortCutItem(Sidearms.FOG_THROWER, CanBurrow()),
-    ShortCutItem(Sidearms.DEFLECTOR_PARASOL, CanBurrow()),
+    ShortCutItem(Sidearms.DEFLECTOR_PARASOL, True_()),
     ShortCutItem(Sidearms.MIST_JAR, CanBurrow()),
-    ShortCutItem(Sidearms.DRIVER_DRILL, CanBurrow()),
+    ShortCutItem(Sidearms.DRIVER_DRILL, CanBurrow() & (CanClimb() | Has(SingleKears.EASTERN_HEATH_WATERFALL_KEAR.value))),
     ShortCutItem(Sidearms.RECALL_DISC, True_()),
     ShortCutItem(Sidearms.BOUNDING_BOMBS, True_()),
     ShortCutItem(Sidearms.BECKONING_COLLAR, True_()),
