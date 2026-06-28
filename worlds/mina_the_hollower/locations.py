@@ -1,14 +1,18 @@
 from BaseClasses import Region, Location
 from .data.locations import all_regions, all_region_transitions, all_internal_region_connections, all_locations
 from .data import LocationData, RegionConnection, Transition, matching_transition_types
+from typing import TYPE_CHECKING
+
+if TYPE_CHECKING:
+    from . import MinaTheHollowerWorld
 
 
-def create_region(world, name: str, hint: str = ""):
+def create_region(world: "MinaTheHollowerWorld", name: str, hint: str = ""):
     region = Region(name, world.player, world.multiworld)
     valid_locations: dict[str, (Location, LocationData)] = {}
-    #TODO: dont loop through all locations for each region
+    # TODO: dont loop through all locations for each region
     for loc_name, data in all_locations.items():
-        if loc_name == "LL Captain's Gift" and world.options.ossex_start.value:
+        if loc_name == "LL Captain's Gift" and world.options.ossex_start:
             continue
         if data.region != name:
             continue
@@ -23,19 +27,20 @@ def create_region(world, name: str, hint: str = ""):
     for loc_name, (location, data) in valid_locations.items():
         world.set_rule(location, data.rule)
 
-def create_regions(world, regions: set[str]):
+
+def create_regions(world: "MinaTheHollowerWorld", regions: set[str]):
+    # TODO: check if regions being a set introduces nondeterminism
     create_region(world, "Menu")
     for region in regions:
         create_region(world, region)
 
 
-
-def get_regions(world) ->  set[str]:
-    #TODO: logic to handle which regions are being created based on yaml
+def get_regions(world: "MinaTheHollowerWorld") -> set[str]:
+    # TODO: logic to handle which regions are being created based on yaml
     return all_regions
 
 
-def create_entrances(world, regions):
+def create_entrances(world: "MinaTheHollowerWorld", regions):
     menu = world.get_region("Menu")
 
     world.create_entrance(menu, world.get_region("Ossex City Center Main"), name="Menu To Ossex")
@@ -44,7 +49,7 @@ def create_entrances(world, regions):
         exiting_region = world.get_region(data.exiting_screen)
         entering_region = world.get_region(data.entering_screen)
         entrance = world.create_entrance(exiting_region, entering_region, rule=data.rule, name=name, force_creation=True)
-        if data.entrance_group != 0 and world.entrance_rando > 0:
+        if data.entrance_group != 0 and world.entrance_rando:
             entrance.randomization_group = data.entrance_group
             world.disconnect_entrance_for_randomization(entrance)
     for name, data in all_internal_region_connections.items():
@@ -52,5 +57,3 @@ def create_entrances(world, regions):
         entering_region = world.get_region(data.entering_region)
         entrance = world.create_entrance(exiting_region, entering_region, rule=data.rule, name=name,
                                          force_creation=True)
-
-
