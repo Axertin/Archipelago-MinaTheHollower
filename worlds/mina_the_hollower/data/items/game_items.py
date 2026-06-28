@@ -8,21 +8,20 @@ class Sidearms(ItemTypeEnum):
     GYRO_DAGGER = ("Gyro Dagger", 22, ItemClassification.progression)
     VOLT_HATCHET = ("Volt Hatchet", 21, ItemClassification.progression)
 
-    FOG_THROWER = ("FogThrower", 29, ItemClassification.progression)  # burrow
-    DEFLECTOR_PARASOL = ("BarrierParasol", 33, ItemClassification.progression)# burrow
-    MIST_JAR = ("Mist Jar", 31, ItemClassification.progression)# burrow
-    DRIVER_DRILL = ("ShieldBash", 25, ItemClassification.progression)# burrow
+    FOG_THROWER = ("Fog Thrower", 29, ItemClassification.progression)  # burrow
+    DEFLECTOR_PARASOL = ("Deflector Parasol", 33, ItemClassification.progression)  # burrow
+    MIST_JAR = ("Mist Jar", 31, ItemClassification.progression)  # burrow
+    DRIVER_DRILL = ("Driver Drill", 25, ItemClassification.progression)  # burrow
 
-    RECALL_DISC = ("Recall Disc",23, ItemClassification.progression)
+    RECALL_DISC = ("Recall Disc", 23, ItemClassification.progression)
     DYNAMO_LANTURN = ("Dynamo Lanturn", 24, ItemClassification.progression)
 
-    BOUNDING_BOMBS =("Bounding Bombs", 26, ItemClassification.progression)
-    IRON_STEED = ("Iron Steed", 27, ItemClassification.progression) #2 sparks or train ticket and septemburg ticket
+    BOUNDING_BOMBS = ("Bounding Bombs", 26, ItemClassification.progression)
+    IRON_STEED = ("Iron Steed", 27, ItemClassification.progression)  # 2 sparks or train ticket and septemburg ticket
 
+    BECKONING_COLLAR = ("Beckoning Collar", 30, ItemClassification.progression)
 
-    BECKONING_COLLAR = ("Beckoning Collar",30, ItemClassification.progression)
-
-    GNAWING_GHOSTS = ("Gnawing Ghosts",32, ItemClassification.progression)
+    GNAWING_GHOSTS = ("Gnawing Ghosts", 32, ItemClassification.progression)
 
     FISHING_ROD = ("Fishing Rod",34, ItemClassification.progression) #103 is gold
     # ANGLERS_RAFT = ("Angler's Raft", 102, ItemClassification.progression)
@@ -43,9 +42,9 @@ class PermanentUpgrades(ItemTypeEnum):
     # "ArmorDefault" : ItemData(92, ItemClassification.progression),
     # "ArmorUpgradeAll" : ItemData(93, ItemClassification.progression),
     JOULE_ALMEMBIC = ("Joule Alembic",82, ItemClassification.progression)
-    SIDEARM_SAVER = ("Sidearm Saver",83, ItemClassification.progression)
-    SIDEARM_KEEPER = ("SidearmKeeper",84, ItemClassification.progression)
-    TRAINING_DUMMY =("TrainingDummy",85, ItemClassification.useful)
+    SIDEARM_SAVER = ("Sidearm Recoverer",83, ItemClassification.progression)
+    SIDEARM_KEEPER = ("Sidearm Duplicator",84, ItemClassification.progression)
+    TRAINING_DUMMY =("Training Dummy",85, ItemClassification.useful)
     PHONOGRAPH = ("Phonograph",86, ItemClassification.useful)
     # UNDERLAB_DEFAULT =("Underlab Default" ,120, ItemClassification.filler)
     UNDERLAB_CRYPT = ("Underlab Crypt" ,121, ItemClassification.filler)

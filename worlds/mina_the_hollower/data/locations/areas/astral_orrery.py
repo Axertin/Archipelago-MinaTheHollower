@@ -18,7 +18,7 @@ collectable_locations: dict[str, LocationData] = {
     "AO Tubert Vial Kear": LocationData(138, "Astral Orrery Stellarium Mutant Switch"),
     "AO Gravity Zone Long Hallway Chest": LocationData(133, "Astral Orrery Gravity Zone", CanJumpTiles(distance=2)),
     "AO Gravity Zone Secret Room #1 Kear": LocationData(134, "Astral Orrery Gravity Zone"),
-    "AO Gravity Zone Secret Room #2 Chest": LocationData(126, "Astral Orrery Gravity Zone", CanBurrow()),
+        "AO Gravity Zone Secret Room #2 Chest": LocationData(128, "Astral Orrery Gravity Zone", CanBurrow()),
     "AO Cog Chamber Secret Room #1 Chest": LocationData(130, "Astral Orrery Cog Chamber", CanBurrow() & CanCarry()),
     "AO Cog Chamber Secret Room #1 Kear": LocationData(135, "Astral Orrery Cog Chamber", CanBurrow() & CanCarry()),
     "AO Mutant Lab Secret Room #1 Chest": LocationData(131, "Astral Orrery Mutant Lab", CanBurrow()),
