@@ -19,7 +19,7 @@ collectable_locations: dict[str, LocationData] = {
     "LL Shipwreck Beach Trigger Antennae": LocationData(32, "Loner's Landing Boat Side", HasFishingRod() & CanBurrow()),
     "LL Belowdecks Unchosen Weapon #1": LocationData(17, "Loner's Landing Belowdecks", HasKear(kear=SingleKears.LONERS_LANDING_BELOWDECKS_LEFT_WEAPON_KEAR.value) & CanBurrow() & (HasRepairedOneGenerator() | (HasLadder() & CanSwim()))),
     "LL Belowdecks Unchosen Weapon #2": LocationData(18, "Loner's Landing Belowdecks", HasKear(kear=SingleKears.LONERS_LANDING_BELOWDECKS_RIGHT_WEAPON_KEAR.value) & CanBurrow() & (HasRepairedOneGenerator() | (HasLadder() & CanSwim()))),
-    "LL Belowdecks Chest": LocationData(30, "Loner's Landing Belowdecks", CanJumpTiles(distance=2), HasRepairedOneGenerator() | (HasLadder() & CanSwim())),
+    "LL Belowdecks Chest": LocationData(30, "Loner's Landing Belowdecks", CanJumpTiles(distance=2) & (HasRepairedOneGenerator() | (HasLadder() & CanSwim()))),
     "LL Captain's Gift" : LocationData(24, "Loner's Landing Shipwreck"),
 }
 

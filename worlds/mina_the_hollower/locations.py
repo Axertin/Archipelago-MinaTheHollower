@@ -12,7 +12,7 @@ def create_region(world: "MinaTheHollowerWorld", name: str, hint: str = ""):
     valid_locations: dict[str, (Location, LocationData)] = {}
     # TODO: dont loop through all locations for each region
     for loc_name, data in all_locations.items():
-        if loc_name == "LL Captain's Gift" and world.options.ossex_start.value:
+        if loc_name == "LL Captain's Gift" and world.options.ossex_start:
             continue
         if data.region != name:
             continue

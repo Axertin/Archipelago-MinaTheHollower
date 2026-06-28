@@ -139,7 +139,7 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
                                                        (base_needs_sidearm and not state.has(PermanentUpgrades.DOUBLE_SIDEARM_PERMIT.value, self.player))):
                     continue
 
-                if movement_item in Trinkets and trinket_slots == 0:
+                if movement_item.type in Trinkets and trinket_slots == 0:
                     continue
 
                 trinket_slots -= 1
