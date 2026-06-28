@@ -1,6 +1,6 @@
 import json
 from importlib.resources import files
-from typing import Any, ClassVar, Dict, Optional
+from typing import Any, ClassVar
 
 from BaseClasses import ItemClassification, Location, Tutorial
 from entrance_rando import bake_target_group_lookup, randomize_entrances
@@ -48,10 +48,10 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
     game = MINA_THE_HOLLOWER
     web = MinaTheHollowerWeb()
 
-    item_name_to_id: ClassVar[Dict[str, int]] = {
+    item_name_to_id: ClassVar[dict[str, int]] = {
         item.value: item.item_id for item in all_items
     }
-    location_name_to_id: ClassVar[Dict[str, int]] = {
+    location_name_to_id: ClassVar[dict[str, int]] = {
         loc_name: loc_data.location_id for loc_name, loc_data in all_locations.items()
     }
 
@@ -77,11 +77,17 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
     }
 
     @staticmethod
-    def interpret_slot_data(slot_data: Dict[str, Any]) -> Dict[str, Any]:
+    def interpret_slot_data(slot_data: dict[str, Any]) -> dict[str, Any]:
         return slot_data
 
+    regions: set[str]
+    itempool: list[MinaTheHollowerItem]
+    entrance_rando: bool
+    hints: dict[int, str]
+    starting_items: list[MinaTheHollowerItem]
+
     def __init__(self, multiworld, player):
-        self.regions = {}
+        self.regions = set()
         self.itempool = []
         self.entrance_rando = False
         self.hints = {}
@@ -156,12 +162,12 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             ]
         }
 
-    def extend_hint_information(self, hint_data: Dict[int, Dict[int, str]]):
+    def extend_hint_information(self, hint_data: dict[int, dict[int, str]]):
         hint_data[self.player] = self.hints
 
     def handle_ut_yamless(
-        self, slot_data: Optional[Dict[str, Any]]
-    ) -> Optional[Dict[str, Any]]:
+        self, slot_data: dict[str, Any] | None
+    ) -> dict[str, Any] | None:
 
         if (
             not slot_data
