@@ -9,7 +9,7 @@ from ...rules.state_rules import HasLadder, HasKear
 
 collectable_locations: dict[str, LocationData] = {
     "BW Upper Shanty Swamp Glutton's Jug": LocationData(289, "Backwaters Upper Swamp Waterfall"),
-    "BW Upper Swamp Side Room Chest": LocationData(296, "Backwaters Upper Swamp Secret Room", CanSwim()),
+    "BW Upper Shanty Swamp Side Room Chest": LocationData(296, "Backwaters Upper Swamp Secret Room", CanSwim()),
     "BW Lantern Cave Bonestone": LocationData(287, "Backwaters Upper Lantern Cave"),
     "BW Lantern Cave Vial Pouch": LocationData(295, "Backwaters Upper Lantern Cave"),
     "BW Pinky's Parlor Spark Catcher": LocationData(297, "Backwaters Pinky Shop"),
