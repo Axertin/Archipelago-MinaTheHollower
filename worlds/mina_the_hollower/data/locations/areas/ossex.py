@@ -5,14 +5,15 @@ from ... import LocationData
 from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneUps, GenericBoneUp, Trinkets, \
     SingleKears
 from ...items.abilities import ABILITY_NAMES
-from ...rules.ability_rules import CanBurrow, CanJumpTiles, CanBounce, HasVialsCount, CanClimb, \
+from ...rules.ability_rules import CanBurrow, CanBounce, HasVialsCount, CanClimb, \
     HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform
 from ...rules.state_rules import HasAllKears, HasTrinketCount, HasRepairedWindyGenerator, HasKear, \
-    HasRepairedOneGenerator, HasRepairedShorelineGenerator
+        HasRepairedOneGenerator, HasRepairedShorelineGenerator, HasRepairedGeneratorCount
+from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
          "OS City Center Steady Soles" : LocationData(162, "Ossex High Street Residence Balcony West"),
-        "OS Fish Flag Fish" : LocationData(220, "Ossex City Center Main", HasFishingRod()),
+        "OS Fish Triple Flagellum" : LocationData(220, "Ossex City Center Main", HasFishingRod()),
         "OS City Center 2nd Race Kear" : LocationData(243, "Ossex City Center Main", CanBurrow()),
         "OS City Center Final Race Bellows Bustle" : LocationData(322, "Ossex City Center Main", CanBounce() & CanBurrow() & CanCarry() & CanClimb()),
         "OS Courtyard East Deboning Wand" : LocationData(161, "Ossex Courtyard East"),
@@ -26,11 +27,11 @@ collectable_locations: dict[str, LocationData] = {
         "OS Hollower's Guild Back Room Isle Map" : LocationData(211, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
         "OS Hollower's Guild Back Room Sidearm Recoverer" : LocationData(215, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
         "OS Hollower's Guild Back Room Training Dummy" : LocationData(218, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
-        "OS Hollower's Guild Back Room Sidearm Duplicator" : LocationData(214, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
-        "OS Hollower's Guild Back Room Memory Goggles" : LocationData(217, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
-        "OS Hollower's Guild Back Room Phonograph" : LocationData(216, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
-        "OS Hollower's Guild Back Room Enhanced Map" : LocationData(212, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
-        "OS Hollower's Guild Back Room All-Seeing Skull" : LocationData(213, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
+        "OS Hollower's Guild Back Room Sidearm Duplicator" : LocationData(214, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & HasRepairedGeneratorCount(count=2)),
+        "OS Hollower's Guild Back Room Memory Goggles" : LocationData(217, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & HasRepairedGeneratorCount(count=2)),
+        "OS Hollower's Guild Back Room Phonograph" : LocationData(216, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & HasRepairedGeneratorCount(count=2)),
+        "OS Hollower's Guild Back Room Enhanced Map" : LocationData(212, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & HasRepairedGeneratorCount(count=3)),
+        "OS Hollower's Guild Back Room All-Seeing Skull" : LocationData(213, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & HasRepairedGeneratorCount(count=5)),
         "OS Hollower's Guild Back Room Smack Muriel" : LocationData(146, "Ossex Guild Back Room", Has(Weapons.BLASTSTRIKE_MAUL.value, count=3)),
         "OS Kear Institute Kear #1" : LocationData(199, "Ossex Kear Institute"),
         "OS Kear Institute Kear #2" : LocationData(200, "Ossex Kear Institute", item_rule=lambda item: item.name not in ABILITY_NAMES),
@@ -55,11 +56,11 @@ collectable_locations: dict[str, LocationData] = {
         "OS Emporium Vial Pouch #2" : LocationData(190, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
         "OS Emporium Vial Pouch #3" : LocationData(191, "Ossex Emporium", item_rule=lambda item: item.name not in ABILITY_NAMES),
         "OS Emporium Spark Container" : LocationData(192, "Ossex Emporium"),
-        "OS Legovich's Arms Whip" : LocationData(174, "Ossex Legovich's Arms", HasRepairedOneGenerator(), progress_type=LocationProgressType.EXCLUDED),
-        "OS Legovich's Arms Hammer" : LocationData(175, "Ossex Legovich's Arms", HasRepairedOneGenerator(), progress_type=LocationProgressType.EXCLUDED),
-        "OS Legovich's Arms Daggers" : LocationData(176, "Ossex Legovich's Arms", HasRepairedOneGenerator(), progress_type=LocationProgressType.EXCLUDED),
-        "OS Legovich's Arms Guardian Casket" : LocationData(178, "Ossex Legovich's Arms", HasRepairedOneGenerator(), progress_type=LocationProgressType.EXCLUDED),
-        "OS Legovich's Arms Battery Buster" : LocationData(177, "Ossex Legovich's Arms", HasRepairedOneGenerator(), progress_type=LocationProgressType.EXCLUDED),
+        "OS Legovich's Arms Whip" : LocationData(174, "Ossex Legovich's Arms", HasRepairedGeneratorCount(count=1)),
+        "OS Legovich's Arms Hammer" : LocationData(175, "Ossex Legovich's Arms", HasRepairedGeneratorCount(count=1)),
+        "OS Legovich's Arms Daggers" : LocationData(176, "Ossex Legovich's Arms", HasRepairedGeneratorCount(count=1)),
+        "OS Legovich's Arms Guardian Casket" : LocationData(178, "Ossex Legovich's Arms", HasRepairedGeneratorCount(count=1)),
+        "OS Legovich's Arms Battery Buster" : LocationData(177, "Ossex Legovich's Arms", HasRepairedGeneratorCount(count=1)),
         "OS Gutterways Bonestone" : LocationData(172, "Ossex Gutterways", Has(Sidearms.IRON_STEED.value)),
         "OS High Street Valor Medallion" : LocationData(154, "Ossex High Street SE Garden", CanCarry()),
         "OS High Street Sewer Chest" : LocationData(164, "Ossex High Street Sewer"),

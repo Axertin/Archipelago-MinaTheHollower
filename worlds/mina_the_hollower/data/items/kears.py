@@ -36,10 +36,10 @@ class SingleKears(ItemTypeEnum):
     CHOPPE_SHOPPE_KEAR = ("Choppe Shoppe Lock", ITEMS_OFFSET_KEARS + 225, ItemClassification.progression)
     EASTERN_HEATH_MOUNTAIN_PATH = ("Eastern Heath Mountain Path Lock", ITEMS_OFFSET_KEARS + 222, ItemClassification.progression) #missing kear
     EASTERN_HEATH_BUCKLERS_BLUFF_KEAR = ("Eastern Heath Bucklers Bluff Lock", ITEMS_OFFSET_KEARS + 224, ItemClassification.progression)
-    MOURNERS_MILES_BIKE_KEAR = ("Mourners Miles Bike Lock", ITEMS_OFFSET_KEARS + 307, ItemClassification.progression)
+    MOURNERS_MILES_BIKE_KEAR = ("Mourner's Mile Bike Lock", ITEMS_OFFSET_KEARS + 307, ItemClassification.progression)
     EASTERN_HEATH_WATERFALL_KEAR = ("Eastern Heath Waterfall Lock", ITEMS_OFFSET_KEARS + 1, ItemClassification.progression)
     EASTERN_HEATH_GRASSLAND_BUSHROOM_KEAR = ("Eastern Heath Grassland Bushroom Lock", ITEMS_OFFSET_KEARS + 227, ItemClassification.progression)
-    MOURNERS_MILE_AFTER_GENERATOR_KEAR = ("Mourners Mile After Generator Lock", ITEMS_OFFSET_KEARS + 304, ItemClassification.progression)
+    MOURNERS_MILE_AFTER_GENERATOR_KEAR = ("Mourner's Mile After Generator Lock", ITEMS_OFFSET_KEARS + 304, ItemClassification.progression)
     QUEENSBURY_CRYPT_BONNET_TOMB_KEAR = ("Queensbury Crypt Bonnet Tomb Lock", ITEMS_OFFSET_KEARS + 55, ItemClassification.progression)
     FROZEN_PASS_KEAR = ("Frozen Pass Lock", ITEMS_OFFSET_KEARS + 109, ItemClassification.progression)
     OSSEX_TRAIN_KEAR_1 = ("Ossex Train Lock 1", ITEMS_OFFSET_KEARS + 358, ItemClassification.progression)

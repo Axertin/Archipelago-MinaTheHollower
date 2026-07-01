@@ -2,12 +2,13 @@ from BaseClasses import LocationProgressType
 from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
 from ...items import SingleKears, PermanentUpgrades
-from ...rules.ability_rules import CanBurrow, CanBounce, CanJumpTiles, CanClimb, CanCarry, \
+from ...rules.ability_rules import CanBurrow, CanBounce, CanClimb, CanCarry, \
     HasFishingRod, CanSwim
 from ...rules.state_rules import HasRepairedShorelineGenerator, HasKear
+from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
-    "SF Fish Bouncy Puffy" : LocationData(82, "Sandfalls Mining Outlook", HasFishingRod()),
+    "SF Fish Puffer Beak" : LocationData(82, "Sandfalls Mining Outlook", HasFishingRod()),
     "SF Sifted Sands Snake Bomb Chest" : LocationData(326, "Sandfalls Sifted Sands", CanBurrow() & CanCarry()), #needs burrow, carry,
     "SF Sifted Sands Kear" : LocationData(319, "Sandfalls Sifted Sands", HasRepairedShorelineGenerator()),
     "SF Guiding Grains Niter Belt" : LocationData(330, "Sandfalls Pachinko"),

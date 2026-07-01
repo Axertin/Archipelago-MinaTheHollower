@@ -1,8 +1,9 @@
 from BaseClasses import LocationProgressType
 from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
-from ...rules.ability_rules import CanBurrow, CanBounce, CanJumpTiles, CanClimb, CanCarry, \
+from ...rules.ability_rules import CanBurrow, CanBounce, CanClimb, CanCarry, \
     HasFishingRod, HasVialsCount
+from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
     "QC Old Graveyard Bonestone": LocationData(51, "Queensbury Crypt Old Graveyard Main"),
@@ -18,7 +19,7 @@ collectable_locations: dict[str, LocationData] = {
     "QC Mirror Room Stolenoid": LocationData(66, "Queensbury Crypt Mirror Room West"),
     "QC Mirror Room Kear": LocationData(67, "Queensbury Crypt Mirror Room West"),
     "QC Putrid Place Bonestone": LocationData(62, "Queensbury Crypt Putrid Place"),
-    "QC Fish Ghost Fish": LocationData(68, "Queensbury Crypt Putrid Place", HasFishingRod()),
+    "QC Fish Tombstone": LocationData(68, "Queensbury Crypt Putrid Place", HasFishingRod()),
     "QC Rancid Room Fly Bait": LocationData(59, "Queensbury Crypt Rancid Room"),
     "QC Ancestral Chamber Health Rose": LocationData(58, "Queensbury Crypt Ancestral Chamber"),
     "QC Royal Tomb Proto Spark": LocationData(60, "Queensbury Crypt Royal Tomb", HasVialsCount(count=2) & CanClimb()),

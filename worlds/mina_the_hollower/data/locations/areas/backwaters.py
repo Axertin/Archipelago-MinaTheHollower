@@ -3,11 +3,13 @@ from rule_builder.options import OptionFilter
 from rule_builder.rules import Has, True_
 from ... import RegionConnection, Transition, LocationData
 from ...items import Trinkets, SingleKears, Sidearms, FishingUpgrades
-from ...rules.ability_rules import CanBurrow, CanJumpTiles, CanBounce, CanSwim, CanCarry, CanClimb, \
+from ...rules.ability_rules import CanBurrow, CanBounce, CanSwim, CanCarry, CanClimb, \
     HasFishingRod
-from ...rules.state_rules import HasLadder, HasKear
+from ...rules.state_rules import HasLadder, HasKear, HasRepairedGeneratorCount
+from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
+
     "BW Upper Shanty Swamp Glutton's Jug": LocationData(289, "Backwaters Upper Swamp Waterfall"),
     "BW Upper Shanty Swamp Side Room Chest": LocationData(296, "Backwaters Upper Swamp Secret Room", CanSwim()),
     "BW Lantern Cave Bonestone": LocationData(287, "Backwaters Upper Lantern Cave"),
@@ -21,12 +23,12 @@ collectable_locations: dict[str, LocationData] = {
     "BW Lower Shanty Swamp Tumbling Tutu": LocationData(291, "Backwaters Lower Swamp Shanty Band", CanCarry() & CanBurrow() & CanSwim() & CanClimb()),
     "BW Lucky's Lair Kear": LocationData(292, "Backwaters Lucky's Lair", CanBurrow() & CanCarry()),
     "BW Fishing Hole Fishing Rod": LocationData(300, "Backwaters Fishing Hole"),
-    "BW Fish Fleeper": LocationData(299, "Backwaters Fishing Hole", HasFishingRod()),
-    "BW Fishing Hole Thalassion": LocationData(302, "Backwaters Fishing Hole", HasFishingRod() & CanSwim() & (Has(Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
-    "BW Fishing Hole Gilded Rod": LocationData(301, "Backwaters Fishing Hole", HasFishingRod() & CanSwim() & (Has(Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
+    "BW Fish Fleeper Head": LocationData(299, "Backwaters Fishing Hole", HasFishingRod()),
+    "BW Fishing Hole Thalassian Pearl": LocationData(302, "Backwaters Fishing Hole", HasFishingRod() & CanSwim() & (Has(Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
+    "BW Fishing Hole Gilded Rod": LocationData(301, "Backwaters Fishing Hole", HasRepairedGeneratorCount(count=6) & HasFishingRod() & CanSwim() & (Has(Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
 }
 
 boss_locations: dict[str, LocationData] = {
-    "Defeat Fish Boss": LocationData(0, "Waterfall Backwaters"),
+    "Plasma Jug": LocationData(290, "Backwaters Upper Swamp Waterfall", Has(Trinkets.EMPTY_JUG.value)),
 }
 
