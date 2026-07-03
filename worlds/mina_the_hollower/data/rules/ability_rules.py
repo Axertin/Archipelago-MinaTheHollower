@@ -13,7 +13,7 @@ from ...options import AbilityRando
 from ...world_base import MinaTheHollowerBase
 
 def HasReachingSideArm():
-    return Has(PlayerUpgrades.JOULE_BOX.value) & Has(Sidearms.VOLT_HATCHET.value)
+    return Has(PlayerUpgrades.JOULE_BOX.value) & (Has(Sidearms.VOLT_HATCHET.value) | Has(Sidearms.FISHING_ROD.value))
 
 @dataclasses.dataclass(kw_only=True)
 class CanBurrow(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):

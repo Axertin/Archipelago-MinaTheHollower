@@ -49,7 +49,7 @@ class MaximumStatLevel(Range):
     display_name = "Maximum Stat Caps"
     range_start = 10
     range_end = 99
-    default = 20
+    default = 15
 
 class OssexStart(DefaultOnToggle):
     """

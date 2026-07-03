@@ -10,7 +10,7 @@ from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
     "NB Fish Shrimpter Tail" : LocationData(50, "Nox's Bayou Boat Station", HasFishingRod()), #needs fishing rod,
-    "NB Guard Room Twill Weave" : LocationData(47, "Nox's Bayou Guard Room"),
+    "NB Guard Room Twill Weave" : LocationData(47, "Nox's Bayou Waterfall Trinket"),
     "NB First Flooder Chest" : LocationData(39, "Nox's Bayou Lily Full Pump Room"),
     "NB Shallow Pool Chest" : LocationData(38, "Nox's Bayou Shallow Pool"),
     "NB Lagoon Dark Chest" : LocationData(42, "Nox's Bayou Big Lagoon Dark"),

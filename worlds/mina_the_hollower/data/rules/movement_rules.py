@@ -12,7 +12,7 @@ from ..items import Trinkets, Sidearms, PlayerUpgrades, Weapons, \
     Abilities, all_movement_items, movement_trinkets, movement_sidearms
 
 
-def base_movement_calc(movement_loadout, has_walls: bool):
+def base_movement_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
     distance = 1
     if Abilities.BURROW in movement_loadout:
         distance+=1
@@ -20,37 +20,39 @@ def base_movement_calc(movement_loadout, has_walls: bool):
         distance += 5
     if Trinkets.BELLOWS_BUSTLE in movement_loadout:
         distance += 2
-    if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
+    if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout
+                  and not no_sidearms and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
         distance += 2
-    if Sidearms.MIST_JAR in movement_loadout:
+    if Sidearms.MIST_JAR in movement_loadout and not no_sidearms:
         distance += 1
     if Trinkets.PIT_PRESERVER in movement_loadout:
         distance += 1
-    if Sidearms.DRIVER_DRILL in movement_loadout:
+    if Sidearms.DRIVER_DRILL in movement_loadout and not no_sidearms:
         distance+=4
     if Trinkets.BRISK_BREW in movement_loadout and distance > 2:
         distance += 1
     return distance
 
-def shield_calc(movement_loadout, has_walls: bool):
+def shield_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
     distance = 4
     if Trinkets.WALLOWERS_GAUNTLETS in movement_loadout and has_walls and Abilities.BURROW in movement_loadout:
         distance += 5
     if Trinkets.BELLOWS_BUSTLE in movement_loadout:
         distance += 2
-    if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
+    if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout
+                              and not no_sidearms and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
         distance += 2
-    if Sidearms.MIST_JAR in movement_loadout:
+    if Sidearms.MIST_JAR in movement_loadout and not no_sidearms:
         distance += 1
     if Trinkets.PIT_PRESERVER in movement_loadout:
         distance += 1
-    if Sidearms.DRIVER_DRILL in movement_loadout:
+    if Sidearms.DRIVER_DRILL in movement_loadout and not no_sidearms:
         distance += 4
     if Trinkets.BRISK_BREW in movement_loadout and distance > 4:
         distance += 1
     return distance
 
-def bridge_weaver_calc(movement_loadout, has_walls: bool):
+def bridge_weaver_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
     distance = 3
     if Abilities.BURROW in movement_loadout:
         distance += 1
@@ -58,19 +60,21 @@ def bridge_weaver_calc(movement_loadout, has_walls: bool):
         distance += 5
     if Trinkets.BELLOWS_BUSTLE in movement_loadout:
         distance += 2
-    if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
+    if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout and not no_sidearms and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
         distance += 2
-    if Sidearms.MIST_JAR in movement_loadout:
+    if Sidearms.MIST_JAR in movement_loadout and not no_sidearms:
         distance += 1
     if Trinkets.PIT_PRESERVER in movement_loadout:
         distance += 1
-    if Sidearms.DRIVER_DRILL in movement_loadout:
+    if Sidearms.DRIVER_DRILL in movement_loadout and not no_sidearms:
         distance += 4
     if Trinkets.BRISK_BREW in movement_loadout and distance > 3:
         distance += 1
     return distance
 
-def iron_steed_calc(movement_loadout, has_walls: bool):
+def iron_steed_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
+    if no_sidearms:
+        return 1
     distance = 5
     if Trinkets.KERI_THE_WISP in movement_loadout:
         return 11
@@ -81,19 +85,19 @@ def iron_steed_calc(movement_loadout, has_walls: bool):
     return distance
 
 
-def spring_heel_calc(movement_loadout, has_walls: bool):
+def spring_heel_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
     distance = 3
 
     if Trinkets.WALLOWERS_GAUNTLETS in movement_loadout and has_walls and Abilities.BURROW in movement_loadout:
         distance+=5
-    if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
+    if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout and not no_sidearms and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
         distance += 2
 
-    if Sidearms.DRIVER_DRILL in movement_loadout:
+    if Sidearms.DRIVER_DRILL in movement_loadout and not no_sidearms:
         distance+=4
         if Trinkets.KERI_THE_WISP in movement_loadout:
             distance+=1
-    if Sidearms.MIST_JAR in movement_loadout:
+    if Sidearms.MIST_JAR in movement_loadout and not no_sidearms:
         distance += 1
     if Trinkets.PIT_PRESERVER in movement_loadout:
         distance += 1
@@ -163,23 +167,25 @@ def valid_loadouts(state: CollectionState, player: int):
 class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
     distance: int
     has_wall: bool = False
+    no_sidearms: bool = False
     @override
     def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
         # caching_enabled only needs to be passed in when your world inherits from CachedRuleBuilderWorld
-        return self.Resolved(distance=self.distance, has_wall=self.has_wall, player=world.player, caching_enabled=True)
+        return self.Resolved(distance=self.distance, no_sidearms=self.no_sidearms, has_wall=self.has_wall, player=world.player, caching_enabled=True)
 
     class Resolved(Rule.Resolved):
         distance: int
         has_wall: bool
+        no_sidearms: bool
 
         @override
         def _evaluate(self, state: CollectionState) -> bool:
             for loadout in valid_loadouts(state, self.player):
-                distance = base_movement_calc(loadout, self.has_wall)
+                distance = base_movement_calc(loadout, self.has_wall, self.no_sidearms)
 
                 for item, calc in exclusive_movements:
                     if item in loadout:
-                        distance = max(distance, calc(loadout, self.has_wall))
+                        distance = max(distance, calc(loadout, self.has_wall, self.no_sidearms))
                 if distance >= self.distance:
                     return True
             return False
@@ -198,20 +204,20 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         def __str__(self) -> str:
             return "Jump x tiles"
 
-def max_jump(state: CollectionState, player: int, has_wall:bool)  -> tuple[int,frozenset[ItemTypeEnum]]:
+def max_jump(state: CollectionState, player: int, has_wall:bool, no_sidearms: bool)  -> tuple[int,frozenset[ItemTypeEnum]]:
     distance = 0
     loadout = None
     for new_loadout in valid_loadouts(state, player):
 
-        new_distance = base_movement_calc(new_loadout, has_wall)
+        new_distance = base_movement_calc(new_loadout, has_wall, no_sidearms)
 
         if new_distance > distance:
             distance = new_distance
             loadout = new_loadout
 
         for item, calc in exclusive_movements:
-            if item in loadout:
-                new_distance = calc(new_loadout, has_wall)
+            if item in new_loadout:
+                new_distance = calc(new_loadout, has_wall, no_sidearms)
                 if new_distance > distance:
                     distance = new_distance
                     loadout = new_loadout

@@ -36,7 +36,7 @@ def create_items(world: "MinaTheHollowerWorld"):
     all_items: list[ItemData] = []
     trinket_types = set(Trinkets)
     bone_cap_types = {*BoneUps, GenericBoneUp.ALL_BONE_UP_CAP}
-    bone_cap_cap = 6 if world.options.bone_up_cap == BoneUpCap.option_perUpgrade else 2
+    bone_cap_cap = 4 if world.options.bone_up_cap == BoneUpCap.option_perUpgrade else 2
     trinkets_selected = 0
     bags_selected = 0
     bone_caps_selected = 0

@@ -4,7 +4,7 @@ from rule_builder.rules import Has, True_
 from ... import RegionConnection, Transition, LocationData
 from ...items import Trinkets, SingleKears, Sidearms, FishingUpgrades
 from ...rules.ability_rules import CanBurrow, CanBounce, CanSwim, CanCarry, CanClimb, \
-    HasFishingRod
+    HasFishingRod, PowerLevelThreshold
 from ...rules.state_rules import HasLadder, HasKear, HasRepairedGeneratorCount
 from ...rules.movement_rules import CanJumpTiles
 
@@ -29,6 +29,6 @@ collectable_locations: dict[str, LocationData] = {
 }
 
 boss_locations: dict[str, LocationData] = {
-    "Plasma Jug": LocationData(290, "Backwaters Upper Swamp Waterfall", Has(Trinkets.EMPTY_JUG.value)),
+    "Plasma Jug": LocationData(290, "Backwaters Upper Swamp Waterfall", Has(Trinkets.EMPTY_JUG.value) & PowerLevelThreshold(power=24)),
 }
 
