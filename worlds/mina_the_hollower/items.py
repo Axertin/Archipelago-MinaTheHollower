@@ -230,7 +230,7 @@ def create_events(world: "MinaTheHollowerWorld"):
         #     region = starting_region
         # else:
         create_event(world, region_name=area + " " + name + " Generator",
-                     item_name="Repair " + name + " Generator", loc_name="Repair " + area + "Generator")
+                     item_name="Repair " + name + " Generator", loc_name="Repair " + area + " Generator")
 
     create_event(world, region_name="Astral Orrery Queensbury Mirror",
                  item_name=AstralPlatforms.BLUE_ASTRAL_PLATFORMS.value, loc_name="Blue Switch")

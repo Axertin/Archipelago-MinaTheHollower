@@ -187,6 +187,38 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
                 {"type": "color", "color": "green", "text": f"Can Jump With Wallower {wall_distance} Tiles.{wall_loadout_message}\n"},
                 {"type": "color", "color": "green", "text": f"Can Jump With No Sidarms {no_sides_distance} Tiles.{no_sides_loadout_message}\n"},
             ]
+        if dest_name == "Generators":
+            generators = [
+                ("Solemn", "Repair Solemn Generator"),
+                ("Swampy", "Repair Swampy Generator"),
+                ("Windy", "Repair Windy Generator"),
+                ("Shoreline", "Repair Shoreline Generator"),
+                ("Frozen", "Repair Frozen Generator"),
+                ("Starry", "Repair Starry Generator"),
+            ]
+
+            repairable_generators = [
+                name for name, item in generators
+                if state.has(item, self.player)
+            ]
+
+            unreachable_generators = [
+                name for name, item in generators
+                if not state.has(item, self.player)
+            ]
+
+            return [
+                {
+                    "type": "color",
+                    "color": "green",
+                    "text": f"Repairable Generators: {', '.join(repairable_generators) or 'None'}\n",
+                },
+                {
+                    "type": "color",
+                    "color": "salmon",
+                    "text": f"Unreachable Generators: {', '.join(unreachable_generators) or 'None'}\n",
+                },
+            ]
         return None
 
 
