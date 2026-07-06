@@ -24,8 +24,8 @@ collectable_locations: dict[str, LocationData] = {
     "AO Cog Chamber Secret Room #1 Kear": LocationData(135, "Astral Orrery Cog Chamber", CanBurrow() & CanCarry()),
     "AO Mutant Lab Secret Room #1 Chest": LocationData(131, "Astral Orrery Mutant Lab", CanBurrow()),
     "AO Mutant Lab Secret Room #2 Bridge Weaver": LocationData(132, "Astral Orrery Mutant Lab", CanBurrow()),
-    "AO Hall of Scholars Below Boss Chamber Bonestone": LocationData(126, "Astral Orrery Hall of Scholars"),
-    "AO Hall of Scholars Exit Chest": LocationData(136, "Astral Orrery Hall of Scholars End", CanBurrow()),
+    "AO Hall of Scholars Below Boss Chamber Bonestone": LocationData(126, "Astral Orrery Hall Of Scholars"),
+    "AO Hall of Scholars Exit Chest": LocationData(136, "Astral Orrery Hall Of Scholars End", CanBurrow()),
     "AO Sealed Archive Health Rose": LocationData(125, "Astral Orrery Sealed Archive Congealed Chamber"),
 
 

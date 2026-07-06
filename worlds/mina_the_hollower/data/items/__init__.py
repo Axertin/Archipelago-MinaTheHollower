@@ -1,5 +1,4 @@
 from rule_builder.rules import True_, Has
-from worlds.ff1.Client import movement_items
 from .abilities import Abilities
 from .blockers import AstralPlatforms
 from .game_items import Sidearms, PermanentUpgrades, PlayerUpgrades, Trinkets, BoneFiller, JunkFiller, CosmeticUpgrades, \

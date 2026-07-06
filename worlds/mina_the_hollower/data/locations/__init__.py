@@ -26,6 +26,10 @@ all_collectables: ChainMap[str, LocationData] = ChainMap(
     western_wilds.collectable_locations,
 )
 
+all_optional_locations: ChainMap[str, LocationData] = ChainMap(
+    loners_landing.optional_collectable_locations
+)
+
 all_bosses: ChainMap[str, LocationData] = ChainMap(
     # astral_orrery.boss_locations,
     # bayou.boss_locations,

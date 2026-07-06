@@ -21,6 +21,8 @@ collectable_locations: dict[str, LocationData] = {
     "LL Belowdecks Unchosen Weapon #1": LocationData(17, "Loner's Landing Belowdecks", HasKear(kear=SingleKears.LONERS_LANDING_BELOWDECKS_LEFT_WEAPON_KEAR.value)),
     "LL Belowdecks Unchosen Weapon #2": LocationData(18, "Loner's Landing Belowdecks", HasKear(kear=SingleKears.LONERS_LANDING_BELOWDECKS_RIGHT_WEAPON_KEAR.value)),
     "LL Belowdecks Chest": LocationData(30, "Loner's Landing Belowdecks", CanJumpTiles(distance=2)),
+}
+optional_collectable_locations: dict[str, LocationData] = {
     "LL Captain's Gift" : LocationData(24, "Loner's Landing Shipwreck"),
 }
 
