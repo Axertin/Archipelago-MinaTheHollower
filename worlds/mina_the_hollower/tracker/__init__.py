@@ -336,6 +336,100 @@ mm_stairs: dict[int, int] = {
     12:0,
     3:0,
 }
+qc_graveyard: dict[int, int] = {
+    9:0,
+    3:0,
+    0:1,
+    4:1,
+    1:1,
+    7:2,
+    2:3,
+    5:3,
+}
+
+qc_tomb: dict[int, int] = {
+    6:0,
+}
+qc_crypt: dict[int, int] = {
+    20:0,
+}
+qc_entryway: dict[int, int] = {
+    22:0,
+    21:0,
+    27:0,
+    10:0,
+    0:1,
+    7:1,
+    5:1,
+    6:1,
+    12:1,
+}
+qc_deep_stair: dict[int, int] = {
+    8:0,
+}
+qc_head: dict[int, int] = {
+    23:0,
+    11:0,
+    28:0,
+    26:0,
+    25:0,
+    19:0,
+    31:0,
+    24:0,
+    32:0,
+    9:0,
+}
+qc_final_stair: dict[int, int] = {
+    13:0,
+}
+qc_chamber: dict[int, int] = {
+    15:0,
+    16:0,
+    14:0,
+    4:0,
+    29:1,
+    30:1,
+    1:2,
+    17:2
+}
+qc_end: dict[int, int] = {
+    3:0,
+    2:0,
+}
+kw_start: dict[int, int] = {
+    14:0,
+}
+kw_overgrowth: dict[int, int] = {
+    13:0,
+    4:0,
+    7:0,
+    6:0,
+    15:0,
+}
+kw_overgrowth_house: dict[int, int] = {
+    19:0,
+    12:0,
+}
+kw_mad_house: dict[int, int] = {
+    10:0
+}
+kw_farm: dict[int, int] = {
+    5:0,
+    8:0,
+    18:1,
+    17:0,
+}
+kw_interiors: dict[int, int] = {
+    1:0,
+    2:0,
+}
+kw_train: dict[int, int] = {
+    20:0,
+    9:0,
+}
+kw_wallowers: dict[int, int] = {
+    11:0,
+}
 @dataclasses.dataclass
 class MapData:
     lookup: dict[int, int]
@@ -385,7 +479,7 @@ area_id_to_map: dict[int, MapData] = {
     72: MapData(pinky, 28),
     74: MapData(fishing, 28),
     73: MapData(lanturn_cave, 29),
-    77: MapData(backwaters_station, 29),
+    76: MapData(backwaters_station, 29),
     75: MapData(lucky_lair, 29),
     1: MapData(bayou_boat, 30),
     8: MapData(bayou_fen, 30),
@@ -404,6 +498,23 @@ area_id_to_map: dict[int, MapData] = {
     90: MapData(mm_mina_grave, 42),
     91: MapData(mm_deprived_path, 42),
     86: MapData(mm_stairs, 43),
+    19: MapData(qc_graveyard, 44),
+    20: MapData(qc_tomb, 45),
+    12: MapData(qc_crypt, 48),
+    13: MapData(qc_entryway, 49),
+    17: MapData(qc_deep_stair, 50),
+    14: MapData(qc_head, 51),
+    18: MapData(qc_final_stair, 51),
+    15: MapData(qc_chamber, 52),
+    16: MapData(qc_chamber, 54),
+    78: MapData(kw_start, 55),
+    77: MapData(kw_overgrowth, 55),
+    82: MapData(kw_overgrowth_house, 56),
+    84: MapData(kw_mad_house, 58),
+    79: MapData(kw_farm, 57),
+    83: MapData(kw_interiors, 58),
+    81: MapData(kw_train, 58),
+    80: MapData(kw_wallowers, 59),
 }
 
 

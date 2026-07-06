@@ -50,5 +50,23 @@
   {"name": "Mourner's Mile Shallow Tomb", "img": "area_images/mourners_mile/shallow_tomb.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Mourner's Mile Generator", "img": "area_images/mourners_mile/generator.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Mourner's Mile Deprived Path", "img": "area_images/mourners_mile/deprived_path.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Mourner's Mile Stairs", "img": "area_images/mourners_mile/stairs.png", "location_size": 32, "location_border_thickness": 2}
+  {"name": "Mourner's Mile Stairs", "img": "area_images/mourners_mile/stairs.png", "location_size": 32, "location_border_thickness": 2},
+
+  {"name": "Queensbury Entrance", "img": "area_images/queensbury/entrance.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Old Graveyard", "img": "area_images/queensbury/old_graveyard.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Bridge", "img": "area_images/queensbury/bridge.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Outside Crypt", "img": "area_images/queensbury/crypt_facade.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Foyer", "img": "area_images/queensbury/crypt_foyer.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Entryway", "img": "area_images/queensbury/b_1_start.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Entryway End", "img": "area_images/queensbury/b_1_end.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Head Hall", "img": "area_images/queensbury/b_2.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Ancestral Chamber", "img": "area_images/queensbury/b_3_start.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Ancestral Chamber NPC", "img": "area_images/b_3_npc/b_1_end.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Ancestral Chamber End", "img": "area_images/b_3_end/b_1_end.png", "location_size": 32, "location_border_thickness": 2},
+
+  {"name": "Kindlewood Overgrowth", "img": "area_images/kindlewood/woods.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Kindlewood Overgrowth Interiors", "img": "area_images/kindlewood/woods_interiors.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Kindlewood Farm Crossing", "img": "area_images/kindlewood/town.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Kindlewood Interiors", "img": "area_images/kindlewood/interiors.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Kindlewood Burrowers", "img": "area_images/kindlewood/wallowers.png", "location_size": 32, "location_border_thickness": 2}
 ]
