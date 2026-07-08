@@ -61,8 +61,8 @@
   {"name": "Queensbury Entryway End", "img": "area_images/queensbury/b_1_end.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Queensbury Head Hall", "img": "area_images/queensbury/b_2.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Queensbury Ancestral Chamber", "img": "area_images/queensbury/b_3_start.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Queensbury Ancestral Chamber NPC", "img": "area_images/b_3_npc/b_1_end.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Queensbury Ancestral Chamber End", "img": "area_images/b_3_end/b_1_end.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Ancestral Chamber NPC", "img": "area_images/queensbury/b_3_npc.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Queensbury Ancestral Chamber End", "img": "area_images/queensbury/b_3_end.png", "location_size": 32, "location_border_thickness": 2},
 
   {"name": "Kindlewood Overgrowth", "img": "area_images/kindlewood/woods.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Kindlewood Overgrowth Interiors", "img": "area_images/kindlewood/woods_interiors.png", "location_size": 32, "location_border_thickness": 2},

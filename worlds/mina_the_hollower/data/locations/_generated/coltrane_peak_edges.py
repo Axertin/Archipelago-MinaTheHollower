@@ -215,7 +215,7 @@ transitions: dict[str, Transition] = {
     'Coltrane Peak Spiral Summit Underlab North Transition': Transition('Coltrane Peak Spiral Summit Underlab', 'Coltrane Peak Spiral Summit', DirectionType.NORTH, TransitionType.SCREENS, True_()),
     'Coltrane Peak Spiral Wolf South Transition': Transition('Coltrane Peak Spiral Wolf', 'Coltrane Peak Spiral Summit Platforms Rope', DirectionType.SOUTH, TransitionType.SCREENS, CanClimb()),
     'Coltrane Peak Spiral Wolf Stairs North Transition': Transition('Coltrane Peak Spiral Wolf Stairs', 'Coltrane Peak Spiral Summit Climb', DirectionType.NORTH, TransitionType.SCREENS, True_()),
-    'Coltrane Peak Station Do_Not_Randomize_Entrance': Transition('Coltrane Peak Station', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value)),
+    'Coltrane Peak Station Do_Not_Randomize_Entrance': Transition('Coltrane Peak Station', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value)),
     'Coltrane Peak Station East Transition': Transition('Coltrane Peak Station', 'Coltrane Peak Gorge Engine', DirectionType.EAST, TransitionType.SCREENS, True_()),
     'Coltrane Peak Station South Area Transition': Transition('Coltrane Peak Station', 'Coltrane Peak Frozen Pass Top', DirectionType.SOUTH, TransitionType.AREA_SCREENS, True_()),
     'Coltrane Peak Station Tracks West Transition': Transition('Coltrane Peak Station Tracks', 'Coltrane Peak Station', DirectionType.EAST, TransitionType.SCREENS, HasRepairedFrozenGenerator()),

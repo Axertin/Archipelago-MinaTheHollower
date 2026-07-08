@@ -210,7 +210,7 @@ transitions: dict[str, Transition] = {
     'Ossex Station South Burrow': Transition('Ossex Station', 'Ossex Station Underside Burrow', DirectionType.SOUTH, TransitionType.BURROW, CanBurrow()),
     'Ossex Station Underside Exit': Transition('Ossex Station Underside Main', 'Ossex Bowery Main', DirectionType.SOUTH, TransitionType.DOORS, True_()),
     'Ossex Station Underside Upper North Burrow': Transition('Ossex Station Underside Upper', 'Ossex Courtyard West Chest', DirectionType.NORTH, TransitionType.BURROW, CanBurrow()),
-    'Ossex Station_Ossex Train Caboose': Transition('Ossex Station', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.OSSEX_TICKET.value)),
+    'Ossex Station_Ossex Train Caboose': Transition('Ossex Station', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value)),
     'Ossex Strategy Center Exit': Transition('Ossex Strategy Center', 'Ossex High Street Main', DirectionType.SOUTH, TransitionType.DOORS, True_()),
     'Ossex Trinket Bazaar Door': Transition('Ossex Trinket Bazaar', 'Ossex City Center Upper', DirectionType.SOUTH, TransitionType.DOORS, True_()),
 }

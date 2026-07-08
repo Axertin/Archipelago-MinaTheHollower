@@ -90,7 +90,7 @@ connections: dict[str, RegionConnection] = {
 transitions: dict[str, Transition] = {
     'Kindlewood Behind Madd House South Burrow': Transition('Kindlewood Behind Madd House', 'Kindlewood Overgrowth Madd Arena', DirectionType.SOUTH, TransitionType.BURROW, PowerLevelThreshold(power=25)),
     'Kindlewood Farm Crossing Above School East Burrow': Transition('Kindlewood Farm Crossing Above School', 'Kindlewood Farm Crossing Pumpkin Patch', DirectionType.EAST, TransitionType.BURROW, CanBurrow()),
-    'Kindlewood Farm Crossing Do_Not_Randomize_Entrance': Transition('Kindlewood Farm Crossing', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.SEPTEMBURG_TICKET.value)),
+    'Kindlewood Farm Crossing Do_Not_Randomize_Entrance': Transition('Kindlewood Farm Crossing', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value)),
     'Kindlewood Farm Crossing Pumpkin Patch North Burrow': Transition('Kindlewood Farm Crossing Pumpkin Patch', 'Kindlewood Farm Crossing Shack', DirectionType.NORTH, TransitionType.BURROW, CanBurrow()),
     'Kindlewood Farm Crossing Pumpkin Patch West Burrow': Transition('Kindlewood Farm Crossing Pumpkin Patch', 'Kindlewood Farm Crossing Above School', DirectionType.WEST, TransitionType.BURROW, CanBurrow()),
     'Kindlewood Farm Crossing Shack East Burrow': Transition('Kindlewood Farm Crossing Shack', 'Kindlewood Farm Crossing Shack Outside', DirectionType.EAST, TransitionType.BURROW, CanBurrow()),

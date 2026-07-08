@@ -1,0 +1,41 @@
+[
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "QC Old Graveyard Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Old Graveyard",
+                "x": 208,
+                "y": 785
+            }
+        ]
+    },
+    {
+        "name": "Grave Digging",
+        "sections": [
+            {"name": "QC Old Graveyard Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Old Graveyard",
+                "x": 175,
+                "y": 397
+            }
+        ]
+    },
+    {
+          "name": "Grave Digging",
+          "sections": [
+              {"name": "QC Old Graveyard Kear"}
+          ],
+          "map_locations": [
+              {
+                  "map": "QC Bonnet Tomb Desperation Bonnet",
+                  "x": 175,
+                  "y": 397
+              }
+          ]
+      }
+]

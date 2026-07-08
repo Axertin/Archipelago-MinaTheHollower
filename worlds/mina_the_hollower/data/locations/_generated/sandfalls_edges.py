@@ -98,7 +98,7 @@ transitions: dict[str, Transition] = {
     'Sandfalls Sandwater Junction Top Burrow East': Transition('Sandfalls Sandwater Junction Top', 'Sandfalls Payload Passage Bottom', DirectionType.EAST, TransitionType.BURROW, CanBurrow()),
     'Sandfalls Sandwater Junction Top South Rope': Transition('Sandfalls Sandwater Junction Top', 'Sandfalls Sandwater Junction', DirectionType.SOUTH, TransitionType.SCREENS, CanClimb()),
     'Sandfalls Sandy Station North Transition': Transition('Sandfalls Sandy Station', 'Sandfalls Sifted Sands', DirectionType.NORTH, TransitionType.SCREENS, True_()),
-    'Sandfalls Sandy Station Train': Transition('Sandfalls Sandy Station', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.BONE_BEACH_TICKET.value)),
+    'Sandfalls Sandy Station Train': Transition('Sandfalls Sandy Station', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value)),
     'Sandfalls Shifty Seclusion Exit': Transition('Sandfalls Shifty Seclusion', 'Sandfalls Sifted Sands', DirectionType.SOUTH, TransitionType.DOORS, True_()),
     'Sandfalls Sifted Sands Burrow West': Transition('Sandfalls Sifted Sands', 'Sandfalls Payload Passage Chest', DirectionType.WEST, TransitionType.BURROW, CanBurrow() & CanCarry()),
     'Sandfalls Sifted Sands Den Door': Transition('Sandfalls Sifted Sands', 'Sandfalls Miners Den Entrance', DirectionType.NORTH, TransitionType.STAIRS, HasVialsCount(count=3) & CanBurrow() & CanCarry()),

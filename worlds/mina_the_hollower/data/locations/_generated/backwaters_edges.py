@@ -110,7 +110,7 @@ transitions: dict[str, Transition] = {
     'Backwaters Lower Swamp Shanty Band Secret North Transition': Transition('Backwaters Lower Swamp Shanty Band', 'Backwaters Upper Swamp Back', DirectionType.NORTH, TransitionType.SCREENS, CanSwim()),
     'Backwaters Lower Swamp Station Entrance East Transition': Transition('Backwaters Lower Swamp Station Entrance', 'Backwaters Lower Swamp Station', DirectionType.EAST, TransitionType.SCREENS, True_()),
     'Backwaters Lower Swamp Station South Area Transition': Transition('Backwaters Lower Swamp Station', "Loner's Landing Bay", DirectionType.SOUTH, TransitionType.AREA_SCREENS, True_()),
-    'Backwaters Lower Swamp Station Train': Transition('Backwaters Lower Swamp Station', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.BAYOU_TICKET.value)),
+    'Backwaters Lower Swamp Station Train': Transition('Backwaters Lower Swamp Station', 'Ossex Train Caboose', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.TRAIN_PASS.value)),
     "Backwaters Lucky's Lair Burrow Exit": Transition("Backwaters Lucky's Lair", 'Backwaters Lower Swamp Bayou Entrance', DirectionType.SOUTH, TransitionType.BURROW, CanBurrow()),
     'Backwaters Pinky Back Pond Board South Transition': Transition('Backwaters Pinky Back Pond Board', 'Backwaters Pinky Front Lawn West', DirectionType.SOUTH, TransitionType.SCREENS, True_()),
     'Backwaters Pinky Back Pond Lawn West Shop Entrance': Transition('Backwaters Pinky Back Pond Lawn', 'Backwaters Pinky Shop Back', DirectionType.WEST, TransitionType.SCREENS, HasKear(kear=SingleKears.PINKY_BACK_KEAR.value)),
