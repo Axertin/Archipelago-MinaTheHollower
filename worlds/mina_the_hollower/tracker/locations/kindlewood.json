@@ -1,0 +1,148 @@
+[
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Overgrowth Bonfire Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Overgrowth",
+                "x": 401,
+                "y": 1042
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Residence Basement Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Overgrowth Interiors",
+                "x": 465,
+                "y": 333
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "KW Madd House Draining Beastium"},
+            {"name": "KW Madd House Oozing Organ"},
+            {"name": "KW Madd House Voltaic Guard"},
+            {"name": "KW Madd House Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Interiors",
+                "x": 1469,
+                "y": 334
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Behind Madd House Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Overgrowth",
+                "x": 432,
+                "y": 111
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "KW Train Station Gourdan"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 1038,
+                "y": 400
+            }
+        ]
+    },
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "KW Gazeworm Eye"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 998,
+                "y": 334
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Train Station Ledge Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 684,
+                "y": 656
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Farm Crossing Shack Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Interiors",
+                "x": 726,
+                "y": 79
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "KW Wallower's Room Wallower's Gauntlets"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Wallowers",
+                "x": 726,
+                "y": 79
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Wallower's Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Wallowers",
+                "x": 80,
+                "y": 661
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Rail Tunnel Vial Pouch"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood interiors",
+                "x": 1650,
+                "y": 541
+            }
+        ]
+    }
+]

@@ -74,6 +74,8 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             "locations/western_wilds.json",
             "locations/bayou.json",
             "locations/mourners_mile.json",
+            "locations/queensbury.json",
+            "locations/kindlewood.json",
         },
         "map_page_index": tracker.map_page_index,
         "map_page_setting_key": "MTH_level_{team}_{player}",

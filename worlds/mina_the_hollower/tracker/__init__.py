@@ -430,6 +430,173 @@ kw_train: dict[int, int] = {
 kw_wallowers: dict[int, int] = {
     11:0,
 }
+sb_farm: dict[int, int] = {
+    4:0,
+    6:0,
+    14:0,
+    5:1,
+    16:1,
+    0:1,
+    1:2,
+    19:2,
+    15:2,
+    12:3,
+    13:3,
+    3:4,
+    2:4,
+    18:4,
+    17:4,
+}
+sb_barn: dict[int, int] = {
+    7:0,
+    8:0,
+    9:0,
+}
+sb_barn_exit: dict[int, int] = {
+    10:0,
+}
+sb_storm_intro: dict[int, int] = {
+    6:0,
+    17:0,
+    4:0,
+    5:0,
+}
+sb_town: dict[int, int] = {
+    6:0,
+    17:0,
+    4:0,
+    5:0,
+    15:1,
+}
+sb_town_house: dict[int, int] = {
+    3:0,
+}
+sb_forest: dict[int, int] = {
+    7:0,
+    11:0,
+    13:0,
+    16:0,
+}
+sb_stormwatch: dict[int, int] = {
+    8:0,
+    10:0,
+    9:0,
+    14:0,
+    2:0,
+    1:1
+}
+sb_fight: dict[int, int] = {
+    0:0,
+}
+sb_generator: dict[int, int] = {
+    2:0,
+    0:0,
+}
+sb_wastewater: dict[int, int] = {
+    3:0,
+    2:0,
+    8:0,
+    5:0,
+    7:0,
+    6:0,
+    1:1,
+    0:1,
+    4:1,
+}
+sf_start: dict[int, int] = {
+    14:0,
+}
+sandfalls: dict[int, int] = {
+    12:0,
+    24:0,
+    25:1,
+    17:1,
+    13:1,
+    26:1,
+}
+sf_station: dict[int, int] = {
+    2:0,
+}
+sf_ring: dict[int, int] = {
+    3:0,
+}
+sf_junction: dict[int, int] = {
+    2:0,
+    4:0,
+}
+sf_mine: dict[int, int] = {
+    5:0,
+    4:0,
+    1:0,
+    0:0,
+}
+bb_shortcut: dict[int, int] = {
+    0:0,
+    5:0,
+    1:2,
+    8:1,
+    7:1
+}
+bb_trail: dict[int, int] = {
+    16:0,
+    5:0,
+    7:1,
+    4:1,
+    6:1,
+    14:1,
+    0:1,
+    9:1,
+    1:2,
+    2:2,
+}
+bb_tent: dict[int, int] = {
+    19:0,
+}
+bb_cave: dict[int, int] = {
+    10:0,
+    12:0,
+    15:0,
+    11:0,
+}
+bb_back: dict[int, int] = {
+    14:0,
+    8:0,
+    4:0,
+    1:1,
+    2:1,
+    20:5,
+}
+
+bb_maw: dict[int, int] = {
+    29:0,
+    5:0,
+}
+bb_tract: dict[int, int] = {
+    1:0,
+    2:0,
+    10:0,
+    9:0,
+    8:0,
+    3:1,
+}
+bb_mine: dict[int, int] = {
+    6:0,
+    18:0,
+    20:0,
+    4:0,
+}
+bb_depths: dict[int, int] = {
+    11:0,
+    13:0,
+    14:0
+}
+bb_dark: dict[int, int] = {
+    12:0,
+}
+bb_arena: dict[int, int] = {
+    5:0,
+    7:0,
+}
 @dataclasses.dataclass
 class MapData:
     lookup: dict[int, int]
@@ -515,6 +682,33 @@ area_id_to_map: dict[int, MapData] = {
     83: MapData(kw_interiors, 58),
     81: MapData(kw_train, 58),
     80: MapData(kw_wallowers, 59),
+    42: MapData(sb_farm, 60),
+    43: MapData(sb_barn, 65),
+    44: MapData(sb_barn_exit, 65),
+    45: MapData(sb_town, 66),
+    46: MapData(sb_town_house, 67),
+    47: MapData(sb_forest, 68),
+    48: MapData(sb_stormwatch, 69),
+    49: MapData(sb_fight, 69),
+    51: MapData(bb_shortcut, 69),
+    50: MapData(sb_wastewater, 70),
+    94: MapData(sf_start, 72),
+    93: MapData(sandfalls, 72),
+    95: MapData(sf_station, 72),
+    96: MapData(sf_ring, 73),
+    39: MapData(sf_junction, 74),
+    97: MapData(sf_mine, 75),
+    37: MapData(bb_shortcut, 76),
+    24: MapData(bb_trail, 77),
+    36: MapData(bb_back, 77),
+    34: MapData(bb_tent, 80),
+    28: MapData(bb_cave, 80),
+    29: MapData(bb_maw, 81),
+    35: MapData(bb_arena, 81),
+    30: MapData(bb_tract, 81),
+    31: MapData(bb_mine, 82),
+    32: MapData(bb_depths, 83),
+    33: MapData(bb_dark, 84),
 }
 
 

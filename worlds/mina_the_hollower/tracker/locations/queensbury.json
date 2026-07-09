@@ -26,16 +26,199 @@
         ]
     },
     {
-          "name": "Grave Digging",
-          "sections": [
-              {"name": "QC Old Graveyard Kear"}
-          ],
-          "map_locations": [
-              {
-                  "map": "QC Bonnet Tomb Desperation Bonnet",
-                  "x": 175,
-                  "y": 397
-              }
-          ]
-      }
+        "name": "Trinket",
+        "sections": [
+            {"name": "QC Bonnet Tomb Desperation Bonnet"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Old Graveyard",
+                "x": 256,
+                "y": 66
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "QC Broken Bridge Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Bridge",
+                "x": 209,
+                "y": 1106
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "QC Pipe Room Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Bridge",
+                "x": 811,
+                "y": 347
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Castle Entry Weapon Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Outside Crypt",
+                "x": 75,
+                "y": 332
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Smelly Secret Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Entryway End",
+                "x": 1676,
+                "y": 1006
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "QC Hidden Tunnel Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Entryway End",
+                "x": 1452,
+                "y": 400
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Statue Head Hall Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Head Hall",
+                "x": 569,
+                "y": 1157
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Mirror Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Head Hall",
+                "x": 975,
+                "y": 627
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "QC Mirror Room Stolenoid"},
+            {"name": "QC Mirror Room Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Head Hall",
+                "x": 593,
+                "y": 593
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Putrid Place Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Head Hall",
+                "x": 1456,
+                "y": 1035
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Putrid Place Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Head Hall",
+                "x": 1456,
+                "y": 1035
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Putrid Place Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Head Hall",
+                "x": 1456,
+                "y": 1035
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "QC Rancid Room Fly Bait"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Ancestral Chamber",
+                "x": 764,
+                "y": 1289
+            }
+        ]
+    },
+    {
+        "name": "Rose",
+        "sections": [
+            {"name": "QC Ancestral Chamber Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Ancestral Chamber End",
+                "x": 257,
+                "y": 626
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "QC Royal Tomb Proto Spark"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Ancestral Chamber End",
+                "x": 206,
+                "y": 145
+            }
+        ]
+    }
 ]

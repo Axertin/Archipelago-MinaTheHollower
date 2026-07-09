@@ -68,5 +68,34 @@
   {"name": "Kindlewood Overgrowth Interiors", "img": "area_images/kindlewood/woods_interiors.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Kindlewood Farm Crossing", "img": "area_images/kindlewood/town.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Kindlewood Interiors", "img": "area_images/kindlewood/interiors.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Kindlewood Burrowers", "img": "area_images/kindlewood/wallowers.png", "location_size": 32, "location_border_thickness": 2}
+  {"name": "Kindlewood Wallowers", "img": "area_images/kindlewood/wallowers.png", "location_size": 32, "location_border_thickness": 2},
+
+  {"name": "Septemburg Farm Start", "img": "area_images/septemburg/start.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Farm", "img": "area_images/septemburg/farm1.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Farm Chase", "img": "area_images/septemburg/chase1.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Farm Wind", "img": "area_images/septemburg/wind.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Farm Tractors", "img": "area_images/septemburg/tractors.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Barn", "img": "area_images/septemburg/barn.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Stormy Town", "img": "area_images/septemburg/lightning_intro.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Town", "img": "area_images/septemburg/town.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Forest", "img": "area_images/septemburg/forest.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Stormwatch", "img": "area_images/septemburg/stormwatch.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Generator", "img": "area_images/septemburg/generator.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Wastewater Canal", "img": "area_images/septemburg/wastewater_canal.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Wastewater Well", "img": "area_images/septemburg/wastewater_well.png", "location_size": 32, "location_border_thickness": 2},
+
+  {"name": "Sandfalls", "img": "area_images/sandfalls/sandfalls.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Sandfalls Interiors", "img": "area_images/sandfalls/interiors.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Sandfalls Junction", "img": "area_images/sandfalls/junction.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Sandfalls Mine", "img": "area_images/sandfalls/mine.png", "location_size": 32, "location_border_thickness": 2},
+
+  {"name": "Bone Beach Generator", "img": "area_images/bone_beach/generator.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Bone Beach", "img": "area_images/bone_beach/beach.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Bone Beach Cliffs", "img": "area_images/bone_beach/beach_head.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Bone Beach Ocean", "img": "area_images/bone_beach/ocean.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Bone Beach Interiors", "img": "area_images/bone_beach/interiors.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Bone Beach Pulsing Tract", "img": "area_images/bone_beach/maw.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Bone Beach Stomach Mine", "img": "area_images/bone_beach/layers.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Bone Beach Gut Depths", "img": "area_images/bone_beach/depths.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Bone Beach Gut Darkness", "img": "area_images/bone_beach/dark.png", "location_size": 32, "location_border_thickness": 2}
 ]
