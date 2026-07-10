@@ -122,7 +122,7 @@ transitions: dict[str, Transition] = {
     'Kindlewood Overgrowth Residence Yard West Transition': Transition('Kindlewood Overgrowth Residence Yard', 'Kindlewood Overgrowth Bonfire Main', DirectionType.WEST, TransitionType.SCREENS, True_()),
     'Kindlewood Rail Tunnel Tracks West Transition': Transition('Kindlewood Rail Tunnel Tracks', 'Kindlewood Train Tracks', DirectionType.WEST, TransitionType.SCREENS, True_()),
     'Kindlewood School Backyard Doors': Transition('Kindlewood School Backyard', 'Kindlewood School Side', DirectionType.NORTH, TransitionType.DOORS, True_()),
-    'Kindlewood School Backyard Stairs': Transition('Kindlewood School Backyard', 'Septemburg Wastewater Canal Well Entrance', DirectionType.NORTH, TransitionType.STAIRS, True_()),
+    'Kindlewood School Backyard Stairs': Transition('Kindlewood School Backyard', 'Septemburg Wastewater Canal Well Entrance', DirectionType.NORTH, TransitionType.STAIRS, CanClimb()),
     'Kindlewood School Doors': Transition('Kindlewood School', 'Kindlewood School Yard', DirectionType.SOUTH, TransitionType.DOORS, True_()),
     'Kindlewood School Side Doors': Transition('Kindlewood School Side', 'Kindlewood School Backyard', DirectionType.SOUTH, TransitionType.DOORS, True_()),
     'Kindlewood School Side East Burrow': Transition('Kindlewood School Side', 'Kindlewood School', DirectionType.EAST, TransitionType.BURROW, True_()),

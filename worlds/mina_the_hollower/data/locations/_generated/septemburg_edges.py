@@ -224,7 +224,7 @@ transitions: dict[str, Transition] = {
     'Septemburg Wastewater Canal Slime Room East Burrow': Transition('Septemburg Wastewater Canal Slime Room', 'Septemburg Wastewater Canal Pumps Top', DirectionType.EAST, TransitionType.BURROW, CanBurrow()),
     'Septemburg Wastewater Canal Well Entrance East Burrow': Transition('Septemburg Wastewater Canal Well Entrance', 'Septemburg Wastewater Canal Well Tunnel', DirectionType.EAST, TransitionType.BURROW, CanBurrow()),
     'Septemburg Wastewater Canal Well Entrance East Transition': Transition('Septemburg Wastewater Canal Well Entrance', 'Septemburg Wastewater Canal Well Tunnel', DirectionType.EAST, TransitionType.SCREENS, True_()),
-    'Septemburg Wastewater Canal Well Entrance Stairs': Transition('Septemburg Wastewater Canal Well Entrance', 'Kindlewood School Backyard', DirectionType.NORTH, TransitionType.STAIRS, True_()),
+    'Septemburg Wastewater Canal Well Entrance Stairs': Transition('Septemburg Wastewater Canal Well Entrance', 'Kindlewood School Backyard', DirectionType.NORTH, TransitionType.STAIRS, CanClimb()),
     'Septemburg Wastewater Canal Well Rope North Transition': Transition('Septemburg Wastewater Canal Well Rope', 'Septemburg Wastewater Canal Boxes Pipes', DirectionType.NORTH, TransitionType.SCREENS, True_()),
     'Septemburg Wastewater Canal Well Tunnel West Burrow': Transition('Septemburg Wastewater Canal Well Tunnel', 'Septemburg Wastewater Canal Well Entrance', DirectionType.WEST, TransitionType.BURROW, CanBurrow()),
     'Septemburg Wastewater Canal Well Tunnel West Transition': Transition('Septemburg Wastewater Canal Well Tunnel', 'Septemburg Wastewater Canal Well Entrance', DirectionType.WEST, TransitionType.SCREENS, True_()),
