@@ -83,7 +83,7 @@ def HasBeastiumTransform():
 
 
 def HasFishingRod():
-    return Has(FishingUpgrades.FISHING_ROD.value)
+    return Has(PlayerUpgrades.JOULE_BOX.value) & Has(FishingUpgrades.FISHING_ROD.value)
 
 
 @dataclasses.dataclass(kw_only=True)

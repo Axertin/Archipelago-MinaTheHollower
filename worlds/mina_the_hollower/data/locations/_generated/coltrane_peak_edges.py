@@ -155,7 +155,7 @@ transitions: dict[str, Transition] = {
     'Coltrane Peak Frostbite Woods Rope North Transition': Transition('Coltrane Peak Frostbite Woods Rope', 'Coltrane Peak Rail Yard', DirectionType.NORTH, TransitionType.SCREENS, True_()),
     'Coltrane Peak Frostbite Woods South Transition': Transition('Coltrane Peak Frostbite Woods', 'Coltrane Peak Frostbite Woods Bush', DirectionType.SOUTH, TransitionType.SCREENS, True_()),
     'Coltrane Peak Frozen Generator South Transition': Transition('Coltrane Peak Frozen Generator', 'Coltrane Peak Maelstorm', DirectionType.SOUTH, TransitionType.SCREENS, True_()),
-    'Coltrane Peak Frozen Horror Arena North Transition': Transition('Coltrane Peak Frozen Horror Arena', 'Coltrane Peak Frozen Pipe', DirectionType.NORTH, TransitionType.SCREENS, PowerLevelThreshold(power=30)),
+    'Coltrane Peak Frozen Horror Arena North Transition': Transition('Coltrane Peak Frozen Horror Arena', 'Coltrane Peak Frozen Pipe', DirectionType.NORTH, TransitionType.SCREENS, PowerLevelThreshold(power=40)),
     'Coltrane Peak Frozen Horror Arena South Transition': Transition('Coltrane Peak Frozen Horror Arena', 'Coltrane Peak Icebound Cavern Pit Upper', DirectionType.SOUTH, TransitionType.SCREENS, PowerLevelThreshold(power=30)),
     'Coltrane Peak Frozen Mirror Room Mirrors': Transition('Coltrane Peak Frozen Mirror Room', 'Astral Orrery Coltrane Peak Mirror', DirectionType.OVERWORLD, TransitionType.MIRRORS, True_()),
     'Coltrane Peak Frozen Mirror Room West Burrow': Transition('Coltrane Peak Frozen Mirror Room', 'Coltrane Peak Frozen Pipe', DirectionType.WEST, TransitionType.BURROW, CanBurrow()),

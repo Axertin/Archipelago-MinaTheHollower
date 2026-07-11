@@ -47,7 +47,7 @@ class PermanentUpgrades(ItemTypeEnum):
     TRAINING_DUMMY = ("Training Dummy", 85, ItemClassification.useful)
     PHONOGRAPH = ("Phonograph", 86, ItemClassification.useful)
     TRAIN_PASS = ("Train Pass",94, ItemClassification.progression)
-    OSSEX_TICKET = ("Ossex Ticket", 95, ItemClassification.progression)
+    # OSSEX_TICKET = ("Ossex Ticket", 95, ItemClassification.progression)
     BAYOU_TICKET = ("Bayou Ticket",96, ItemClassification.progression)
     SEPTEMBURG_TICKET = ("Septemburg Ticket",97, ItemClassification.progression)
     BONE_BEACH_TICKET = ("Bone Beach Ticket",98, ItemClassification.progression)

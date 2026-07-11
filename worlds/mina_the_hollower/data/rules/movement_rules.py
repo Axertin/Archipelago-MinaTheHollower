@@ -4,7 +4,7 @@ from typing import override
 
 from BaseClasses import CollectionState
 from NetUtils import JSONMessagePart
-from rule_builder.rules import Rule
+from rule_builder.rules import Rule, Has
 from ...constants import MINA_THE_HOLLOWER
 from ...world_base import MinaTheHollowerBase
 from ...data import ItemTypeEnum
@@ -170,8 +170,9 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
     no_sidearms: bool = False
     @override
     def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
+        no_joules = not (Has(PlayerUpgrades.JOULE_BOX.value).resolve(world))
         # caching_enabled only needs to be passed in when your world inherits from CachedRuleBuilderWorld
-        return self.Resolved(distance=self.distance, no_sidearms=self.no_sidearms, has_wall=self.has_wall, player=world.player, caching_enabled=True)
+        return self.Resolved(distance=self.distance, no_sidearms=self.no_sidearms or no_joules, has_wall=self.has_wall, player=world.player, caching_enabled=True)
 
     class Resolved(Rule.Resolved):
         distance: int
@@ -180,6 +181,7 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
 
         @override
         def _evaluate(self, state: CollectionState) -> bool:
+
             for loadout in valid_loadouts(state, self.player):
                 distance = base_movement_calc(loadout, self.has_wall, self.no_sidearms)
 
