@@ -41,7 +41,7 @@ class HasSparks(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         count:int
         @override
         def _evaluate(self, state: CollectionState) -> bool:
-            sparks = 1 if state.has(Trinkets.SPARK_CATCHER.value, self.player) else 0
+            sparks = 1 if state.has(Trinkets.SPARK_CATCHER.value, self.player) and state.has(PlayerUpgrades.TRINKET_BAG.value, self.player) else 0
             sparks += state.count(PlayerUpgrades.SPARK_CONTAINER.value, self.player)
             return sparks >= self.count
 
@@ -50,6 +50,7 @@ class HasSparks(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
             return {
                 Trinkets.SPARK_CATCHER.value: {id(self)},
                 PlayerUpgrades.SPARK_CONTAINER.value: {id(self)},
+                PlayerUpgrades.TRINKET_BAG.value: {id(self)},
             }
 
         @override
