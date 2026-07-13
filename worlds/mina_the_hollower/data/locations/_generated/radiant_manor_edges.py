@@ -13,11 +13,13 @@ from ...rules.movement_rules import (
     CanJumpTiles, 
 )
 from ...rules.state_rules import (
-   HasLadder, HasRepairedShorelineGenerator, HasAccessToTorch, StartedInOssex, 
-   AnyThreeAstralPlatforms, HasRepairedAllGenerators, HasKear, HasSparks, 
-   HasRepairedSolemnGenerator, HasRepairedSwampyGenerator, HasRepairedWindyGenerator,
-   HasRepairedShorelineGenerator, HasRepairedFrozenGenerator, HasRepairedStarryGenerator,
-   HasRepairedOneGenerator,
+   HasLadder, HasAccessToTorch, StartedInOssex, 
+   AnyThreeAstralPlatforms, HasKear, HasSparks, 
+   RepairedGenerator, RepairedGeneratorCount,
+)
+from ...events import (
+   QUEENSBURY_CRYPT_DATA, NOXS_BAYOU_DATA, SEPTEMBURG_DATA, 
+   BONE_BEACH_DATA, COLTRANE_PEAK_DATA, ASTRAL_ORRERY_DATA, 
 )
 from ...items.game_items import (
    PermanentUpgrades, PlayerUpgrades, Trinkets
@@ -135,8 +137,8 @@ transitions: dict[str, Transition] = {
     'Radiant Manor Ballroom Balcony East Stairs': Transition('Radiant Manor Ballroom Balcony East', 'Radiant Manor Finale Dining Room', DirectionType.NORTH, TransitionType.STAIRS, True_()),
     'Radiant Manor Ballroom Balcony West Transition': Transition('Radiant Manor Ballroom Balcony West', 'Radiant Manor Backlit Corridor Rope', DirectionType.WEST, TransitionType.SCREENS, True_()),
     'Radiant Manor Ballroom Dining Stairs': Transition('Radiant Manor Ballroom', 'Radiant Manor Dining Room', DirectionType.NORTH, TransitionType.STAIRS, True_()),
-    'Radiant Manor Ballroom Greenhouse Doors': Transition('Radiant Manor Ballroom', 'Radiant Manor Greenhouse Wing', DirectionType.NORTH, TransitionType.DOORS, HasRepairedAllGenerators()),
-    'Radiant Manor Ballroom Meowstro Doors': Transition('Radiant Manor Ballroom', "Radiant Manor Meowstro's Chamber", DirectionType.NORTH, TransitionType.DOORS, HasRepairedAllGenerators()),
+    'Radiant Manor Ballroom Greenhouse Doors': Transition('Radiant Manor Ballroom', 'Radiant Manor Greenhouse Wing', DirectionType.NORTH, TransitionType.DOORS, RepairedGeneratorCount(count=6)),
+    'Radiant Manor Ballroom Meowstro Doors': Transition('Radiant Manor Ballroom', "Radiant Manor Meowstro's Chamber", DirectionType.NORTH, TransitionType.DOORS, RepairedGeneratorCount(count=6)),
     'Radiant Manor Ballroom Mimic Stairs': Transition('Radiant Manor Ballroom', 'Radiant Manor Mimic Chamber', DirectionType.NORTH, TransitionType.STAIRS, True_()),
     'Radiant Manor Ballroom South Transition': Transition('Radiant Manor Ballroom', 'Radiant Manor Entry', DirectionType.SOUTH, TransitionType.SCREENS, True_()),
     'Radiant Manor Ballroom Upper Pillars Burrow North': Transition('Radiant Manor Ballroom Upper Pillars', 'Radiant Manor West Chamber', DirectionType.NORTH, TransitionType.BURROW, CanBurrow()),
@@ -157,7 +159,7 @@ transitions: dict[str, Transition] = {
     'Radiant Manor Foyer Exit': Transition('Radiant Manor Foyer', 'Ossex Courtyard', DirectionType.SOUTH, TransitionType.DOORS, True_()),
     'Radiant Manor Foyer Library Doors': Transition('Radiant Manor Foyer', 'Radiant Manor Foyer Library', DirectionType.NORTH, TransitionType.DOORS, True_()),
     'Radiant Manor Foyer Mirror': Transition('Radiant Manor Foyer', "Astral Orrery Mirror's End", DirectionType.OVERWORLD, TransitionType.MIRRORS, True_()),
-    'Radiant Manor Foyer North Transition': Transition('Radiant Manor Foyer', 'Radiant Manor Entry', DirectionType.NORTH, TransitionType.SCREENS, HasRepairedAllGenerators()),
+    'Radiant Manor Foyer North Transition': Transition('Radiant Manor Foyer', 'Radiant Manor Entry', DirectionType.NORTH, TransitionType.SCREENS, RepairedGeneratorCount(count=6)),
     'Radiant Manor Foyer Orphanage Doors': Transition('Radiant Manor Foyer', 'Radiant Manor Orphanage', DirectionType.NORTH, TransitionType.DOORS, True_()),
     'Radiant Manor Gallery Right East Transition': Transition('Radiant Manor Gallery Right', "Radiant Manor Servant's Quarters", DirectionType.EAST, TransitionType.SCREENS, True_()),
     'Radiant Manor Gallery Stairs Right Transition': Transition('Radiant Manor Gallery Stairs Right', 'Radiant Manor Gallery', DirectionType.EAST, TransitionType.SCREENS, True_()),
@@ -177,12 +179,12 @@ transitions: dict[str, Transition] = {
     'Radiant Manor Greenhouse Statues Bridge West Transition': Transition('Radiant Manor Greenhouse Statues Bridge', 'Radiant Manor Greenhouse Lookout', DirectionType.WEST, TransitionType.SCREENS, True_()),
     'Radiant Manor Greenhouse Statues Doors': Transition('Radiant Manor Greenhouse Statues', 'Radiant Manor Greenhouse Wing Exit', DirectionType.NORTH, TransitionType.DOORS, True_()),
     'Radiant Manor Greenhouse Statues West Transition': Transition('Radiant Manor Greenhouse Statues', 'Radiant Manor Greenhouse Right', DirectionType.WEST, TransitionType.SCREENS, True_()),
-    'Radiant Manor Greenhouse Wing Doors': Transition('Radiant Manor Greenhouse Wing', 'Radiant Manor Ballroom', DirectionType.NORTH, TransitionType.DOORS, HasRepairedAllGenerators()),
+    'Radiant Manor Greenhouse Wing Doors': Transition('Radiant Manor Greenhouse Wing', 'Radiant Manor Ballroom', DirectionType.NORTH, TransitionType.DOORS, RepairedGeneratorCount(count=6)),
     'Radiant Manor Greenhouse Wing Exit Doors': Transition('Radiant Manor Greenhouse Wing Exit', 'Radiant Manor Greenhouse Statues', DirectionType.NORTH, TransitionType.DOORS, True_()),
     'Radiant Manor Greenhouse Wing Exit East Transition': Transition('Radiant Manor Greenhouse Wing Exit', 'Radiant Manor Greenhouse Wing', DirectionType.EAST, TransitionType.SCREENS, True_()),
     'Radiant Manor Greenhouse Wing West Transition': Transition('Radiant Manor Greenhouse Wing', 'Radiant Manor Greenhouse Wing Exit', DirectionType.WEST, TransitionType.SCREENS, True_()),
     'Radiant Manor Library Doors': Transition('Radiant Manor Foyer Library', 'Radiant Manor Foyer', DirectionType.SOUTH, TransitionType.DOORS, True_()),
-    "Radiant Manor Meowstro's Chamber Doors": Transition("Radiant Manor Meowstro's Chamber", 'Radiant Manor Ballroom', DirectionType.NORTH, TransitionType.DOORS, HasRepairedAllGenerators()),
+    "Radiant Manor Meowstro's Chamber Doors": Transition("Radiant Manor Meowstro's Chamber", 'Radiant Manor Ballroom', DirectionType.NORTH, TransitionType.DOORS, RepairedGeneratorCount(count=6)),
     'Radiant Manor Mimic Chamber Stairs': Transition('Radiant Manor Mimic Chamber', 'Radiant Manor Ballroom', DirectionType.NORTH, TransitionType.STAIRS, True_()),
     'Radiant Manor Orphanage Beds West Transition': Transition('Radiant Manor Orphanage Beds', 'Radiant Manor Orphanage', DirectionType.WEST, TransitionType.SCREENS, True_()),
     'Radiant Manor Orphanage Doors': Transition('Radiant Manor Orphanage', 'Radiant Manor Foyer', DirectionType.SOUTH, TransitionType.DOORS, True_()),

@@ -2,9 +2,9 @@ from rule_builder.rules import True_, Has
 from .abilities import Abilities
 from .blockers import AstralPlatforms
 from .game_items import Sidearms, PermanentUpgrades, PlayerUpgrades, Trinkets, BoneFiller, JunkFiller, CosmeticUpgrades, \
-    FilledJug
+    FilledJug, FillerUpgrades
 from .kears import Kear, AreaKears, SingleKears
-from .progressives import Weapons, BoneUps, GenericBoneUp, FishingUpgrades, MapUpgrades
+from .progressives import Weapons, BoneUps, GenericBoneUp, FishingUpgrades
 from .. import ItemData, ItemTypeEnum, ItemFiller, ItemMovement, ItemPower
 
 all_items: list[ItemTypeEnum] = [
@@ -24,7 +24,7 @@ all_items: list[ItemTypeEnum] = [
     *GenericBoneUp,
     *FishingUpgrades,
     *CosmeticUpgrades,
-    *MapUpgrades,
+    *FillerUpgrades,
     *FilledJug
 ]
 
@@ -84,7 +84,7 @@ upgrade_items: list[ItemData] = [
     ItemData(Weapons.BLASTSTRIKE_MAUL, 3),
     ItemData(Weapons.WHISPER_AND_VESPER, 3),
     ItemData(FishingUpgrades.FISHING_ROD, 3),
-    ItemData(MapUpgrades.PROGRESSIVE_MAP, 2)
+    # ItemData(MapUpgrades.PROGRESSIVE_MAP, 2)
 ]
 
 movement_sidearms: list[ItemTypeEnum] = [
@@ -165,6 +165,13 @@ all_power_items: list[ItemPower] = [
     *upgrade_powers,
     *trinket_powers,
     *item_powers_dependencies
+]
+
+all_starting_upgrades: list[ItemData] = [
+    ItemData(FillerUpgrades.PROGRESSIVE_MAP, 2),
+    ItemData(FillerUpgrades.RADAR_MAP, 1),
+    ItemData(FillerUpgrades.TRAINING_DUMMY, 1),
+    ItemData(FillerUpgrades.CANDLE_VISION, 1),
 ]
 
 valid_power_types = {

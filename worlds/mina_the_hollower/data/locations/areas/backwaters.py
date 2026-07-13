@@ -5,13 +5,13 @@ from ... import RegionConnection, Transition, LocationData
 from ...items import Trinkets, SingleKears, Sidearms, FishingUpgrades
 from ...rules.ability_rules import CanBurrow, CanBounce, CanSwim, CanCarry, CanClimb, \
     HasFishingRod, PowerLevelThreshold
-from ...rules.state_rules import HasLadder, HasKear, HasRepairedGeneratorCount
+from ...rules.state_rules import HasLadder, HasKear, RepairedGeneratorCount
 from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
 
     "BW Upper Shanty Swamp Glutton's Jug": LocationData(289, "Backwaters Upper Swamp Waterfall"),
-    "BW Upper Shanty Swamp Side Room Chest": LocationData(296, "Backwaters Upper Swamp Secret Room", CanSwim()),
+    "BW Upper Shanty Swamp Side Room Chest": LocationData(296, "Backwaters Upper Swamp Secret Room", CanSwim() & (CanJumpTiles(distance=2, no_sidearms=True) | CanJumpTiles(distance=3))),
     "BW Lantern Cave Bonestone": LocationData(287, "Backwaters Upper Lantern Cave"),
     "BW Lantern Cave Vial Pouch": LocationData(295, "Backwaters Upper Lantern Cave"),
     "BW Pinky's Parlor Spark Catcher": LocationData(297, "Backwaters Pinky Shop"),
@@ -25,7 +25,7 @@ collectable_locations: dict[str, LocationData] = {
     "BW Fishing Hole Fishing Rod": LocationData(300, "Backwaters Fishing Hole"),
     "BW Fish Fleeper Head": LocationData(299, "Backwaters Fishing Hole", HasFishingRod()),
     "BW Fish Thalassian Pearl": LocationData(302, "Backwaters Fishing Hole", HasFishingRod() & CanSwim() & (Has(Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
-    "BW Fishing Hole Gilded Rod": LocationData(301, "Backwaters Fishing Hole", HasRepairedGeneratorCount(count=6) & HasFishingRod() & CanSwim() & (Has(Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
+    "BW Fishing Hole Gilded Rod": LocationData(301, "Backwaters Fishing Hole", RepairedGeneratorCount(count=6) & HasFishingRod() & CanSwim() & (Has(Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
 }
 
 boss_locations: dict[str, LocationData] = {

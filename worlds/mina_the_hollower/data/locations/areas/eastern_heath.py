@@ -5,11 +5,11 @@ from ... import RegionConnection, Transition, LocationData, TransitionType, Dire
 from ...items import Trinkets, SingleKears, PermanentUpgrades
 from ...rules.ability_rules import CanBurrow, CanBounce, HasReachingSideArm, CanClimb, \
     CanSwim, HasFishingRod
-from ...rules.state_rules import HasRepairedSolemnGenerator, HasKear, HasRepairedOneGenerator, HasRepairedGeneratorCount
+from ...rules.state_rules import HasKear, RepairedGeneratorCount
 from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
-    "EH Grassland Trinket Bag" : LocationData(221, "Eastern Heath Grassland", HasRepairedGeneratorCount(count=1)),
+    "EH Grassland Trinket Bag" : LocationData(221, "Eastern Heath Grassland", RepairedGeneratorCount(count=1)),
     "EH Grassland Dork Eyes" : LocationData(241, "Eastern Heath Grassland Bridge Left", HasFishingRod()), #needs fishing rod,
     "EH Grassland Ossex Patio Chest" : LocationData(231, "Eastern Heath I Screen", CanBurrow()),
     "EH Grassland Bush Room Bonestone" : LocationData(236, "Eastern Heath Bush Room", HasKear(kear=SingleKears.EASTERN_HEATH_GRASSLAND_BUSHROOM_KEAR.value)), #needs kear,
@@ -23,7 +23,6 @@ collectable_locations: dict[str, LocationData] = {
             (CanBurrow() & HasKear(kear=SingleKears.EASTERN_HEATH_WATERFALL_KEAR.value)) |
             (Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value) & Has(PermanentUpgrades.TRAIN_PASS.value) & CanClimb()))
     ),
-    "EH Grassland Vertical Spinner Room Chest" : LocationData(238, "Eastern Heath East Corner", HasRepairedSolemnGenerator()),
     "EH Under the Bridge Chest" : LocationData(230, "Eastern Heath Under Bridge West"),
     "EH Buckler's Bluff Joule Box" : LocationData(229, "Eastern Heath Buckler's Bluff Cliff", CanClimb()),
     "EH Grassland Poppit Cave Chest" : LocationData(235, "Eastern Heath Grassland Poppit Cave"),
@@ -32,5 +31,5 @@ collectable_locations: dict[str, LocationData] = {
 }
 
 boss_locations: dict[str, LocationData] = {
-    "EH Grassland Maxi": LocationData(1018, "Eastern Heath Grassland", HasRepairedGeneratorCount(count=1)),
+    "EH Grassland Maxi": LocationData(1018, "Eastern Heath Grassland", RepairedGeneratorCount(count=1)),
 }

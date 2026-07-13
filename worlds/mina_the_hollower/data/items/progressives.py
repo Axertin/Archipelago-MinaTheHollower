@@ -21,6 +21,3 @@ class GenericBoneUp(ItemTypeEnum):
 class FishingUpgrades(ItemTypeEnum):
     FISHING_ROD = ("Progressive Fishing Rod", ITEMS_OFFSET_PROGRESSIVES+9, ItemClassification.progression)
     #fishing rod->raft=>gold rod
-
-class MapUpgrades(ItemTypeEnum):
-    PROGRESSIVE_MAP = ("World Map", ITEMS_OFFSET_PROGRESSIVES+10, ItemClassification.useful)

@@ -9,13 +9,14 @@ from entrance_rando import bake_target_group_lookup, randomize_entrances
 
 from Utils import visualize_regions
 from rule_builder.rules import Has
+from .data.events import repair_generator_data
 from .data.rules.ability_rules import PowerLevelThreshold
 from .data.rules.movement_rules import CanJumpTiles, max_jump
-from .data.rules.state_rules import HasRepairedAllGenerators, HasRepairedGeneratorCount
+from .rules import set_goal
 
 from ..AutoWorld import WebWorld
 from . import items, locations, tracker
-from .constants import MINA_THE_HOLLOWER
+from .constants import *
 from .data import get_target_groups
 from .data.items import all_filler_items, all_items
 from .data.locations import all_locations
@@ -97,14 +98,30 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         self.entrance_rando = False
         self.hints = {}
         self.starting_items = []
+        self.lit_generators:list[int] = []
+        self.broken_generators:list[int] = []
 
         super().__init__(multiworld, player)
 
     def generate_early(self) -> None:
-        # self.options.excluded_areas.value = False
-        self.handle_ut_yamless(None)
+
+        if self.options.goal.value == self.options.goal.option_fixGenerators:
+            if self.options.goal_generators.value < 3:
+                valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH]
+            elif self.options.goal_generators.value < 5:
+                valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH,
+                                    self.random.choice([COLTRANE_PEAK, ASTRAL_ORRERY])]
+            else:
+                valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH, COLTRANE_PEAK, ASTRAL_ORRERY]
+            selected_generators = self.random.sample(valid_generators, self.options.goal_generators.value)
+            self.broken_generators =[gen.index for gen in repair_generator_data if gen.gen_name in selected_generators]
+            self.lit_generators = [gen.index for gen in repair_generator_data if gen.gen_name not in selected_generators]
+
+
+
         if self.options.ability_rando.value:
             self.options.ossex_start.value = self.options.ossex_start.option_true
+        self.handle_ut_yamless(None)
 
     def create_regions(self):
         self.regions = locations.get_regions(self)
@@ -133,10 +150,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             self.push_precollected(item)
 
     def set_rules(self):
-        if self.options.goal.value == Goal.option_radientManorGenerator:
-            self.set_completion_rule(Has("Victory") & PowerLevelThreshold(power=60))
-        if self.options.goal.value == Goal.option_fixGenerators:
-            self.set_completion_rule(HasRepairedGeneratorCount(count=self.options.goal_generators.value))
+        set_goal(self)
 
 
     def generate_output(self, output_directory: str):
@@ -161,6 +175,8 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             "kear_rando": self.options.kear_rando.value,
             "max_stat_level": self.options.max_stat_level.value,
             "wallet_cap": False,
+            "lit_generators" : self.lit_generators,
+            "broken_generators" : self.broken_generators,
             # "entrance_rando" : self.options.entrance_rando.value,
             "death_link": self.options.death_link.value,
             # The client disables each ability while its "*_rando" key is nonzero.
