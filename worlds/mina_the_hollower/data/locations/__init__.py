@@ -4,11 +4,16 @@ from ._generated import eastern_heath_edges, mourners_mile_edges, ossex_edges, q
     southern_outskirts_edges, western_wilds_edges, ossex_train_edges, sandfalls_edges, loners_landing_edges, \
     backwaters_edges, bayou_edges, septemburg_edges, bone_beach_edges, kindlewood_edges, coltrane_peak_edges, \
     radiant_manor_edges, astral_orrery_edges
-from .areas import astral_orrery, bayou, bone_beach, coltrane_peak, eastern_heath, kindlewood, loners_landing, mourners_mile, ossex, queensbury_crypt, radiant_manor, sandfalls, septemburg, southern_outskirts, backwaters, western_wilds
+from .areas import astral_orrery, bayou, bone_beach, coltrane_peak, eastern_heath, kindlewood, loners_landing, \
+    mourners_mile, ossex, queensbury_crypt, radiant_manor, sandfalls, septemburg, southern_outskirts, backwaters, \
+    western_wilds, mirrors_end
 from .. import LocationData, RegionConnection, Transition
+from ..events import QUEENSBURY_CRYPT_DATA, ASTRAL_ORRERY_DATA, COLTRANE_PEAK_DATA, BONE_BEACH_DATA, SEPTEMBURG_DATA, \
+    NOXS_BAYOU_DATA, RADIANT_MANOR_DATA
 
 all_collectables: ChainMap[str, LocationData] = ChainMap(
     astral_orrery.collectable_locations,
+    mirrors_end.collectable_locations,
     bayou.collectable_locations,
     bone_beach.collectable_locations,
     coltrane_peak.collectable_locations,
@@ -52,6 +57,32 @@ all_bosses: ChainMap[str, LocationData] = ChainMap(
 all_locations: ChainMap[str, LocationData] = ChainMap(
     all_collectables,
     all_bosses
+)
+
+dungeon_locations: dict[int, ChainMap[str, LocationData]]= {
+    QUEENSBURY_CRYPT_DATA.index: ChainMap(queensbury_crypt.collectable_locations),
+    NOXS_BAYOU_DATA.index: ChainMap(bayou.collectable_locations),
+    SEPTEMBURG_DATA.index: ChainMap(septemburg.collectable_locations),
+    BONE_BEACH_DATA.index: ChainMap(bone_beach.collectable_locations),
+    COLTRANE_PEAK_DATA.index: ChainMap(coltrane_peak.collectable_locations),
+    ASTRAL_ORRERY_DATA.index: ChainMap(astral_orrery.collectable_locations),
+    RADIANT_MANOR_DATA.index: ChainMap(radiant_manor.collectable_locations),
+}
+
+all_permanent_locations: ChainMap[str, LocationData] = ChainMap(
+
+mirrors_end.collectable_locations,
+    eastern_heath.collectable_locations,
+    kindlewood.collectable_locations,
+    loners_landing.collectable_locations,
+    mourners_mile.collectable_locations,
+    ossex.collectable_locations,
+    sandfalls.collectable_locations,
+    southern_outskirts.collectable_locations,
+    backwaters.collectable_locations,
+    backwaters.boss_locations,
+    western_wilds.collectable_locations,
+    radiant_manor.permanent_locations,
 )
 
 all_regions: set[str] = set.union(

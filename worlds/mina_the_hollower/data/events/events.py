@@ -10,6 +10,7 @@ class RepairGenerators(EventTypeEnum):
     REPAIR_BONE_BEACH = ("Repair Bone Beach Generator", "Bone Beach Shoreline Generator", GeneratorsComplete.REPAIR_SHORELINE_GENERATOR.value)
     REPAIR_COLTRANE_PEAK = ("Repair Coltrane Peak Generator", "Coltrane Peak Frozen Generator", GeneratorsComplete.REPAIR_FROZEN_GENERATOR.value)
     REPAIR_ASTRAL_ORRERY = ("Repair Astral Orrery Generator", "Astral Orrery Starry Generator", GeneratorsComplete.REPAIR_STARRY_GENERATOR.value)
+    REPAIR_PRIME_GENERATOR = ("Repair Radiant Manor Generator", "Radiant Manor Prime Generator", GeneratorsComplete.REPAIR_PRIME_GENERATOR.value)
 
 class MirrorsEndSwitches(EventTypeEnum):
     BLUE_SWITCH = ("Blue Switch", "Astral Orrery Queensbury Mirror", AstralPlatforms.BLUE_ASTRAL_PLATFORMS.value)

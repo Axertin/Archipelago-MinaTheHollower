@@ -1,3 +1,5 @@
+from typing import TYPE_CHECKING
+
 from BaseClasses import Item, Location, ItemClassification, CollectionRule
 from rule_builder.rules import True_, Rule
 from worlds.mina_the_hollower.data.events.events import MirrorsEndSwitches
@@ -12,7 +14,8 @@ from .data.items import Kear, SingleKears, AreaKears, base_items, Abilities, Bon
 from .data.rules.state_rules import sidearm_rules
 from .options import BoneUpCap, KearRandomization, Goal
 
-from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from . import MinaTheHollowerWorld
 
 
 class MinaTheHollowerItem(Item):
@@ -24,11 +27,11 @@ def create_item(world, item: ItemData):
         world.itempool.append(world.create_item(item.type.value))
 
 
-def create_single_item(world, item_type: ItemTypeEnum):
+def create_single_item(world: "MinaTheHollowerWorld", item_type: ItemTypeEnum):
     world.itempool.append(world.create_item(item_type.value))
 
 
-def create_items(world):
+def create_items(world: "MinaTheHollowerWorld"):
     is_ut = getattr(world.multiworld, "generation_is_fake", False)
     #crashed. will do later
     # is_ut = world.using_ut
@@ -196,7 +199,7 @@ def create_items(world):
     return starting_items
 
 
-def create_event(world, region_name: str, item_name: str, loc_name: str | None = None,
+def create_event(world: "MinaTheHollowerWorld", region_name: str, item_name: str, loc_name: str | None = None,
                  rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()) -> None:
     if loc_name is None:
         loc_name = "Event " + item_name
@@ -208,7 +211,7 @@ def create_event(world, region_name: str, item_name: str, loc_name: str | None =
     region.locations.append(event_loc)
 
 
-def create_events(world):
+def create_events(world: "MinaTheHollowerWorld"):
 
     plasma_jug_loc = world.get_location("Plasma Jug")
     plasma_jug_loc.place_locked_item(MinaTheHollowerItem(FilledJug.PLASMA_JUG.value, ItemClassification.useful, FilledJug.PLASMA_JUG.item_id, world.player))

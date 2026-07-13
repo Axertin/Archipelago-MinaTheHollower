@@ -24,3 +24,4 @@ class GeneratorsComplete(ItemTypeEnum):
     REPAIR_SHORELINE_GENERATOR = ("Repair Shoreline Generator", None, ItemClassification.progression)
     REPAIR_FROZEN_GENERATOR = ("Repair Frozen Generator", None, ItemClassification.progression)
     REPAIR_STARRY_GENERATOR = ("Repair Starry Generator", None, ItemClassification.progression)
+    REPAIR_PRIME_GENERATOR = ("Repair Prime Generator", None, ItemClassification.progression)
