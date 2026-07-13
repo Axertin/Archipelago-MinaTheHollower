@@ -1,9 +1,10 @@
 from BaseClasses import LocationProgressType
 from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
+from ...events import SEPTEMBURG_DATA
 from ...items import SingleKears
 from ...rules.ability_rules import CanBurrow, CanBounce, CanClimb, CanCarry, HasFishingRod, CanSpring
-from ...rules.state_rules import HasKear, HasRepairedWindyGenerator, HasSparks
+from ...rules.state_rules import HasKear, HasSparks, RepairedGenerator
 from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
@@ -21,11 +22,13 @@ collectable_locations: dict[str, LocationData] = {
     "SB Galloway Room Chest": LocationData(100, "Septemburg Tangled Woods Kid Room", CanBurrow() & CanSpring()),
     "SB Stormwatch Way Chest": LocationData(101, "Septemburg Stormwatch Wind", CanBurrow()),
     "SB Carving Shack Health Rose": LocationData(95, "Septemburg Carving Shack Arena"),
-    "SB Dark Deluxy Spark Container": LocationData(353, "Septemburg Windy Generator", CanBurrow() & HasRepairedWindyGenerator() & HasSparks(count=2)),
+    "SB Dark Deluxy Spark Container": LocationData(353, "Septemburg Windy Generator", CanBurrow() & RepairedGenerator(event=SEPTEMBURG_DATA) & HasSparks(count=2)),
     "SB Wastewater Canal Spincer": LocationData(108, "Septemburg Wastewater Canal Well Entrance", HasFishingRod()),
     "SB Wastewater Canal Slime Room Chest": LocationData(106, "Septemburg Wastewater Canal Slime Room", CanBurrow()),
     "SB Wastewater Canal Box Room Chest": LocationData(105, "Septemburg Wastewater Canal Boxes", CanBurrow()),
     "SB Wastewater Canal Well Entrance Chest": LocationData(107, "Septemburg Wastewater Canal Well Entrance"),
+    "OS Trinket Bazaar Lightning Grip": LocationData(334, "Ossex Trinket Bazaar", RepairedGenerator(event=SEPTEMBURG_DATA)), # needs save """4""" students,
+
 }
 
 

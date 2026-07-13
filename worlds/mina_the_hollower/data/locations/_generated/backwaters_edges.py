@@ -13,11 +13,13 @@ from ...rules.movement_rules import (
     CanJumpTiles, 
 )
 from ...rules.state_rules import (
-   HasLadder, HasRepairedShorelineGenerator, HasAccessToTorch, StartedInOssex, 
-   AnyThreeAstralPlatforms, HasRepairedAllGenerators, HasKear, HasSparks, 
-   HasRepairedSolemnGenerator, HasRepairedSwampyGenerator, HasRepairedWindyGenerator,
-   HasRepairedShorelineGenerator, HasRepairedFrozenGenerator, HasRepairedStarryGenerator,
-   HasRepairedOneGenerator,
+   HasLadder, HasAccessToTorch, StartedInOssex, 
+   AnyThreeAstralPlatforms, HasKear, HasSparks, 
+   RepairedGenerator, RepairedGeneratorCount,
+)
+from ...events import (
+   QUEENSBURY_CRYPT_DATA, NOXS_BAYOU_DATA, SEPTEMBURG_DATA, 
+   BONE_BEACH_DATA, COLTRANE_PEAK_DATA, ASTRAL_ORRERY_DATA, 
 )
 from ...items.game_items import (
    PermanentUpgrades, PlayerUpgrades, Trinkets

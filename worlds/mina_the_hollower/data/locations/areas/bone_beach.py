@@ -1,9 +1,11 @@
 from BaseClasses import LocationProgressType
 from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
+from ...events import BONE_BEACH_DATA
 from ...rules.ability_rules import CanBurrow, CanBounce, CanClimb, CanCarry, CanSwim, \
     HasFishingRod
 from ...rules.movement_rules import CanJumpTiles
+from ...rules.state_rules import RepairedGenerator
 
 collectable_locations: dict[str, LocationData] = {
     "BB Goremaw Fang": LocationData(88, "Bone Beach Aquatic", HasFishingRod() & CanSwim()),
@@ -25,6 +27,8 @@ collectable_locations: dict[str, LocationData] = {
     "BB Moving Stairs Bonestone": LocationData(85, "Bone Beach Gut Depths Hidden", CanBounce()),
     "BB Gut Passage Chest": LocationData(87, "Bone Beach Gut Depths Dark"),
     "BB Brain Alcove Health Rose": LocationData(83, "Bone Beach Brain Alcove"),
+    "OS Couple's Quarter Thermal Pack" : LocationData(147, "Ossex Couple's Quarter", CanBurrow() & RepairedGenerator(event=BONE_BEACH_DATA)),
+    "SF Sifted Sands Kear" : LocationData(319, "Sandfalls Sifted Sands", RepairedGenerator(event=BONE_BEACH_DATA)),
 
 }
 

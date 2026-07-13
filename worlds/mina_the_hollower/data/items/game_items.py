@@ -1,6 +1,6 @@
 from BaseClasses import ItemClassification
 from .. import ItemTypeEnum
-
+from ...constants import ITEMS_OFFSET_PROGRESSIVES
 
 
 class Sidearms(ItemTypeEnum):
@@ -31,10 +31,10 @@ class Sidearms(ItemTypeEnum):
 
 class PermanentUpgrades(ItemTypeEnum):
     HEALING_VIAL_POUCH = ("Healing Vial Pouch", 18, ItemClassification.progression)
-    CANDLE_VISION = ("Memory Goggles", 74, ItemClassification.useful)
+    # CANDLE_VISION = ("Memory Goggles", 74, ItemClassification.useful)
     # WORLD_MAP = ("World Map", 75, ItemClassification.useful)
     # ENHANCED_MAP = ("Enhanced Map", 76, ItemClassification.useful)
-    RADAR_MAP = ("All-Seeing Skull", 77, ItemClassification.useful)
+    # RADAR_MAP = ("All-Seeing Skull", 77, ItemClassification.useful)
     DOUBLE_SIDEARM_PERMIT = ("Double Sidearm Permit", 78, ItemClassification.progression)
     VITALITY_VEST = ("Vitality Vest", 79, ItemClassification.progression)
     SAFETY_SHROUD = ("Safety Shroud", 80, ItemClassification.progression)
@@ -44,7 +44,6 @@ class PermanentUpgrades(ItemTypeEnum):
     JOULE_ALMEMBIC = ("Joule Alembic", 82, ItemClassification.progression)
     SIDEARM_SAVER = ("Sidearm Recoverer", 83, ItemClassification.progression)
     SIDEARM_KEEPER = ("Sidearm Duplicator", 84, ItemClassification.progression)
-    TRAINING_DUMMY = ("Training Dummy", 85, ItemClassification.useful)
     PHONOGRAPH = ("Phonograph", 86, ItemClassification.useful)
     TRAIN_PASS = ("Train Pass",94, ItemClassification.progression)
     # OSSEX_TICKET = ("Ossex Ticket", 95, ItemClassification.progression)
@@ -52,6 +51,12 @@ class PermanentUpgrades(ItemTypeEnum):
     SEPTEMBURG_TICKET = ("Septemburg Ticket",97, ItemClassification.progression)
     BONE_BEACH_TICKET = ("Bone Beach Ticket",98, ItemClassification.progression)
     COLTRANE_PEAK_TICKET = ("Coltrane Peak Ticket",99, ItemClassification.progression)
+
+class FillerUpgrades(ItemTypeEnum):
+    TRAINING_DUMMY = ("Training Dummy", 85, ItemClassification.useful)
+    PROGRESSIVE_MAP = ("World Map", ITEMS_OFFSET_PROGRESSIVES + 10, ItemClassification.useful)
+    RADAR_MAP = ("All-Seeing Skull", 77, ItemClassification.useful)
+    CANDLE_VISION = ("Memory Goggles", 74, ItemClassification.useful)
 
 class CosmeticUpgrades(ItemTypeEnum):
     UNDERLAB_DEFAULT =("Underlab Default" ,120, ItemClassification.filler)

@@ -8,3 +8,20 @@ class AstralPlatforms(ItemTypeEnum):
     BLUE_ASTRAL_PLATFORMS = ("Blue Astral Platforms",ITEMS_OFFSET_BLOCKERS+2, ItemClassification.progression)
     YELLOW_ASTRAL_PLATFORMS = ("Yellow Astral Platforms",ITEMS_OFFSET_BLOCKERS+3, ItemClassification.progression)
     PURPLE_ASTRAL_PLATFORMS = ("Purple Astral Platforms",ITEMS_OFFSET_BLOCKERS+4, ItemClassification.progression)
+
+# region_gen = {
+#         "Astral Orrery": "Starry",
+#         "Queensbury Crypt": "Solemn",
+#         "Coltrane Peak": "Frozen",
+#         "Septemburg": "Windy",
+#         "Bone Beach": "Shoreline",
+#         "Nox's Bayou": "Swampy"
+
+class GeneratorsComplete(ItemTypeEnum):
+    REPAIR_SOLEMN_GENERATOR = ("Repair Solemn Generator", None, ItemClassification.progression)
+    REPAIR_SWAMPY_GENERATOR = ("Repair Swampy Generator", None, ItemClassification.progression)
+    REPAIR_WINDY_GENERATOR = ("Repair Windy Generator", None, ItemClassification.progression)
+    REPAIR_SHORELINE_GENERATOR = ("Repair Shoreline Generator", None, ItemClassification.progression)
+    REPAIR_FROZEN_GENERATOR = ("Repair Frozen Generator", None, ItemClassification.progression)
+    REPAIR_STARRY_GENERATOR = ("Repair Starry Generator", None, ItemClassification.progression)
+    REPAIR_PRIME_GENERATOR = ("Repair Prime Generator", None, ItemClassification.progression)

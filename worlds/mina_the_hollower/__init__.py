@@ -9,13 +9,15 @@ from entrance_rando import bake_target_group_lookup, randomize_entrances
 
 from Utils import visualize_regions
 from rule_builder.rules import Has
+from .data.events import repair_generator_data
 from .data.rules.ability_rules import PowerLevelThreshold
 from .data.rules.movement_rules import CanJumpTiles, max_jump
-from .data.rules.state_rules import HasRepairedAllGenerators, HasRepairedGeneratorCount
+from .data.rules.state_rules import repair_generator_lookup
+from .rules import set_goal
 
 from ..AutoWorld import WebWorld
 from . import items, locations, tracker
-from .constants import MINA_THE_HOLLOWER
+from .constants import *
 from .data import get_target_groups
 from .data.items import all_filler_items, all_items
 from .data.locations import all_locations
@@ -97,14 +99,30 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         self.entrance_rando = False
         self.hints = {}
         self.starting_items = []
+        self.lit_generators:list[int] = []
+        self.broken_generators:list[int] = []
 
         super().__init__(multiworld, player)
 
     def generate_early(self) -> None:
-        # self.options.excluded_areas.value = False
-        self.handle_ut_yamless(None)
+
+        if self.options.goal.value == self.options.goal.option_fixGenerators:
+            if self.options.goal_generators.value < 3:
+                valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH]
+            elif self.options.goal_generators.value < 5:
+                valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH,
+                                    self.random.choice([COLTRANE_PEAK, ASTRAL_ORRERY])]
+            else:
+                valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH, COLTRANE_PEAK, ASTRAL_ORRERY]
+            selected_generators = self.random.sample(valid_generators, self.options.goal_generators.value)
+            self.broken_generators =[gen.index for gen in repair_generator_data if gen.gen_name in selected_generators]
+            self.lit_generators = [gen.index for gen in repair_generator_data if gen.gen_name not in selected_generators]
+
+
+
         if self.options.ability_rando.value:
             self.options.ossex_start.value = self.options.ossex_start.option_true
+        self.handle_ut_yamless(None)
 
     def create_regions(self):
         self.regions = locations.get_regions(self)
@@ -133,10 +151,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             self.push_precollected(item)
 
     def set_rules(self):
-        if self.options.goal.value == Goal.option_radientManorGenerator:
-            self.set_completion_rule(Has("Victory") & PowerLevelThreshold(power=60))
-        if self.options.goal.value == Goal.option_fixGenerators:
-            self.set_completion_rule(HasRepairedGeneratorCount(count=self.options.goal_generators.value))
+        set_goal(self)
 
 
     def generate_output(self, output_directory: str):
@@ -161,6 +176,8 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             "kear_rando": self.options.kear_rando.value,
             "max_stat_level": self.options.max_stat_level.value,
             "wallet_cap": False,
+            "lit_generators" : self.lit_generators,
+            "broken_generators" : self.broken_generators,
             # "entrance_rando" : self.options.entrance_rando.value,
             "death_link": self.options.death_link.value,
             # The client disables each ability while its "*_rando" key is nonzero.
@@ -177,7 +194,15 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
 
     @override
     def explain_rule(self, dest_name: str, state: CollectionState, *_: Any, **__: Any) -> list[JSONMessagePart] | None:
-        if dest_name == "Max Jump":
+        if dest_name == "help" or dest_name == "Help" :
+            return [
+                {
+                    "type": "color",
+                    "color": "green",
+                    "text": f"Max Jump, Generators\n",
+                },
+            ]
+        if dest_name == "Max Jump" or dest_name == "max jump":
             pure_distance, pure_loadout = max_jump(state, self.player, False, False)
             wall_distance, wall_loadout = max_jump(state, self.player, True, False)
             no_sides_distance, no_sides_loadout = max_jump(state, self.player, True, True)
@@ -190,24 +215,15 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
                 {"type": "color", "color": "green", "text": f"Can Jump With Wallower {wall_distance} Tiles.{wall_loadout_message}\n"},
                 {"type": "color", "color": "green", "text": f"Can Jump With No Sidarms {no_sides_distance} Tiles.{no_sides_loadout_message}\n"},
             ]
-        if dest_name == "Generators":
-            generators = [
-                ("Solemn", "Repair Solemn Generator"),
-                ("Swampy", "Repair Swampy Generator"),
-                ("Windy", "Repair Windy Generator"),
-                ("Shoreline", "Repair Shoreline Generator"),
-                ("Frozen", "Repair Frozen Generator"),
-                ("Starry", "Repair Starry Generator"),
-            ]
-
+        if dest_name == "Generators" or dest_name == "generators":
             repairable_generators = [
-                name for name, item in generators
-                if state.has(item, self.player)
+                repair_generator_lookup[i].type.name for i in self.broken_generators
+                if state.has(repair_generator_lookup[i].type.event_item, self.player)
             ]
 
             unreachable_generators = [
-                name for name, item in generators
-                if not state.has(item, self.player)
+                repair_generator_lookup[i].type.name for i in self.broken_generators
+                if not state.has(repair_generator_lookup[i].type.event_item, self.player)
             ]
 
             return [
@@ -250,6 +266,8 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         self.options.kear_rando.value = slot_data["kear_rando"]
         self.options.ossex_start.value = slot_data["ossex_start"]
         self.options.max_stat_level.value = slot_data["max_stat_level"]
+        self.lit_generators = slot_data["lit_generators"]
+        self.broken_generators = slot_data["broken_generators"]
         self.options.ability_rando.value = {
             option_key
             for option_key, slot_keys in ABILITY_RANDO_SLOT_KEYS.items()

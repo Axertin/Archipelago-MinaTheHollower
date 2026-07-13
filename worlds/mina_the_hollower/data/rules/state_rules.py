@@ -7,11 +7,15 @@ from rule_builder.options import OptionFilter
 from rule_builder.rules import Rule, Has, True_, False_
 from .ability_rules import CanSwim, CanCarry, CanBurrow, CanClimb
 from .movement_rules import CanJumpTiles
-from .. import ShortCutItem
+from .. import ShortCutItem, RepairEventData
+from ..events import repair_generator_data
 from ..items import Kear, SingleKears, AreaKears, Trinkets, AstralPlatforms, Sidearms, PlayerUpgrades, PermanentUpgrades
+from ..items.blockers import GeneratorsComplete
 from ..items.kears import kear_area_lookup
 from ...constants import MINA_THE_HOLLOWER
 from ...world_base import MinaTheHollowerBase
+
+repair_generator_lookup = {data.index: data for data in repair_generator_data}
 
 @dataclasses.dataclass(kw_only=True)
 class HasKear(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
@@ -149,19 +153,6 @@ class StartedInOssex(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
             return True_().resolve(world)
         return False_().resolve(world)
 
-def HasRepairedSolemnGenerator():
-    return Has("Repair Solemn Generator")
-def HasRepairedSwampyGenerator():
-    return Has("Repair Swampy Generator")
-def HasRepairedWindyGenerator():
-    return Has("Repair Windy Generator")
-def HasRepairedShorelineGenerator():
-    return Has("Repair Shoreline Generator")
-def HasRepairedFrozenGenerator():
-    return Has("Repair Frozen Generator")
-def HasRepairedStarryGenerator():
-    return Has("Repair Starry Generator")
-
 def AnyThreeAstralPlatforms():
     green = Has(AstralPlatforms.GREEN_ASTRAL_PLATFORMS.value)
     red = Has(AstralPlatforms.RED_ASTRAL_PLATFORMS.value)
@@ -175,42 +166,39 @@ def AnyThreeAstralPlatforms():
         (red & blue & yellow)
     )
 
-def HasRepairedAllGenerators():
-    return HasRepairedGeneratorCount(count=6)
-
-def HasRepairedOneGenerator():
-    return HasRepairedSolemnGenerator() | HasRepairedSwampyGenerator() | HasRepairedWindyGenerator() | HasRepairedShorelineGenerator() | HasRepairedFrozenGenerator() | HasRepairedStarryGenerator()
-
 
 @dataclasses.dataclass(kw_only=True)
-class HasRepairedGeneratorCount(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
+class RepairedGeneratorCount(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
     count: int
 
     @override
     def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
-        # caching_enabled only needs to be passed in when your world inherits from CachedRuleBuilderWorld
-        return self.Resolved(count=self.count, player=world.player, caching_enabled=False)
+        return self.Resolved(
+            count=self.count,
+            player=world.player,
+            broken_generators=tuple(world.broken_generators),
+            caching_enabled=False,
+        )
 
     class Resolved(Rule.Resolved):
         count: int
+        broken_generators: tuple[int, ...]
 
         @override
         def _evaluate(self, state: CollectionState) -> bool:
-            gen_count = sum([
-                state.has("Repair Solemn Generator", self.player),
-                state.has("Repair Swampy Generator", self.player),
-                state.has("Repair Windy Generator", self.player),
-                state.has("Repair Shoreline Generator", self.player),
-                state.has("Repair Frozen Generator", self.player),
-                state.has("Repair Starry Generator", self.player),
-            ])
+            repaired = sum(
+                state.has(repair_generator_lookup[i].type.event_item, self.player)
+                for i in self.broken_generators
+            )
 
-            return gen_count >= self.count
+            if self.count >= len(self.broken_generators):
+                return repaired == len(self.broken_generators)
+
+            return repaired >= self.count
 
         @override
         def item_dependencies(self) -> dict[str, set[int]]:
-            return {item: {id(self)} for item in ["Repair Solemn Generator", "Repair Swampy Generator", "Repair Windy Generator",
-                                                        "Repair Shoreline Generator", "Repair Frozen Generator", "Repair Starry Generator"]}
+            return {item: {id(self)} for item in [item.value for item in GeneratorsComplete]}
 
         @override
         def explain_json(self, state: CollectionState | None = None) -> list[JSONMessagePart]:
@@ -220,8 +208,20 @@ class HasRepairedGeneratorCount(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWE
             ]
         @override
         def __str__(self) -> str:
-            return f"Completed X Generators"
+            return f"Completed {self.count} Generators"
 
+
+
+@dataclasses.dataclass(kw_only=True)
+class RepairedGenerator(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
+    event: RepairEventData
+    @override
+    def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
+        if self.event.index in world.lit_generators:
+            return (RepairedGeneratorCount(count=world.options.goal_generators.value) &
+                Has(self.event.type.event_item)).resolve(world)
+
+        return Has(self.event.type.event_item).resolve(world)
 
 #figure out when screen rando exists
 def HasAccessToTorch():
@@ -247,4 +247,4 @@ sidearm_rules: list[ShortCutItem] = [
 ]
 
 def CanFishAllFish():
-    return HasRepairedAllGenerators()
+    return RepairedGeneratorCount(count=6)

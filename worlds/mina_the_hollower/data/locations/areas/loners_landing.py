@@ -1,7 +1,7 @@
 from ... import LocationData
 from ...items import SingleKears
 from ...rules.ability_rules import CanBurrow, CanBounce, CanClimb, CanCarry, HasFishingRod, CanSwim
-from ...rules.state_rules import HasKear, HasRepairedOneGenerator, HasLadder
+from ...rules.state_rules import HasKear, HasLadder
 from ...rules.movement_rules import CanJumpTiles
 
 boss_locations: dict[str, LocationData] = {

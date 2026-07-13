@@ -13,11 +13,13 @@ from ...rules.movement_rules import (
     CanJumpTiles, 
 )
 from ...rules.state_rules import (
-   HasLadder, HasRepairedShorelineGenerator, HasAccessToTorch, StartedInOssex, 
-   AnyThreeAstralPlatforms, HasRepairedAllGenerators, HasKear, HasSparks, 
-   HasRepairedSolemnGenerator, HasRepairedSwampyGenerator, HasRepairedWindyGenerator,
-   HasRepairedShorelineGenerator, HasRepairedFrozenGenerator, HasRepairedStarryGenerator,
-   HasRepairedOneGenerator,
+   HasLadder, HasAccessToTorch, StartedInOssex, 
+   AnyThreeAstralPlatforms, HasKear, HasSparks, 
+   RepairedGenerator, RepairedGeneratorCount,
+)
+from ...events import (
+   QUEENSBURY_CRYPT_DATA, NOXS_BAYOU_DATA, SEPTEMBURG_DATA, 
+   BONE_BEACH_DATA, COLTRANE_PEAK_DATA, ASTRAL_ORRERY_DATA, 
 )
 from ...items.game_items import (
    PermanentUpgrades, PlayerUpgrades, Trinkets
@@ -59,8 +61,8 @@ regions: set[str] = {
 
 connections: dict[str, RegionConnection] = {
     'Sandfalls Bone Junction Sands_Sandfalls Sifted Sands': RegionConnection('Sandfalls Bone Junction Sands', 'Sandfalls Sifted Sands', True_()),
-    'Sandfalls Bone Junction Stair_Sandfalls Bone Junction': RegionConnection('Sandfalls Bone Junction Stair', 'Sandfalls Bone Junction', CanBurrow() & HasRepairedShorelineGenerator() & CanCarry()),
-    'Sandfalls Bone Junction_Sandfalls Bone Junction Stair': RegionConnection('Sandfalls Bone Junction', 'Sandfalls Bone Junction Stair', CanBurrow() & HasRepairedShorelineGenerator() & CanCarry()),
+    'Sandfalls Bone Junction Stair_Sandfalls Bone Junction': RegionConnection('Sandfalls Bone Junction Stair', 'Sandfalls Bone Junction', CanBurrow() & RepairedGenerator(event=BONE_BEACH_DATA) & CanCarry()),
+    'Sandfalls Bone Junction_Sandfalls Bone Junction Stair': RegionConnection('Sandfalls Bone Junction', 'Sandfalls Bone Junction Stair', CanBurrow() & RepairedGenerator(event=BONE_BEACH_DATA) & CanCarry()),
     'Sandfalls Miners Den Entrance Top_Sandfalls Miners Den Entrance': RegionConnection('Sandfalls Miners Den Entrance Top', 'Sandfalls Miners Den Entrance', CanClimb()),
     'Sandfalls Miners Den Entrance_Sandfalls Miners Den Entrance Top': RegionConnection('Sandfalls Miners Den Entrance', 'Sandfalls Miners Den Entrance Top', CanClimb()),
     'Sandfalls Payload Passage Bottom_Sandfalls Payload Passage Chest': RegionConnection('Sandfalls Payload Passage Bottom', 'Sandfalls Payload Passage Chest', CanJumpTiles(distance=2)),
@@ -71,7 +73,7 @@ connections: dict[str, RegionConnection] = {
 }
 
 transitions: dict[str, Transition] = {
-    'Sandfalls Bone Junction Burrow East': Transition('Sandfalls Bone Junction', 'Bone Beach Bone Rush Mine', DirectionType.EAST, TransitionType.BURROW, CanBurrow() & HasRepairedShorelineGenerator() & CanCarry()),
+    'Sandfalls Bone Junction Burrow East': Transition('Sandfalls Bone Junction', 'Bone Beach Bone Rush Mine', DirectionType.EAST, TransitionType.BURROW, CanBurrow() & RepairedGenerator(event=BONE_BEACH_DATA) & CanCarry()),
     'Sandfalls Bone Junction East Transition': Transition('Sandfalls Bone Junction', 'Bone Beach Shoreline Generator', DirectionType.EAST, TransitionType.SCREENS, True_()),
     'Sandfalls Bone Junction North Transition': Transition('Sandfalls Bone Junction Stair', 'Sandfalls Bone Junction Plank', DirectionType.NORTH, TransitionType.SCREENS, True_()),
     'Sandfalls Bone Junction Plank South Transition': Transition('Sandfalls Bone Junction Plank', 'Sandfalls Bone Junction Stair', DirectionType.SOUTH, TransitionType.SCREENS, True_()),

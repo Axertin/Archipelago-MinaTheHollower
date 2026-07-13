@@ -120,6 +120,41 @@ class ShortCutItem(NamedTuple):
     type: ItemTypeEnum
     access_rule: CollectionRule | Rule[MinaTheHollowerBase]
 
+class RegionTypeEnum(Enum):
+    def __init__(self,value: str):
+        # self._value_ must be set to the first element to support lookup by value
+        self._value_ = value
+
+class ConnectionTypeEnum(Enum):
+    def __init__(self, value: str, exiting_region: RegionTypeEnum, entering_region: RegionTypeEnum, rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()):
+        # self._value_ must be set to the first element to support lookup by value
+        self._value_ = value
+        self.exiting_region = exiting_region
+        self.entering_region = entering_region
+        self.rule = rule
+
+class LocationTypeEnum(Enum):
+    def __init__(self, value: str, location_id: int, region: RegionTypeEnum,rule: CollectionRule | Rule[MinaTheHollowerBase] = True_(), progress_type: LocationProgressType = LocationProgressType.DEFAULT):
+        # self._value_ must be set to the first element to support lookup by value
+        self._value_ = value
+        self.region = region
+        self.location_id = location_id
+        self.rule = rule
+        self.progress_type = progress_type
+
+class EventTypeEnum(Enum):
+    def __init__(self, value: str, region:str, event_item:str,  rule: CollectionRule | Rule[MinaTheHollowerBase] = True_()):
+        # self._value_ must be set to the first element to support lookup by value
+        self._value_ = value
+        self.region = region
+        self.event_item = event_item
+        self.rule = rule
+
+class RepairEventData(NamedTuple):
+    type: EventTypeEnum
+    gen_name: str
+    index: int
+
 class RegionConnection(NamedTuple):
     exiting_region: str
     entering_region: str
