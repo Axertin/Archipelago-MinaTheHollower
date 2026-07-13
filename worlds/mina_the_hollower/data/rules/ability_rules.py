@@ -74,7 +74,7 @@ class HasVialsCount(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         return Has(PlayerUpgrades.HEALING_VIAL.value, count=self.count).resolve(world)
 
 def HasBeastiumTransform():
-    return Has(PlayerUpgrades.TRINKET_BAG.value, count=5) & (Has(Trinkets.RECKLESS_BEASTIUM.value) &
+    return Has(PlayerUpgrades.TRINKET_BAG.value, count=6) & (Has(Trinkets.RECKLESS_BEASTIUM.value) &
             Has(Trinkets.WARDING_BEASTIUM.value) &
             Has(Trinkets.BURNING_BEASTIUM.value) &
             Has(Trinkets.DRAINING_BEASTIUM.value) &
@@ -133,3 +133,10 @@ class PowerLevelThreshold(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         @override
         def __str__(self) -> str:
             return f"Power Level of {self.power} Required"
+
+@dataclasses.dataclass(kw_only=True)
+class HasTrinket(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
+    trinket: str
+    @override
+    def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
+        return (Has(PlayerUpgrades.TRINKET_BAG.value) & Has(self.trinket)).resolve(world)

@@ -29,6 +29,8 @@ class HasKear(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
             else:
                 return False_().resolve(world)
 
+
+
 @dataclasses.dataclass(kw_only=True)
 class HasSparks(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
     count: int
