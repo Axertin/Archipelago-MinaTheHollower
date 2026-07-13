@@ -4,7 +4,7 @@ from rule_builder.rules import Has, True_
 from ... import RegionConnection, Transition, LocationData
 from ...items import Trinkets, SingleKears, Sidearms, FishingUpgrades
 from ...rules.ability_rules import CanBurrow, CanBounce, CanSwim, CanCarry, CanClimb, \
-    HasFishingRod, PowerLevelThreshold
+    HasFishingRod, PowerLevelThreshold, HasTrinket
 from ...rules.state_rules import HasLadder, HasKear, RepairedGeneratorCount
 from ...rules.movement_rules import CanJumpTiles
 
@@ -24,11 +24,11 @@ collectable_locations: dict[str, LocationData] = {
     "BW Lucky's Lair Kear": LocationData(292, "Backwaters Lucky's Lair", CanBurrow() & CanCarry()),
     "BW Fishing Hole Fishing Rod": LocationData(300, "Backwaters Fishing Hole"),
     "BW Fish Fleeper Head": LocationData(299, "Backwaters Fishing Hole", HasFishingRod()),
-    "BW Fish Thalassian Pearl": LocationData(302, "Backwaters Fishing Hole", HasFishingRod() & CanSwim() & (Has(Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
-    "BW Fishing Hole Gilded Rod": LocationData(301, "Backwaters Fishing Hole", RepairedGeneratorCount(count=6) & HasFishingRod() & CanSwim() & (Has(Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
+    "BW Fish Thalassian Pearl": LocationData(302, "Backwaters Fishing Hole", HasFishingRod() & CanSwim() & (HasTrinket(trinket=Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
+    "BW Fishing Hole Gilded Rod": LocationData(301, "Backwaters Fishing Hole", RepairedGeneratorCount(count=6) & HasFishingRod() & CanSwim() & (HasTrinket(trinket=Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
 }
 
 boss_locations: dict[str, LocationData] = {
-    "Plasma Jug": LocationData(290, "Backwaters Upper Swamp Waterfall", Has(Trinkets.EMPTY_JUG.value) & PowerLevelThreshold(power=24)),
+    "Plasma Jug": LocationData(290, "Backwaters Upper Swamp Waterfall", HasTrinket(trinket=Trinkets.EMPTY_JUG.value) & PowerLevelThreshold(power=24)),
 }
 

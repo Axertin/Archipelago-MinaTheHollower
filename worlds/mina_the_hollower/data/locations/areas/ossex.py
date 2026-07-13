@@ -2,12 +2,11 @@
 from rule_builder.rules import Has
 
 from ... import LocationData
-from ...events import BONE_BEACH_DATA, SEPTEMBURG_DATA
-from ...items import Weapons, Sidearms, PermanentUpgrades, BoneUps, GenericBoneUp, Trinkets, \
+from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneUps, GenericBoneUp, Trinkets, \
     SingleKears
 from ...items.abilities import ABILITY_NAMES
 from ...rules.ability_rules import CanBurrow, CanBounce, HasVialsCount, CanClimb, \
-    HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform
+    HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform, HasTrinket
 from ...rules.state_rules import HasAllKears, HasTrinketCount, HasKear, RepairedGeneratorCount
 from ...rules.movement_rules import CanJumpTiles
 
@@ -72,7 +71,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Atelier Vitality Vest" : LocationData(208, "Ossex Atelier"),
         "OS Atelier Custom Fit" : LocationData(209, "Ossex Atelier", Has(PermanentUpgrades.VITALITY_VEST.value) & Has(PermanentUpgrades.SAFETY_SHROUD.value)),
         "OS Bowery Double Sidearm Permit" : LocationData(219, "Ossex Bowery Main", Has(BoneUps.SIDEARM_BONE_UP_CAP.value, count=5) | Has(GenericBoneUp.ALL_BONE_UP_CAP.value, count=5)),
-        "OS Bowery Upper Chest" : LocationData(173, "Ossex Bowery Upper", CanBurrow() & (HasReachingSideArm() | Has(Trinkets.SEISMIC_BELT.value) | HasBeastiumTransform())),
+        "OS Bowery Upper Chest" : LocationData(173, "Ossex Bowery Upper", CanBurrow() & (HasReachingSideArm() | HasTrinket(trinket=Trinkets.SEISMIC_BELT.value) | HasBeastiumTransform())),
         "OS Bowery New House Bonestone" : LocationData(159, "Ossex Bowery Tall Residence Upper Main", CanBurrow()),
         "OS Bowery Residence Kear" : LocationData(156, "Ossex Bowery Begger Residence"),
         "OS Music Hall Chest" : LocationData(170, "Ossex Music Hall"),

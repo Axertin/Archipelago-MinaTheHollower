@@ -3,7 +3,7 @@ from rule_builder.options import OptionFilter
 from rule_builder.rules import Has, True_
 from ... import RegionConnection, Transition, LocationData
 from ...items import SingleKears, Trinkets
-from ...rules.ability_rules import CanBurrow, CanBounce, CanCarry, HasFishingRod, CanClimb
+from ...rules.ability_rules import CanBurrow, CanBounce, CanCarry, HasFishingRod, CanClimb, HasTrinket
 from ...rules.state_rules import HasKear
 from ...rules.movement_rules import CanJumpTiles
 
@@ -17,7 +17,7 @@ collectable_locations: dict[str, LocationData] = {
     "WW Occupied Bridge Underneath Chest" : LocationData(252, "Western Wilds Foundry Path", CanBurrow()),
     "WW Molten Foundry Poppit Helio" : LocationData(256, "Western Wilds Molten Foundry Dark Poppit"),
     "WW Molten Foundry Poppit Kear" : LocationData(257, "Western Wilds Molten Foundry Dark Poppit"),
-    "WW Molten Foundry Dark Chest" : LocationData(255, "Western Wilds Molten Foundry Dark", CanBurrow() | Has(Trinkets.POLYP_LAMP.value)),
+    "WW Molten Foundry Dark Chest" : LocationData(255, "Western Wilds Molten Foundry Dark", CanBurrow() | HasTrinket(trinket=Trinkets.POLYP_LAMP.value)),
     "WW Molten Foundry Flame Guard" : LocationData(249, "Western Wilds Molten Dungeon End"),
     "WW Fish Glomper Stalk" : LocationData(258, "Western Wilds Western Pond", HasFishingRod()),
     "WW Balcony Chest" : LocationData(254, "Western Wilds Balcony", HasKear(kear=SingleKears.WESTERN_WILDS_BALCONY_KEAR.value)),
