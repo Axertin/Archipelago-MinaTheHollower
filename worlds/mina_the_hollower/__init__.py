@@ -12,6 +12,7 @@ from rule_builder.rules import Has
 from .data.events import repair_generator_data
 from .data.rules.ability_rules import PowerLevelThreshold
 from .data.rules.movement_rules import CanJumpTiles, max_jump
+from .data.rules.state_rules import repair_generator_lookup
 from .rules import set_goal
 
 from ..AutoWorld import WebWorld
@@ -193,7 +194,15 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
 
     @override
     def explain_rule(self, dest_name: str, state: CollectionState, *_: Any, **__: Any) -> list[JSONMessagePart] | None:
-        if dest_name == "Max Jump":
+        if dest_name == "help" or dest_name == "Help" :
+            return [
+                {
+                    "type": "color",
+                    "color": "green",
+                    "text": f"Max Jump, Generators\n",
+                },
+            ]
+        if dest_name == "Max Jump" or dest_name == "max jump":
             pure_distance, pure_loadout = max_jump(state, self.player, False, False)
             wall_distance, wall_loadout = max_jump(state, self.player, True, False)
             no_sides_distance, no_sides_loadout = max_jump(state, self.player, True, True)
@@ -206,24 +215,15 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
                 {"type": "color", "color": "green", "text": f"Can Jump With Wallower {wall_distance} Tiles.{wall_loadout_message}\n"},
                 {"type": "color", "color": "green", "text": f"Can Jump With No Sidarms {no_sides_distance} Tiles.{no_sides_loadout_message}\n"},
             ]
-        if dest_name == "Generators":
-            generators = [
-                ("Solemn", "Repair Solemn Generator"),
-                ("Swampy", "Repair Swampy Generator"),
-                ("Windy", "Repair Windy Generator"),
-                ("Shoreline", "Repair Shoreline Generator"),
-                ("Frozen", "Repair Frozen Generator"),
-                ("Starry", "Repair Starry Generator"),
-            ]
-
+        if dest_name == "Generators" or dest_name == "generators":
             repairable_generators = [
-                name for name, item in generators
-                if state.has(item, self.player)
+                repair_generator_lookup[i].type.name for i in self.broken_generators
+                if state.has(repair_generator_lookup[i].type.event_item, self.player)
             ]
 
             unreachable_generators = [
-                name for name, item in generators
-                if not state.has(item, self.player)
+                repair_generator_lookup[i].type.name for i in self.broken_generators
+                if not state.has(repair_generator_lookup[i].type.event_item, self.player)
             ]
 
             return [
@@ -266,6 +266,8 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         self.options.kear_rando.value = slot_data["kear_rando"]
         self.options.ossex_start.value = slot_data["ossex_start"]
         self.options.max_stat_level.value = slot_data["max_stat_level"]
+        self.lit_generators = slot_data["lit_generators"]
+        self.broken_generators = slot_data["broken_generators"]
         self.options.ability_rando.value = {
             option_key
             for option_key, slot_keys in ABILITY_RANDO_SLOT_KEYS.items()

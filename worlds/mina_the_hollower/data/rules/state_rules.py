@@ -166,41 +166,6 @@ def AnyThreeAstralPlatforms():
         (red & blue & yellow)
     )
 
-#
-# @dataclasses.dataclass(kw_only=True)
-# class RepairedGeneratorTrigger(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
-#     event: RepairEventData
-#
-#     @override
-#     def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
-#         # caching_enabled only needs to be passed in when your world inherits from CachedRuleBuilderWorld
-#         return self.Resolved(index=self.event.index, event_item=self.event.type.event_item, player=world.player, lit_generators=tuple(world.lit_generators),
-#                              broken_generators=tuple(world.broken_generators), name= self.event.type.value, caching_enabled=False)
-#
-#     class Resolved(Rule.Resolved):
-#         name: str
-#         index: int
-#         event_item: str
-#         lit_generators: tuple[int, ...]
-#         broken_generators: tuple[int, ...]
-#         @override
-#         def _evaluate(self, state: CollectionState) -> bool:
-#             return
-#
-#         @override
-#         def item_dependencies(self) -> dict[str, set[int]]:
-#             return {item: {id(self)} for item in [item.value for item in GeneratorsComplete]}
-#
-#         @override
-#         def explain_json(self, state: CollectionState | None = None) -> list[JSONMessagePart]:
-#             # this method can be overridden to display custom explanations
-#             return [
-#                 {"type": "color", "color": "green" if state and self(state) else "salmon", "text": str(self)},
-#             ]
-#         @override
-#         def __str__(self) -> str:
-#             return f"Can {self.name}"
-
 
 @dataclasses.dataclass(kw_only=True)
 class RepairedGeneratorCount(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
