@@ -7,7 +7,7 @@ from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, DirectionType, TransitionType
 from ...rules.ability_rules import (
     CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce, PowerLevelThreshold,
-    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, 
+    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, HasTrinket 
 )
 from ...rules.movement_rules import (
     CanJumpTiles, 
@@ -22,7 +22,7 @@ from ...events import (
    BONE_BEACH_DATA, COLTRANE_PEAK_DATA, ASTRAL_ORRERY_DATA, 
 )
 from ...items.game_items import (
-   PermanentUpgrades, PlayerUpgrades, Trinkets
+   PermanentUpgrades, PlayerUpgrades, Trinkets, Sidearms
 )
 from ...items.kears import (
    SingleKears,

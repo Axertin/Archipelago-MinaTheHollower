@@ -4,7 +4,7 @@ from .blockers import AstralPlatforms
 from .game_items import Sidearms, PermanentUpgrades, PlayerUpgrades, Trinkets, BoneFiller, JunkFiller, CosmeticUpgrades, \
     FilledJug, FillerUpgrades
 from .kears import Kear, AreaKears, SingleKears
-from .progressives import Weapons, BoneUps, GenericBoneUp, FishingUpgrades
+from .progressives import Weapons, BoneUps, GenericBoneUp, FishingUpgrades, Wallets
 from .. import ItemData, ItemTypeEnum, ItemFiller, ItemMovement, ItemPower
 
 all_items: list[ItemTypeEnum] = [
@@ -25,7 +25,8 @@ all_items: list[ItemTypeEnum] = [
     *FishingUpgrades,
     *CosmeticUpgrades,
     *FillerUpgrades,
-    *FilledJug
+    *FilledJug,
+    *Wallets
 ]
 
 item_name_to_type = {

@@ -7,7 +7,7 @@ from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, DirectionType, TransitionType
 from ...rules.ability_rules import (
     CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce, PowerLevelThreshold,
-    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, 
+    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, HasTrinket 
 )
 from ...rules.movement_rules import (
     CanJumpTiles, 
@@ -22,7 +22,7 @@ from ...events import (
    BONE_BEACH_DATA, COLTRANE_PEAK_DATA, ASTRAL_ORRERY_DATA, 
 )
 from ...items.game_items import (
-   PermanentUpgrades, PlayerUpgrades, Trinkets
+   PermanentUpgrades, PlayerUpgrades, Trinkets, Sidearms
 )
 from ...items.kears import (
    SingleKears,
@@ -48,8 +48,8 @@ connections: dict[str, RegionConnection] = {
 transitions: dict[str, Transition] = {
     'Bayou Stop': Transition('Ossex Train Interior', 'Backwaters Lower Swamp Station', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.BAYOU_TICKET.value)),
     'Bayou Stop 2': Transition('Ossex Train Cab', 'Backwaters Lower Swamp Station', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.BAYOU_TICKET.value)),
-    'Coltrane Peak Stop': Transition('Ossex Train Interior', 'Coltrane Peak Thorne Arena', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value) & PowerLevelThreshold(power=30)),
-    'Coltrane Peak Stop 2': Transition('Ossex Train Cab', 'Coltrane Peak Thorne Arena', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value) & PowerLevelThreshold(power=30)),
+    'Coltrane Peak Stop': Transition('Ossex Train Interior', 'Coltrane Peak Thorne Arena', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value) & CanClimb() & PowerLevelThreshold(power=30)),
+    'Coltrane Peak Stop 2': Transition('Ossex Train Cab', 'Coltrane Peak Thorne Arena', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value) & CanClimb() & PowerLevelThreshold(power=30)),
     'Kindlewood Stop': Transition('Ossex Train Interior', 'Kindlewood Farm Crossing', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.SEPTEMBURG_TICKET.value)),
     'Kindlewood Stop 2': Transition('Ossex Train Cab', 'Kindlewood Farm Crossing', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, Has(PermanentUpgrades.SEPTEMBURG_TICKET.value)),
     'Ossex Stop': Transition('Ossex Train Interior', 'Ossex Station', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, True_()),

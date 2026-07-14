@@ -1,4 +1,5 @@
 from BaseClasses import Region, Location, ItemClassification, LocationProgressType
+from .data.events import RADIANT_MANOR_DATA
 from .data.items import BoneFiller
 from .data.locations import all_regions, all_region_transitions, all_internal_region_connections, \
     all_permanent_locations, dungeon_locations
@@ -19,6 +20,7 @@ def create_location(world, name: str, data: LocationData, bonestone: bool = Fals
         item = MinaTheHollowerItem(BoneFiller.BONE_STONE_2.value, ItemClassification.filler, BoneFiller.BONE_STONE_2.item_id, world.player)
         location.place_locked_item(item)
     region.locations.append(location)
+    world.set_rule(location, data.rule)
 
 def create_region(world: "MinaTheHollowerWorld", name: str, hint: str = ""):
     region = Region(name, world.player, world.multiworld)
@@ -48,7 +50,8 @@ def create_regions(world: "MinaTheHollowerWorld", regions: set[str]):
         create_region(world, region)
     for index, loc_map in dungeon_locations.items():
         for name, data in loc_map.items():
-            create_location(world, name, data, bonestone=index in world.lit_generators)
+            override = index == RADIANT_MANOR_DATA.index and world.options.goal.value == world.options.goal.option_fixGenerators
+            create_location(world, name, data, bonestone=(index in world.lit_generators) or override)
 
 
 

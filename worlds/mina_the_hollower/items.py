@@ -9,7 +9,7 @@ from .constants import MINA_THE_HOLLOWER
 from .data import ItemData, ItemTypeEnum, ItemFiller
 from .data.items import Kear, SingleKears, AreaKears, base_items, Abilities, BoneUps, GenericBoneUp, all_filler_items, \
     PermanentUpgrades, PlayerUpgrades, upgrade_items, Trinkets, BASE_ITEM_TOTAL, \
-    valid_power_types, FilledJug, FillerUpgrades
+    valid_power_types, FilledJug, FillerUpgrades, Wallets, all_starting_upgrades
 
 from .data.rules.state_rules import sidearm_rules
 from .options import BoneUpCap, KearRandomization, Goal
@@ -85,9 +85,6 @@ def create_items(world: "MinaTheHollowerWorld"):
                 if item_data.amount <= 0:
                     all_items.remove(item_data)
         else:
-            for _ in range(2):
-                starting_items.append(world.create_item(FillerUpgrades.PROGRESSIVE_MAP.value))
-
             for i in range(BASE_ITEM_TOTAL):
                 if i < (BASE_ITEM_TOTAL * 2) // 3:
                     candidates = [
@@ -104,7 +101,7 @@ def create_items(world: "MinaTheHollowerWorld"):
                 else:
                     candidates = list(all_items)
 
-                if (trinkets_selected > bags_selected):
+                if trinkets_selected > bags_selected:
                     filtered = [
                         item
                         for item in candidates
@@ -113,7 +110,7 @@ def create_items(world: "MinaTheHollowerWorld"):
                     if filtered:
                         candidates = filtered
 
-                if (bone_caps_selected >= bone_cap_cap):
+                if bone_caps_selected >= bone_cap_cap:
                     filtered = [
                         item
                         for item in candidates
@@ -145,6 +142,9 @@ def create_items(world: "MinaTheHollowerWorld"):
         for item in base_items:
             for i in range(item.amount):
                 starting_items.append(world.create_item(item.type.value))
+    for data in all_starting_upgrades:
+        for _ in range(data.amount):
+            starting_items.append(world.create_item(data.type.value))
 
     for item_type in Abilities:
         if item_type.value in world.options.ability_rando.value:
@@ -154,6 +154,9 @@ def create_items(world: "MinaTheHollowerWorld"):
 
     for item in all_items:
         create_item(world, item)
+
+    for _ in range(8):
+        create_single_item(world, Wallets.WALLET_SIZE)
 
     if world.options.kear_rando == KearRandomization.option_vanilla:
         create_item(world, ItemData(Kear.UNIVERSAL_KEAR, 50))

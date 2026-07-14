@@ -7,7 +7,7 @@ from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, DirectionType, TransitionType
 from ...rules.ability_rules import (
     CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce, PowerLevelThreshold,
-    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, 
+    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, HasTrinket 
 )
 from ...rules.movement_rules import (
     CanJumpTiles, 
@@ -22,7 +22,7 @@ from ...events import (
    BONE_BEACH_DATA, COLTRANE_PEAK_DATA, ASTRAL_ORRERY_DATA, 
 )
 from ...items.game_items import (
-   PermanentUpgrades, PlayerUpgrades, Trinkets
+   PermanentUpgrades, PlayerUpgrades, Trinkets, Sidearms
 )
 from ...items.kears import (
    SingleKears,
@@ -70,7 +70,7 @@ connections: dict[str, RegionConnection] = {
     "Mourner's Mile Knight's Guard Main_Mourner's Mile Knight's Guard Bike": RegionConnection("Mourner's Mile Knight's Guard Main", "Mourner's Mile Knight's Guard Bike", HasKear(kear=SingleKears.MOURNERS_MILES_BIKE_KEAR.value)),
     "Mourner's Mile Knight's Rest Chest_Mourner's Mile Knight's Rest Main": RegionConnection("Mourner's Mile Knight's Rest Chest", "Mourner's Mile Knight's Rest Main", CanClimb()),
     "Mourner's Mile Knight's Rest Main_Mourner's Mile Knight's Rest Chest": RegionConnection("Mourner's Mile Knight's Rest Main", "Mourner's Mile Knight's Rest Chest", CanJumpTiles(distance=3, has_wall=True)),
-    "Mourner's Mile Spike Hell Mourner_Mourner's Mile Spike Hell Sandfall": RegionConnection("Mourner's Mile Spike Hell Mourner", "Mourner's Mile Spike Hell Sandfall", Has(Trinkets.SPIKE_SPURS.value)),
+    "Mourner's Mile Spike Hell Mourner_Mourner's Mile Spike Hell Sandfall": RegionConnection("Mourner's Mile Spike Hell Mourner", "Mourner's Mile Spike Hell Sandfall", HasTrinket(trinket=Trinkets.SPIKE_SPURS.value) & Has(Sidearms.MIST_JAR.value) & Has(PlayerUpgrades.JOULE_BOX.value, count=2) & Has(PlayerUpgrades.HEALTH_ROSE.value, count=6)),
     "Mourner's Mile Spike Hell Sandfall_Mourner's Mile Spike Hell Mourner": RegionConnection("Mourner's Mile Spike Hell Sandfall", "Mourner's Mile Spike Hell Mourner", True_()),
     "Mourner's Mile Spike Vault Hidden_Mourner's Mile Spike Vault Main": RegionConnection("Mourner's Mile Spike Vault Hidden", "Mourner's Mile Spike Vault Main", True_()),
     "Mourner's Mile Spike Vault Upper_Mourner's Mile Spike Vault Hidden": RegionConnection("Mourner's Mile Spike Vault Upper", "Mourner's Mile Spike Vault Hidden", True_()),
