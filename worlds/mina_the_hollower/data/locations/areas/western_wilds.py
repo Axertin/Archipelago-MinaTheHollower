@@ -2,13 +2,13 @@ from BaseClasses import LocationProgressType
 from rule_builder.options import OptionFilter
 from rule_builder.rules import Has, True_
 from ... import RegionConnection, Transition, LocationData
-from ...items import SingleKears, Trinkets
+from ...items import SingleKears, Trinkets, Wallets
 from ...rules.ability_rules import CanBurrow, CanBounce, CanCarry, HasFishingRod, CanClimb, HasTrinket
 from ...rules.state_rules import HasKear
 from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
-    "WW Secret Passage Chest" : LocationData(251, "Western Wilds Secret Passageway East", CanJumpTiles(distance=3), item_rule=lambda item: item.name != Wallets.value),
+    "WW Secret Passage Chest" : LocationData(251, "Western Wilds Secret Passageway East", CanJumpTiles(distance=3), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
     "WW Secret Passage Joule Box" : LocationData(248, "Western Wilds Secret Passageway East", CanJumpTiles(distance=5) & HasKear(kear=SingleKears.WESTERN_WILDS_SECRET_PASSAGE_KEAR.value)),
     "WW Occupied Bridge Brute Chest" : LocationData(253, "Western Wilds Brutes"),
     "WW Occupied Bridge Far Chest" : LocationData(250, "Western Wilds End", CanBurrow()),

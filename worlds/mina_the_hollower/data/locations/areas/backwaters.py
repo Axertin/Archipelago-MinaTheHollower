@@ -10,7 +10,7 @@ from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
 
-    "BW Upper Shanty Swamp Glutton's Jug": LocationData(289, "Backwaters Upper Swamp Waterfall", item_rule=lambda item: item.name != Wallets.value),
+    "BW Upper Shanty Swamp Glutton's Jug": LocationData(289, "Backwaters Upper Swamp Waterfall", item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
     "BW Upper Shanty Swamp Side Room Chest": LocationData(296, "Backwaters Upper Swamp Secret Room", CanSwim() & (CanJumpTiles(distance=2, no_sidearms=True) | CanJumpTiles(distance=3))),
     "BW Lantern Cave Bonestone": LocationData(287, "Backwaters Upper Lantern Cave"),
     "BW Lantern Cave Vial Pouch": LocationData(295, "Backwaters Upper Lantern Cave"),
