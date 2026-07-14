@@ -19,7 +19,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Courtyard West Weapon Upgrade" : LocationData(163, "Ossex Courtyard West Chest", HasVialsCount(count=5)),
         "OS Courtyard Garden Warding Beastium" : LocationData(171, "Ossex Courtyard East Manor Side"),
         "OS Evra's Rest Health Rose" : LocationData(352, "Ossex Goddred's Grave End"),
-        "OS Couple's Quarter Chest" : LocationData(165, "Ossex Couple's Quarter", CanBurrow()),
+        "OS Couple's Quarter Chest" : LocationData(165, "Ossex Couple's Quarter", CanBurrow() | HasReachingSideArm()),
 
         "OS Hollower's Guild Back Room Kear Chest" : LocationData(168, "Ossex Guild Back Room"),
         "OS Hollower's Guild Back Room Joule Alembic" : LocationData(210, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
