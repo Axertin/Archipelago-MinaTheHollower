@@ -8,7 +8,7 @@ from ...rules.state_rules import HasKear
 from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
-    "WW Secret Passage Chest" : LocationData(251, "Western Wilds Secret Passageway East", CanJumpTiles(distance=3)),
+    "WW Secret Passage Chest" : LocationData(251, "Western Wilds Secret Passageway East", CanJumpTiles(distance=3), item_rule=lambda item: item.name != Wallets.value),
     "WW Secret Passage Joule Box" : LocationData(248, "Western Wilds Secret Passageway East", CanJumpTiles(distance=5) & HasKear(kear=SingleKears.WESTERN_WILDS_SECRET_PASSAGE_KEAR.value)),
     "WW Occupied Bridge Brute Chest" : LocationData(253, "Western Wilds Brutes"),
     "WW Occupied Bridge Far Chest" : LocationData(250, "Western Wilds End", CanBurrow()),
