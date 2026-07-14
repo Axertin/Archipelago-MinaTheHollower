@@ -1,4 +1,6 @@
 import dataclasses
+import math
+from operator import truediv
 from typing import override
 
 from BaseClasses import CollectionState
@@ -9,7 +11,8 @@ from .ability_rules import CanSwim, CanCarry, CanBurrow, CanClimb
 from .movement_rules import CanJumpTiles
 from .. import ShortCutItem, RepairEventData
 from ..events import repair_generator_data
-from ..items import Kear, SingleKears, AreaKears, Trinkets, AstralPlatforms, Sidearms, PlayerUpgrades, PermanentUpgrades
+from ..items import Kear, SingleKears, AreaKears, Trinkets, AstralPlatforms, Sidearms, PlayerUpgrades, \
+    PermanentUpgrades, Wallets
 from ..items.blockers import GeneratorsComplete
 from ..items.kears import kear_area_lookup
 from ...constants import MINA_THE_HOLLOWER
@@ -248,3 +251,42 @@ sidearm_rules: list[ShortCutItem] = [
 
 def CanFishAllFish():
     return RepairedGeneratorCount(count=6)
+
+
+@dataclasses.dataclass(kw_only=True)
+class ShopPrice(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
+    cost: int
+
+    @override
+    def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
+        return self.Resolved(
+            cost=self.cost,
+            player=world.player,
+            caching_enabled=False,
+        )
+
+    class Resolved(Rule.Resolved):
+        cost: int
+
+        @override
+        def _evaluate(self, state: CollectionState) -> bool:
+            amount = math.ceil((self.cost - 750) / 500)
+            if amount <= 0:
+                return True
+            cap = state.count(Wallets.WALLET_SIZE.value, self.player)
+            return cap >= 8 or cap >= amount
+
+
+        @override
+        def item_dependencies(self) -> dict[str, set[int]]:
+            return {item: {id(self)} for item in [item.value for item in Wallets]}
+
+        @override
+        def explain_json(self, state: CollectionState | None = None) -> list[JSONMessagePart]:
+            # this method can be overridden to display custom explanations
+            return [
+                {"type": "color", "color": "green" if state and self(state) else "salmon", "text": str(self)},
+            ]
+        @override
+        def __str__(self) -> str:
+            return f"Check Wallet Size of {self.cost}"

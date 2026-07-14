@@ -29,6 +29,7 @@ all_collectables: ChainMap[str, LocationData] = ChainMap(
     southern_outskirts.collectable_locations,
     backwaters.collectable_locations,
     western_wilds.collectable_locations,
+    radiant_manor.permanent_locations
 )
 
 all_optional_locations: ChainMap[str, LocationData] = ChainMap(

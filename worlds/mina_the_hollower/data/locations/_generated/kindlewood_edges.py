@@ -7,7 +7,7 @@ from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, DirectionType, TransitionType
 from ...rules.ability_rules import (
     CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce, PowerLevelThreshold,
-    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, 
+    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, HasTrinket 
 )
 from ...rules.movement_rules import (
     CanJumpTiles, 
@@ -22,7 +22,7 @@ from ...events import (
    BONE_BEACH_DATA, COLTRANE_PEAK_DATA, ASTRAL_ORRERY_DATA, 
 )
 from ...items.game_items import (
-   PermanentUpgrades, PlayerUpgrades, Trinkets
+   PermanentUpgrades, PlayerUpgrades, Trinkets, Sidearms
 )
 from ...items.kears import (
    SingleKears,
@@ -86,7 +86,7 @@ connections: dict[str, RegionConnection] = {
     'Kindlewood Rail Tunnel_Kindlewood Rail Tunnel Tracks': RegionConnection('Kindlewood Rail Tunnel', 'Kindlewood Rail Tunnel Tracks', CanBurrow() & CanClimb()),
     'Kindlewood Wallowers Path End_Kindlewood Wallowers Path': RegionConnection('Kindlewood Wallowers Path End', 'Kindlewood Wallowers Path', CanBurrow()),
     "Kindlewood Wallowers Path_Kindlewood Wallower's Path Cliff Bush": RegionConnection('Kindlewood Wallowers Path', "Kindlewood Wallower's Path Cliff Bush", CanBurrow()),
-    'Kindlewood Wallowers Path_Kindlewood Wallowers Path End': RegionConnection('Kindlewood Wallowers Path', 'Kindlewood Wallowers Path End', Has(Trinkets.WALLOWERS_GAUNTLETS.value) | CanJumpTiles(distance=7)),
+    'Kindlewood Wallowers Path_Kindlewood Wallowers Path End': RegionConnection('Kindlewood Wallowers Path', 'Kindlewood Wallowers Path End', HasTrinket(trinket=Trinkets.WALLOWERS_GAUNTLETS.value) | CanJumpTiles(distance=7)),
 }
 
 transitions: dict[str, Transition] = {

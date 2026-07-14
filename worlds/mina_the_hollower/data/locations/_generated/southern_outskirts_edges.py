@@ -7,7 +7,7 @@ from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, DirectionType, TransitionType
 from ...rules.ability_rules import (
     CanBurrow, CanCarry, CanClimb, CanSwim, CanBounce, PowerLevelThreshold,
-    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, 
+    HasVialsCount, HasReachingSideArm, HasFishingRod, CanSpring, HasTrinket 
 )
 from ...rules.movement_rules import (
     CanJumpTiles, 
@@ -22,7 +22,7 @@ from ...events import (
    BONE_BEACH_DATA, COLTRANE_PEAK_DATA, ASTRAL_ORRERY_DATA, 
 )
 from ...items.game_items import (
-   PermanentUpgrades, PlayerUpgrades, Trinkets
+   PermanentUpgrades, PlayerUpgrades, Trinkets, Sidearms
 )
 from ...items.kears import (
    SingleKears,
@@ -169,7 +169,7 @@ transitions: dict[str, Transition] = {
     'Southern Outskirts Commons Upper North Transition': Transition('Southern Outskirts Commons Upper', 'Southern Outskirts Commons East Ossex', DirectionType.OVERWORLD, TransitionType.DO_NOT_RANDOMIZE_ENTRANCE, CanBounce()),
     'Southern Outskirts Commons Upper Stairs': Transition('Southern Outskirts Commons Upper', 'Southern Outskirts Cave Network End', DirectionType.NORTH, TransitionType.STAIRS, True_()),
     'Southern Outskirts Commons West Ossex East Transition': Transition('Southern Outskirts Commons West Ossex', 'Southern Outskirts Commons Ossex Entry', DirectionType.EAST, TransitionType.SCREENS, True_()),
-    'Southern Outskirts Commons West Ossex West Transition': Transition('Southern Outskirts Commons West Ossex', 'Southern Outskirts Commons Western Pit Room Main', DirectionType.WEST, TransitionType.SCREENS, True_()),
+    'Southern Outskirts Commons West Ossex West Transition': Transition('Southern Outskirts Commons West Ossex', 'Southern Outskirts Commons Western Pit Room Pit', DirectionType.WEST, TransitionType.SCREENS, True_()),
     'Southern Outskirts Commons Western Pit Room Main North Area Transition': Transition('Southern Outskirts Commons Western Pit Room Main', 'Western Wilds Overgrown Path', DirectionType.NORTH, TransitionType.AREA_SCREENS, True_()),
     'Southern Outskirts Commons Western Pit Room Main South Transition': Transition('Southern Outskirts Commons Western Pit Room Main', 'Southern Outskirts Commons Southern Pit Room Main', DirectionType.SOUTH, TransitionType.SCREENS, True_()),
     'Southern Outskirts Commons Western Pit Room Pit East Transition': Transition('Southern Outskirts Commons Western Pit Room Pit', 'Southern Outskirts Commons West Ossex', DirectionType.EAST, TransitionType.SCREENS, True_()),

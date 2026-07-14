@@ -21,3 +21,6 @@ class GenericBoneUp(ItemTypeEnum):
 class FishingUpgrades(ItemTypeEnum):
     FISHING_ROD = ("Progressive Fishing Rod", ITEMS_OFFSET_PROGRESSIVES+9, ItemClassification.progression)
     #fishing rod->raft=>gold rod
+
+class Wallets(ItemTypeEnum):
+    WALLET_SIZE = ("Progressive Bone Wallet", ITEMS_OFFSET_PROGRESSIVES+11, ItemClassification.progression)
