@@ -4,6 +4,8 @@ from BaseClasses import Item, Location, ItemClassification, CollectionRule
 from rule_builder.rules import True_, Rule
 from worlds.mina_the_hollower.data.events.events import MirrorsEndSwitches
 from . import repair_generator_data
+from .data.events import all_generator_data
+from .data.items.kears import kear_area_lookup
 from .world_base import MinaTheHollowerBase
 from .constants import MINA_THE_HOLLOWER
 from .data import ItemData, ItemTypeEnum, ItemFiller
@@ -161,10 +163,18 @@ def create_items(world: "MinaTheHollowerWorld"):
     if world.options.kear_rando == KearRandomization.option_vanilla:
         create_item(world, ItemData(Kear.UNIVERSAL_KEAR, 50))
     elif world.options.kear_rando == KearRandomization.option_apItems:
+        excluded_kears = [data.kear_item_type for data in all_generator_data if data.index in world.lit_generators]
         for item_type in SingleKears:
+            if kear_area_lookup[item_type.value] in excluded_kears:
+                starting_items.append(world.create_item(item_type.value))
+                continue
             create_single_item(world, item_type)
     elif world.options.kear_rando.value == 2:  # todo: change to KearRandomization.option_areaApItems
         for item_type in AreaKears:
+            excluded_kears = [data.kear_item_type for data in all_generator_data if data.index in world.lit_generators]
+            if item_type in excluded_kears:
+                starting_items.append(world.create_item(item_type.value))
+                continue
             create_single_item(world, item_type)
 
     total_location_count = len(world.multiworld.get_unfilled_locations(world.player))
@@ -182,11 +192,12 @@ def create_items(world: "MinaTheHollowerWorld"):
             if remaining <= 20:
                 break
     else:
-        for _ in range(world.options.max_stat_level.value-10):
-            create_item(world, ItemData(GenericBoneUp.ALL_BONE_UP_CAP, 1))
-            remaining -= 1
-            if remaining <= 20:
-                break
+        if world.options.max_stat_level.value > 10:
+            for _ in range(world.options.max_stat_level.value-10):
+                create_item(world, ItemData(GenericBoneUp.ALL_BONE_UP_CAP, 1))
+                remaining -= 1
+                if remaining <= 20:
+                    break
 
 
     filler: list[ItemFiller] = world.random.choices(

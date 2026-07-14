@@ -109,6 +109,10 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         if self.options.goal.value == self.options.goal.option_fixGenerators:
             if self.options.goal_generators.value < 3:
                 valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH]
+                if self.options.goal_generators == 1:
+                    self.options.max_stat_level.value = 6
+                elif self.options.goal_generators == 2:
+                    self.options.max_stat_level.value = 10
             elif self.options.goal_generators.value < 5:
                 valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH,
                                     self.random.choice([COLTRANE_PEAK, ASTRAL_ORRERY])]
@@ -175,7 +179,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             "ossex_start": self.options.ossex_start.value,
             "kear_rando": self.options.kear_rando.value,
             "max_stat_level": self.options.max_stat_level.value,
-            "wallet_cap": False,
+            "wallet_cap": True,
             "lit_generators" : self.lit_generators,
             "broken_generators" : self.broken_generators,
             # "entrance_rando" : self.options.entrance_rando.value,

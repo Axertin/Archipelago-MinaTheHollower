@@ -154,6 +154,7 @@ class RepairEventData(NamedTuple):
     type: EventTypeEnum
     gen_name: str
     index: int
+    kear_item_type: ItemTypeEnum
 
 class RegionConnection(NamedTuple):
     exiting_region: str

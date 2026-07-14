@@ -17,7 +17,7 @@ def create_location(world, name: str, data: LocationData, bonestone: bool = Fals
     location.progress_type = LocationProgressType.EXCLUDED if bonestone else data.progress_type
     location.item_rule = data.item_rule
     if bonestone:
-        item = MinaTheHollowerItem(BoneFiller.BONE_STONE_2.value, ItemClassification.filler, BoneFiller.BONE_STONE_2.item_id, world.player)
+        item = MinaTheHollowerItem(BoneFiller.TREASURE_SMALLEST.value, ItemClassification.filler, BoneFiller.TREASURE_SMALLEST.item_id, world.player)
         location.place_locked_item(item)
     region.locations.append(location)
     world.set_rule(location, data.rule)
