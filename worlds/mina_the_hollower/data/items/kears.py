@@ -44,13 +44,13 @@ class SingleKears(ItemTypeEnum):
     OSSEX_TRAIN_KEAR_1 = ("Ossex Train Lock 1", ITEMS_OFFSET_KEARS + 358, ItemClassification.progression)
     OSSEX_TRAIN_KEAR_2 = ("Ossex Train Lock 2", ITEMS_OFFSET_KEARS + 359, ItemClassification.progression)
     OSSEX_EAST_GARDEN_KEAR = ("Ossex East Garden Lock", ITEMS_OFFSET_KEARS + 157, ItemClassification.progression)
-    PINKY_KEAR = ("Pinky Lock", ITEMS_OFFSET_KEARS + 284, ItemClassification.progression)
-    PINKY_BACK_KEAR = ("Pinky Back Lock", ITEMS_OFFSET_KEARS + 283, ItemClassification.progression)
+    PINKY_KEAR = ("Backwaters Pinky Lock", ITEMS_OFFSET_KEARS + 284, ItemClassification.progression)
+    PINKY_BACK_KEAR = ("Backwaters Pinky Back Lock", ITEMS_OFFSET_KEARS + 283, ItemClassification.progression)
     LONERS_LANDING_BELOWDECKS_RIGHT_WEAPON_KEAR = ("Loner's Landing Below Decks Right Weapon Lock", ITEMS_OFFSET_KEARS + 20, ItemClassification.progression)
     LONERS_LANDING_BELOWDECKS_LEFT_WEAPON_KEAR = ("Loner's Landing Below Decks Left Weapon Lock", ITEMS_OFFSET_KEARS + 21, ItemClassification.progression)
     LONERS_LANDING_BELOWDECKS_BACK_KEAR = ("Loner's Landing Shipwreck Back Lock", ITEMS_OFFSET_KEARS + 22, ItemClassification.progression)
     NOXS_BAYOU_SWAMP_SHACK_KEAR = ("Nox's Bayou Swamp Shack Lock", ITEMS_OFFSET_KEARS + 33, ItemClassification.progression) #find leading spac
-    SANDFALL_CAVE_KEAR = ("Sandfall Cave Lock", ITEMS_OFFSET_KEARS + 320, ItemClassification.progression)
+    SANDFALL_CAVE_KEAR = ("Sandfalls Cave Lock", ITEMS_OFFSET_KEARS + 320, ItemClassification.progression)
     SANDFALLS_PAYLOAD_PASSAGE_BOTTOM_KEAR = ("Sandfalls Payload Passage Bottom Lock", ITEMS_OFFSET_KEARS + 318, ItemClassification.progression) #lower case kea
     BONE_BEACH_MINING_CAMP_CAVE_KEAR = ("Bone Beach Mining Camp Cave Lock", ITEMS_OFFSET_KEARS + 69, ItemClassification.progression)
     KINDLEWOOD_WALLOWERS_PATH_TRINKET_KEAR = ("Kindlewood Wallowers Path Trinket Lock", ITEMS_OFFSET_KEARS + 336, ItemClassification.progression)

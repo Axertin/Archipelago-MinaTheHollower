@@ -9,7 +9,7 @@ from ...rules.state_rules import HasKear, RepairedGenerator
 from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
-    "SF Hobo Holdout Puffer Beak" : LocationData(82, "Sandfalls Mining Outlook", HasFishingRod()),
+    "SF Fish Puffer Beak" : LocationData(82, "Sandfalls Mining Outlook", HasFishingRod()),
     "SF Sifted Sands Snake Bomb Chest" : LocationData(326, "Sandfalls Sifted Sands", CanBurrow() & CanCarry()), #needs burrow, carry,
     "SF Guiding Grains Niter Belt" : LocationData(330, "Sandfalls Pachinko"),
     "SF Guiding Grains Bonestone Left" : LocationData(329, "Sandfalls Pachinko"),
