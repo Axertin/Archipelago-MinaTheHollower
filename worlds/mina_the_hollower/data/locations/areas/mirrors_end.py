@@ -15,6 +15,6 @@ collectable_locations: dict[str, LocationData] = {
                 | ((Has(AstralPlatforms.RED_ASTRAL_PLATFORMS.value)
                 | Has(AstralPlatforms.GREEN_ASTRAL_PLATFORMS.value)
                 | Has(AstralPlatforms.BLUE_ASTRAL_PLATFORMS.value)) & ( CanJumpTiles(distance=4))))),
-    "AO Mirror's End Trunkstar Core": LocationData(282, "Astral Orrery Mirror's End", HasFishingRod()),
+    "AO Mirror's End Fish Trunkstar Core": LocationData(282, "Astral Orrery Mirror's End", HasFishingRod()),
     "AO Mirror's End Moving Platform Room Chest": LocationData(280, "Astral Orrery Mirror's End Blue Chest"),
 }

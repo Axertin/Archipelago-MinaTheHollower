@@ -10,7 +10,7 @@ from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
     "NB Fish Shrimpter Tail" : LocationData(50, "Nox's Bayou Boat Station", HasFishingRod()), #needs fishing rod,
-    "NB Guard Room Twill Weave" : LocationData(47, "Nox's Bayou Waterfall Trinket"),
+    "NB Guard Room Trinket" : LocationData(47, "Nox's Bayou Waterfall Trinket"),
     "NB First Flooder Chest" : LocationData(39, "Nox's Bayou Lily Full Pump Room"),
     "NB Shallow Pool Chest" : LocationData(38, "Nox's Bayou Shallow Pool"),
     "NB Lagoon Dark Chest" : LocationData(42, "Nox's Bayou Big Lagoon Dark"),
@@ -19,7 +19,7 @@ collectable_locations: dict[str, LocationData] = {
     "NB Swamp Shack Kear" : LocationData(49, "Nox's Bayou Swamp Shack"),
     "NB Swamp Shack Blastrike Maul" : LocationData(45, "Nox's Bayou Swamp Shack", HasKear(kear=SingleKears.NOXS_BAYOU_SWAMP_SHACK_KEAR.value)),
     "NB Moonlit Path Chest" : LocationData(43, "Nox's Bayou Moonlit Path"),
-    "NB Moonlit Hideaway Iron Lung" : LocationData(37, "Nox's Bayou Moonlit Mirror"),
+    "NB Moonlit Hideaway Trinket" : LocationData(37, "Nox's Bayou Moonlit Mirror"),
     "NB Plant Pond Chest" : LocationData(35, "Nox's Bayou Thick Plant Pond Cave"),
     "NB Thick Thicket Chest" : LocationData(36, "Nox's Bayou Twin Thicket"),
     "NB Hidden Cave Chest" : LocationData(44, "Nox's Bayou Canopy Bridge Cave"),

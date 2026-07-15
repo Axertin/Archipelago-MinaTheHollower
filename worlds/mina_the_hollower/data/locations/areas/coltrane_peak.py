@@ -20,7 +20,7 @@ collectable_locations: dict[str, LocationData] = {
     "CTP Agnes Express Bone Mimic": LocationData(123, "Coltrane Peak Agnes Express Rear"),
     "CTP Maelstrom Locomotress Health Rose": LocationData(124, "Coltrane Peak Agnes Express Arena"),
     "CTP Frozen Pass Chest" : LocationData(232, "Coltrane Peak Frozen Pass"),
-    "CTP Frozen Pass IceBlock Smelling Salts" : LocationData(237, "Coltrane Peak Frozen Pass Bottom"),
+    "CTP Frozen Pass IceBlock Trinket" : LocationData(237, "Coltrane Peak Frozen Pass Bottom"),
 }
 
 
