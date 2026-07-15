@@ -157,9 +157,6 @@ def create_items(world: "MinaTheHollowerWorld"):
     for item in all_items:
         create_item(world, item)
 
-    for _ in range(8):
-        create_single_item(world, Wallets.WALLET_SIZE)
-
     if world.options.kear_rando == KearRandomization.option_vanilla:
         create_item(world, ItemData(Kear.UNIVERSAL_KEAR, 50))
     elif world.options.kear_rando == KearRandomization.option_apItems:

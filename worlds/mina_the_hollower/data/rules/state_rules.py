@@ -259,34 +259,15 @@ class ShopPrice(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
 
     @override
     def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
-        return self.Resolved(
-            cost=self.cost,
-            player=world.player,
-            caching_enabled=False,
-        )
 
-    class Resolved(Rule.Resolved):
-        cost: int
+        amount = 0
+        if self.cost >= 3000:
+            amount = 3
+        elif self.cost >= 2000:
+            amount = 2
+        elif self.cost >= 3000:
+            amount = 1
+        if amount <= 0:
+            return True_().resolve(world)
 
-        @override
-        def _evaluate(self, state: CollectionState) -> bool:
-            amount = math.ceil((self.cost - 750) / 500)
-            if amount <= 0:
-                return True
-            cap = state.count(Wallets.WALLET_SIZE.value, self.player)
-            return cap >= 8 or cap >= amount
-
-
-        @override
-        def item_dependencies(self) -> dict[str, set[int]]:
-            return {item: {id(self)} for item in [item.value for item in Wallets]}
-
-        @override
-        def explain_json(self, state: CollectionState | None = None) -> list[JSONMessagePart]:
-            # this method can be overridden to display custom explanations
-            return [
-                {"type": "color", "color": "green" if state and self(state) else "salmon", "text": str(self)},
-            ]
-        @override
-        def __str__(self) -> str:
-            return f"Check Wallet Size of {self.cost}"
+        return RepairedGeneratorCount(count=amount).resolve(world)
