@@ -6,7 +6,7 @@ from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneU
         SingleKears, Wallets
 from ...items.abilities import ABILITY_NAMES
 from ...rules.ability_rules import CanBurrow, CanBounce, HasVialsCount, CanClimb, \
-    HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform, HasTrinket
+        HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform, HasTrinket, CanSwim
 from ...rules.state_rules import HasAllKears, HasTrinketCount, HasKear, RepairedGeneratorCount, ShopPrice
 from ...rules.movement_rules import CanJumpTiles
 
@@ -75,7 +75,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Bowery New House Bonestone" : LocationData(159, "Ossex Bowery Tall Residence Upper Main", CanBurrow()),
         "OS Bowery Residence Kear" : LocationData(156, "Ossex Bowery Begger Residence"),
         "OS Music Hall Chest" : LocationData(170, "Ossex Music Hall"),
-        "OS Music Hall Pneumatic Armlet" : LocationData(148, "Ossex Music Hall", CanCarry() & CanClimb()),
+        "OS Music Hall Pneumatic Armlet" : LocationData(148, "Ossex Music Hall", CanCarry() & CanBurrow() & CanSwim() & CanClimb()),
         # "OS Station Train Ticket Donation" : LocationData(149, "Ossex Station", progress_type=LocationProgressType.EXCLUDED),
         "OS Station Underside Bell of Grace" : LocationData(158, "Ossex Station Underside Main", ShopPrice(cost=1000), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
         "OS Trinket Bazaar Kear" : LocationData(160, "Ossex Trinket Bazaar"),
