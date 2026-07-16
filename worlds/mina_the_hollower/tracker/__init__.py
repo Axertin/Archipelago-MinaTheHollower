@@ -597,6 +597,182 @@ bb_arena: dict[int, int] = {
     5:0,
     7:0,
 }
+ctp_pass_bottom: dict[int, int] = {
+    9:0,
+}
+ctp_pass: dict[int, int] = {
+    11:0,
+}
+ctp_train: dict[int, int] = {
+    2:0,
+    12:0,
+}
+ctp_gorge: dict[int, int] = {
+    3:0,
+    7:0,
+    4:0,
+    5:0,
+    15:0,
+    6:0,
+    9:0,
+    8:1,
+    14:2,
+    1:3,
+    20:3,
+}
+
+ctp_woods: dict[int, int] = {
+    6:0,
+    5:0,
+    8:0,
+    12:0,
+}
+
+ctp_rail: dict[int, int] = {
+    2:0,
+    9:0,
+    3:0,
+    4:0,
+}
+ctp_cavern: dict[int, int] = {
+    15:0,
+    16:0,
+}
+
+ctp_cavern_arena: dict[int, int] = {
+    0:0,
+    19:0,
+    13:0,
+}
+
+ctp_summit: dict[int, int] = {
+    1:0,
+    14:0,
+    17:0,
+    20:0,
+    18:0,
+    11:0,
+}
+
+ctp_agnes: dict[int, int] = {
+    0:0,
+    3:0,
+    2:0,
+    1:0,
+    4:0,
+    11:0,
+}
+ctp_maelstorm: dict[int, int] = {
+    0:0,
+    1:0,
+}
+ctp_maelstorm_bottom: dict[int, int] = {
+    15:0,
+}
+ctp_generator: dict[int, int] = {
+    0:0,
+}
+ctp_maelstorm_cliff: dict[int, int] = {
+    16:0,
+}
+ao_mirror: dict[int, int] = {
+    3:0,
+    1:0,
+    0:1
+}
+ao_stellarium: dict[int, int] = {
+    3:0,
+    1:0,
+    0:1
+}
+ao_cog: dict[int, int] = {
+    14:0,
+    15:0,
+    20:0,
+    33:0,
+    32:0,
+    17:0,
+    18:0,
+    19:1,
+    16:1,
+}
+ao_gravity: dict[int, int] = {
+    29:0,
+    1:0,
+    4:0,
+    0:0,
+    2:0,
+    21:0,
+    9:0,
+    3:0,
+}
+
+ao_mutant: dict[int, int] = {
+    25:0,
+    5:0,
+    22:0,
+    23:0,
+    8:0,
+    7:0,
+    6:0,
+    37:0,
+    31:0,
+    24:0,
+}
+
+ao_scholar: dict[int, int] = {
+    28:0,
+    30:0,
+    13:0,
+    23:0,
+    8:0,
+    24:0,
+}
+ao_archive: dict[int, int] = {
+    26:0,
+    36:0,
+    35:0,
+    5:0,
+    38:0,
+    10:0,
+}
+ao_exit: dict[int, int] = {
+    11:0,
+    34:0,
+}
+ao_generator: dict[int, int] = {
+    0:0,
+}
+rm_foyer: dict[int, int] = {
+    0:0,
+}
+rm_foyer_butler: dict[int, int] = {
+    2:0,
+}
+rm_foyer_library: dict[int, int] = {
+    1:0,
+}
+rm_orphanage: dict[int, int] = {
+    0:0,
+    1:0,
+}
+rm_washroom: dict[int, int] = {
+    38:0,
+}
+rm_hall: dict[int, int] = {
+    6:0,
+}
+rm_ballroom: dict[int, int] = {
+    0:0,
+}
+rm_meowstro: dict[int, int] = {
+    21:0,
+    39:0,
+}
+rm_mimic: dict[int, int] = {
+    29:0,
+    28:0
+}
 @dataclasses.dataclass
 class MapData:
     lookup: dict[int, int]
@@ -709,6 +885,38 @@ area_id_to_map: dict[int, MapData] = {
     31: MapData(bb_mine, 82),
     32: MapData(bb_depths, 83),
     33: MapData(bb_dark, 84),
+    57: MapData(ctp_pass_bottom, 85),
+    109: MapData(ctp_pass, 85),
+    108: MapData(ctp_train, 86),
+    119: MapData(ctp_maelstorm_cliff, 86),
+    110: MapData(ctp_gorge, 87),
+    111: MapData(ctp_woods, 90),
+    114: MapData(ctp_rail, 91),
+    112: MapData(ctp_cavern, 92),
+    113: MapData(ctp_cavern_arena, 92),
+    115: MapData(ctp_summit, 93),
+    116: MapData(ctp_agnes, 94),
+    117: MapData(ctp_maelstorm, 95),
+    118: MapData(ctp_maelstorm_bottom, 95),
+    121: MapData(ctp_generator, 95),
+    100: MapData(ao_mirror, 96),
+    103: MapData(ao_stellarium, 98),
+    101: MapData(ao_cog, 99),
+    106: MapData(ao_gravity, 101),
+    104: MapData(ao_mutant, 102),
+    105: MapData(ao_scholar, 103),
+    98: MapData(ao_archive, 104),
+    99: MapData(ao_exit, 104),
+    107: MapData(ao_generator, 104),
+    168: MapData(rm_foyer, 105),
+    171: MapData(rm_foyer_butler, 105),
+    169: MapData(rm_foyer_library, 105),
+    170: MapData(rm_orphanage, 105),
+    137: MapData(rm_washroom, 105),
+    139: MapData(rm_hall, 105),
+    127: MapData(rm_ballroom, 106),
+    132: MapData(rm_meowstro, 106),
+    140: MapData(rm_mimic, 106),
 }
 
 

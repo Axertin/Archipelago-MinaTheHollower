@@ -97,5 +97,35 @@
   {"name": "Bone Beach Pulsing Tract", "img": "area_images/bone_beach/maw.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Bone Beach Stomach Mine", "img": "area_images/bone_beach/layers.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Bone Beach Gut Depths", "img": "area_images/bone_beach/depths.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Bone Beach Gut Darkness", "img": "area_images/bone_beach/dark.png", "location_size": 32, "location_border_thickness": 2}
+  {"name": "Bone Beach Gut Darkness", "img": "area_images/bone_beach/dark.png", "location_size": 32, "location_border_thickness": 2},
+
+  {"name": "Coltrane Peak Frozen Pass", "img": "area_images/coltrane_peak/pass.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Train", "img": "area_images/coltrane_peak/train.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Dead Man's Gorge", "img": "area_images/coltrane_peak/gorge.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Gorge Gauntlet", "img": "area_images/coltrane_peak/gorge_ice.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Gorge Rails", "img": "area_images/coltrane_peak/gorge_rails.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Frostbite Woods", "img": "area_images/coltrane_peak/woods.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Rail Yard", "img": "area_images/coltrane_peak/rail_yard.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Icebound Cavern", "img": "area_images/coltrane_peak/cavern.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Spiral Summit", "img": "area_images/coltrane_peak/summit.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Agnes Express", "img": "area_images/coltrane_peak/agnes.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Maelstorm", "img": "area_images/coltrane_peak/maelstorm.png", "location_size": 32, "location_border_thickness": 2},
+
+
+  {"name": "Mirror's End", "img": "area_images/astral_orrery/mirrors_end.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Mirror's End Top", "img": "area_images/astral_orrery/mirrors_entrance.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/stellarium.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/cog_1.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/cog_2.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/gravity.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/mutant.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/scholar.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Sealed Archive", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2},
+
+  {"name": "Radiant Manor Foyer", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Foyer2", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Foyer3", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Foyer4", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2}
+
+
 ]
