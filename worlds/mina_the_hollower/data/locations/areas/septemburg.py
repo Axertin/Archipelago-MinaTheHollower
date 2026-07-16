@@ -15,7 +15,7 @@ collectable_locations: dict[str, LocationData] = {
     "SB Hidden Crop Thresher Room Chest": LocationData(90, "Septemburg Tractor Chase", CanSpring() & CanBurrow()),
     "SB Rotten Barn Chest": LocationData(94, "Septemburg Rotten Barn Kid Room", CanBurrow()),
     "SB Below Crow Town Bridge Chest": LocationData(98, "Septemburg Crow Town Tunnel Top", HasKear(kear=SingleKears.SEPTEMBURG_CROW_TOWN_TUNNEL_KEAR.value)),
-    "SB Crow Town Shop Repulsing Root": LocationData(102, "Septemburg Crow Town"),
+    "SB Crow Town Shop Trinket": LocationData(102, "Septemburg Crow Town"),
     "SB Crow Town Shop Kear": LocationData(103, "Septemburg Crow Town"),
     "SB Crow Town Farmhouse Roof Chest": LocationData(99, "Septemburg Farm House Roof", CanBurrow() & CanCarry()),
     "SB Tangled Woods Hidden Grove Chest": LocationData(97, "Septemburg Tangled Woods Hidden Grove", CanBurrow()),
@@ -23,11 +23,11 @@ collectable_locations: dict[str, LocationData] = {
     "SB Stormwatch Way Chest": LocationData(101, "Septemburg Stormwatch Wind", CanBurrow()),
     "SB Carving Shack Health Rose": LocationData(95, "Septemburg Carving Shack Arena"),
     "SB Dark Deluxy Spark Container": LocationData(353, "Septemburg Windy Generator", CanBurrow() & RepairedGenerator(event=SEPTEMBURG_DATA) & HasSparks(count=2)),
-    "SB Wastewater Canal Spincer": LocationData(108, "Septemburg Wastewater Canal Well Entrance", HasFishingRod()),
+    "SB Fish Spincer Pincers": LocationData(108, "Septemburg Wastewater Canal Well Entrance", HasFishingRod()),
     "SB Wastewater Canal Slime Room Chest": LocationData(106, "Septemburg Wastewater Canal Slime Room", CanBurrow()),
     "SB Wastewater Canal Box Room Chest": LocationData(105, "Septemburg Wastewater Canal Boxes", CanBurrow()),
     "SB Wastewater Canal Well Entrance Chest": LocationData(107, "Septemburg Wastewater Canal Well Entrance"),
-    "OS Trinket Bazaar Lightning Grip": LocationData(334, "Ossex Trinket Bazaar", RepairedGenerator(event=SEPTEMBURG_DATA)), # needs save """4""" students,
+    "SB Save Students Trinket": LocationData(334, "Ossex Trinket Bazaar", RepairedGenerator(event=SEPTEMBURG_DATA)), # needs save """4""" students,
 
 }
 

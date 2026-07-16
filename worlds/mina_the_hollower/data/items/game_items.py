@@ -54,7 +54,7 @@ class PermanentUpgrades(ItemTypeEnum):
 
 class FillerUpgrades(ItemTypeEnum):
     TRAINING_DUMMY = ("Training Dummy", 85, ItemClassification.useful)
-    PROGRESSIVE_MAP = ("World Map", ITEMS_OFFSET_PROGRESSIVES + 10, ItemClassification.useful)
+    PROGRESSIVE_MAP = ("Progressive World Map", ITEMS_OFFSET_PROGRESSIVES + 10, ItemClassification.useful)
     RADAR_MAP = ("All-Seeing Skull", 77, ItemClassification.useful)
     CANDLE_VISION = ("Memory Goggles", 74, ItemClassification.useful)
 

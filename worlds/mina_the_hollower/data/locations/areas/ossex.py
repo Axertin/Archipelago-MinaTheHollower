@@ -6,7 +6,7 @@ from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneU
         SingleKears, Wallets
 from ...items.abilities import ABILITY_NAMES
 from ...rules.ability_rules import CanBurrow, CanBounce, HasVialsCount, CanClimb, \
-    HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform, HasTrinket
+        HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform, HasTrinket, CanSwim
 from ...rules.state_rules import HasAllKears, HasTrinketCount, HasKear, RepairedGeneratorCount, ShopPrice
 from ...rules.movement_rules import CanJumpTiles
 
@@ -22,14 +22,14 @@ collectable_locations: dict[str, LocationData] = {
         "OS Couple's Quarter Chest" : LocationData(165, "Ossex Couple's Quarter", CanBurrow() | HasReachingSideArm(), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
 
         "OS Hollower's Guild Back Room Kear Chest" : LocationData(168, "Ossex Guild Back Room"),
-        "OS Hollower's Guild Back Room Joule Alembic" : LocationData(210, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
-        "OS Hollower's Guild Back Room Isle Map" : LocationData(211, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
-        "OS Hollower's Guild Back Room Sidearm Recoverer" : LocationData(215, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
-        "OS Hollower's Guild Back Room Training Dummy" : LocationData(218, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)),
-        "OS Hollower's Guild Back Room Sidearm Duplicator" : LocationData(214, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=2)),
-        "OS Hollower's Guild Back Room Memory Goggles" : LocationData(217, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=2)),
-        "OS Hollower's Guild Back Room Phonograph" : LocationData(216, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=2)),
-        "OS Hollower's Guild Back Room Enhanced Map" : LocationData(212, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=3)),
+        "OS Hollower's Guild Back Room Joule Alembic" : LocationData(210, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & ShopPrice(cost=2000)),
+        "OS Hollower's Guild Back Room Isle Map" : LocationData(211, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & ShopPrice(cost=2000)),
+        "OS Hollower's Guild Back Room Sidearm Recoverer" : LocationData(215, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & ShopPrice(cost=2000)),
+        "OS Hollower's Guild Back Room Training Dummy" : LocationData(218, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)) & ShopPrice(cost=2000),
+        "OS Hollower's Guild Back Room Sidearm Duplicator" : LocationData(214, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=2) & ShopPrice(cost=2000)),
+        "OS Hollower's Guild Back Room Memory Goggles" : LocationData(217, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=2) & ShopPrice(cost=2000)),
+        "OS Hollower's Guild Back Room Phonograph" : LocationData(216, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=2) & ShopPrice(cost=2000)),
+        "OS Hollower's Guild Back Room Enhanced Map" : LocationData(212, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=3) & ShopPrice(cost=2000)),
         "OS Hollower's Guild Back Room All-Seeing Skull" : LocationData(213, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=5)),
         "OS Hollower's Guild Back Room Smack Muriel" : LocationData(146, "Ossex Guild Back Room", Has(Weapons.BLASTSTRIKE_MAUL.value, count=3)),
         "OS Kear Institute Kear #1" : LocationData(199, "Ossex Kear Institute", ShopPrice(cost=300), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
@@ -75,7 +75,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Bowery New House Bonestone" : LocationData(159, "Ossex Bowery Tall Residence Upper Main", CanBurrow()),
         "OS Bowery Residence Kear" : LocationData(156, "Ossex Bowery Begger Residence"),
         "OS Music Hall Chest" : LocationData(170, "Ossex Music Hall"),
-        "OS Music Hall Pneumatic Armlet" : LocationData(148, "Ossex Music Hall", CanCarry() & CanClimb()),
+        "OS Music Hall Pneumatic Armlet" : LocationData(148, "Ossex Music Hall", CanCarry() & CanBurrow() & CanSwim() & CanClimb()),
         # "OS Station Train Ticket Donation" : LocationData(149, "Ossex Station", progress_type=LocationProgressType.EXCLUDED),
         "OS Station Underside Bell of Grace" : LocationData(158, "Ossex Station Underside Main", ShopPrice(cost=1000), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
         "OS Trinket Bazaar Kear" : LocationData(160, "Ossex Trinket Bazaar"),

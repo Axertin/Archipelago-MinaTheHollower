@@ -9,13 +9,13 @@ from ...rules.state_rules import HasKear, RepairedGenerator
 from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
-    "SF Hobo Holdout Puffer Beak" : LocationData(82, "Sandfalls Mining Outlook", HasFishingRod()),
+    "SF Fish Puffer Beak" : LocationData(82, "Sandfalls Mining Outlook", HasFishingRod()),
     "SF Sifted Sands Snake Bomb Chest" : LocationData(326, "Sandfalls Sifted Sands", CanBurrow() & CanCarry()), #needs burrow, carry,
-    "SF Guiding Grains Niter Belt" : LocationData(330, "Sandfalls Pachinko"),
+    "SF Guiding Grains Trinket" : LocationData(330, "Sandfalls Pachinko"),
     "SF Guiding Grains Bonestone Left" : LocationData(329, "Sandfalls Pachinko"),
     "SF Guiding Grains Bonestone Right" : LocationData(328, "Sandfalls Pachinko"),
     "SF Hidden Cave Vial Pouch" : LocationData(323, "Sandfalls Sifted Sands Hidden Cave", CanBurrow() & HasKear(kear=SingleKears.SANDFALLS_HIDDEN_CAVE_KEAR.value)),
-    "SF Ring Dive Parlor Tunneler's Codex" : LocationData(317, "Sandfalls Ring Dive Parlor", CanBurrow()),
+    "SF Ring Dive Parlor Trinket" : LocationData(317, "Sandfalls Ring Dive Parlor", CanBurrow()),
     "SF Shifty Seclusion Chest" : LocationData(327, "Sandfalls Shifty Seclusion"),
     "SF Payload Passage Chest" : LocationData(332, "Sandfalls Payload Passage Chest", CanBurrow() & CanCarry()),
     "SF Bone Junction Chest" : LocationData(356, "Sandfalls Bone Junction"),

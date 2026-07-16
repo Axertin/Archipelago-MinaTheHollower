@@ -10,21 +10,21 @@ from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
 
-    "BW Upper Shanty Swamp Glutton's Jug": LocationData(289, "Backwaters Upper Swamp Waterfall", item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
-    "BW Upper Shanty Swamp Side Room Chest": LocationData(296, "Backwaters Upper Swamp Secret Room", CanSwim() & (CanJumpTiles(distance=2, no_sidearms=True) | CanJumpTiles(distance=3))),
+    "BW Upper Shanty Swamp Frog Gift": LocationData(289, "Backwaters Upper Swamp Waterfall", item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
+    "BW Upper Shanty Swamp Side Room Chest": LocationData(296, "Backwaters Upper Swamp Secret Room", CanSwim() & (((CanJumpTiles(distance=2, no_sidearms=True) | CanJumpTiles(distance=4)) | CanBurrow()) | (CanBurrow() & HasTrinket(trinket=Trinkets.WALLOWERS_GAUNTLETS.value)))),
     "BW Lantern Cave Bonestone": LocationData(287, "Backwaters Upper Lantern Cave"),
     "BW Lantern Cave Vial Pouch": LocationData(295, "Backwaters Upper Lantern Cave"),
-    "BW Pinky's Parlor Spark Catcher": LocationData(297, "Backwaters Pinky Shop"),
+    "BW Pinky's Parlor Trinket": LocationData(297, "Backwaters Pinky Shop"),
     "BW Pinky's Parlor Kear": LocationData(298, "Backwaters Pinky Shop"),
     "BW Pinky's Parlor Joule Box": LocationData(286, "Backwaters Pinky Shop Back", HasLadder()),
     "BW Lower Shanty Swamp Locked Chest": LocationData(293, "Backwaters Lower Swamp Fishing", HasKear(kear=SingleKears.BACKWATERS_FISHING_KEAR.value) & (CanSwim() | CanJumpTiles(distance=4))),
-    "BW Lower Shanty Swamp Evasion Powder": LocationData(294, "Backwaters Lower Swamp Station Entrance", HasLadder()),
+    "BW Lower Shanty Swamp Trinket": LocationData(294, "Backwaters Lower Swamp Station Entrance", HasLadder()),
     "BW Lower Shanty Swamp Bonestone": LocationData(288, "Backwaters Lower Swamp Station Entrance", HasLadder()),
-    "BW Lower Shanty Swamp Tumbling Tutu": LocationData(291, "Backwaters Lower Swamp Shanty Band", CanCarry() & CanBurrow() & CanSwim() & CanClimb()),
+    "BW Lower Shanty Swamp Band Gift": LocationData(291, "Backwaters Lower Swamp Shanty Band", CanCarry() & CanBurrow() & CanSwim() & CanClimb()),
     "BW Lucky's Lair Kear": LocationData(292, "Backwaters Lucky's Lair", CanBurrow() & CanCarry()),
     "BW Fishing Hole Fishing Rod": LocationData(300, "Backwaters Fishing Hole"),
     "BW Fish Fleeper Head": LocationData(299, "Backwaters Fishing Hole", HasFishingRod()),
-    "BW Fish Thalassian Pearl": LocationData(302, "Backwaters Fishing Hole", HasFishingRod() & CanSwim() & (HasTrinket(trinket=Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
+    "BW Fishing Hole Thalassian Pearl": LocationData(302, "Backwaters Fishing Hole", HasFishingRod() & CanSwim() & (HasTrinket(trinket=Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
     "BW Fishing Hole Gilded Rod": LocationData(301, "Backwaters Fishing Hole", RepairedGeneratorCount(count=6) & HasFishingRod() & CanSwim() & (HasTrinket(trinket=Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
 }
 

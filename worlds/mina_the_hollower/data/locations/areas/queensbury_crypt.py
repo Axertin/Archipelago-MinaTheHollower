@@ -10,7 +10,7 @@ from ...rules.state_rules import RepairedGenerator
 collectable_locations: dict[str, LocationData] = {
     "QC Old Graveyard Bonestone": LocationData(51, "Queensbury Crypt Old Graveyard Main"),
     "QC Old Graveyard Kear": LocationData(52, "Queensbury Crypt Old Graveyard Sodsby", CanBurrow()),
-    "QC Bonnet Tomb Desperation Bonnet": LocationData(57, "Queensbury Crypt Bonnet Tomb Inner"),
+    "QC Bonnet Tomb Trinket": LocationData(57, "Queensbury Crypt Bonnet Tomb Inner"),
     "QC Broken Bridge Bonestone": LocationData(54, "Queensbury Crypt Broken Bridge"),
     "QC Pipe Room Bonestone": LocationData(53, "Queensbury Crypt Pipe Room"),
     "QC Castle Entry Weapon Chest": LocationData(56, "Queensbury Crypt Castle Entry"),
@@ -21,11 +21,11 @@ collectable_locations: dict[str, LocationData] = {
     "QC Mirror Room Stolenoid": LocationData(66, "Queensbury Crypt Mirror Room West"),
     "QC Mirror Room Kear": LocationData(67, "Queensbury Crypt Mirror Room West"),
     "QC Putrid Place Bonestone": LocationData(62, "Queensbury Crypt Putrid Place"),
-    "QC Putrid Place Tombstone": LocationData(68, "Queensbury Crypt Putrid Place", HasFishingRod()),
-    "QC Rancid Room Fly Bait": LocationData(59, "Queensbury Crypt Rancid Room"),
+    "QC Fish Tombstone": LocationData(68, "Queensbury Crypt Putrid Place", HasFishingRod()),
+    "QC Rancid Room Trinket": LocationData(59, "Queensbury Crypt Rancid Room"),
     "QC Ancestral Chamber Health Rose": LocationData(58, "Queensbury Crypt Ancestral Chamber"),
-    "QC Royal Tomb Proto Spark": LocationData(60, "Queensbury Crypt Royal Tomb", HasVialsCount(count=2) & CanClimb()),
-"EH Grassland Vertical Spinner Room Chest" : LocationData(238, "Eastern Heath East Corner", RepairedGenerator(event=QUEENSBURY_CRYPT_DATA)),
+    "QC Royal Tomb Trinket": LocationData(60, "Queensbury Crypt Royal Tomb", HasVialsCount(count=2) & CanClimb()),
+    "EH Grassland Vertical Spinner Room Chest" : LocationData(238, "Eastern Heath East Corner", RepairedGenerator(event=QUEENSBURY_CRYPT_DATA)),
 
 
 }
