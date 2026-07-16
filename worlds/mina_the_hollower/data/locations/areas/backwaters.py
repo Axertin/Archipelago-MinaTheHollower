@@ -29,6 +29,6 @@ collectable_locations: dict[str, LocationData] = {
 }
 
 boss_locations: dict[str, LocationData] = {
-    "Plasma Jug": LocationData(290, "Backwaters Upper Swamp Waterfall", HasTrinket(trinket=Trinkets.EMPTY_JUG.value) & PowerLevelThreshold(power=24)),
+    "BW Upper Shanty Swamp Plasma Jug": LocationData(290, "Backwaters Upper Swamp Waterfall", HasTrinket(trinket=Trinkets.EMPTY_JUG.value) & PowerLevelThreshold(power=24)),
 }
 
