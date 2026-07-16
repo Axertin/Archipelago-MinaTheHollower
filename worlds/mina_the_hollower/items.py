@@ -224,7 +224,7 @@ def create_event(world: "MinaTheHollowerWorld", region_name: str, item_name: str
 
 def create_events(world: "MinaTheHollowerWorld"):
 
-    plasma_jug_loc = world.get_location("Plasma Jug")
+    plasma_jug_loc = world.get_location("BW Upper Shanty Swamp Plasma Jug")
     plasma_jug_loc.place_locked_item(MinaTheHollowerItem(FilledJug.PLASMA_JUG.value, ItemClassification.useful, FilledJug.PLASMA_JUG.item_id, world.player))
 
     starting_region = "Ossex City Center Main" if world.options.ossex_start else "Loner's Landing Shipwreck"
