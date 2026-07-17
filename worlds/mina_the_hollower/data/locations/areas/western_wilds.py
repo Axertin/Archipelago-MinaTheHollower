@@ -2,7 +2,7 @@ from BaseClasses import LocationProgressType
 from rule_builder.options import OptionFilter
 from rule_builder.rules import Has, True_
 from ... import RegionConnection, Transition, LocationData
-from ...items import SingleKears, Trinkets, Wallets
+from ...items import SingleKears, Trinkets, Wallets, PermanentUpgrades
 from ...rules.ability_rules import CanBurrow, CanBounce, CanCarry, HasFishingRod, CanClimb, HasTrinket
 from ...rules.state_rules import HasKear
 from ...rules.movement_rules import CanJumpTiles
@@ -21,7 +21,8 @@ collectable_locations: dict[str, LocationData] = {
     "WW Molten Foundry Trinket" : LocationData(249, "Western Wilds Molten Dungeon End"),
     "WW Fish Glomper Stalk" : LocationData(258, "Western Wilds Western Pond", HasFishingRod()),
     "WW Balcony Chest" : LocationData(254, "Western Wilds Balcony", HasKear(kear=SingleKears.WESTERN_WILDS_BALCONY_KEAR.value)),
-    "WW Balcony Trinket" : LocationData(242, "Western Wilds Balcony", HasKear(kear=SingleKears.WESTERN_WILDS_BALCONY_KEAR.value) & CanBurrow() & CanCarry() & CanClimb()),
+    "WW Balcony Snowball Fight Trinket" : LocationData(242, "Western Wilds Balcony", HasKear(kear=SingleKears.WESTERN_WILDS_BALCONY_KEAR.value) & CanBurrow() & CanCarry() & CanClimb()
+                                                       & Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value)),
 }
 
 boss_locations: dict[str, LocationData] = {

@@ -20,8 +20,8 @@ collectable_locations: dict[str, LocationData] = {
     "KW Train Station Ledge Chest": LocationData(346, "Kindlewood Farm Crossing Pumpkin Patch", CanBurrow()),
     "KW Farm Crossing Shack Chest": LocationData(342, "Kindlewood Farm Crossing Shack", HasReachingSideArm() & CanBurrow()),
     "KW Wallower's Room Trinket": LocationData(344, "Kindlewood Wallowers Path", HasKear(kear=SingleKears.KINDLEWOOD_WALLOWERS_PATH_TRINKET_KEAR.value)),  # needs kear, burrow,
-    "KW Wallower's Room Chest": LocationData(345, "Kindlewood Wallowers Path", (CanBurrow() & HasTrinket(trinket=Trinkets.WALLOWERS_GAUNTLETS.value))),
-    "KW Rail Tunnel Vial Pouch": LocationData(343, "Kindlewood Rail Tunnel", CanBurrow() & CanCarry()),
+    "KW Wallower's Room Chest": LocationData(345, "Kindlewood Wallowers Path", (CanBurrow() & HasTrinket(trinket=Trinkets.WALLOWERS_GAUNTLETS.value)) | (CanJumpTiles(distance=7) & HasTrinket(trinket=Trinkets.BRIDGE_WEAVER.value))),
+    "KW Rail Tunnel Vial Pouch": LocationData(343, "Kindlewood Rail Tunnel", CanBurrow() & CanCarry() & HasKear(kear=SingleKears.KINDLEWOOD_TRAIN_TUNNEL_KEAR.value)),
 }
 
 boss_locations: dict[str, LocationData] = {

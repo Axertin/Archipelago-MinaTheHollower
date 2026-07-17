@@ -27,7 +27,7 @@ collectable_locations: dict[str, LocationData] = {
     "BB Moving Stairs Bonestone": LocationData(85, "Bone Beach Gut Depths Hidden", CanBounce()),
     "BB Gut Passage Chest": LocationData(87, "Bone Beach Gut Depths Dark"),
     "BB Brain Alcove Health Rose": LocationData(83, "Bone Beach Brain Alcove"),
-    "OS Couple's Quarter Thermal Pack" : LocationData(147, "Ossex Couple's Quarter", CanBurrow() & RepairedGenerator(event=BONE_BEACH_DATA)),
+    "OS Couple's Quarter Thermal Pack" : LocationData(147, "Bone Beach Calcified Cage"),
     "SF Sifted Sands Kear" : LocationData(319, "Sandfalls Sifted Sands", RepairedGenerator(event=BONE_BEACH_DATA)),
 
 }

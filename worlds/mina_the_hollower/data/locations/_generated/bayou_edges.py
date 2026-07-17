@@ -179,7 +179,7 @@ connections: dict[str, RegionConnection] = {
     "Nox's Bayou Thick Thicket_Nox's Bayou Thick Thicket Wet": RegionConnection("Nox's Bayou Thick Thicket", "Nox's Bayou Thick Thicket Wet", CanBurrow() & CanSwim()),
     "Nox's Bayou Thicket Bridge East_Nox's Bayou Thicket Bridge West": RegionConnection("Nox's Bayou Thicket Bridge East", "Nox's Bayou Thicket Bridge West", CanBurrow()),
     "Nox's Bayou Thicket Bridge West_Nox's Bayou Thicket Bridge East": RegionConnection("Nox's Bayou Thicket Bridge West", "Nox's Bayou Thicket Bridge East", CanBurrow()),
-    "Nox's Bayou Waterfall Cliff_Nox's Bayou Waterfall": RegionConnection("Nox's Bayou Waterfall Cliff", "Nox's Bayou Waterfall", True_()),
+    "Nox's Bayou Waterfall Cliff_Nox's Bayou Waterfall": RegionConnection("Nox's Bayou Waterfall Cliff", "Nox's Bayou Waterfall", CanClimb()),
     "Nox's Bayou Waterfall Trinket_Nox's Bayou Guard Room": RegionConnection("Nox's Bayou Waterfall Trinket", "Nox's Bayou Guard Room", CanClimb() & (CanSwim() | CanJumpTiles(distance=3))),
     "Nox's Bayou Waterfall Trinket_Nox's Bayou Waterfall": RegionConnection("Nox's Bayou Waterfall Trinket", "Nox's Bayou Waterfall", CanJumpTiles(distance=3)),
     "Nox's Bayou Waterfall_Nox's Bayou Guard Room": RegionConnection("Nox's Bayou Waterfall", "Nox's Bayou Guard Room", True_()),

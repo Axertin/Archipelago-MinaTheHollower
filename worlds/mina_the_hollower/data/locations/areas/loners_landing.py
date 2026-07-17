@@ -10,7 +10,7 @@ collectable_locations: dict[str, LocationData] = {
     "LL Blighted Docks Tall Room Chest": LocationData(29, "Loner's Landing Blighted Docks Fences Bottom"),
     # needs burrow,
     "LL Blighted Docks Side Cave Chest": LocationData(28, "Loner's Landing Blighted Docks Side Cave"),
-    "LL Blighted Docks Bridge Chest": LocationData(31, "Loner's Landing Blighted Docks Bridge", CanBounce() & CanClimb()),
+    "LL Blighted Docks Bridge Chest": LocationData(31, "Loner's Landing Blighted Docks Bridge", (CanBounce() | CanJumpTiles(distance=3))& CanClimb()),
     "LL Blighted Docks Residence Chest": LocationData(26, "Loner's Landing Blighted Docks Residence", CanBurrow()),
     "LL Blighted Docks Burrow Residence Bubble": LocationData(23, "Loner's Landing Blighted Docks Burrow", CanJumpTiles(distance=2)),
     # needs burrow,
