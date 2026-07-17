@@ -6,7 +6,7 @@ on:
 
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -20,13 +20,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run Archipelago Unit Tests
-        run: |
-          python -m unittest discover
-
-      - name: Run Mina tests
-        run: |
-          python -m unittest discover -s worlds/mina_the_hollower/test -t .
+      - uses: Eijebong/ap-actions/ap-tests@main
+        with:
+          apworld-path: worlds/mina_the_hollower
+          ap-version: '0.6.7'
+          python-version: '3.12'
 
       - name: Build APWorld
         run: |
