@@ -129,7 +129,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             selected_generators = self.random.sample(valid_generators, self.options.goal_generators.value)
             self.broken_generators =[gen.index for gen in repair_generator_data if gen.gen_name in selected_generators]
             self.lit_generators = [gen.index for gen in repair_generator_data if gen.gen_name not in selected_generators]
-        elif self.options.goal.value == self.options.goal.option_radientManorGenerator:
+        elif self.options.goal.value == self.options.goal.option_radiantManorGenerator:
             self.options.goal_generators.value = 6
             valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH, COLTRANE_PEAK, ASTRAL_ORRERY]
             selected_generators = self.random.sample(valid_generators, self.options.goal_generators.value)
