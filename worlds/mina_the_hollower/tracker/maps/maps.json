@@ -1,5 +1,5 @@
 [
-  {"name": "World Map", "img": "area_images/overview/WorldMap.png", "location_size": 16, "location_border_thickness": 2},
+  {"name": "World Map", "img": "area_images/overview/WorldMap.png", "location_size": 14, "location_border_thickness": 2},
   {"name": "ShipWreck", "img": "area_images/loners_landing/0-11-17-18.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Blighted Docks Landing", "img": "area_images/loners_landing/19.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Blighted Docks Fences", "img": "area_images/loners_landing/2-3-8-16.png", "location_size": 32, "location_border_thickness": 2},

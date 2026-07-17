@@ -496,5 +496,83 @@
                 "y": 130
             }
         ]
+    },
+    {
+        "name": "Has Burrow",
+        "sections": [
+            {"name": "Burrow"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 112,
+                "y": 264
+            }
+        ]
+    },
+    {
+        "name": "Has Swim",
+        "sections": [
+            {"name": "Swim"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 153,
+                "y": 264
+            }
+        ]
+    },
+    {
+        "name": "Has Carry",
+        "sections": [
+            {"name": "Carry"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 189,
+                "y": 264
+            }
+        ]
+    },
+    {
+        "name": "Has Climb",
+        "sections": [
+            {"name": "Climb"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 224,
+                "y": 264
+            }
+        ]
+    },
+    {
+        "name": "Has Bounce",
+        "sections": [
+            {"name": "Bounce"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 265,
+                "y": 264
+            }
+        ]
+    },
+    {
+        "name": "Has Spring",
+        "sections": [
+            {"name": "Spring"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 306,
+                "y": 264
+            }
+        ]
     }
 ]

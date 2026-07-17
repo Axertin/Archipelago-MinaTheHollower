@@ -1,6 +1,7 @@
 from BaseClasses import Region, Location, ItemClassification, LocationProgressType
+from rule_builder.rules import Has
 from .data.events import RADIANT_MANOR_DATA
-from .data.items import BoneFiller
+from .data.items import BoneFiller, Abilities
 from .data.locations import all_regions, all_region_transitions, all_internal_region_connections, \
     all_permanent_locations, dungeon_locations
 from .data import LocationData, RegionConnection, Transition, matching_transition_types
@@ -42,16 +43,35 @@ def create_region(world: "MinaTheHollowerWorld", name: str, hint: str = ""):
     for loc_name, (location, data) in valid_locations.items():
         world.set_rule(location, data.rule)
 
+    return region
 
 def create_regions(world: "MinaTheHollowerWorld", regions: set[str]):
     # TODO: check if regions being a set introduces nondeterminism
-    create_region(world, "Menu")
+    menu = create_region(world, "Menu")
     for region in regions:
         create_region(world, region)
     for index, loc_map in dungeon_locations.items():
         for name, data in loc_map.items():
             override = index == RADIANT_MANOR_DATA.index and world.options.goal.value == world.options.goal.option_fixGenerators
             create_location(world, name, data, bonestone=(index in world.lit_generators) or override)
+
+    is_ut = getattr(world.multiworld, "generation_is_fake", False)
+
+    if is_ut:
+        world.create_entrance(menu, create_region(world, "Burrow Region"), name="Menu To Burrow", rule=Has(Abilities.BURROW.value))
+        world.create_entrance(menu, create_region(world, "Swim Region"), name="Menu To Swim", rule=Has(Abilities.SWIM.value))
+        world.create_entrance(menu, create_region(world, "Carry Region"), name="Menu To Carry", rule=Has(Abilities.CARRY.value))
+        world.create_entrance(menu, create_region(world, "Climb Region"), name="Menu To Climb", rule=Has(Abilities.CLIMB.value))
+        world.create_entrance(menu, create_region(world, "Bounce Region"), name="Menu To Bounce", rule=Has(Abilities.BOUNCE.value))
+        world.create_entrance(menu, create_region(world, "Spring Region"), name="Menu To Spring", rule=Has(Abilities.SPRING.value))
+
+        create_location(world, "Burrow", LocationData(None, "Burrow Region", lambda _: False))
+        create_location(world, "Swim", LocationData(None, "Swim Region", lambda _: False))
+        create_location(world, "Carry", LocationData(None, "Carry Region", lambda _: False))
+        create_location(world, "Climb", LocationData(None, "Climb Region", lambda _: False))
+        create_location(world, "Bounce", LocationData(None, "Bounce Region", lambda _: False))
+        create_location(world, "Spring", LocationData(None, "Spring Region", lambda _: False))
+
 
 
 
