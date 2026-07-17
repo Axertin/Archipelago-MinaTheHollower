@@ -240,6 +240,6 @@ def create_events(world: "MinaTheHollowerWorld"):
         create_event(world, region_name=astral_switch.region, item_name=astral_switch.event_item,
                      loc_name=astral_switch.value, rule=astral_switch.rule)
 
-    if world.options.goal.value == Goal.option_radientManorGenerator:
+    if world.options.goal.value == Goal.option_radiantManorGenerator:
         create_event(world, region_name="Radiant Manor Prime Generator",
                      item_name="Victory", loc_name="Defeat Giga Lionel")

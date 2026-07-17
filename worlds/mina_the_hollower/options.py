@@ -9,7 +9,7 @@ class Goal(Choice):
     Goal
     """
     display_name = "Goal"
-    option_radientManorGenerator = 0
+    option_radiantManorGenerator = 0
     option_fixGenerators = 1
     # option_killBosses = 2
     default = 0

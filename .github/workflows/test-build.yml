@@ -18,6 +18,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip setuptools
+          python -m pip install typing_extensions==4.15.0
           python ModuleUpdate.py --yes --force --append "WebHostLib/requirements.txt"
 
       - uses: Eijebong/ap-actions/ap-tests@main
