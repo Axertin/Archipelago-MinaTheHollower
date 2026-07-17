@@ -152,7 +152,7 @@ trinket_powers: list[ItemPower] = [
 upgrade_powers: list[ItemPower] = [
     ItemPower(PlayerUpgrades.HEALTH_ROSE, 2),
     ItemPower(PlayerUpgrades.JOULE_BOX, 1),
-    # ItemPower(PlayerUpgrades.HEALING_VIAL, 1),
+    ItemPower(PlayerUpgrades.HEALING_VIAL, 1),
     ItemPower(BoneUps.ATTACK_BONE_UP_CAP, 1),
     ItemPower(BoneUps.DEFENSE_BONE_UP_CAP, 1),
     ItemPower(BoneUps.SIDEARM_BONE_UP_CAP, 1),
