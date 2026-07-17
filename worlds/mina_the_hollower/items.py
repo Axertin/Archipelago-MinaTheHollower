@@ -243,4 +243,3 @@ def create_events(world: "MinaTheHollowerWorld"):
     if world.options.goal.value == Goal.option_radientManorGenerator:
         create_event(world, region_name="Radiant Manor Prime Generator",
                      item_name="Victory", loc_name="Defeat Giga Lionel")
-

@@ -64,7 +64,6 @@
             }
         ]
     },
-
     {
         "name": "Legovich's Arms",
         "sections": [
@@ -79,6 +78,23 @@
                 "map": "Ossex Main Interiors",
                 "x": 79,
                 "y": 399
+            }
+        ]
+    },
+    {
+        "name": "Legovich's Arms",
+        "sections": [
+            {"name": "OS Legovich's Arms Whip"},
+            {"name": "OS Legovich's Arms Hammer"},
+            {"name": "OS Legovich's Arms Daggers"},
+            {"name": "OS Legovich's Arms Battery Buster"},
+            {"name": "OS Legovich's Arms Guardian Casket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 721,
+                "y": 686
             }
         ]
     },
@@ -108,6 +124,31 @@
         ]
     },
     {
+        "name": "Emporium",
+        "sections": [
+            {"name": "OS Emporium Health Rose #1"},
+            {"name": "OS Emporium Health Rose #2"},
+            {"name": "OS Emporium Health Rose #3"},
+            {"name": "OS Emporium Vial Pouch #1"},
+            {"name": "OS Emporium Vial Pouch #2"},
+            {"name": "OS Emporium Vial Pouch #3"},
+            {"name": "OS Emporium Spark Container"},
+            {"name": "OS Emporium Joule Box #1"},
+            {"name": "OS Emporium Joule Box #2"},
+            {"name": "OS Emporium Joule Box #3"},
+            {"name": "OS Emporium Trinket Bag #1"},
+            {"name": "OS Emporium Trinket Bag #2"},
+            {"name": "OS Emporium Trinket Bag #3"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 1200,
+                "y": 688
+            }
+        ]
+    },
+    {
         "name": "Kear Institute",
         "sections": [
             {"name": "OS Kear Institute Kear #1"},
@@ -125,6 +166,27 @@
                 "map": "Ossex Main Interiors",
                 "x": 588,
                 "y": 59
+            }
+        ]
+    },
+    {
+        "name": "Kear Institute",
+        "sections": [
+            {"name": "OS Kear Institute Kear #1"},
+            {"name": "OS Kear Institute Kear #2"},
+            {"name": "OS Kear Institute Kear #3"},
+            {"name": "OS Kear Institute Kear #4"},
+            {"name": "OS Kear Institute Kear #5"},
+            {"name": "OS Kear Institute Kear #6"},
+            {"name": "OS Kear Institute Kear #7"},
+            {"name": "OS Kear Institute Kear #8"},
+            {"name": "OS Kear Institute Kear #9"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 1394,
+                "y": 688
             }
         ]
     },
@@ -254,6 +316,27 @@
         ]
     },
     {
+        "name": "Trinket Shops",
+        "sections": [
+            {"name": "OS Trinket Bazaar Kear"},
+            {"name": "OS Trinket Bazaar Plasma Funnel"},
+            {"name": "OS Trinket Bazaar Seismic Belt"},
+            {"name": "OS Trinket Bazaar Brisk Brew"},
+            {"name": "OS Trinket Bazaar Intrevenous Vial"},
+            {"name": "OS Trinket Bazaar Shock Flint"},
+            {"name": "OS Trinket Bazaar Uranium Bracelet"},
+            {"name": "OS Trinket Bazaar Bubble Ring"},
+            {"name": "OS Trinket Bazaar Counter Vial"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 722,
+                "y": 526
+            }
+        ]
+    },
+    {
         "name": "Telescope",
         "sections": [
             {"name": "OS Ossex Telescope Kear"}
@@ -308,21 +391,9 @@
         ]
     },
     {
-        "name": "Vest",
-        "sections": [
-            {"name": "OS Atelier Vitality Vest"}
-        ],
-        "map_locations": [
-            {
-                "map": "Ossex High Street Interiors",
-                "x": 378,
-                "y": 176
-            }
-        ]
-    },
-    {
         "name": "Shop",
         "sections": [
+            {"name": "OS Atelier Vitality Vest"},
             {"name": "OS Atelier Custom Fit"}
         ],
         "map_locations": [
@@ -330,6 +401,20 @@
                 "map": "Ossex High Street Interiors",
                 "x": 334,
                 "y": 232
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "OS Atelier Vitality Vest"},
+            {"name": "OS Atelier Custom Fit"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 1874,
+                "y": 688
             }
         ]
     },
