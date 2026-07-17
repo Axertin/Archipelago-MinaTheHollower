@@ -28,7 +28,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "OS Courtyard Garden Warding Beastium"}
+            {"name": "OS Courtyard Garden Trinket"}
         ],
         "map_locations": [
             {
@@ -501,7 +501,7 @@
     {
         "name": "Nose",
         "sections": [
-            {"name": "OS High Street Valor Medallion"}
+            {"name": "OS High Street Nose Trinket"}
 
         ],
         "map_locations": [

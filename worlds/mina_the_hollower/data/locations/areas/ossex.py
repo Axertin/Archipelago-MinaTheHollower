@@ -17,7 +17,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS City Center Final Race Bellows Bustle" : LocationData(322, "Ossex City Center Main", CanBounce() & CanBurrow() & CanCarry() & CanClimb()),
         "OS Courtyard East Deboning Wand" : LocationData(161, "Ossex Courtyard East", ShopPrice(cost=1000), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
         "OS Courtyard West Weapon Upgrade" : LocationData(163, "Ossex Courtyard West Chest", HasVialsCount(count=5)),
-        "OS Courtyard Garden Warding Beastium" : LocationData(171, "Ossex Courtyard East Manor Side"),
+        "OS Courtyard Garden Trinket" : LocationData(171, "Ossex Courtyard East Manor Side"),
         "OS Evra's Rest Health Rose" : LocationData(352, "Ossex Goddred's Grave End"),
         "OS Couple's Quarter Chest" : LocationData(165, "Ossex Couple's Quarter", CanBurrow() | HasReachingSideArm(), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
 
@@ -61,7 +61,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Legovich's Arms Guardian Casket" : LocationData(178, "Ossex Legovich's Arms", ShopPrice(cost=3000) & CanBurrow()),
         "OS Legovich's Arms Battery Buster" : LocationData(177, "Ossex Legovich's Arms", ShopPrice(cost=3000) & CanBurrow()),
         "OS Gutterways Bonestone" : LocationData(172, "Ossex Gutterways", Has(Sidearms.IRON_STEED.value)),
-        "OS High Street Valor Medallion" : LocationData(154, "Ossex High Street SE Garden", CanCarry()),
+        "OS High Street Nose Trinket" : LocationData(154, "Ossex High Street SE Garden", CanCarry()),
         "OS High Street Sewer Chest" : LocationData(164, "Ossex High Street Sewer"),
         "OS Strategy Center Chest" : LocationData(167, "Ossex Strategy Center", HasReachingSideArm() & CanBurrow()),
         "OS Strategy Center Ophidio Bonestone" : LocationData(153, "Ossex Strategy Center", Has(Weapons.WHISPER_AND_VESPER.value, count=3) & CanBurrow()),
