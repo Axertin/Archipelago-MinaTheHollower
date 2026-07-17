@@ -118,20 +118,6 @@
         ]
     },
     {
-        "name": "TEMP Frozen Pass",
-        "sections": [
-            {"name": "EH Frozen Pass Chest"},
-            {"name": "EH Frozen Pass IceBlock Smelling Salts"}
-        ],
-        "map_locations": [
-            {
-                "map": "Eastern Heath Waterfall",
-                "x": 770,
-                "y": 60
-            }
-        ]
-    },
-    {
         "name": "Chest",
         "sections": [
             {"name": "EH Buckler's Bluff Joule Box"}

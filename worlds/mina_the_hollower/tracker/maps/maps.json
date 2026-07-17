@@ -70,8 +70,8 @@
   {"name": "Kindlewood Interiors", "img": "area_images/kindlewood/interiors.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Kindlewood Wallowers", "img": "area_images/kindlewood/wallowers.png", "location_size": 32, "location_border_thickness": 2},
 
-  {"name": "Septemburg Farm Start", "img": "area_images/septemburg/start.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Septemburg Farm", "img": "area_images/septemburg/farm1.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Farm", "img": "area_images/septemburg/start.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Septemburg Farm End", "img": "area_images/septemburg/farm1.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Septemburg Farm Chase", "img": "area_images/septemburg/chase1.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Septemburg Farm Wind", "img": "area_images/septemburg/wind.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Septemburg Farm Tractors", "img": "area_images/septemburg/tractors.png", "location_size": 32, "location_border_thickness": 2},
@@ -102,7 +102,7 @@
   {"name": "Coltrane Peak Frozen Pass", "img": "area_images/coltrane_peak/pass.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Coltrane Peak Train", "img": "area_images/coltrane_peak/train.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Coltrane Peak Dead Man's Gorge", "img": "area_images/coltrane_peak/gorge.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Coltrane Peak Gorge Gauntlet", "img": "area_images/coltrane_peak/gorge_ice.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Coltrane Peak Gorge Passage", "img": "area_images/coltrane_peak/gorge_ice.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Coltrane Peak Gorge Rails", "img": "area_images/coltrane_peak/gorge_rails.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Coltrane Peak Frostbite Woods", "img": "area_images/coltrane_peak/woods.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Coltrane Peak Rail Yard", "img": "area_images/coltrane_peak/rail_yard.png", "location_size": 32, "location_border_thickness": 2},
@@ -115,17 +115,19 @@
   {"name": "Mirror's End", "img": "area_images/astral_orrery/mirrors_end.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Mirror's End Top", "img": "area_images/astral_orrery/mirrors_entrance.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/stellarium.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/cog_1.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/cog_2.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/gravity.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/mutant.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Astral Orrery Stellarium", "img": "area_images/astral_orrery/scholar.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Cog Chamber", "img": "area_images/astral_orrery/cog_1.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Cog Chamber End", "img": "area_images/astral_orrery/cog_2.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Gravity Zone", "img": "area_images/astral_orrery/gravity.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Mutant Lab", "img": "area_images/astral_orrery/mutant.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Astral Orrery Hall Of Schalars", "img": "area_images/astral_orrery/scholar.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Astral Orrery Sealed Archive", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2},
 
-  {"name": "Radiant Manor Foyer", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Radiant Manor Foyer2", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Radiant Manor Foyer3", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Radiant Manor Foyer4", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2}
-
-
+  {"name": "Radiant Manor Foyer", "img": "area_images/radiant_manor/Foyer.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Ballroom", "img": "area_images/radiant_manor/Ballroom.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Backlit Corridor", "img": "area_images/radiant_manor/corridor.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor West Wing", "img": "area_images/radiant_manor/west.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Rafters", "img": "area_images/radiant_manor/rafters.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor East Wing", "img": "area_images/radiant_manor/east.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Rooftop", "img": "area_images/radiant_manor/roof.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Generator", "img": "area_images/radiant_manor/generator.png", "location_size": 32, "location_border_thickness": 2}
 ]

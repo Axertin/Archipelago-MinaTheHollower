@@ -771,7 +771,57 @@ rm_meowstro: dict[int, int] = {
 }
 rm_mimic: dict[int, int] = {
     29:0,
-    28:0
+    28:0,
+    20:0
+}
+rm_corridor: dict[int, int] = {
+    17:1,
+    7:0,
+}
+rm_greenhouse: dict[int, int] = {
+    16:0,
+    13:0,
+    14:0,
+    41:0,
+    15:0,
+}
+rm_rafters: dict[int, int] = {
+    40:0,
+    18:0,
+    19:0,
+}
+rm_gallery: dict[int, int] = {
+    3:0,
+    8:0,
+}
+rm_servants: dict[int, int] = {
+    31:0,
+    5:0,
+}
+rm_roof: dict[int, int] = {
+    20:0,
+    12:0,
+    10:0,
+    11:0,
+    16:0,
+}
+rm_dining: dict[int, int] = {
+    4:0,
+    30:0,
+}
+
+rm_core: dict[int, int] = {
+    32:0,
+    33:0,
+}
+rm_bath: dict[int, int] = {
+    38:0,
+}
+rm_study: dict[int, int] = {
+    9:0,
+}
+rm_generator: dict[int, int] = {
+    0:0,
 }
 @dataclasses.dataclass
 class MapData:
@@ -917,6 +967,17 @@ area_id_to_map: dict[int, MapData] = {
     127: MapData(rm_ballroom, 106),
     132: MapData(rm_meowstro, 106),
     140: MapData(rm_mimic, 106),
+    134: MapData(rm_corridor, 107),
+    128: MapData(rm_greenhouse, 108),
+    129: MapData(rm_rafters, 109),
+    130: MapData(rm_gallery, 110),
+    131: MapData(rm_servants, 110),
+    133: MapData(rm_roof, 111),
+    138: MapData(rm_dining, 112),
+    135: MapData(rm_core, 112),
+    136: MapData(rm_study, 112),
+    126: MapData(rm_generator, 112),
+
 }
 
 

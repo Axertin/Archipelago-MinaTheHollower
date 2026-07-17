@@ -1,0 +1,93 @@
+[
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "RM Foyer Library Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Radiant Manor Foyer",
+                "x": 1870,
+                "y": 620
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "RM Mimic Chamber Dodging Pendulum"}
+        ],
+        "map_locations": [
+            {
+                "map": "Radiant Manor Ballroom",
+                "x": 1778,
+                "y": 142
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "RM Meowstro's Chamber Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Radiant Manor Ballroom",
+                "x": 1474,
+                "y": 1040
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "RM Rafters Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Radiant Manor Rafters",
+                "x": 2000,
+                "y": 30
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "RM Servant's Quarters Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Radiant Manor East Wing",
+                "x": 2160,
+                "y": 716
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "RM Ballroom Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Radiant Manor Ballroom",
+                "x": 1344,
+                "y": 620
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "RM Tile Chamber Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Radiant Manor Ballroom",
+                "x": 1856,
+                "y": 500
+            }
+        ]
+    }
+]

@@ -1,0 +1,237 @@
+[
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Launch Pad Secret Room #1 Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Farm",
+                "x": 48,
+                "y": 33
+            }
+        ]
+    },
+    {
+        "name": "Kear",
+        "sections": [
+            {"name": "SB Launch Pad Secret Room #2 Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Farm End",
+                "x": 94,
+                "y": 416
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Kid Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Farm Chase",
+                "x": 770,
+                "y": 62
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Hidden Mandrake Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Farm Wind",
+                "x": 48,
+                "y": 479
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Hidden Crop Thresher Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Farm Tractors",
+                "x": 48,
+                "y": 479
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Rotten Barn Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Barn",
+                "x": 121,
+                "y": 174
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Below Crow Town Bridge Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Stormy Town",
+                "x": 48,
+                "y": 690
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "SB Crow Town Shop Trinket"},
+            {"name": "SB Crow Town Shop Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Town",
+                "x": 895,
+                "y": 223
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Crow Town Farmhouse Roof Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Town",
+                "x": 303,
+                "y": 622
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Tangled Woods Hidden Grove Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Forest",
+                "x": 48,
+                "y": 300
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Stormwatch Way Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Stormwatch",
+                "x": 2224,
+                "y": 318
+            }
+        ]
+    },
+    {
+        "name": "Rose",
+        "sections": [
+            {"name": "SB Carving Shack Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Generator",
+                "x": 384,
+                "y": 1336
+            }
+        ]
+    },
+    {
+        "name": "Reward",
+        "sections": [
+            {"name": "SB Dark Deluxy Spark Container"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Generator",
+                "x": 412,
+                "y": 4220
+            }
+        ]
+    },
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "SB Fish Spincer Pincers"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Stormy Town",
+                "x": 260,
+                "y": 600
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Wastewater Canal Slime Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Canal",
+                "x": 48,
+                "y": 335
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Wastewater Canal Box Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Canal",
+                "x": 1136,
+                "y": 432
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Wastewater Canal Well Entrance Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Well",
+                "x": 1136,
+                "y": 432
+            }
+        ]
+    },
+    {
+        "name": "Reward",
+        "sections": [
+            {"name": "SB Save Students Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Interiors",
+                "x": 707,
+                "y": 351
+            }
+        ]
+    }
+]

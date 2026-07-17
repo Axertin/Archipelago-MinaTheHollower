@@ -1,0 +1,198 @@
+[
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "CTP Frigid Station Missed Train Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Train",
+                "x": 110,
+                "y": 1075
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "CTP Frozen Pass Rope Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Frozen Pass",
+                "x": 450,
+                "y": 640
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "CTP Frozen Pass Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Frozen Pass",
+                "x": 48,
+                "y": 1327
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "CTP Frozen Pass IceBlock Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Frozen Pass",
+                "x": 140,
+                "y": 1394
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "CTP Dead Man's Gorge Passage Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Gorge Passage",
+                "x": 1842,
+                "y": 80
+            }
+        ]
+    },
+    {
+        "name": "Kear",
+        "sections": [
+            {"name": "CTP Dead Man's Gorge Rail Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Frostbite Woods",
+                "x": 960,
+                "y": 1044
+            }
+        ]
+    },
+    {
+        "name": "Reward",
+        "sections": [
+            {"name": "CTP Frostbite Woods Blinking Glass"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Frostbite Woods",
+                "x": 977,
+                "y": 433
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "CTP Rail Yard Purple Structure Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Rail Yard",
+                "x": 48,
+                "y": 944
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "CTP Rail Yard Cliff Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Rail Yard",
+                "x": 1360,
+                "y": 848
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "CTP Rail Yard Casket Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Rail Yard",
+                "x": 1360,
+                "y": 432
+            }
+        ]
+    },
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "CTP Fish Fishcicle Core"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Rail Yard",
+                "x": 528,
+                "y": 109
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "CTP Rail Yard Kear Room Rupert Shop Trinket"},
+            {"name": "CTP Rail Yard Kear Room Rupert Shop Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Rail Yard",
+                "x": 208,
+                "y": 208
+            }
+        ]
+    },
+    {
+        "name": "Kear",
+        "sections": [
+            {"name": "CTP Spiral Summit Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Spiral Summit",
+                "x": 48,
+                "y": 140
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "CTP Agnes Express Bone Mimic"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Agnes Express",
+                "x": 105,
+                "y": 150
+            }
+        ]
+    },
+    {
+        "name": "Rose",
+        "sections": [
+            {"name": "CTP Maelstrom Locomotress Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Maelstorm",
+                "x": 256,
+                "y": 1784
+            }
+        ]
+    }
+]

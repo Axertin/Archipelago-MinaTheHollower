@@ -1,0 +1,250 @@
+[
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "BB Fish Goremaw Fang"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach",
+                "x": 630,
+                "y": 938
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Bone Rush Trail Furgus Tunnel Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Generator",
+                "x": 80,
+                "y": 140
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "BB Gold Grasp Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Generator",
+                "x": 976,
+                "y": 204
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "BB Large Conveyor Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach",
+                "x": 880,
+                "y": 113
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Split Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach",
+                "x": 466,
+                "y": 880
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Aquatic Conveyor Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach",
+                "x": 1170,
+                "y": 685
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "BB Brac's Tent Trinket"},
+            {"name": "BB Brac's Tent Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Interiors",
+                "x": 254,
+                "y": 77
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "BB Secret Shoals Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Ocean",
+                "x": 86,
+                "y": 944
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Calcified Caves Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Interiors",
+                "x": 1470,
+                "y": 366
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "BB Calcified Caves Jail Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Interiors",
+                "x": 558,
+                "y": 170
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Submerged Handles Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Stomach Mine",
+                "x": 456,
+                "y": 1006
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "BB Pulsing Tract Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Pulsing Tract",
+                "x": 1408,
+                "y": 48
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "BB Worm's Back Battery Buster"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach",
+                "x": 944,
+                "y": 326
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "BB Worm's Back Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Cliffs",
+                "x": 1215,
+                "y": 960
+            }
+        ]
+    },
+    {
+        "name": "Kear",
+        "sections": [
+            {"name": "BB Stomach Mine Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Stomach Mine",
+                "x": 2032,
+                "y": 620
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "BB Moving Stairs Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Gut Depths",
+                "x": 1450,
+                "y": 260
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Gut Passage Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Gut Darkness",
+                "x": 112,
+                "y": 128
+            }
+        ]
+    },
+    {
+        "name": "Rose",
+        "sections": [
+            {"name": "BB Brain Alcove Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Pulsing Tract",
+                "x": 655,
+                "y": 922
+            }
+        ]
+    },
+    {
+        "name": "Rose",
+        "sections": [
+            {"name": "BB Brain Alcove Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Pulsing Tract",
+                "x": 655,
+                "y": 922
+            }
+        ]
+    }
+]

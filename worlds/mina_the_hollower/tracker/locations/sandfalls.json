@@ -1,0 +1,171 @@
+[
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "SF Fish Puffer Beak"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 1106,
+                "y": 110
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SF Sifted Sands Snake Bomb Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 177,
+                "y": 943
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "SF Guiding Grains Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls Interiors",
+                "x": 880,
+                "y": 47
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "SF Guiding Grains Bonestone Left"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls Interiors",
+                "x": 784,
+                "y": 784
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "SF Guiding Grains Bonestone Right"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls Interiors",
+                "x": 976,
+                "y": 784
+            }
+        ]
+    },
+    {
+        "name": "Item",
+        "sections": [
+            {"name": "SF Hidden Cave Vial Pouch"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls Interiors",
+                "x": 160,
+                "y": 525
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "SF Ring Dive Parlor Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls Interiors",
+                "x": 1296,
+                "y": 25
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SF Shifty Seclusion Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls Interiors",
+                "x": 560,
+                "y": 175
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SF Payload Passage Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls Interiors",
+                "x": 434,
+                "y": 690
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SF Bone Junction Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls Interiors",
+                "x": 270,
+                "y": 200
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "SF Train Vita's Shop"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 1360,
+                "y": 1648
+            }
+        ]
+    },
+    {
+        "name": "Raft",
+        "sections": [
+            {"name": "BB Sandwater Junction Angler's Raft"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandwater Junction",
+                "x": 432,
+                "y": 333
+            }
+        ]
+    },
+    {
+        "name": "Kear",
+        "sections": [
+            {"name": "SF Sifted Sands Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 1682,
+                "y": 840
+            }
+        ]
+    }
+]

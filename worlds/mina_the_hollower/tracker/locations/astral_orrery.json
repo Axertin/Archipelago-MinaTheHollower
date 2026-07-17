@@ -1,0 +1,224 @@
+[
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Mirror's End Beach Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mirror's End",
+                "x": 1164,
+                "y": 780
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "AO Mirror's End Reckless Beastium"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mirror's End",
+                "x": 1725,
+                "y": 462
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Mirror's End West Ledge Trinket Bag"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mirror's End",
+                "x": 173,
+                "y": 400
+            }
+        ]
+    },
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "AO Mirror's End Fish Trunkstar Core"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mirror's End",
+                "x": 727,
+                "y": 482
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Mirror's End Moving Platform Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mirror's End Top",
+                "x": 815,
+                "y": 1320
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Stellarium East Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Stellarium",
+                "x": 600,
+                "y": 198
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "AO Tubert Trinket"},
+            {"name": "AO Tubert Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Stellarium",
+                "x": 38,
+                "y": 213
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Gravity Zone Long Hallway Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Gravity Zone",
+                "x": 936,
+                "y": 775
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Gravity Zone Secret Room #1 Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Gravity Zone",
+                "x": 1449,
+                "y": 712
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Gravity Zone Secret Room #2 Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Gravity Zone",
+                "x": 55,
+                "y": 1032
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Cog Chamber Secret Room #1 Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Cog Chamber",
+                "x": 384,
+                "y": 1062
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Cog Chamber Secret Room #1 Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Cog Chamber",
+                "x": 1295,
+                "y": 1064
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Mutant Lab Secret Room #1 Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Mutant Lab",
+                "x": 1383,
+                "y": 424
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Mutant Lab Secret Room #2 Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Mutant Lab",
+                "x": 24,
+                "y": 488
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "AO Hall of Scholars Below Boss Chamber Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Hall Of Schalars",
+                "x": 232,
+                "y": 150
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Hall of Scholars Exit Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Hall Of Schalars",
+                "x": 455,
+                "y": 40
+            }
+        ]
+    },
+    {
+        "name": "Rose",
+        "sections": [
+            {"name": "AO Sealed Archive Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Sealed Archive",
+                "x": 462,
+                "y": 952
+            }
+        ]
+    }
+]
