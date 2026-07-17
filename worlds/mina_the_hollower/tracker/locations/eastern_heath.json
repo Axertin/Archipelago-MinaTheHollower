@@ -2,7 +2,7 @@
     {
         "name": "Beat Maxi",
         "sections": [
-            {"name": "EH Grassland Trinket Bag"}
+            {"name": "EH Grassland Maxi Trinket Bag"}
         ],
         "map_locations": [
             {
@@ -107,7 +107,7 @@
     {
         "name": "Kite Trinket",
         "sections": [
-            {"name": "EH Grassland Waterfall Windfall Charm"}
+            {"name": "EH Grassland Waterfall Kite Trinket"}
         ],
         "map_locations": [
             {
@@ -133,7 +133,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "EH Choppe Shoppe Chain Capacitor"}
+            {"name": "EH Choppe Shoppe Trinket"}
         ],
         "map_locations": [
             {
@@ -157,9 +157,22 @@
         ]
     },
     {
+        "name": "Chest",
+        "sections": [
+            {"name": "EH Hidden Grotto Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Heath Interiors",
+                "x": 526,
+                "y": 402
+            }
+        ]
+    },
+    {
         "name": "Fish",
         "sections": [
-            {"name": "EH Grassland Dork Eyes"}
+            {"name": "EH Fish Dork Eyes"}
         ],
         "map_locations": [
             {

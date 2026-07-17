@@ -181,19 +181,6 @@
         ]
     },
     {
-        "name": "Donation",
-        "sections": [
-            {"name": "OS Station Train Ticket Donation"}
-        ],
-        "map_locations": [
-            {
-                "map": "Ossex Bowery Interiors",
-                "x": 447,
-                "y": 140
-            }
-        ]
-    },
-    {
         "name": "Generosity",
         "sections": [
             {"name": "OS Bowery Residence Kear"}
@@ -256,8 +243,7 @@
             {"name": "OS Trinket Bazaar Shock Flint"},
             {"name": "OS Trinket Bazaar Uranium Bracelet"},
             {"name": "OS Trinket Bazaar Bubble Ring"},
-            {"name": "OS Trinket Bazaar Counter Vial"},
-            {"name": "OS Trinket Bazaar Lightning Grip"}
+            {"name": "OS Trinket Bazaar Counter Vial"}
         ],
         "map_locations": [
             {

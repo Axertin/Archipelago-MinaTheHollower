@@ -133,6 +133,19 @@
     {
         "name": "Chest",
         "sections": [
+            {"name": "SB Galloway Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Forest",
+                "x": 48,
+                "y": 977
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
             {"name": "SB Stormwatch Way Chest"}
         ],
         "map_locations": [

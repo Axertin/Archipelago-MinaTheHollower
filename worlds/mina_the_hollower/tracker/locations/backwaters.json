@@ -2,8 +2,8 @@
     {
         "name": "Frog Fight",
         "sections": [
-            {"name": "Plasma Jug"},
-            {"name": "BW Upper Shanty Swamp Glutton's Jug"}
+            {"name": "BW Upper Shanty Swamp Plasma Jug"},
+            {"name": "BW Upper Shanty Swamp Frog Gift"}
         ],
         "map_locations": [
             {
@@ -16,7 +16,7 @@
     {
         "name": "Frog Fight",
         "sections": [
-            {"name": "BW Upper Swamp Side Room Chest"}
+            {"name": "BW Upper Shanty Swamp Side Room Chest"}
         ],
         "map_locations": [
             {
@@ -55,7 +55,7 @@
     {
         "name": "Pinky Shop",
         "sections": [
-            {"name": "BW Pinky's Parlor Spark Catcher"},
+            {"name": "BW Pinky's Parlor Trinket"},
             {"name": "BW Pinky's Parlor Kear"}
         ],
         "map_locations": [
@@ -95,7 +95,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "BW Lower Shanty Swamp Evasion Powder"}
+            {"name": "BW Lower Shanty Swamp Trinket"}
         ],
         "map_locations": [
             {
@@ -121,7 +121,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "BW Lower Shanty Swamp Tumbling Tutu"}
+            {"name": "BW Lower Shanty Swamp Band Gift"}
         ],
         "map_locations": [
             {
@@ -148,7 +148,7 @@
         "name": "Fishing Rod",
         "sections": [
             {"name": "BW Fishing Hole Fishing Rod"},
-            {"name": "BW Fish Thalassian Pearl"},
+            {"name": "BW Fishing Hole Thalassian Pearl"},
             {"name": "BW Fish Fleeper Head"},
             {"name": "BW Fishing Hole Gilded Rod"}
         ],

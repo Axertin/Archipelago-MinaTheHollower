@@ -1,0 +1,500 @@
+[
+    {
+        "name": "Astral Orrery",
+        "sections": [
+            {"name": "AO Mirror's End Beach Room Chest"},
+            {"name": "AO Mirror's End Reckless Beastium"},
+            {"name": "AO Mirror's End West Ledge Trinket Bag"},
+            {"name": "AO Mirror's End Fish Trunkstar Core"},
+            {"name": "AO Mirror's End Moving Platform Room Chest"},
+            {"name": "AO Stellarium East Chest"},
+            {"name": "AO Tubert Trinket"},
+            {"name": "AO Tubert Kear"},
+            {"name": "AO Gravity Zone Long Hallway Chest"},
+            {"name": "AO Gravity Zone Secret Room #1 Kear"},
+            {"name": "AO Gravity Zone Secret Room #2 Chest"},
+            {"name": "AO Cog Chamber Secret Room #1 Chest"},
+            {"name": "AO Cog Chamber Secret Room #1 Kear"},
+            {"name": "AO Mutant Lab Secret Room #1 Chest"},
+            {"name": "AO Mutant Lab Secret Room #2 Trinket"},
+            {"name": "AO Hall of Scholars Below Boss Chamber Bonestone"},
+            {"name": "AO Hall of Scholars Exit Chest"},
+            {"name": "AO Sealed Archive Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 158,
+                "y": 60
+            }
+        ]
+    },
+    {
+        "name": "Backwaters",
+        "sections": [
+            {"name": "BW Upper Shanty Swamp Plasma Jug"},
+            {"name": "BW Upper Shanty Swamp Frog Gift"},
+            {"name": "BW Upper Shanty Swamp Side Room Chest"},
+            {"name": "BW Lantern Cave Bonestone"},
+            {"name": "BW Lantern Cave Vial Pouch"},
+            {"name": "BW Pinky's Parlor Trinket"},
+            {"name": "BW Pinky's Parlor Kear"},
+            {"name": "BW Pinky's Parlor Joule Box"},
+            {"name": "BW Lower Shanty Swamp Locked Chest"},
+            {"name": "BW Lower Shanty Swamp Trinket"},
+            {"name": "BW Lower Shanty Swamp Bonestone"},
+            {"name": "BW Lower Shanty Swamp Band Gift"},
+            {"name": "BW Lucky's Lair Kear"},
+            {"name": "BW Fishing Hole Fishing Rod"},
+            {"name": "BW Fishing Hole Thalassian Pearl"},
+            {"name": "BW Fish Fleeper Head"},
+            {"name": "BW Fishing Hole Gilded Rod"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 108,
+                "y": 182
+            }
+        ]
+    },
+    {
+        "name": "Nox's Bayou",
+        "sections": [
+            {"name": "NB Fish Shrimpter Tail"},
+            {"name": "NB Guard Room Trinket"},
+            {"name": "NB First Flooder Chest"},
+            {"name": "NB Shallow Pool Chest"},
+            {"name": "NB Lagoon Dark Chest"},
+            {"name": "NB Swamp Shack Pit Preserver"},
+            {"name": "NB Swamp Shack Kear"},
+            {"name": "NB Swamp Shack Blastrike Maul"},
+            {"name": "NB Submerged Side Room Trinket"},
+            {"name": "NB Moonlit Path Chest"},
+            {"name": "NB Moonlit Hideaway Trinket"},
+            {"name": "NB Plant Pond Chest"},
+            {"name": "NB Thick Thicket Chest"},
+            {"name": "NB Hidden Cave Chest"},
+            {"name": "NB Grate Lake Chest"},
+            {"name": "NB Gutter Tunnel Chest"},
+            {"name": "NB Tainted Depths Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 40,
+                "y": 162
+            }
+        ]
+    },
+    {
+        "name": "Bone Beach",
+        "sections": [
+            {"name": "BB Fish Goremaw Fang"},
+            {"name": "BB Bone Rush Trail Furgus Tunnel Chest"},
+            {"name": "BB Gold Grasp Bonestone"},
+            {"name": "BB Large Conveyor Bonestone"},
+            {"name": "BB Split Room Chest"},
+            {"name": "BB Aquatic Conveyor Chest"},
+            {"name": "BB Brac's Tent Trinket"},
+            {"name": "BB Brac's Tent Kear"},
+            {"name": "BB Secret Shoals Trinket"},
+            {"name": "BB Calcified Caves Kear"},
+            {"name": "BB Calcified Caves Jail Bonestone"},
+            {"name": "BB Submerged Handles Chest"},
+            {"name": "BB Pulsing Tract Bonestone"},
+            {"name": "BB Worm's Back Battery Buster"},
+            {"name": "BB Worm's Back Bonestone"},
+            {"name": "BB Stomach Mine Kear"},
+            {"name": "BB Moving Stairs Bonestone"},
+            {"name": "BB Gut Passage Chest"},
+            {"name": "BB Brain Alcove Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 396,
+                "y": 188
+            }
+        ]
+    },
+    {
+        "name": "Coltrane Peak",
+        "sections": [
+            {"name": "CTP Frigid Station Missed Train Chest"},
+            {"name": "CTP Frozen Pass Rope Chest"},
+            {"name": "CTP Frozen Pass Chest"},
+            {"name": "CTP Frozen Pass IceBlock Trinket"},
+            {"name": "CTP Dead Man's Gorge Passage Trinket"},
+            {"name": "CTP Dead Man's Gorge Rail Kear"},
+            {"name": "CTP Frostbite Woods Blinking Glass"},
+            {"name": "CTP Rail Yard Purple Structure Chest"},
+            {"name": "CTP Rail Yard Cliff Chest"},
+            {"name": "CTP Rail Yard Casket Chest"},
+            {"name": "CTP Fish Fishcicle Core"},
+            {"name": "CTP Rail Yard Kear Room Rupert Shop Trinket"},
+            {"name": "CTP Rail Yard Kear Room Rupert Shop Kear"},
+            {"name": "CTP Spiral Summit Kear"},
+            {"name": "CTP Agnes Express Bone Mimic"},
+            {"name": "CTP Maelstrom Locomotress Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 382,
+                "y": 30
+            }
+        ]
+    },
+    {
+        "name": "Eastern Heath",
+        "sections": [
+            {"name": "EH Grassland Maxi Trinket Bag"},
+            {"name": "EH Grassland Ossex Patio Chest"},
+            {"name": "EH Grassland Bush Room Bonestone"},
+            {"name": "EH Grassland Poppit Cave Willow"},
+            {"name": "EH Grassland Poppit Cave Kear"},
+            {"name": "EH Grassland Poppit Cave Chest"},
+            {"name": "EH Grassland Riverbed Chest"},
+            {"name": "EH Grassland Vertical Spinner Room Chest"},
+            {"name": "EH Grassland Waterfall Chest"},
+            {"name": "EH Grassland Waterfall Kite Trinket"},
+            {"name": "EH Buckler's Bluff Joule Box"},
+            {"name": "EH Choppe Shoppe Trinket"},
+            {"name": "EH Under the Bridge Chest"},
+            {"name": "EH Hidden Grotto Chest"},
+            {"name": "EH Fish Dork Eyes"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 334,
+                "y": 120
+            }
+        ]
+    },
+    {
+        "name": "Kindlewood",
+        "sections": [
+            {"name": "KW Overgrowth Bonfire Chest"},
+            {"name": "KW Residence Basement Chest"},
+            {"name": "KW Madd House Draining Beastium"},
+            {"name": "KW Madd House Oozing Organ"},
+            {"name": "KW Madd House Voltaic Guard"},
+            {"name": "KW Madd House Kear"},
+            {"name": "KW Behind Madd House Bonestone"},
+            {"name": "KW Train Station Gourdan"},
+            {"name": "KW Fish Gazeworm Eye"},
+            {"name": "KW Train Station Ledge Chest"},
+            {"name": "KW Farm Crossing Shack Chest"},
+            {"name": "KW Wallower's Room Trinket"},
+            {"name": "KW Wallower's Room Chest"},
+            {"name": "KW Rail Tunnel Vial Pouch"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 70,
+                "y": 94
+            }
+        ]
+    },
+    {
+        "name": "Loner's Landing",
+        "sections": [
+            {"name": "LL Belowdecks Unchosen Weapon #1"},
+            {"name": "LL Belowdecks Unchosen Weapon #2"},
+            {"name": "LL Belowdecks Chest"},
+            {"name": "LL Captain's Gift"},
+            {"name": "LL Fish Trigger Antennae"},
+            {"name": "LL Blighted Docks Tall Room Chest"},
+            {"name": "LL Blighted Docks Side Cave Chest"},
+            {"name": "LL Blighted Docks Bridge Chest"},
+            {"name": "LL Blighted Docks Residence Chest"},
+            {"name": "LL Blighted Docks Burrow Residence Bubble"},
+            {"name": "LL Boardwalk Fire Bounce Chest"},
+            {"name": "LL Boardwalk Sandfalls Ledge Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 184,
+                "y": 216
+            }
+        ]
+    },
+    {
+        "name": "Mourner's Mile",
+        "sections": [
+            {"name": "MM Knight's Rest Chest"},
+            {"name": "MM Statue Room Bonestone"},
+            {"name": "MM Shallow Tomb Kear"},
+            {"name": "MM Ring Tomb Trinket"},
+            {"name": "MM Spike Vault Vial Pouch"},
+            {"name": "MM Spike Vault Hidden Room Kear"},
+            {"name": "MM Tower Tunnel Chest #1"},
+            {"name": "MM Tower Tunnel Chest #2"},
+            {"name": "MM Knight's Stand Bonestone"},
+            {"name": "MM Mina's Grave Chest"},
+            {"name": "MM Mina's Grave Trinket"},
+            {"name": "MM Spike Hell Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 396,
+                "y": 112
+            }
+        ]
+    },
+    {
+        "name": "Ossex",
+        "sections": [
+            {"name": "OS Courtyard East Deboning Wand"},
+            {"name": "OS Courtyard West Weapon Upgrade"},
+            {"name": "OS Courtyard Garden Warding Beastium"},
+            {"name": "OS Evra's Rest Health Rose"},
+            {"name": "OS City Center Steady Soles"},
+            {"name": "OS Legovich's Arms Whip"},
+            {"name": "OS Legovich's Arms Hammer"},
+            {"name": "OS Legovich's Arms Daggers"},
+            {"name": "OS Legovich's Arms Battery Buster"},
+            {"name": "OS Legovich's Arms Guardian Casket"},
+            {"name": "OS Emporium Health Rose #1"},
+            {"name": "OS Emporium Health Rose #2"},
+            {"name": "OS Emporium Health Rose #3"},
+            {"name": "OS Emporium Vial Pouch #1"},
+            {"name": "OS Emporium Vial Pouch #2"},
+            {"name": "OS Emporium Vial Pouch #3"},
+            {"name": "OS Emporium Spark Container"},
+            {"name": "OS Emporium Joule Box #1"},
+            {"name": "OS Emporium Joule Box #2"},
+            {"name": "OS Emporium Joule Box #3"},
+            {"name": "OS Emporium Trinket Bag #1"},
+            {"name": "OS Emporium Trinket Bag #2"},
+            {"name": "OS Emporium Trinket Bag #3"},
+            {"name": "OS Kear Institute Kear #1"},
+            {"name": "OS Kear Institute Kear #2"},
+            {"name": "OS Kear Institute Kear #3"},
+            {"name": "OS Kear Institute Kear #4"},
+            {"name": "OS Kear Institute Kear #5"},
+            {"name": "OS Kear Institute Kear #6"},
+            {"name": "OS Kear Institute Kear #7"},
+            {"name": "OS Kear Institute Kear #8"},
+            {"name": "OS Kear Institute Kear #9"},
+            {"name": "OS Kear Institute Kear Completion"},
+            {"name": "OS Couple's Quarter Chest"},
+            {"name": "OS Couple's Quarter Thermal Pack"},
+            {"name": "OS Music Hall Pneumatic Armlet"},
+            {"name": "OS Bowery Residence Kear"},
+            {"name": "OS Music Hall Chest"},
+            {"name": "OS Bowery New House Bonestone"},
+            {"name": "OS Bowery New House Bonestone"},
+            {"name": "OS Trinket Bazaar Kear"},
+            {"name": "OS Trinket Bazaar Plasma Funnel"},
+            {"name": "OS Trinket Bazaar Seismic Belt"},
+            {"name": "OS Trinket Bazaar Brisk Brew"},
+            {"name": "OS Trinket Bazaar Intrevenous Vial"},
+            {"name": "OS Trinket Bazaar Shock Flint"},
+            {"name": "OS Trinket Bazaar Uranium Bracelet"},
+            {"name": "OS Trinket Bazaar Bubble Ring"},
+            {"name": "OS Trinket Bazaar Counter Vial"},
+            {"name": "OS Ossex Telescope Kear"},
+            {"name": "OS Bowery Upper Chest"},
+            {"name": "OS City Center 2nd Race Kear"},
+            {"name": "OS City Center Final Race Bellows Bustle"},
+            {"name": "OS High Street Sewer Chest"},
+            {"name": "OS Atelier Vitality Vest"},
+            {"name": "OS Atelier Custom Fit"},
+            {"name": "OS Atelier Chest"},
+            {"name": "OS Attic Chest"},
+            {"name": "OS Strategy Center Ophidio Bonestone"},
+            {"name": "OS Strategy Center Chest"},
+            {"name": "OS Bowery Double Sidearm Permit"},
+            {"name": "OS Fish Triple Flagellum"},
+            {"name": "OS High Street Valor Medallion"},
+            {"name": "OS Gutterways Bonestone"},
+            {"name": "OS Station Underside Bell of Grace"},
+            {"name": "OS Hollower's Guild Back Room Smack Muriel"},
+            {"name": "OS Hollower's Guild Back Room Kear Chest"},
+            {"name": "OS Hollower's Guild Back Room Joule Alembic"},
+            {"name": "OS Hollower's Guild Back Room Isle Map"},
+            {"name": "OS Hollower's Guild Back Room Sidearm Recoverer"},
+            {"name": "OS Hollower's Guild Back Room Training Dummy"},
+            {"name": "OS Hollower's Guild Back Room Sidearm Duplicator"},
+            {"name": "OS Hollower's Guild Back Room Memory Goggles"},
+            {"name": "OS Hollower's Guild Back Room Phonograph"},
+            {"name": "OS Hollower's Guild Back Room Enhanced Map"},
+            {"name": "OS Hollower's Guild Back Room All-Seeing Skull"},
+            {"name": "OS Train Private Cabin Chest"},
+            {"name": "OS Train Private Cabin Safety Shroud"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 258,
+                "y": 132
+            }
+        ]
+    },
+    {
+        "name": "Queensbury Crypt",
+        "sections": [
+            {"name": "QC Old Graveyard Bonestone"},
+            {"name": "QC Old Graveyard Kear"},
+            {"name": "QC Bonnet Tomb Trinket"},
+            {"name": "QC Broken Bridge Bonestone"},
+            {"name": "QC Pipe Room Bonestone"},
+            {"name": "QC Castle Entry Weapon Chest"},
+            {"name": "QC Smelly Secret Kear"},
+            {"name": "QC Hidden Tunnel Bonestone"},
+            {"name": "QC Statue Head Hall Chest"},
+            {"name": "QC Mirror Room Chest"},
+            {"name": "QC Mirror Room Stolenoid"},
+            {"name": "QC Mirror Room Kear"},
+            {"name": "QC Putrid Place Bonestone"},
+            {"name": "QC Putrid Place Bonestone"},
+            {"name": "QC Putrid Place Bonestone"},
+            {"name": "QC Rancid Room Trinket"},
+            {"name": "QC Ancestral Chamber Health Rose"},
+            {"name": "QC Royal Tomb Trinket"},
+            {"name": "QC Fish Tombstone"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 460,
+                "y": 112
+            }
+        ]
+    },
+    {
+        "name": "Radiant Manor",
+        "sections": [
+            {"name": "RM Foyer Library Chest"},
+            {"name": "RM Mimic Chamber Dodging Pendulum"},
+            {"name": "RM Meowstro's Chamber Bonestone"},
+            {"name": "RM Rafters Chest"},
+            {"name": "RM Servant's Quarters Trinket"},
+            {"name": "RM Ballroom Chest"},
+            {"name": "RM Tile Chamber Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 258,
+                "y": 62
+            }
+        ]
+    },
+    {
+        "name": "Sandfalls",
+        "sections": [
+            {"name": "SF Fish Puffer Beak"},
+            {"name": "SF Sifted Sands Snake Bomb Chest"},
+            {"name": "SF Guiding Grains Trinket"},
+            {"name": "SF Guiding Grains Bonestone Left"},
+            {"name": "SF Guiding Grains Bonestone Right"},
+            {"name": "SF Hidden Cave Vial Pouch"},
+            {"name": "SF Ring Dive Parlor Trinket"},
+            {"name": "SF Shifty Seclusion Chest"},
+            {"name": "SF Payload Passage Chest"},
+            {"name": "SF Bone Junction Chest"},
+            {"name": "SF Train Vita's Shop"},
+            {"name": "BB Sandwater Junction Angler's Raft"},
+            {"name": "SF Sifted Sands Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 300,
+                "y": 190
+            }
+        ]
+    },
+    {
+        "name": "Septemburg",
+        "sections": [
+            {"name": "SB Launch Pad Secret Room #1 Chest"},
+            {"name": "SB Launch Pad Secret Room #2 Kear"},
+            {"name": "SB Kid Room Chest"},
+            {"name": "SB Hidden Mandrake Room Chest"},
+            {"name": "SB Hidden Crop Thresher Room Chest"},
+            {"name": "SB Rotten Barn Chest"},
+            {"name": "SB Below Crow Town Bridge Chest"},
+            {"name": "SB Crow Town Shop Trinket"},
+            {"name": "SB Crow Town Shop Kear"},
+            {"name": "SB Crow Town Farmhouse Roof Chest"},
+            {"name": "SB Tangled Woods Hidden Grove Chest"},
+            {"name": "SB Galloway Room Chest"},
+            {"name": "SB Stormwatch Way Chest"},
+            {"name": "SB Carving Shack Health Rose"},
+            {"name": "SB Dark Deluxy Spark Container"},
+            {"name": "SB Fish Spincer Pincers"},
+            {"name": "SB Wastewater Canal Slime Room Chest"},
+            {"name": "SB Wastewater Canal Box Room Chest"},
+            {"name": "SB Wastewater Canal Well Entrance Chest"},
+            {"name": "SB Save Students Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 72,
+                "y": 38
+            }
+        ]
+    },
+    {
+        "name": "Southern Outskirts",
+        "sections": [
+            {"name": "SO Commons Ossex Entry Left Chest"},
+            {"name": "SO Commons Ossex Entry Right Chest"},
+            {"name": "SO Four Flowers Chest"},
+            {"name": "SO Commons Chest"},
+            {"name": "SO Fish Crumblefin Head"},
+            {"name": "SO Cave Network Chest"},
+            {"name": "SO Cave Network Side Room Chest"},
+            {"name": "SO Poppit Keri"},
+            {"name": "SO Poppit Kear"},
+            {"name": "SO Southern Pit Room Bonestone"},
+            {"name": "SO Western Pit Room Chest"},
+            {"name": "SO Thorne Residence Basement Trinket"},
+            {"name": "SO Mining Passage Chest"},
+            {"name": "Dugin Fight 2 Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 228,
+                "y": 180
+            }
+        ]
+    },
+    {
+        "name": "Western Wilds",
+        "sections": [
+            {"name": "WW Secret Passage Chest"},
+            {"name": "WW Secret Passage Joule Box"},
+            {"name": "WW Occupied Bridge Brute Chest"},
+            {"name": "WW Occupied Bridge Far Chest"},
+            {"name": "WW Occupied Bridge Leaf Trinket"},
+            {"name": "WW Fish Cuddlepus Shell"},
+            {"name": "WW Occupied Bridge Underneath Chest"},
+            {"name": "WW Fish Glomper Stalk"},
+            {"name": "WW Balcony Chest"},
+            {"name": "WW Balcony Trinket"},
+            {"name": "WW Molten Foundry Poppit Trinket"},
+            {"name": "WW Molten Foundry Poppit Kear"},
+            {"name": "WW Molten Foundry Dark Chest"},
+            {"name": "WW Molten Foundry Trinket"},
+            {"name": "Dugin Fight 2 Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 144,
+                "y": 130
+            }
+        ]
+    }
+]

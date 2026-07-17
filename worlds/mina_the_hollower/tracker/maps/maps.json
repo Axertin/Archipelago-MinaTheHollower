@@ -1,5 +1,5 @@
 [
-  {"name": "World Map", "img": "area_images/overview/WorldMap.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "World Map", "img": "area_images/overview/WorldMap.png", "location_size": 16, "location_border_thickness": 2},
   {"name": "ShipWreck", "img": "area_images/loners_landing/0-11-17-18.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Blighted Docks Landing", "img": "area_images/loners_landing/19.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Blighted Docks Fences", "img": "area_images/loners_landing/2-3-8-16.png", "location_size": 32, "location_border_thickness": 2},
@@ -124,10 +124,9 @@
 
   {"name": "Radiant Manor Foyer", "img": "area_images/radiant_manor/Foyer.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Radiant Manor Ballroom", "img": "area_images/radiant_manor/Ballroom.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Radiant Manor Backlit Corridor", "img": "area_images/radiant_manor/corridor.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Backlit Rooftop", "img": "area_images/radiant_manor/roof.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Radiant Manor West Wing", "img": "area_images/radiant_manor/west.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Radiant Manor Rafters", "img": "area_images/radiant_manor/rafters.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Radiant Manor East Wing", "img": "area_images/radiant_manor/east.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Radiant Manor Rooftop", "img": "area_images/radiant_manor/roof.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Radiant Manor Generator", "img": "area_images/radiant_manor/generator.png", "location_size": 32, "location_border_thickness": 2}
 ]

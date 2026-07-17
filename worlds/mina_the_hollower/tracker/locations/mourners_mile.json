@@ -41,7 +41,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "MM Ring Tomb Spike Spurs"}
+            {"name": "MM Ring Tomb Trinket"}
         ],
         "map_locations": [
             {
@@ -132,7 +132,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "MM Mina's Grave Starving Beastium"}
+            {"name": "MM Mina's Grave Trinket"}
         ],
         "map_locations": [
             {

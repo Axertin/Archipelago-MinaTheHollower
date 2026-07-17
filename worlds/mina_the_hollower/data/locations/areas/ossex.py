@@ -25,7 +25,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Hollower's Guild Back Room Joule Alembic" : LocationData(210, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & ShopPrice(cost=2000)),
         "OS Hollower's Guild Back Room Isle Map" : LocationData(211, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & ShopPrice(cost=2000)),
         "OS Hollower's Guild Back Room Sidearm Recoverer" : LocationData(215, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & ShopPrice(cost=2000)),
-        "OS Hollower's Guild Back Room Training Dummy" : LocationData(218, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value)) & ShopPrice(cost=2000),
+        "OS Hollower's Guild Back Room Training Dummy" : LocationData(218, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & ShopPrice(cost=2000)),
         "OS Hollower's Guild Back Room Sidearm Duplicator" : LocationData(214, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=2) & ShopPrice(cost=2000)),
         "OS Hollower's Guild Back Room Memory Goggles" : LocationData(217, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=2) & ShopPrice(cost=2000)),
         "OS Hollower's Guild Back Room Phonograph" : LocationData(216, "Ossex Guild Back Room", HasKear(kear=SingleKears.SOUTHERN_OUTSKIRTS_ROOFTOP_KEAR.value) & RepairedGeneratorCount(count=2) & ShopPrice(cost=2000)),

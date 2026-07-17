@@ -42,9 +42,9 @@
         ]
     },
     {
-        "name": "Chest",
+        "name": "Bonestone",
         "sections": [
-            {"name": "KW Behind Madd House Chest"}
+            {"name": "KW Behind Madd House Bonestone"}
         ],
         "map_locations": [
             {
@@ -70,7 +70,7 @@
     {
         "name": "Fish",
         "sections": [
-            {"name": "KW Gazeworm Eye"}
+            {"name": "KW Fish Gazeworm Eye"}
         ],
         "map_locations": [
             {
@@ -109,7 +109,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "KW Wallower's Room Wallower's Gauntlets"}
+            {"name": "KW Wallower's Room Trinket"}
         ],
         "map_locations": [
             {
@@ -139,7 +139,7 @@
         ],
         "map_locations": [
             {
-                "map": "Kindlewood interiors",
+                "map": "Kindlewood Interiors",
                 "x": 1650,
                 "y": 541
             }

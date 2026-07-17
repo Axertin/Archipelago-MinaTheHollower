@@ -15,6 +15,19 @@
     {
         "name": "Chest",
         "sections": [
+            {"name": "WW Secret Passage Joule Box"}
+        ],
+        "map_locations": [
+            {
+                "map": "Western Wilds",
+                "x": 623,
+                "y": 1072
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
             {"name": "WW Occupied Bridge Brute Chest"}
         ],
         "map_locations": [
@@ -41,7 +54,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "WW Occupied Bridge Dead Leaf"}
+            {"name": "WW Occupied Bridge Leaf Trinket"}
         ],
         "map_locations": [
             {
@@ -80,7 +93,7 @@
     {
         "name": "Fish",
         "sections": [
-            {"name": "WW Western Pond Glomper Stalk"}
+            {"name": "WW Fish Glomper Stalk"}
         ],
         "map_locations": [
             {
@@ -106,7 +119,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "WW Balcony Dummy Cache"}
+            {"name": "WW Balcony Trinket"}
         ],
         "map_locations": [
             {
@@ -119,7 +132,7 @@
     {
         "name": "Poppit Shop",
         "sections": [
-            {"name": "WW Molten Foundry Poppit Helio"},
+            {"name": "WW Molten Foundry Poppit Trinket"},
             {"name": "WW Molten Foundry Poppit Kear"}
         ],
         "map_locations": [
@@ -146,7 +159,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "WW Molten Foundry Flame Guard"}
+            {"name": "WW Molten Foundry Trinket"}
         ],
         "map_locations": [
             {

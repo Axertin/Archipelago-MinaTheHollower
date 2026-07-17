@@ -28,7 +28,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "QC Bonnet Tomb Desperation Bonnet"}
+            {"name": "QC Bonnet Tomb Trinket"}
         ],
         "map_locations": [
             {
@@ -185,7 +185,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "QC Rancid Room Fly Bait"}
+            {"name": "QC Rancid Room Trinket"}
         ],
         "map_locations": [
             {
@@ -211,13 +211,26 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "QC Royal Tomb Proto Spark"}
+            {"name": "QC Royal Tomb Trinket"}
         ],
         "map_locations": [
             {
                 "map": "Queensbury Ancestral Chamber End",
                 "x": 206,
                 "y": 145
+            }
+        ]
+    },
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "QC Fish Tombstone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Entryway End",
+                "x": 1142,
+                "y": 1006
             }
         ]
     }

@@ -133,7 +133,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "SO Residence Primed Vial Pouch"}
+            {"name": "SO Thorne Residence Basement Trinket"}
         ],
         "map_locations": [
             {
@@ -159,7 +159,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "SO Moonbath Lace Glove"}
+            {"name": "Dugin Fight 2 Trinket"}
         ],
         "map_locations": [
             {

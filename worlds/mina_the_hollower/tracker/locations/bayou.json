@@ -15,7 +15,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "NB Guard Room Twill Weave"}
+            {"name": "NB Guard Room Trinket"}
         ],
         "map_locations": [
             {
@@ -120,7 +120,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "NB Moonlit Hideaway Iron Lung"}
+            {"name": "NB Moonlit Hideaway Trinket"}
         ],
         "map_locations": [
             {

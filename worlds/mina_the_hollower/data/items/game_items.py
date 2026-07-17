@@ -30,7 +30,7 @@ class Sidearms(ItemTypeEnum):
 
 
 class PermanentUpgrades(ItemTypeEnum):
-    HEALING_VIAL_POUCH = ("Healing Vial Pouch", 18, ItemClassification.progression)
+    # HEALING_VIAL_POUCH = ("Healing Vial Pouch", 18, ItemClassification.progression)
     # CANDLE_VISION = ("Memory Goggles", 74, ItemClassification.useful)
     # WORLD_MAP = ("World Map", 75, ItemClassification.useful)
     # ENHANCED_MAP = ("Enhanced Map", 76, ItemClassification.useful)
