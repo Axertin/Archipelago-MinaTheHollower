@@ -19,7 +19,7 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-          python -m pip install --upgrade pip
+          python -m pip install --upgrade pip setuptools
           python ModuleUpdate.py --yes --force --append "WebHostLib/requirements.txt"
 
       - uses: Eijebong/ap-actions/ap-tests@main
