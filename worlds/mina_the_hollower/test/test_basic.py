@@ -10,5 +10,6 @@ class TestBasic(MinaTestBase):
     world: MinaTheHollowerWorld
 
     def test_can_beat_game(self):
+        self.assertTrue(False)
         self.collect_all_but([])
         self.assertBeatable(True)
