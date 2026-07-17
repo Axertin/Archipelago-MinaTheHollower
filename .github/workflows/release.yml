@@ -20,7 +20,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip setuptools
           python ModuleUpdate.py --yes --force --append "WebHostLib/requirements.txt"
-          python -m pip install --force-reinstall --no-deps typing_extensions==4.15.0
+          python -m pip install typing_extensions==4.15.0
 
       - uses: Eijebong/ap-actions/ap-tests@main
         with:
@@ -35,7 +35,7 @@ jobs:
 
       - name: Generate Template
         run: |
-          python Launcher.py --yes "Generate Template Options"
+          python Launcher.py "Generate Template Options"
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
