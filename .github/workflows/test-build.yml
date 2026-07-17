@@ -30,7 +30,7 @@ jobs:
       - name: Build APWorld
         run: |
           python -m pip install typing_extensions==4.15.0
-          python Launcher.py "Build APWorlds"
+          python Launcher.py --yes"Build APWorlds"
 
       - name: Generate Template
         run: |
