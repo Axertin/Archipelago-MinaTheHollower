@@ -4,7 +4,7 @@ from .data.rules.ability_rules import PowerLevelThreshold
 
 
 def set_goal(world):
-    if world.options.goal.value == world.options.goal.option_radientManorGenerator:
+    if world.options.goal.value == world.options.goal.option_radiantManorGenerator:
         world.set_completion_rule(Has("Victory") & PowerLevelThreshold(power=60))
     if world.options.goal.value == world.options.goal.option_fixGenerators:
         world.set_completion_rule(RepairedGeneratorCount(count=world.options.goal_generators.value))
