@@ -1,7 +1,10 @@
 # Mina The Hollower
 ## State of the Implementaion
 The Archipelago Mod and AP World are currently fairly stable. As a late alpha, we are primarily looking for help finding logic bugs and reporting any issues with the mod.
+
+### Known Issues and how to report
 - The mod breaks whenever any game update comes out. Wait for a new mod release to play.
+- You must close and reopen the game to connect to a different slot
 - If you find a logic bug or are unsure what is causing the issue, create an issue on the [AP World Issue Tracker](https://github.com/FyreDay/Archipelago-MinaTheHollower/issues).
 - If you know the problem is with the mod itself, create an issue on the [Mod Issue Tracker](https://github.com/Axertin/mth-apclient/issues)
 
@@ -101,7 +104,7 @@ doesn't appear or you want to hide it once connected, it can be toggled by press
 
 **NEVER LOAD INTO A SAVE AND THEN CONNECT**
 
-**NEVER LOAD INTO A VANILLA SAVE YOU DONT WANT MODIFIED**
+**NEVER LOAD INTO A VANILLA SAVE YOU DO NOT WANT MODIFIED**
 
 There is also a console you can access by presssing **F1**. type ```help``` to see commands
 
@@ -133,13 +136,11 @@ There is also a console you can access by presssing **F1**. type ```help``` to s
 
 **Climb** - The ability to climb ropes.
 
-**Bounce** - The ability to bounce on bounce plants and springboards.
+**Bounce** - The ability to bounce on objects.
 
 **Spring** - The ability to be launched by springboards.
 
 **Carry** - The ability to carry objects.
 
 ### Deathlink
-- Sends a DeathLink every time you die.
-
-(Planned change: only sparkless deaths will trigger DeathLink in the future.)
+- Sends a DeathLink every time you die a sparkless death.
