@@ -1,5 +1,5 @@
 # Mina The Hollower
-## State of the Implementaion
+## State of the Implementation
 The Archipelago Mod and AP World are currently fairly stable. As a late alpha, we are primarily looking for help finding logic bugs and reporting any issues with the mod.
 
 ### Known Issues and how to report
@@ -35,7 +35,7 @@ We would also appreciate feedback on how the map tracker is organized and whethe
 Go to the [Setup guide](setup_en.md)
 # Features
 See our [Features roadmap](roadmap.md) for planned additions
-## options
+## Options
 
 ### Start In Ossex
 - Skips Loner's Landing. You can still teleport there from the pause menu.
@@ -72,5 +72,5 @@ See our [Features roadmap](roadmap.md) for planned additions
 ### Deathlink
 - Sends a DeathLink every time you die a sparkless death.
 
-## Acknoledgements
+## Acknowledgements
 Big shout out to everyone who contributed
