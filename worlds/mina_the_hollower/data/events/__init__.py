@@ -3,8 +3,8 @@ from .. import RepairEventData
 from ..items import AreaKears
 from ...constants import *
 
-QUEENSBURY_CRYPT_DATA = RepairEventData(RepairGenerators.REPAIR_QUEENSBURY_CRYPT, QUEENSBURY_CRYPT, 0, AreaKears.QUEENSBURY_KEARS)
-NOXS_BAYOU_DATA = RepairEventData(RepairGenerators.REPAIR_NOXS_BAYOU, NOXS_BAYOU, 1, AreaKears.BAYOU_KEARS)
+QUEENSBURY_CRYPT_DATA = RepairEventData(RepairGenerators.REPAIR_QUEENSBURY_CRYPT, QUEENSBURY_CRYPT, 1, AreaKears.QUEENSBURY_KEARS)
+NOXS_BAYOU_DATA = RepairEventData(RepairGenerators.REPAIR_NOXS_BAYOU, NOXS_BAYOU, 0, AreaKears.BAYOU_KEARS)
 SEPTEMBURG_DATA = RepairEventData(RepairGenerators.REPAIR_SEPTEMBURG, SEPTEMBURG, 2, AreaKears.SEPTEMBURG_KEARS)
 BONE_BEACH_DATA = RepairEventData(RepairGenerators.REPAIR_BONE_BEACH, BONE_BEACH, 3, AreaKears.BONE_BEACH_KEARS)
 COLTRANE_PEAK_DATA = RepairEventData(RepairGenerators.REPAIR_COLTRANE_PEAK, COLTRANE_PEAK, 4, AreaKears.COLTRANE_PEAK_KEARS)
