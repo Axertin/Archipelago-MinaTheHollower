@@ -1,33 +1,33 @@
 # Mina The Hollower
-
-If you are reading this, you have either been invited to or are interested in helping alpha test Mina the Hollower Archipelago. This randomizer is still in ALPHA, so please play with the intention of reporting bugs and providing feedback.
-
-- If you are unsure what is causing the issue, create an issue on the [AP World Issue Tracker](https://github.com/FyreDay/Archipelago-MinaTheHollower/issues).
+## State of the Implementaion
+The Archipelago Mod and AP World are currently fairly stable. As a late alpha, we are primarily looking for help finding logic bugs and reporting any issues with the mod.
+- The mod breaks whenever any game update comes out. Wait for a new mod release to play.
+- If you find a logic bug or are unsure what is causing the issue, create an issue on the [AP World Issue Tracker](https://github.com/FyreDay/Archipelago-MinaTheHollower/issues).
 - If you know the problem is with the mod itself, create an issue on the [Mod Issue Tracker](https://github.com/Axertin/mth-apclient/issues)
 
-## Current State
+## What does randomization do to this game?
 
-The randomizer is currently believed to be completable. Below is an ever-changing list of implemented features we want tested, and known bugs. Please let us know how your experience goes!
+In the Archipelago Randomizer, all trinkets, player upgrades, underlab improvements, and train tickets. Every chest, trinket, bonestone, and shop are locations.
+
+Ability Shuffling is by default on and is the main way we gate checks in this open world game, with the option to shuffle certain abilities (Burrow, Swim, Climb, Carry, Bounce, Spring),
+preventing them from being used until found. Burrow is by default not shuffled. Shuffle Burrow if you want a challenge.
+
+Enemy randomization is an option in the ingame modifiers if you want to randomize them. (but not taken into account in the ap world)
+Feel free to enable/disable modifiers at will. The AP world assumes you can teleport to Ossex and the Shipwreck at any time
+
+## What are the goals of Mina the Hollower Archipelago?
+- Defeat Giga Lionel and repair the final generator
+- Repair a target number of generators
 
 
-- Known issues:
-  - Backer code breaks any save created in AP. Remove backer code for AP.
-  - You are forced to teleport to ossex if transitions take you to ropes without you having climb
-  - Goal in theory sends after a fix. Let us know how if it sends.
+## Is there a tracker pack?
+There is a map tracker built for Universal Tracker (UT) built into the Mina the Hollower AP world. To use it, install the [Universal Tracker](https://github.com/FarisTheAncient/Archipelago/releases?q=Tracker) tracker.apworld and use it as your text client.
 
-- Location logic has been improved, but still has bugs. Please report anything that UT says is inaccessible that you can reach, or anything UT says is accessible that you cannot reach.
+There is also support for additional commands You can use ```/explain Max Jump``` To see what AP thinks your best trinket combo is at the moment and ```/explain Generators``` to see which generators are on and which ones you can repair with your items
 
-### Tracker
-Use [Universal Tracker](https://github.com/FarisTheAncient/Archipelago/releases?q=Tracker) to keep track of what you can access. There is also an in-progress map tracker built into UT that is actively being worked on.
-The map tracker is currently complete for Train, Ossex, Loner's Landing, Southern Outskirts, and Eastern Hearth. Please limit map tracker feedback to these areas for now.
-
-You can use ```/explain Max Jump``` To see what AP thinks your best trinket combo is at the moment
-
-We would also appreciate feedback on how the map tracker is organized and whether you find it useful as development continues.
+We would also appreciate feedback on how the map tracker is organized and whether you find it useful.
 
 ## Installing
-
-If you previously had this installed, remove the version.dll or the libmthap.so from your game directory
 
 Download the mod and the AP world. The mod will be a zip file with your OS name
 - [Latest Mod Release](https://github.com/Axertin/mth-apclient/releases/latest)
@@ -105,14 +105,6 @@ doesn't appear or you want to hide it once connected, it can be toggled by press
 
 There is also a console you can access by presssing **F1**. type ```help``` to see commands
 
-## What does randomization do to this game?
-
-All chests, shops, trinkets, and large Bonestones are randomized.
-
-### Goals
-- Defeat Giga Lionel and repair the final generator
-- Repair a target number of generators
-
 ## Options
 
 ### Start In Ossex
@@ -125,6 +117,9 @@ All chests, shops, trinkets, and large Bonestones are randomized.
 ### Bone Up Caps
 - **Per Upgrade**: Attack, defense, and sidearm upgrades are progressively limited separately.
 - **All upgrade**: A single progressive cap applies to attack, defense, and sidearm upgrades.
+
+### Maximum Stat Caps
+- Select what your max level for your stats will be
 
 ### Randomize Starting Items
 - Takes your 15 starting items and shuffles them. This increases difficulty and can cause some funny starts.

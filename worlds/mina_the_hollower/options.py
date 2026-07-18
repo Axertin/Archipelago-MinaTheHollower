@@ -103,25 +103,6 @@ class RandomizeEntrances(OptionSet):
 
     # valid_keys = ["Doors", "Stairs", "Area Transitions", "Screen Transitions"]
 
-class ExcludedAreas(OptionSet):
-    """
-    NOT IMPLEMENTED WILL NOT BE USED
-    Each Region you add to this list will not have any locations have any thing in them have any items. That generator will be marked complete
-
-    Example value: ["Astral Orrery", "Queensbury Crypt"]
-
-    Valid Area Names. Copy "NAME" into the brackets [] below. Seperate all names by Commas ,
-    - **"Queensbury Crypt"** -
-    - **"Nox's Bayou"** -
-    - **"Bone Beach"** -
-    - **"Queensbury Crypt"** -
-    - **"Coltrane Peak"** -
-    - **"Astral Orrery"** -
-    """
-    display_name = "Excluded Areas"
-    default = []
-    valid_keys = ["Astral Orrery", "Queensbury Crypt", "Coltrane Peak", "Septemburg", "Bone Beach", "Nox's Bayou"]
-
 class KearRandomization(Choice):
     """
     Vanilla: Universal Kears are in the multiworld. Every Kear Lock you open before receiving every single Kear will be OUT OF LOGIC
@@ -151,7 +132,6 @@ mina_the_hollower_option_groups= [
         MaximumStatLevel,
         OssexStart,
         KearRandomization,
-        ExcludedAreas,
         RandomizeStartingItems,
         # RandomizeEntrances,
         AbilityRando,
