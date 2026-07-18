@@ -4,21 +4,23 @@ import dataclasses
 def range_incl(a: int, b: int) -> range:
     return range(a, b+1)
 
-#Images for a single map Id
+ll_boardwalk: dict[int, int] = {
+    19: 0,
+    3: 1,
+    2: 1,
+    8: 1,
+    16: 1,
+    6: 2,
+    4: 2,
+
+}
+
+
+ll_in: dict[int, int] = {
+    9: 0,
+    13: 0,
+}
 loners_landing: dict[int, int] = {
-    0: 1,
-    17: 1,
-    18: 1,
-    11: 1,
-    19: 2,
-    3: 3,
-    2: 3,
-    8: 3,
-    16: 3,
-    6: 4,
-    4: 4,
-    9: 4,
-    13: 4,
     14: 5,
     15: 5,
     7: 5,
@@ -28,7 +30,14 @@ loners_landing: dict[int, int] = {
     28: 6,
     21: 6,
 }
-
+ll_shipwreck: dict[int, int] = {
+    0: 0,
+    17: 0,
+    18: 0,
+}
+ll_shipwreck_in: dict[int, int] = {
+    11: 0,
+}
 southern_outskirts: dict[int, int] = {
     15: 0,
     6: 0,
@@ -38,15 +47,19 @@ southern_outskirts: dict[int, int] = {
     7: 0,
     23:0,
     22: 0,
-    10: 1,
-    11: 1,
-    12: 1,
-    14: 1,
-    13: 1,
-    16: 2,
-    19: 3,
+    18: 2,
 }
-
+so_barracks: dict[int, int] = {
+    10: 0,
+    11: 0,
+    12: 0,
+    14: 0,
+    13: 0,
+}
+so_thorne: dict[int, int] = {
+    16: 0,
+    19: 0,
+}
 so_poppit: dict[int, int] = {
     18:0
 }
@@ -830,8 +843,14 @@ class MapData:
     start_index: int
 
 area_id_to_map: dict[int, MapData] = {
+    183: MapData(ll_boardwalk, 2),
+    188: MapData(ll_in, 4),
     184: MapData(loners_landing, 0),
+    186: MapData(ll_shipwreck_in, 1),
+    187: MapData(ll_shipwreck, 1),
     59: MapData(southern_outskirts, 7),
+    60: MapData(so_barracks, 8),
+    62: MapData(so_thorne, 10),
     61: MapData(cave_network, 11),
     92: MapData(mining_passage, 12),
     54: MapData(eastern_heath, 13),

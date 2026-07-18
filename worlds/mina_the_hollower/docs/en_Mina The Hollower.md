@@ -73,4 +73,4 @@ See our [Features roadmap](roadmap.md) for planned additions
 - Sends a DeathLink every time you die a sparkless death.
 
 ## Acknowledgements
-Big shout out to everyone who contributed
+Big shout out to everyone who [contributed](contributers.md)

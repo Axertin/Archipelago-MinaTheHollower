@@ -78,7 +78,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Music Hall Pneumatic Armlet" : LocationData(148, "Ossex Music Hall", CanCarry() & CanBurrow() & CanSwim() & CanClimb()),
         # "OS Station Train Ticket Donation" : LocationData(149, "Ossex Station", progress_type=LocationProgressType.EXCLUDED),
         "OS Station Underside Bell of Grace" : LocationData(158, "Ossex Station Underside Main", ShopPrice(cost=1000), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
-        "OS Trinket Bazaar Kear" : LocationData(160, "Ossex Trinket Bazaar"),
+        "OS Trinket Bazaar Kear" : LocationData(160, "Ossex Trinket Bazaar", CanBurrow()),
         "OS Trinket Bazaar Plasma Funnel" : LocationData(179, "Ossex Trinket Bazaar", ShopPrice(cost=700)),
         "OS Trinket Bazaar Seismic Belt" : LocationData(180, "Ossex Trinket Bazaar", ShopPrice(cost=700)),
         "OS Trinket Bazaar Brisk Brew" : LocationData(181, "Ossex Trinket Bazaar", ShopPrice(cost=700)),

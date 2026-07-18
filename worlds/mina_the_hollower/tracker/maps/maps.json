@@ -122,8 +122,8 @@
   {"name": "Astral Orrery Hall Of Schalars", "img": "area_images/astral_orrery/scholar.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Astral Orrery Sealed Archive", "img": "area_images/astral_orrery/archive.png", "location_size": 32, "location_border_thickness": 2},
 
-  {"name": "Radiant Manor Foyer", "img": "area_images/radiant_manor/Foyer.png", "location_size": 32, "location_border_thickness": 2},
-  {"name": "Radiant Manor Ballroom", "img": "area_images/radiant_manor/Ballroom.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Foyer", "img": "area_images/radiant_manor/foyer.png", "location_size": 32, "location_border_thickness": 2},
+  {"name": "Radiant Manor Ballroom", "img": "area_images/radiant_manor/ballroom.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Radiant Manor Backlit Rooftop", "img": "area_images/radiant_manor/roof.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Radiant Manor West Wing", "img": "area_images/radiant_manor/west.png", "location_size": 32, "location_border_thickness": 2},
   {"name": "Radiant Manor Rafters", "img": "area_images/radiant_manor/rafters.png", "location_size": 32, "location_border_thickness": 2},
