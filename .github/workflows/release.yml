@@ -39,6 +39,11 @@ jobs:
         run: |
           python Launcher.py "Generate Template Options"
 
+      - name: Fix template AP version
+        run: |
+          sed -i '0,/version: 0\.6\.8/s//version: 0.6.7/' \
+            "Players/Templates/Mina The Hollower.yaml"
+
       - name: Create Release
         uses: softprops/action-gh-release@v2
         with:
