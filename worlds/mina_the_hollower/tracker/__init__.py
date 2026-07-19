@@ -94,6 +94,9 @@ cave_eastern_heath: dict[int, int] = {
     19: 0,
     20: 0
 }
+eh_chop: dict[int, int] = {
+    21:0,
+}
 under_eastern_heath: dict[int, int] = {
     23:0,
     18:0,
@@ -325,6 +328,7 @@ mourners_mile: dict[int, int] = {
 }
 mm_tomb: dict[int, int] = {
     13:0,
+    15:0,
 }
 mm_cave: dict[int, int] = {
     6:0,
@@ -551,6 +555,23 @@ bb_shortcut: dict[int, int] = {
     8:1,
     7:1
 }
+bb_trail_2: dict[int, int] = {
+    0:0,
+}
+bb_beach: dict[int, int] = {
+    1:0,
+}
+bb_ocean: dict[int, int] = {
+    1:0,
+    3:0,
+}
+bb_cliff: dict[int, int] = {
+    2:0,
+    20:4,
+}
+bb_gen: dict[int, int] = {
+    0:0
+}
 bb_trail: dict[int, int] = {
     16:0,
     5:0,
@@ -565,6 +586,9 @@ bb_trail: dict[int, int] = {
 }
 bb_tent: dict[int, int] = {
     19:0,
+}
+bb_mirror: dict[int, int] = {
+    13:0,
 }
 bb_cave: dict[int, int] = {
     10:0,
@@ -582,6 +606,7 @@ bb_back: dict[int, int] = {
 }
 
 bb_maw: dict[int, int] = {
+    0:0,
     29:0,
     5:0,
 }
@@ -854,6 +879,7 @@ area_id_to_map: dict[int, MapData] = {
     61: MapData(cave_network, 11),
     92: MapData(mining_passage, 12),
     54: MapData(eastern_heath, 13),
+    56: MapData(eh_chop, 16),
     53: MapData(under_eastern_heath, 16),
     52: MapData(cave_eastern_heath, 16),
     144: MapData(balcony, 17),
@@ -945,10 +971,16 @@ area_id_to_map: dict[int, MapData] = {
     39: MapData(sf_junction, 75),
     97: MapData(sf_mine, 76),
     37: MapData(bb_shortcut, 77),
-    24: MapData(bb_trail, 78),
+    24: MapData(bb_trail, 77),
+    40: MapData(bb_gen, 77),
+    25: MapData(bb_trail_2, 77),
+    26: MapData(bb_beach, 79),
+    27: MapData(bb_ocean, 80),
+    23: MapData(bb_cliff, 79),
     36: MapData(bb_back, 78),
     34: MapData(bb_tent, 81),
     28: MapData(bb_cave, 81),
+    38: MapData(bb_mirror, 81),
     29: MapData(bb_maw, 82),
     35: MapData(bb_arena, 82),
     30: MapData(bb_tract, 82),

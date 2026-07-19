@@ -1,8 +1,10 @@
 from BaseClasses import LocationProgressType
 from rule_builder.rules import Has, CanReachLocation
 from ... import RegionConnection, Transition, LocationData
+from ...items import SingleKears, PermanentUpgrades
 from ...rules.ability_rules import CanBurrow, CanBounce, CanClimb, CanCarry, HasFishingRod
 from ...rules.movement_rules import CanJumpTiles
+from ...rules.state_rules import HasKear
 
 collectable_locations: dict[str, LocationData] = {
     "CTP Frigid Station Missed Train Chest": LocationData(113, "Coltrane Peak Station Tracks"),
@@ -21,6 +23,8 @@ collectable_locations: dict[str, LocationData] = {
     "CTP Maelstrom Locomotress Health Rose": LocationData(124, "Coltrane Peak Agnes Express Arena"),
     "CTP Frozen Pass Chest" : LocationData(232, "Coltrane Peak Frozen Pass"),
     "CTP Frozen Pass IceBlock Trinket" : LocationData(237, "Coltrane Peak Frozen Pass Bottom"),
+    "WW Balcony Snowball Fight Trinket" : LocationData(242, "Western Wilds Balcony", HasKear(kear=SingleKears.WESTERN_WILDS_BALCONY_KEAR.value) & CanBurrow() & CanCarry() & CanClimb()
+                                                           & Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value)),
 }
 
 

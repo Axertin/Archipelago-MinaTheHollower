@@ -16,7 +16,6 @@ collectable_locations: dict[str, LocationData] = {
     "MM Spike Vault Hidden Room Kear": LocationData(310, "Mourner's Mile Spike Vault Hidden Room"),
     "MM Tower Tunnel Chest #1": LocationData(313, "Mourner's Mile Tower Tunnel Dark", CanBurrow()),
     "MM Tower Tunnel Chest #2": LocationData(314, "Mourner's Mile Tower Tunnel Dark", CanBurrow()),
-    "MM Knight's Stand Bonestone": LocationData(303, "Mourner's Mile Knight's Guard Hill"),
     "MM Mina's Grave Chest": LocationData(309, "Mourner's Mile Mina's Grave"),
     "MM Mina's Grave Trinket": LocationData(308, "Mourner's Mile Mina's Grave"),
     "MM Spike Hell Chest": LocationData(355, "Mourner's Mile Spike Hell Sandfall"),

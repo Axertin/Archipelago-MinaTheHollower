@@ -138,7 +138,7 @@ class Trinkets(ItemTypeEnum):
     PRIMED_VIAL_POUCH = ("Primed Vial Pouch", 154, ItemClassification.progression)
     FLAME_GUARD = ("Flame Guard", 155, ItemClassification.progression)
     SPARK_CATCHER = ("Spark Catcher", 156, ItemClassification.progression)
-    EVASION_POWER = ("Evasion Power", 157, ItemClassification.progression)
+    EVASION_POWDER = ("Evasion Powder", 157, ItemClassification.progression)
     VASCULAR_SYRUP = ("Vascular Syrup", 158, ItemClassification.progression)
     PIT_PRESERVER = ("Pit Preserver", 159, ItemClassification.progression)
     IRON_LUNG = ("Iron Lung", 160, ItemClassification.progression)

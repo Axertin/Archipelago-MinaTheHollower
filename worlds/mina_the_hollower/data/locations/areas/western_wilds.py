@@ -21,8 +21,6 @@ collectable_locations: dict[str, LocationData] = {
     "WW Molten Foundry Trinket" : LocationData(249, "Western Wilds Molten Dungeon End"),
     "WW Fish Glomper Stalk" : LocationData(258, "Western Wilds Western Pond", HasFishingRod()),
     "WW Balcony Chest" : LocationData(254, "Western Wilds Balcony", HasKear(kear=SingleKears.WESTERN_WILDS_BALCONY_KEAR.value)),
-    "WW Balcony Snowball Fight Trinket" : LocationData(242, "Western Wilds Balcony", HasKear(kear=SingleKears.WESTERN_WILDS_BALCONY_KEAR.value) & CanBurrow() & CanCarry() & CanClimb()
-                                                       & Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value)),
 }
 
 boss_locations: dict[str, LocationData] = {

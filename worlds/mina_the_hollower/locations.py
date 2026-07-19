@@ -1,7 +1,7 @@
 from BaseClasses import Region, Location, ItemClassification, LocationProgressType
 from rule_builder.rules import Has
 from .data.events import RADIANT_MANOR_DATA
-from .data.items import BoneFiller, Abilities
+from .data.items import BoneFiller, Abilities, PermanentUpgrades
 from .data.locations import all_regions, all_region_transitions, all_internal_region_connections, \
     all_permanent_locations, dungeon_locations
 from .data import LocationData, RegionConnection, Transition, matching_transition_types
@@ -71,6 +71,23 @@ def create_regions(world: "MinaTheHollowerWorld", regions: set[str]):
         create_location(world, "Climb", LocationData(None, "Climb Region", lambda _: False))
         create_location(world, "Bounce", LocationData(None, "Bounce Region", lambda _: False))
         create_location(world, "Spring", LocationData(None, "Spring Region", lambda _: False))
+
+        world.create_entrance(menu, create_region(world, "Train Pass Region"), name="Menu To Train Pass",
+                              rule=Has(PermanentUpgrades.TRAIN_PASS.value))
+        world.create_entrance(menu, create_region(world, "Bayou Ticket Region"), name="Menu To Bayou Ticket",
+                              rule=Has(PermanentUpgrades.BAYOU_TICKET.value))
+        world.create_entrance(menu, create_region(world, "Septemburg Ticket Region"), name="Menu To Septemburg Ticket",
+                              rule=Has(PermanentUpgrades.SEPTEMBURG_TICKET.value))
+        world.create_entrance(menu, create_region(world, "Bone Beach Ticket Region"), name="Menu To Bone Beach Ticket",
+                              rule=Has(PermanentUpgrades.BONE_BEACH_TICKET.value))
+        world.create_entrance(menu, create_region(world, "Coltrane Peak Ticket Region"), name="Menu To Coltrane Peak Ticket",
+                              rule=Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value))
+
+        create_location(world, "Train Pass", LocationData(None, "Train Pass Region", lambda _: False))
+        create_location(world, "Bayou Ticket", LocationData(None, "Bayou Ticket Region", lambda _: False))
+        create_location(world, "Septemburg Ticket", LocationData(None, "Septemburg Ticket Region", lambda _: False))
+        create_location(world, "Bone Beach Ticket", LocationData(None, "Bone Beach Ticket Region", lambda _: False))
+        create_location(world, "Coltrane Peak Ticket", LocationData(None, "Coltrane Peak Ticket Region", lambda _: False))
 
 
 

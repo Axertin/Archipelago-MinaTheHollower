@@ -12,15 +12,15 @@ class Goal(Choice):
     option_radiantManorGenerator = 0
     option_fixGenerators = 1
     # option_killBosses = 2
-    default = 0
+    default = 1
 
 class BoneUpCap(Choice):
     """
     How do you want your Bone Up Cap Items. A progressive each for attack, defense and Sidearms OR One progressive item for all
     """
     display_name = "Bone Up Cap Type"
-    option_perUpgrade = 0
-    option_allUpgrade = 1
+    option_perUpgrade = 1
+    option_allUpgrade = 0
     default = 0
 
 class NumberOfGenerators(Range):
@@ -30,7 +30,7 @@ class NumberOfGenerators(Range):
     display_name = "Generators Required"
     range_start = 1
     range_end = 6
-    default = 6
+    default = 3
 
 class NumberOfBosses(Range):
     """

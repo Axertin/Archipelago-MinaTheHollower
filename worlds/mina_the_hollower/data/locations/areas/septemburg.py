@@ -12,7 +12,7 @@ collectable_locations: dict[str, LocationData] = {
     "SB Launch Pad Secret Room #2 Kear": LocationData(89, "Septemburg Withered Farms Secret Springs", CanSpring()),
     "SB Kid Room Chest": LocationData(92, "Septemburg Withered Farms Kid Room 1", CanBurrow()),
     "SB Hidden Mandrake Room Chest": LocationData(93, "Septemburg Hidden Mandrake Room", CanJumpTiles(distance=2)),
-    "SB Hidden Crop Thresher Room Chest": LocationData(90, "Septemburg Tractor Chase", CanSpring() & CanBurrow()),
+    "SB Hidden Crop Thresher Room Chest": LocationData(90, "Septemburg Tractor Chase", CanSpring() & CanBurrow() & CanClimb()),
     "SB Rotten Barn Chest": LocationData(94, "Septemburg Rotten Barn Kid Room", CanBurrow()),
     "SB Below Crow Town Bridge Chest": LocationData(98, "Septemburg Crow Town Tunnel Top", HasKear(kear=SingleKears.SEPTEMBURG_CROW_TOWN_TUNNEL_KEAR.value)),
     "SB Crow Town Shop Trinket": LocationData(102, "Septemburg Crow Town"),

@@ -6,7 +6,7 @@ from ...items import Weapons, PlayerUpgrades, Sidearms, PermanentUpgrades, BoneU
         SingleKears, Wallets
 from ...items.abilities import ABILITY_NAMES
 from ...rules.ability_rules import CanBurrow, CanBounce, HasVialsCount, CanClimb, \
-        HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform, HasTrinket, CanSwim
+        HasReachingSideArm, HasFishingRod, CanCarry, HasBeastiumTransform, HasTrinket, CanSwim, PowerLevelThreshold
 from ...rules.state_rules import HasAllKears, HasTrinketCount, HasKear, RepairedGeneratorCount, ShopPrice
 from ...rules.movement_rules import CanJumpTiles
 
@@ -18,7 +18,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Courtyard East Deboning Wand" : LocationData(161, "Ossex Courtyard East", ShopPrice(cost=1000), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
         "OS Courtyard West Weapon Upgrade" : LocationData(163, "Ossex Courtyard West Chest", HasVialsCount(count=5)),
         "OS Courtyard Garden Trinket" : LocationData(171, "Ossex Courtyard East Manor Side"),
-        "OS Evra's Rest Health Rose" : LocationData(352, "Ossex Goddred's Grave End"),
+        "OS Evra's Rest Health Rose" : LocationData(352, "Ossex Goddred's Grave End", PowerLevelThreshold(power=50)),
         "OS Couple's Quarter Chest" : LocationData(165, "Ossex Couple's Quarter", CanBurrow() | HasReachingSideArm(), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
 
         "OS Hollower's Guild Back Room Kear Chest" : LocationData(168, "Ossex Guild Back Room"),
@@ -82,11 +82,11 @@ collectable_locations: dict[str, LocationData] = {
         "OS Trinket Bazaar Plasma Funnel" : LocationData(179, "Ossex Trinket Bazaar", ShopPrice(cost=700)),
         "OS Trinket Bazaar Seismic Belt" : LocationData(180, "Ossex Trinket Bazaar", ShopPrice(cost=700)),
         "OS Trinket Bazaar Brisk Brew" : LocationData(181, "Ossex Trinket Bazaar", ShopPrice(cost=700)),
-        "OS Trinket Bazaar Intrevenous Vial" : LocationData(182, "Ossex Trinket Bazaar", ShopPrice(cost=1250)),
-        "OS Trinket Bazaar Shock Flint" : LocationData(183, "Ossex Trinket Bazaar", ShopPrice(cost=1250)),
-        "OS Trinket Bazaar Uranium Bracelet" : LocationData(25, "Ossex Trinket Bazaar", HasTrinketCount(count=15) & ShopPrice(cost=2000)),
-        "OS Trinket Bazaar Bubble Ring" : LocationData(184, "Ossex Trinket Bazaar", HasTrinketCount(count=15) & ShopPrice(cost=1500)),
-        "OS Trinket Bazaar Counter Vial" : LocationData(185, "Ossex Trinket Bazaar", HasTrinketCount(count=15) & ShopPrice(cost=1500)),
+        "OS Trinket Bazaar Intrevenous Vial" : LocationData(182, "Ossex Trinket Bazaar", ShopPrice(cost=1250) & HasTrinketCount(count=5)),
+        "OS Trinket Bazaar Shock Flint" : LocationData(183, "Ossex Trinket Bazaar", ShopPrice(cost=1250) & HasTrinketCount(count=5)),
+        "OS Trinket Bazaar Uranium Bracelet" : LocationData(25, "Ossex Trinket Bazaar", HasTrinketCount(count=10) & ShopPrice(cost=2000)),
+        "OS Trinket Bazaar Bubble Ring" : LocationData(184, "Ossex Trinket Bazaar", HasTrinketCount(count=10) & ShopPrice(cost=1500)),
+        "OS Trinket Bazaar Counter Vial" : LocationData(185, "Ossex Trinket Bazaar", HasTrinketCount(count=20) & ShopPrice(cost=1500)),
         "OS Train Private Cabin Chest" : LocationData(360, "Ossex Train Private Cabin Left", CanBurrow() & HasKear(kear=SingleKears.OSSEX_TRAIN_KEAR_1.value)), #needs burrow, 1 kear,
         "OS Train Private Cabin Safety Shroud" : LocationData(357, "Ossex Train Private Cabin Left", CanBurrow() & HasKear(kear=SingleKears.OSSEX_TRAIN_KEAR_1.value) & HasKear(kear=SingleKears.OSSEX_TRAIN_KEAR_2.value) ),
     # "OS Forgotten Cave Disturbing Dance" : LocationData(351, "Ossex City Center Main", CanBurrow() & CanBounce() & CanClimb()),

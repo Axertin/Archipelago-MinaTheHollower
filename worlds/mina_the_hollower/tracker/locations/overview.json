@@ -156,7 +156,7 @@
             {"name": "EH Grassland Poppit Cave Kear"},
             {"name": "EH Grassland Poppit Cave Chest"},
             {"name": "EH Grassland Riverbed Chest"},
-            {"name": "EH Grassland Vertical Spinner Room Chest"},
+            {"name": "EH Carry Head QB Chest"},
             {"name": "EH Grassland Waterfall Chest"},
             {"name": "EH Grassland Waterfall Kite Trinket"},
             {"name": "EH Buckler's Bluff Joule Box"},
@@ -572,6 +572,71 @@
                 "map": "World Map",
                 "x": 306,
                 "y": 264
+            }
+        ]
+    },
+    {
+        "name": "Has Train Pass",
+        "sections": [
+            {"name": "Train Pass"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 83,
+                "y": 202
+            }
+        ]
+    },
+    {
+        "name": "Has Bayou Ticket",
+        "sections": [
+            {"name": "Bayou Ticket"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 83,
+                "y": 218
+            }
+        ]
+    },
+    {
+        "name": "Has Septemburg Ticket",
+        "sections": [
+            {"name": "Septemburg Ticket"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 83,
+                "y": 234
+            }
+        ]
+    },
+    {
+        "name": "Has Bone Beach",
+        "sections": [
+            {"name": "Bone Beach Ticket"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 83,
+                "y": 250
+            }
+        ]
+    },
+    {
+        "name": "Has Coltrane Peak Ticket",
+        "sections": [
+            {"name": "Coltrane Peak Ticket"}
+        ],
+        "map_locations": [
+            {
+                "map": "World Map",
+                "x": 83,
+                "y": 266
             }
         ]
     }

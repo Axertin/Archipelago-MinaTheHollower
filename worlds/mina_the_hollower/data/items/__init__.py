@@ -137,7 +137,7 @@ trinket_powers: list[ItemPower] = [
     ItemPower(Trinkets.NITER_BELT, 1),
     ItemPower(Trinkets.JOULE_SYRINGE, 2),
     ItemPower(Trinkets.TUNNELING_CODEX, 1),
-    ItemPower(Trinkets.EVASION_POWER, 2),
+    ItemPower(Trinkets.EVASION_POWDER, 2),
     ItemPower(FilledJug.PLASMA_JUG, 2, PlayerUpgrades.HEALING_VIAL),
     ItemPower(Trinkets.VASCULAR_SYRUP, 1),
     ItemPower(Trinkets.TWILL_WEAVE, 1),
