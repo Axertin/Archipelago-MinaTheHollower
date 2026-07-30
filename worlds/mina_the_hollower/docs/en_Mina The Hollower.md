@@ -1,10 +1,9 @@
 # Mina The Hollower
 ## State of the Implementation
-The Archipelago Mod and AP World are currently fairly stable. As a late alpha, we are primarily looking for help finding logic bugs and reporting any issues with the mod.
+The Archipelago Mod and AP World are currently in a beta state. It is stable and we are primarily looking for help finding logic bugs and reporting any issues with the mod.
 
 ### Known Issues and how to report
 - The mod breaks whenever any game update comes out. Wait for a new mod release to play.
-- You must close and reopen the game to connect to a different slot
 - If you find a logic bug or are unsure what is causing the issue, create an issue on the [AP World Issue Tracker](https://github.com/FyreDay/Archipelago-MinaTheHollower/issues).
 - If you know the problem is with the mod itself, create an issue on the [Mod Issue Tracker](https://github.com/Axertin/mth-apclient/issues)
 
@@ -35,6 +34,9 @@ We would also appreciate feedback on how the map tracker is organized and whethe
 Go to the [Setup guide](setup_en.md)
 # Features
 See our [Features roadmap](roadmap.md) for planned additions
+
+# FAQ
+[Mod FAQ](https://github.com/Axertin/mth-apclient/blob/master/docs/faq.md)
 ## Options
 
 ### Start In Ossex

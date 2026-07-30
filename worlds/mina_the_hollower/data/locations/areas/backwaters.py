@@ -24,7 +24,7 @@ collectable_locations: dict[str, LocationData] = {
     "BW Lucky's Lair Kear": LocationData(292, "Backwaters Lucky's Lair", CanBurrow() & CanCarry()),
     "BW Fishing Hole Fishing Rod": LocationData(300, "Backwaters Fishing Hole"),
     "BW Fish Fleeper Head": LocationData(299, "Backwaters Fishing Hole", HasFishingRod()),
-    "BW Fishing Hole Thalassian Pearl": LocationData(302, "Backwaters Fishing Hole", HasFishingRod() & CanSwim() & (HasTrinket(trinket=Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
+    "BW Fishing Hole Thalassian Pearl": LocationData(302, "Backwaters Fishing Hole", PowerLevelThreshold(power=35) & HasFishingRod() & CanSwim() & (HasTrinket(trinket=Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
     "BW Fishing Hole Gilded Rod": LocationData(301, "Backwaters Fishing Hole", RepairedGeneratorCount(count=6) & HasFishingRod() & CanSwim() & (HasTrinket(trinket=Trinkets.TUNNELING_CODEX.value) | Has(FishingUpgrades.FISHING_ROD.value, count=2))),
 }
 

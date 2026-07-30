@@ -61,19 +61,10 @@ appear. The mod's own runtime log is `~/.local/share/mth-apclient/mthap_*.log` (
 An ImGui overlay window should appear allowing connection and disconnection to an AP server. If it
 doesn't appear or you want to hide it once connected, it can be toggled by pressing `F2`.
 
-1. Connect to AP immediately on game launch
-2. Create a new save or load into a save already played on with this slot
+You will see "disconnected" instead of "Start Game" until you are connected to a multiworld.
 
-# Warnings
+You will automatically load into a save once you click "Start game"
 
-**NEVER CREATE A SAVE AND THEN CONNECT**
-
-**NEVER COPY A SAVE AND PLAY THAT SAVE IN AP**
-
-**NEVER LOAD INTO A SAVE AND THEN CONNECT**
-
-**NEVER LOAD INTO A VANILLA SAVE YOU DO NOT WANT MODIFIED**
-
-**CLOSE AND REOPEN THE GAME IF YOU WANT TO CHANGE SLOTS**
+## Debugging
 
 There is also a console you can access by presssing **F1**. type ```help``` to see commands

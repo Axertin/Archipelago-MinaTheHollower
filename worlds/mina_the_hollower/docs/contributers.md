@@ -6,5 +6,5 @@ for helping with routing
 
 Big thanks to all of our testers including
 
-@Zxavier, @Slipomatic, and many more
+@ZXavier, @Slipomatic, and many more
 

@@ -19,7 +19,7 @@ collectable_locations: dict[str, LocationData] = {
     "SO Southern Pit Room Bonestone" : LocationData(261, "Southern Outskirts Commons Southern Pit Room Main", CanJumpTiles(distance=5, has_wall=True) & CanBurrow()),
     "SO Western Pit Room Chest" : LocationData(267, "Southern Outskirts Commons Western Pit Room Main", item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
     "SO Thorne Residence Basement Trinket" : LocationData(269, "Southern Outskirts Residence Basement", item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
-    "SO Mining Passage Chest" : LocationData(331, "Southern Outskirts Mining Passage Secret"),
+    "SO Mining Passage Chest" : LocationData(331, "Southern Outskirts Mining Passage Secret", CanBurrow() & CanBounce() &  HasVialsCount(count=2)),
     "Dugin Fight 2 Trinket" : LocationData(263, "Southern Outskirts Moonbath", RepairedGeneratorCount(count=2)),
     "SO Four Flowers Chest" : LocationData(271, "Southern Outskirts Four Flowers Shortcut", CanBounce()),
 }

@@ -18,7 +18,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Courtyard East Deboning Wand" : LocationData(161, "Ossex Courtyard East", ShopPrice(cost=1000), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
         "OS Courtyard West Weapon Upgrade" : LocationData(163, "Ossex Courtyard West Chest", HasVialsCount(count=5)),
         "OS Courtyard Garden Trinket" : LocationData(171, "Ossex Courtyard East Manor Side"),
-        "OS Evra's Rest Health Rose" : LocationData(352, "Ossex Goddred's Grave End", PowerLevelThreshold(power=50)),
+        "OS Evra's Rest Health Rose" : LocationData(352, "Ossex Goddred's Grave End", PowerLevelThreshold(power=60)),
         "OS Couple's Quarter Chest" : LocationData(165, "Ossex Couple's Quarter", CanBurrow() | HasReachingSideArm(), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
 
         "OS Hollower's Guild Back Room Kear Chest" : LocationData(168, "Ossex Guild Back Room"),
