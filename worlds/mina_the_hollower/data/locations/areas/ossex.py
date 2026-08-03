@@ -70,7 +70,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Atelier Chest" : LocationData(169, "Ossex Atelier", CanJumpTiles(distance=3, has_wall=True) & CanBurrow()),
         "OS Atelier Vitality Vest" : LocationData(208, "Ossex Atelier", ShopPrice(cost=3000)),
         "OS Atelier Custom Fit" : LocationData(209, "Ossex Atelier", Has(PermanentUpgrades.VITALITY_VEST.value) & Has(PermanentUpgrades.SAFETY_SHROUD.value) & ShopPrice(cost=2000)),
-        "OS Bowery Double Sidearm Permit" : LocationData(219, "Ossex Bowery Main", Has(BoneUps.SIDEARM_BONE_UP_CAP.value, count=5) | Has(GenericBoneUp.ALL_BONE_UP_CAP.value, count=5)),
+        "OS Bowery Double Sidearm Permit" : LocationData(219, "Ossex Bowery Main", Has(BoneUps.SIDEARM_BONE_UP_CAP.value, count=4) | Has(GenericBoneUp.ALL_BONE_UP_CAP.value, count=4)),
         "OS Bowery Upper Chest" : LocationData(173, "Ossex Bowery Upper", CanBurrow() & (HasReachingSideArm() | HasTrinket(trinket=Trinkets.SEISMIC_BELT.value) | HasBeastiumTransform())),
         "OS Bowery New House Bonestone" : LocationData(159, "Ossex Bowery Tall Residence Upper Main", CanBurrow()),
         "OS Bowery Residence Kear" : LocationData(156, "Ossex Bowery Begger Residence"),

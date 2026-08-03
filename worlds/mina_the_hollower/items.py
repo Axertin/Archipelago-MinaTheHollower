@@ -59,10 +59,10 @@ def create_items(world: "MinaTheHollowerWorld"):
 
     if world.options.bone_up_cap == BoneUpCap.option_perUpgrade:
         for item_type in BoneUps:
-            for _ in range(10):
+            for _ in range(9):
                 all_items.append(ItemData(item_type, 1))
     else:
-        for _ in range(10):
+        for _ in range(9):
             all_items.append(ItemData(GenericBoneUp.ALL_BONE_UP_CAP, 1))
 
     starting_items: list[Item] = [] if not is_ut else world.starting_items
@@ -181,7 +181,7 @@ def create_items(world: "MinaTheHollowerWorld"):
     remaining = total_location_count - len(world.itempool)
     if world.options.bone_up_cap == BoneUpCap.option_perUpgrade:
         for item_type in BoneUps:
-            for _ in range(world.options.max_stat_level.value-10):
+            for _ in range(world.options.max_stat_level.value-9):
                 create_item(world, ItemData(item_type, 1))
                 remaining -= 1
                 if remaining <= 20:
@@ -190,7 +190,7 @@ def create_items(world: "MinaTheHollowerWorld"):
                 break
     else:
         if world.options.max_stat_level.value > 10:
-            for _ in range(world.options.max_stat_level.value-10):
+            for _ in range(world.options.max_stat_level.value-9):
                 create_item(world, ItemData(GenericBoneUp.ALL_BONE_UP_CAP, 1))
                 remaining -= 1
                 if remaining <= 20:
@@ -220,7 +220,6 @@ def create_event(world: "MinaTheHollowerWorld", region_name: str, item_name: str
     event_loc.place_locked_item(
         MinaTheHollowerItem(item_name, ItemClassification.progression, None, world.player))
     region.locations.append(event_loc)
-
 
 def create_events(world: "MinaTheHollowerWorld"):
 
