@@ -115,7 +115,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
     def generate_early(self) -> None:
 
         if self.options.goal.value == self.options.goal.option_fixGenerators:
-            if self.options.goal_generators.value < 3:
+            if self.options.goal_generators.value <= 3:
                 valid_generators = [QUEENSBURY_CRYPT, NOXS_BAYOU, SEPTEMBURG, BONE_BEACH]
                 if self.options.goal_generators == 1:
                     self.options.max_stat_level.value = 6
@@ -135,8 +135,7 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
             selected_generators = self.random.sample(valid_generators, self.options.goal_generators.value)
             self.broken_generators = [gen.index for gen in repair_generator_data if gen.gen_name in selected_generators]
 
-
-        if self.options.ability_rando.value:
+        if len(self.options.ability_rando.value) != 0:
             self.options.ossex_start.value = self.options.ossex_start.option_true
         self.handle_ut_yamless(None)
 
@@ -170,16 +169,16 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
         set_goal(self)
 
 
-    def generate_output(self, output_directory: str):
-        print("Generating Output")
-        visualize_regions(
-            self.multiworld.get_region("Menu", self.player),
-            f"Player{self.player}_output.puml",
-            show_entrance_names=True,
-            regions_to_highlight=self.multiworld.get_all_state(
-                self.player
-            ).reachable_regions[self.player],
-        )
+    # def generate_output(self, output_directory: str):
+    #     print("Generating Output")
+    #     visualize_regions(
+    #         self.multiworld.get_region("Menu", self.player),
+    #         f"Player{self.player}_output.puml",
+    #         show_entrance_names=True,
+    #         regions_to_highlight=self.multiworld.get_all_state(
+    #             self.player
+    #         ).reachable_regions[self.player],
+    #     )
 
     def fill_slot_data(self) -> id:
         ability_rando = self.options.ability_rando.value
