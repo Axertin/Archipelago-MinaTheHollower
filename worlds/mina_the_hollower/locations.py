@@ -101,8 +101,8 @@ def get_regions(world: "MinaTheHollowerWorld") -> set[str]:
 
 def create_entrances(world: "MinaTheHollowerWorld", regions):
     menu = world.get_region("Menu")
-
-    world.create_entrance(menu, world.get_region("Ossex City Center Main"), name="Menu To Ossex")
+    if world.options.ossex_start.value:
+        world.create_entrance(menu, world.get_region("Ossex City Center Main"), name="Menu To Ossex")
     world.create_entrance(menu, world.get_region("Loner's Landing Shipwreck"), name="Menu To Shipwreck")
     for name, data in all_region_transitions.items():
         exiting_region = world.get_region(data.exiting_screen)
