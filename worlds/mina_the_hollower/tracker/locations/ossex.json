@@ -20,8 +20,8 @@
         "map_locations": [
             {
                 "map": "Ossex Courtyard",
-                "x": 1653,
-                "y": 222
+                "x": 80,
+                "y": 80
             }
         ]
     },
@@ -731,6 +731,32 @@
                 "map": "Ossex",
                 "x": 1968,
                 "y": 433
+            }
+        ]
+    },
+    {
+        "name": "Vita's Shop",
+        "sections": [
+            {"name": "SF Train Vita's Shop"}
+        ],
+        "map_locations": [
+            {
+                "map": "Train",
+                "x": 923,
+                "y": 120
+            }
+        ]
+    },
+    {
+        "name": "Defeat Evra",
+        "sections": [
+            {"name": "OS Evra's Rest Health Rose"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex Courtyard",
+                "x": 2479,
+                "y": 65
             }
         ]
     }
