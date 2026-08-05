@@ -15,7 +15,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "RM Mimic Chamber Dodging Pendulum"}
+            {"name": "RM Mimic Chamber Trinket"}
         ],
         "map_locations": [
             {
@@ -91,14 +91,14 @@
         ]
     },
     {
-        "name": "Chest",
+        "name": "Trinket",
         "sections": [
-            {"name": "RM Mimic Chamber Dodging Pendulum"}
+            {"name": "RM Mimic Chamber Trinket"}
         ],
         "map_locations": [
             {
                 "map": "Radiant Manor Ballroom",
-                "x": 1899,
+                "x": 1099,
                 "y": 722
             }
         ]
