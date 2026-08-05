@@ -602,5 +602,137 @@
                 "y": 285
             }
         ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "OS Station Underside Bell of Grace"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 295,
+                "y": 305
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "OS Couple's Quarter Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 701,
+                "y": 305
+            }
+        ]
+    },
+    {
+        "name": "Kear",
+        "sections": [
+            {"name": "OS Bowery Residence Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 81,
+                "y": 402
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "OS New House Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 303,
+                "y": 499
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "OS Gutterways Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 576,
+                "y": 768
+            }
+        ]
+    },
+    {
+        "name": "Music Hall",
+        "sections": [
+            {"name": "OS Music Hall Chest"}
+            {"name": "OS Music Hall Pneumatic Armlet"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 145,
+                "y": 946
+            }
+        ]
+    },
+    {
+        "name": "Hollower's Guild",
+        "sections": [
+            {"name": "OS Hollower's Guild Back Room Kear Chest"},
+            {"name": "OS Hollower's Guild Back Room Joule Alembic"},
+            {"name": "OS Hollower's Guild Back Room Isle Map"},
+            {"name": "OS Hollower's Guild Back Room Sidearm Recoverer"},
+            {"name": "OS Hollower's Guild Back Room Training Dummy"},
+            {"name": "OS Hollower's Guild Back Room Sidearm Duplicator"},
+            {"name": "OS Hollower's Guild Back Room Memory Goggles"},
+            {"name": "OS Hollower's Guild Back Room Phonograph"},
+            {"name": "OS Hollower's Guild Back Room Enhanced Map"},
+            {"name": "OS Hollower's Guild Back Room All-Seeing Skull"},
+            {"name": "OS Hollower's Guild Back Room Smack Muriel"}
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 1298,
+                "y": 1009
+            }
+        ]
+    },
+    {
+        "name": "Bowery Upper",
+        "sections": [
+            {"name": "OS Ossex Telescope Kear"},
+            {"name": "OS Bowery Upper Chest"},
+            {"name": "OS City Center Steady Soles"}      
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 1712,
+                "y": 12
+            }
+        ]
+    }
+    ,
+    {
+        "name": "Stretegy Center",
+        "sections": [
+            {"name": "OS Stretegy Center Chest"},
+            {"name": "OS Strategy Center Ophidio Bonestone"}    
+        ],
+        "map_locations": [
+            {
+                "map": "Ossex",
+                "x": 1968,
+                "y": 433
+            }
+        ]
     }
 ]
