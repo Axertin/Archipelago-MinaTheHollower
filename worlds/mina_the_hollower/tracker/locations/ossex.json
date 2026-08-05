@@ -46,8 +46,8 @@
         "map_locations": [
             {
                 "map": "Ossex Goddred's Tomb",
-                "x": 446,
-                "y": 414
+                "x": 373,
+                "y": 117
             }
         ]
     },
@@ -509,20 +509,6 @@
                 "map": "Ossex",
                 "x": 1900,
                 "y": 935
-            }
-        ]
-    },
-    {
-        "name": "Chest",
-        "sections": [
-            {"name": "OS Gutterways Bonestone"}
-
-        ],
-        "map_locations": [
-            {
-                "map": "Ossex High Street Interiors",
-                "x": 333,
-                "y": 362
             }
         ]
     },
