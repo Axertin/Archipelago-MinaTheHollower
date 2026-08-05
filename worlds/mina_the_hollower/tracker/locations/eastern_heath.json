@@ -248,8 +248,7 @@
                 "y": 702
             }
         ]
-    }
-    ,
+    },
     {
         "name": "Frozen Pass",
         "sections": [
@@ -262,6 +261,19 @@
                 "map": "Eastern Heath Waterfall",
                 "x": 771,
                 "y": 13
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "EH Under the Bridge Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Heath Waterfall",
+                "x": 774,
+                "y": 448
             }
         ]
     }
