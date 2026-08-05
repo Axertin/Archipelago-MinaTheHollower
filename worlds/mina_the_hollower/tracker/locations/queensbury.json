@@ -233,5 +233,18 @@
                 "y": 1006
             }
         ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "QC Royal Tomb Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Ancestral Chamber",
+                "x": 14,
+                "y": 207
+            }
+        ]
     }
 ]
