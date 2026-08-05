@@ -210,32 +210,8 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "SF Guiding Grains Trinket"}
-        ],
-        "map_locations": [
-            {
-                "map": "Sandfalls",
-                "x": 1185,
-                "y": 465
-            }
-        ]
-    },
-    {
-        "name": "Bonestone",
-        "sections": [
-            {"name": "SF Guiding Grains Bonestone Left"}
-        ],
-        "map_locations": [
-            {
-                "map": "Sandfalls",
-                "x": 1185,
-                "y": 465
-            }
-        ]
-    },
-    {
-        "name": "Bonestone",
-        "sections": [
+            {"name": "SF Guiding Grains Trinket"},
+            {"name": "SF Guiding Grains Bonestone Left"},
             {"name": "SF Guiding Grains Bonestone Right"}
         ],
         "map_locations": [
@@ -262,19 +238,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SF Payload Passage Chest"}
-        ],
-        "map_locations": [
-            {
-                "map": "Sandfalls",
-                "x": 33,
-                "y": 1135
-            }
-        ]
-    },
-    {
-        "name": "Chest",
-        "sections": [
+            {"name": "SF Payload Passage Chest"},
             {"name": "BB Sandwater Junction Angerl's Raft"}
         ],
         "map_locations": [
