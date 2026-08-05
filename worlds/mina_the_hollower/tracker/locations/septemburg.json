@@ -198,19 +198,6 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SB Wastewater Canal Slime Room Chest"}
-        ],
-        "map_locations": [
-            {
-                "map": "Septemburg Wastewater Canal",
-                "x": 48,
-                "y": 335
-            }
-        ]
-    },
-    {
-        "name": "Chest",
-        "sections": [
             {"name": "SB Wastewater Canal Box Room Chest"}
         ],
         "map_locations": [
