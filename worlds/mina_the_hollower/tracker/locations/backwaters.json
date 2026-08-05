@@ -159,5 +159,75 @@
                 "y": 640
             }
         ]
+    },
+    {
+        "name": "Fishing Rod",
+        "sections": [
+            {"name": "BW Fishing Hole Fishing Rod"},
+            {"name": "BW Fishing Hole Thalassian Pearl"},
+            {"name": "BW Fishing Hole Gilded Rod"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 1515,
+                "y": 605
+            }
+        ]
+    },
+    {
+        "name": "Pinky's Shop",
+        "sections": [
+            {"name": "BW Pinky's Parlor Trinket"},
+            {"name": "BW Pinky's Parlor Kear"},
+            {"name": "BW Pinky's Parlor Joule Box"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 1515,
+                "y": 462
+            }
+        ]
+    },
+    {
+        "name": "Lucky's Lair",
+        "sections": [
+            {"name": "BW Lucky's Lair Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 825,
+                "y": 923
+            }
+        ]
+    },
+    {
+        "name": "Lantern Cave",
+        "sections": [
+            {"name": "BW Lantern Cave Bonestone"},
+            {"name": "BW Lantern Cave Vial Pouch"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 1115,
+                "y": 51
+            }
+        ]
+    },
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "BW Fish Fleeper Head"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 700,
+                "y": 352
+            }
+        ]
     }
 ]
