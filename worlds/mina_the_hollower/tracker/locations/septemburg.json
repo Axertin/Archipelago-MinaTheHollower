@@ -72,8 +72,8 @@
         "map_locations": [
             {
                 "map": "Septemburg Barn",
-                "x": 121,
-                "y": 174
+                "x": 716,
+                "y": 169
             }
         ]
     },
@@ -215,19 +215,6 @@
         ],
         "map_locations": [
             {
-                "map": "Septemburg Wastewater Canal",
-                "x": 1136,
-                "y": 432
-            }
-        ]
-    },
-    {
-        "name": "Chest",
-        "sections": [
-            {"name": "SB Wastewater Canal Well Entrance Chest"}
-        ],
-        "map_locations": [
-            {
                 "map": "Septemburg Wastewater Well",
                 "x": 1136,
                 "y": 432
@@ -244,6 +231,45 @@
                 "map": "Kindlewood Interiors",
                 "x": 707,
                 "y": 351
+            }
+        ]
+    },
+    {
+        "name": "Item",
+        "sections": [
+            {"name": "SB Dark Deluxy Spark Container"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Canal",
+                "x": 1455,
+                "y": 822
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Wastewater Canal Well Entrance Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Well",
+                "x": 306,
+                "y": 622
+            }
+        ]
+    },
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "SB Fish Spincer Pincers"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Well",
+                "x": 174,
+                "y": 691
             }
         ]
     }
