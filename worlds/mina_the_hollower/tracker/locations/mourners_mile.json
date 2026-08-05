@@ -106,7 +106,7 @@
     {
         "name": "Burrow",
         "sections": [
-            {"name": "MM Knight's Stand Bonestone"}
+            {"name": "MM Knight's Rest Bonestone"}
         ],
         "map_locations": [
             {
@@ -152,6 +152,100 @@
                 "map": "Mourner's Mile Stairs",
                 "x": 462,
                 "y": 462
+            }
+        ]
+    },
+    {
+        "name": "Kear",
+        "sections": [
+            {"name": "MM Shallow Tomb Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mourner's Mile Entrance",
+                "x": 592,
+                "y": 304
+            }
+        ]
+    },
+    {
+        "name": "Item",
+        "sections": [
+            {"name": "EH Carry Head QB Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mourner's Mile Entrance",
+                "x": 368,
+                "y": 304
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "MM Ring Tomb Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mourner's Mile Knights Rest",
+                "x": 515,
+                "y": 875
+            }
+        ]
+    },
+    {
+        "name": "Burrow",
+        "sections": [
+            {"name": "MM Spike Vault Vial Pouch"},
+            {"name": "MM Spike Vault Hidden Room Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mourner's Mile Knights Rest",
+                "x": 756,
+                "y": 624
+            }
+        ]
+    },
+    {
+        "name": "Tower Tunnel",
+        "sections": [
+            {"name": "MM Tower Tunnel Chest #1"},
+            {"name": "MM Tower Tunnel Chest #2"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mourner's Mile Knights Rest",
+                "x": 482,
+                "y": 493
+            }
+        ]
+    },
+    {
+        "name": "Mina's Grave",
+        "sections": [
+            {"name": "MM Mina's Grave Chest"},
+            {"name": "MM Mina's Grave Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mourner's Mile Knights Rest",
+                "x": 80,
+                "y": 493
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SF Bone Junction Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mourner's Mile Stairs",
+                "x": 490,
+                "y": 638
             }
         ]
     }
