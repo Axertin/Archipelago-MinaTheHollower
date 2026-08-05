@@ -149,7 +149,6 @@
         "sections": [
             {"name": "BW Fishing Hole Fishing Rod"},
             {"name": "BW Fishing Hole Thalassian Pearl"},
-            {"name": "BW Fish Fleeper Head"},
             {"name": "BW Fishing Hole Gilded Rod"}
         ],
         "map_locations": [
@@ -157,6 +156,76 @@
                 "map": "Backwaters East",
                 "x": 306,
                 "y": 640
+            }
+        ]
+    },
+    {
+        "name": "Lantern Cave",
+        "sections": [
+            {"name": "BW Lantern Cave Bonestone"},
+            {"name": "BW Lantern Cave Vial Pouch"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 1116,
+                "y": 48
+            }
+        ]
+    },
+    {
+        "name": "Pinky's Parlor",
+        "sections": [
+            {"name": "BW Pinky's Parlor Trinket"},
+            {"name": "BW Pinky's Parlor Kear"},
+            {"name": "BW Pinky's Parlor Joule Box"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 1526,
+                "y": 463
+            }
+        ]
+    },
+    {
+        "name": "Fishing Hole",
+        "sections": [
+            {"name": "BW Fishing Hole Fishing Rod"},
+            {"name": "BW Fishing Hole Thalassian Pearl"},
+            {"name": "BW Fishing Hole Gilded Rod"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 1526,
+                "y": 606
+            }
+        ]
+    },
+    {
+        "name": "Kear",
+        "sections": [
+            {"name": "BW Lucky's Lair Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 827,
+                "y": 921
+            }
+        ]
+    },
+    {
+        "name": "Kear",
+        "sections": [
+            {"name": "BW Fish Fleeper Head"},
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 700,
+                "y": 352
             }
         ]
     }
