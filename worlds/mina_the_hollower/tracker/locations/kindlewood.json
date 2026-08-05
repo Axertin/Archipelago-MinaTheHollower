@@ -144,5 +144,18 @@
                 "y": 541
             }
         ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Rail Tunnel Vial Pouch"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 1071,
+                "y": 77
+            }
+        ]
     }
 ]
