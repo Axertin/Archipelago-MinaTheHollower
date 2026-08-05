@@ -114,8 +114,8 @@
         "map_locations": [
             {
                 "map": "Kindlewood Wallowers",
-                "x": 726,
-                "y": 79
+                "x": 817,
+                "y": 107
             }
         ]
     },
@@ -155,6 +155,102 @@
                 "map": "Kindlewood Farm Crossing",
                 "x": 1071,
                 "y": 77
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Farm Crossing Shack Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 622,
+                "y": 290
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "WW Occupied Bridge Leaf Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 684,
+                "y": 756
+            }
+        ]
+    },
+    {
+        "name": "Well",
+        "sections": [
+            {"name": "SB Wastewater Cancal Well Entrance Chest"},
+            {"name": "SB Fish Spincer Pincers"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 94,
+                "y": 455
+            }
+        ]
+    },
+    {
+        "name": "Wallower's Room",
+        "sections": [
+            {"name": "KW Wallower's Room Trinket"},
+            {"name": "KW Wallower's Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 1166,
+                "y": 855
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "KW Madd House Draining Beastium"},
+            {"name": "KW Madd House Oozing Organ"},
+            {"name": "KW Madd House Voltaic Guard"},
+            {"name": "KW Madd House Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Overgrowth",
+                "x": 257,
+                "y": 653
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Residence Basement Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Overgrowth",
+                "x": 975,
+                "y": 1327
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "KW Residence Basement Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Overgrowth Interiors",
+                "x": 80,
+                "y": 50
             }
         ]
     }
