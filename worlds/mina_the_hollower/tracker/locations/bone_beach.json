@@ -233,5 +233,84 @@
                 "y": 922
             }
         ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Submerged Handles Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Cliffs",
+                "x": 1265,
+                "y": 570
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "BB Secret Shoals Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Cliffs",
+                "x": 607,
+                "y": 977
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Calcified Caves Jail Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Cliffs",
+                "x": 111,
+                "y": 691
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Calcified Caves Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Cliffs",
+                "x": 239,
+                "y": 598
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "BB Gut Passage Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach Gut Depths",
+                "x": 579,
+                "y": 2116
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Brac's Tent Trinket"},
+            {"name": "BB Brac's Tent Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bone Beach",
+                "x": 1055,
+                "y": 815
+            }
+        ]
     }
 ]
