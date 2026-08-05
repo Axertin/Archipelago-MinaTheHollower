@@ -113,7 +113,7 @@
             {
                 "map": "Bayou Moonlit Path",
                 "x": 432,
-                "y": 600
+                "y": 1600
             }
         ]
     },
@@ -205,6 +205,87 @@
                 "map": "Bayou Lair",
                 "x": 1631,
                 "y": 1048
+            }
+        ]
+    },
+    {
+        "name": "Shack Shop",
+        "sections": [
+            {"name": "NB Swamp Shack Pit Preserver"},
+            {"name": "NB Swamp Shack Kear"},
+            {"name": "NB Swamp Shack Blastrike Maul"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bayou Big Lagoon",
+                "x": 845,
+                "y": 115
+            }
+        ]
+    },
+    {
+        "name": "Shack Shop",
+        "sections": [
+            {"name": "NB Moonlit Path Chest"},
+            {"name": "NB Moonlit Hideaway Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bayou Big Lagoon",
+                "x": 30,
+                "y": 895
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "NB Lagoon Dark Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bayou Big Lagoon",
+                "x": 80,
+                "y": 190
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "NB Moonlit Hideaway Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bayou Thicket",
+                "x": 720,
+                "y": 878
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "NB Plant Pond Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bayou Thicket",
+                "x": 1375,
+                "y": 673
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "NB Hidden Cave Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Bayou Thicket",
+                "x": 1789,
+                "y": 975
             }
         ]
     }
