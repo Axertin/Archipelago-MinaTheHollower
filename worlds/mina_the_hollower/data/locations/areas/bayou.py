@@ -17,7 +17,7 @@ collectable_locations: dict[str, LocationData] = {
     "NB Submerged Side Room Trinket" : LocationData(40, "Nox's Bayou Big Lagoon East Side Room"),
     "NB Swamp Shack Pit Preserver" : LocationData(48, "Nox's Bayou Swamp Shack"),
     "NB Swamp Shack Kear" : LocationData(49, "Nox's Bayou Swamp Shack"),
-    "NB Swamp Shack Blastrike Maul" : LocationData(45, "Nox's Bayou Swamp Shack", HasKear(kear=SingleKears.NOXS_BAYOU_SWAMP_SHACK_KEAR.value)),
+    "NB Swamp Shack Weapon Chest" : LocationData(45, "Nox's Bayou Swamp Shack", HasKear(kear=SingleKears.NOXS_BAYOU_SWAMP_SHACK_KEAR.value)),
     "NB Moonlit Path Chest" : LocationData(43, "Nox's Bayou Moonlit Path"),
     "NB Moonlit Hideaway Trinket" : LocationData(37, "Nox's Bayou Moonlit Mirror"),
     "NB Plant Pond Chest" : LocationData(35, "Nox's Bayou Thick Plant Pond Cave"),
