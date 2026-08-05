@@ -246,5 +246,18 @@
                 "y": 207
             }
         ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Castle Entry Weapon Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Foyer",
+                "x": 80,
+                "y": 525
+            }
+        ]
     }
 ]
