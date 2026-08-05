@@ -168,5 +168,79 @@
                 "y": 164
             }
         ]
+    },
+    {
+        "name": "Secret Passage",
+        "sections": [
+            {"name": "WW Secret Passage Chest"},
+            {"name": "WW Secret Passage Joule Box"}
+        ],
+        "map_locations": [
+            {
+                "map": "Western Wilds",
+                "x": 1168,
+                "y": 878
+            }
+        ]
+    },
+    {
+        "name": "Secret Passage",
+        "sections": [
+            {"name": "WW Secret Passage Chest"},
+            {"name": "WW Secret Passage Joule Box"}
+        ],
+        "map_locations": [
+            {
+                "map": "Western Wilds",
+                "x": 431,
+                "y": 878
+            }
+        ]
+    },
+    {
+        "name": "Balcony",
+        "sections": [
+            {"name": "WW Balcony Chest"},
+            {"name": "WW Balcony Snowball Fight Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Western Wilds",
+                "x": 1374,
+                "y": 57
+            }
+        ]
+    },
+    {
+        "name": "Molten Foundry",
+        "sections": [
+            {"name": "WW Molten Foundry Poppit Trinket"},
+            {"name": "WW Molten Foundry Poppit Kear"},
+            {"name": "WW Molten Foundry Dark Chest"},
+            {"name": "WW Molten Foundry Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Western Wilds",
+                "x": 1262,
+                "y": 50
+            }
+        ]
+    },
+    {
+        "name": "Molten Foundry",
+        "sections": [
+            {"name": "WW Molten Foundry Poppit Trinket"},
+            {"name": "WW Molten Foundry Poppit Kear"},
+            {"name": "WW Molten Foundry Dark Chest"},
+            {"name": "WW Molten Foundry Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Western Wilds",
+                "x": 1487,
+                "y": 50
+            }
+        ]
     }
 ]
