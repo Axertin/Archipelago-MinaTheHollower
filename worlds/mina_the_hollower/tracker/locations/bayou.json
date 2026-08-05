@@ -224,7 +224,7 @@
         ]
     },
     {
-        "name": "Shack Shop",
+        "name": "Moonlit Path",
         "sections": [
             {"name": "NB Moonlit Path Chest"},
             {"name": "NB Moonlit Hideaway Trinket"}
@@ -232,7 +232,7 @@
         "map_locations": [
             {
                 "map": "Bayou Big Lagoon",
-                "x": 30,
+                "x": 40,
                 "y": 895
             }
         ]
