@@ -189,15 +189,15 @@
         "map_locations": [
             {
                 "map": "Sandfalls",
-                "x": 1104,
-                "y": 212
+                "x": 1106,
+                "y": 207
             }
         ]
     },
     {
         "name": "Chest",
         "sections": [
-            {"name": "SF Shifty Seclusion Chest"}
+            {"name": "SF Shifty Seclusion Mimic Chest"}
         ],
         "map_locations": [
             {
