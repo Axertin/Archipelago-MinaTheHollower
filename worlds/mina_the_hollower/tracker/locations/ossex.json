@@ -76,7 +76,7 @@
         "map_locations": [
             {
                 "map": "Ossex Main Interiors",
-                "x": 79,
+                "x": 81,
                 "y": 348
             }
         ]
@@ -311,7 +311,7 @@
         "map_locations": [
             {
                 "map": "Ossex Main Interiors",
-                "x": 79,
+                "x": 80,
                 "y": 201
             }
         ]
@@ -496,7 +496,7 @@
         "map_locations": [
             {
                 "map": "Ossex",
-                "x": 303,
+                "x": 307,
                 "y": 379
             }
         ]
@@ -746,7 +746,7 @@
         "map_locations": [
             {
                 "map": "Ossex",
-                "x": 303,
+                "x": 307,
                 "y": 499
             }
         ]
