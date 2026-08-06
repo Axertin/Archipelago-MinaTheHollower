@@ -29,8 +29,8 @@ def base_movement_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
         distance += 1
     if Sidearms.DRIVER_DRILL in movement_loadout and not no_sidearms:
         distance+=4
-    if Trinkets.BRISK_BREW in movement_loadout and distance > 2:
-        distance += 1
+    if Trinkets.BRISK_BREW in movement_loadout and Trinkets.DUMMY_CACHE in movement_loadout:
+        distance += 2
     return distance
 
 def shield_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
@@ -48,14 +48,10 @@ def shield_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
         distance += 1
     if Sidearms.DRIVER_DRILL in movement_loadout and not no_sidearms:
         distance += 4
-    if Trinkets.BRISK_BREW in movement_loadout and distance > 4:
-        distance += 1
     return distance
 
 def bridge_weaver_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
     distance = 3
-    if Abilities.BURROW in movement_loadout:
-        distance += 1
     if Trinkets.WALLOWERS_GAUNTLETS in movement_loadout and has_walls and Abilities.BURROW in movement_loadout:
         distance += 5
     if Trinkets.BELLOWS_BUSTLE in movement_loadout:
@@ -68,8 +64,8 @@ def bridge_weaver_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
         distance += 1
     if Sidearms.DRIVER_DRILL in movement_loadout and not no_sidearms:
         distance += 4
-    if Trinkets.BRISK_BREW in movement_loadout and distance > 3:
-        distance += 1
+    if Trinkets.BRISK_BREW in movement_loadout and Trinkets.DUMMY_CACHE in movement_loadout:
+        distance += 2
     return distance
 
 def iron_steed_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
@@ -103,8 +99,8 @@ def spring_heel_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
         distance += 1
     if Trinkets.BELLOWS_BUSTLE in movement_loadout:
         distance += 2
-    if Trinkets.BRISK_BREW in movement_loadout and distance > 3:
-        distance += 1
+    if Trinkets.BRISK_BREW in movement_loadout and Trinkets.DUMMY_CACHE in movement_loadout:
+        distance += 2
     return distance
 
 
