@@ -41,49 +41,11 @@ jobs:
           sed -i '0,/version: 0\.6\.8/s//version: 0.6.7/' \
             "Players/Templates/Mina The Hollower.yaml"
 
-      - name: Create lite APWorld
-        run: |
-          mkdir trim
-          cd trim
-      
-          unzip ../build/apworlds/mina_the_hollower.apworld
-      
-          rm -rf worlds/mina_the_hollower/tracker
-      
-          perl -0pi -e 's/tracker_world: ClassVar = \{[\s\S]*?\{player\}",\n    \}//' worlds/mina_the_hollower/__init__.py
-      
-          zip -qr ../build/apworlds/mina_the_hollower_lite.apworld .
-
-      - name: Verify tracker stripped
-        run: |
-          if grep -q "tracker_world: ClassVar" trim/worlds/mina_the_hollower/__init__.py; then
-            echo "tracker_world was not removed!"
-            exit 1
-          fi
-
-      - name: Prepare tracker APWorld upload
-        run: |
-          mkdir tracker
-          cp build/apworlds/mina_the_hollower.apworld \
-             tracker/mina_the_hollower.apworld
-
-      - name: Upload Tracker APWorld
+      - name: Upload APWorld
         uses: actions/upload-artifact@v4
         with:
-          name: mina-the-hollower-apworld-ut-maps
-          path: tracker/mina_the_hollower.apworld
-
-      - name: Prepare lite APWorld upload
-        run: |
-          mkdir lite
-          cp build/apworlds/mina_the_hollower_lite.apworld \
-             lite/mina_the_hollower.apworld
-
-      - name: Upload Lite APWorld
-        uses: actions/upload-artifact@v4
-        with:
-          name: mina-the-hollower-apworld-no-maps
-          path: lite/mina_the_hollower.apworld
+          name: mina-the-hollower-apworld
+          path: build/apworlds/mina_the_hollower.apworld
 
       - name: Upload Template
         uses: actions/upload-artifact@v4
