@@ -77,7 +77,7 @@
             {
                 "map": "Ossex Main Interiors",
                 "x": 79,
-                "y": 399
+                "y": 348
             }
         ]
     },
@@ -310,8 +310,8 @@
         "map_locations": [
             {
                 "map": "Ossex Main Interiors",
-                "x": 78,
-                "y": 228
+                "x": 79,
+                "y": 201
             }
         ]
     },
