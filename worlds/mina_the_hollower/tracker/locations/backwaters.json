@@ -134,7 +134,7 @@
     {
         "name": "Gift",
         "sections": [
-            {"name": "BW Rescue Cliff Band Reward"}
+            {"name": "BW Lucky's Lair Gift"}
         ],
         "map_locations": [
             {
@@ -226,6 +226,19 @@
                 "map": "Backwaters",
                 "x": 700,
                 "y": 352
+            }
+        ]
+    },
+    {
+        "name": "Fishing Rod",
+        "sections": [
+            {"name": "BW Fishing Hole Thalassian Pearl"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters East",
+                "x": 1543,
+                "y": 635
             }
         ]
     }

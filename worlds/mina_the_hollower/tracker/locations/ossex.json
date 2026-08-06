@@ -76,8 +76,8 @@
         "map_locations": [
             {
                 "map": "Ossex Main Interiors",
-                "x": 79,
-                "y": 399
+                "x": 81,
+                "y": 348
             }
         ]
     },
@@ -305,13 +305,14 @@
             {"name": "OS Trinket Bazaar Shock Flint"},
             {"name": "OS Trinket Bazaar Uranium Bracelet"},
             {"name": "OS Trinket Bazaar Bubble Ring"},
-            {"name": "OS Trinket Bazaar Counter Vial"}
+            {"name": "OS Trinket Bazaar Counter Vial"},
+            {"name": "SB Save Students Trinket"}
         ],
         "map_locations": [
             {
                 "map": "Ossex Main Interiors",
-                "x": 78,
-                "y": 228
+                "x": 80,
+                "y": 201
             }
         ]
     },
@@ -326,7 +327,8 @@
             {"name": "OS Trinket Bazaar Shock Flint"},
             {"name": "OS Trinket Bazaar Uranium Bracelet"},
             {"name": "OS Trinket Bazaar Bubble Ring"},
-            {"name": "OS Trinket Bazaar Counter Vial"}
+            {"name": "OS Trinket Bazaar Counter Vial"},
+            {"name": "SB Save Students Trinket"}
         ],
         "map_locations": [
             {
@@ -407,6 +409,7 @@
     {
         "name": "Shop",
         "sections": [
+            {"name": "OS Atelier Chest"},
             {"name": "OS Atelier Vitality Vest"},
             {"name": "OS Atelier Custom Fit"}
         ],
@@ -493,7 +496,7 @@
         "map_locations": [
             {
                 "map": "Ossex",
-                "x": 303,
+                "x": 307,
                 "y": 379
             }
         ]
@@ -698,7 +701,7 @@
     {
         "name": "Stretegy Center",
         "sections": [
-            {"name": "OS Stretegy Center Chest"},
+            {"name": "OS Strategy Center Chest"},
             {"name": "OS Strategy Center Ophidio Bonestone"}    
         ],
         "map_locations": [
@@ -725,7 +728,7 @@
     {
         "name": "Defeat Evra",
         "sections": [
-            {"name": "OS Evra Reward"}
+            {"name": "OS Evra Fight Reward"}
         ],
         "map_locations": [
             {
@@ -738,12 +741,12 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "OS Lindy Giraffe Bonestone"}
+            {"name": "OS Lindy The Giraffe Bonestone"}
         ],
         "map_locations": [
             {
                 "map": "Ossex",
-                "x": 303,
+                "x": 307,
                 "y": 499
             }
         ]

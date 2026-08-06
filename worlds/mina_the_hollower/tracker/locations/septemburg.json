@@ -72,8 +72,8 @@
         "map_locations": [
             {
                 "map": "Septemburg Barn",
-                "x": 716,
-                "y": 169
+                "x": 720,
+                "y": 173
             }
         ]
     },
@@ -170,19 +170,6 @@
         ]
     },
     {
-        "name": "Reward",
-        "sections": [
-            {"name": "SB Dark Deluxy Fight Reward"}
-        ],
-        "map_locations": [
-            {
-                "map": "Septemburg Generator",
-                "x": 412,
-                "y": 4220
-            }
-        ]
-    },
-    {
         "name": "Fish",
         "sections": [
             {"name": "SB Fish Spincer Pincers"}
@@ -224,13 +211,13 @@
     {
         "name": "Item",
         "sections": [
-            {"name": "SB Dark Deluxy Spark Container"}
+            {"name": "SB Dark Deluxy Fight Reward"}
         ],
         "map_locations": [
             {
                 "map": "Septemburg Wastewater Canal",
-                "x": 1455,
-                "y": 822
+                "x": 1458,
+                "y": 819
             }
         ]
     },
@@ -270,6 +257,19 @@
                 "map": "Septemburg Wastewater Canal",
                 "x": 55,
                 "y": 335
+            }
+        ]
+    },
+    {
+        "name": "Item",
+        "sections": [
+            {"name": "SB Dark Deluxy Fight Reward"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Generator",
+                "x": 415,
+                "y": 433
             }
         ]
     }

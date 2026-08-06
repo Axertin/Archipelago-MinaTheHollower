@@ -174,7 +174,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "WW Occupied Bridge Leaf Trinket"}
+            {"name": "WW Leaf Area Trinket"}
         ],
         "map_locations": [
             {
@@ -251,6 +251,45 @@
                 "map": "Kindlewood Overgrowth Interiors",
                 "x": 80,
                 "y": 50
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "SB Save Students Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 430,
+                "y": 654
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "SB Save Students Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 334,
+                "y": 589
+            }
+        ]
+    },
+    {
+        "name": "Item",
+        "sections": [
+            {"name": "KW Rail Tunnel Vial Pouch"}
+        ],
+        "map_locations": [
+            {
+                "map": "Kindlewood Farm Crossing",
+                "x": 1234,
+                "y": 613
             }
         ]
     }

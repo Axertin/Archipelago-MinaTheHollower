@@ -171,7 +171,7 @@
     {
         "name": "Item",
         "sections": [
-            {"name": "EH Carry Head QB Chest"}
+            {"name": "EH Post Generator Head Escort Chest"}
         ],
         "map_locations": [
             {
@@ -246,6 +246,19 @@
                 "map": "Mourner's Mile Stairs",
                 "x": 490,
                 "y": 638
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "EH Post Generator Head Escort Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mourner's Mile Knights Rest",
+                "x": 79,
+                "y": 25
             }
         ]
     }
