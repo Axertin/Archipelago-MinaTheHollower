@@ -725,7 +725,7 @@
     {
         "name": "Defeat Evra",
         "sections": [
-            {"name": "OS Evra Reward"}
+            {"name": "OS Evra Fight Reward"}
         ],
         "map_locations": [
             {
@@ -738,7 +738,7 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "OS Lindy Giraffe Bonestone"}
+            {"name": "OS Lindy The Giraffe Bonestone"}
         ],
         "map_locations": [
             {
