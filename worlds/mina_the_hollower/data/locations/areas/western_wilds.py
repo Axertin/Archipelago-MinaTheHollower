@@ -9,7 +9,7 @@ from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
     "WW Secret Passage Chest" : LocationData(251, "Western Wilds Secret Passageway East", CanJumpTiles(distance=3), item_rule=lambda item: item.name != Wallets.WALLET_SIZE.value),
-    "WW Secret Passage Locked Chest" : LocationData(248, "Western Wilds Secret Passageway East", CanJumpTiles(distance=5) & HasKear(kear=SingleKears.WESTERN_WILDS_SECRET_PASSAGE_KEAR.value)),
+    "WW Secret Passage Locked Chest" : LocationData(248, "Western Wilds Secret Passageway East", CanJumpTiles(distance=5, has_wall=True) & HasKear(kear=SingleKears.WESTERN_WILDS_SECRET_PASSAGE_KEAR.value)),
     "WW Brute Chest" : LocationData(253, "Western Wilds Brutes"),
     "WW Leaf Area Chest" : LocationData(250, "Western Wilds End", CanBurrow()),
     "WW Leaf Area Trinket" : LocationData(245, "Western Wilds Brutes", (CanBurrow() & CanCarry()) | (CanBurrow() &  Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.SEPTEMBURG_TICKET.value))), #needs kill the other leaf,

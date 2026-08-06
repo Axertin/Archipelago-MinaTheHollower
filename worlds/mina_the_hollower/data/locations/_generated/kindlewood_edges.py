@@ -86,7 +86,7 @@ connections: dict[str, RegionConnection] = {
     'Kindlewood Rail Tunnel_Kindlewood Rail Tunnel Tracks': RegionConnection('Kindlewood Rail Tunnel', 'Kindlewood Rail Tunnel Tracks', CanBurrow() & CanClimb()),
     'Kindlewood Wallowers Path End_Kindlewood Wallowers Path': RegionConnection('Kindlewood Wallowers Path End', 'Kindlewood Wallowers Path', CanBurrow()),
     "Kindlewood Wallowers Path_Kindlewood Wallower's Path Cliff Bush": RegionConnection('Kindlewood Wallowers Path', "Kindlewood Wallower's Path Cliff Bush", CanBurrow()),
-    'Kindlewood Wallowers Path_Kindlewood Wallowers Path End': RegionConnection('Kindlewood Wallowers Path', 'Kindlewood Wallowers Path End', HasTrinket(trinket=Trinkets.WALLOWERS_GAUNTLETS.value) | CanJumpTiles(distance=7)),
+    'Kindlewood Wallowers Path_Kindlewood Wallowers Path End': RegionConnection('Kindlewood Wallowers Path', 'Kindlewood Wallowers Path End', HasTrinket(trinket=Trinkets.WALLOWERS_GAUNTLETS.value) | CanJumpTiles(distance=7, has_wall=True)),
 }
 
 transitions: dict[str, Transition] = {

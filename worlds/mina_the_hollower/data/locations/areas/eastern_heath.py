@@ -2,7 +2,7 @@ from BaseClasses import LocationProgressType
 from rule_builder.options import OptionFilter
 from rule_builder.rules import Has, True_, CanReachLocation
 from ... import RegionConnection, Transition, LocationData, TransitionType, DirectionType
-from ...items import Trinkets, SingleKears, PermanentUpgrades, Wallets
+from ...items import Trinkets, SingleKears, PermanentUpgrades, Wallets, PlayerUpgrades, Sidearms
 from ...rules.ability_rules import CanBurrow, CanBounce, HasReachingSideArm, CanClimb, \
     CanSwim, HasFishingRod
 from ...rules.state_rules import HasKear, RepairedGeneratorCount
@@ -24,7 +24,7 @@ collectable_locations: dict[str, LocationData] = {
             (Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value) & Has(PermanentUpgrades.TRAIN_PASS.value) & CanClimb()))
     ),
     "EH Mimic Chest" : LocationData(230, "Eastern Heath Under Bridge West"),
-    "EH Buckler's Bluff Joule Box" : LocationData(229, "Eastern Heath Buckler's Bluff Cliff", CanClimb()),
+    "EH Buckler's Bluff Joule Box" : LocationData(229, "Eastern Heath Buckler's Bluff Cliff", CanClimb() & (Has(PlayerUpgrades.JOULE_BOX.value, count=2) & Has(Sidearms.DRIVER_DRILL.value))),
     "EH Poppit Cave Chest" : LocationData(235, "Eastern Heath Grassland Poppit Cave"),
     "EH Poppit Cave Willow" : LocationData(239, "Eastern Heath Poppit"),
     "EH Poppit Cave Kear" : LocationData(240, "Eastern Heath Poppit"),

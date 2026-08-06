@@ -73,9 +73,9 @@ regions: set[str] = {
 }
 
 connections: dict[str, RegionConnection] = {
-    "Eastern Heath Buckler's Bluff Cliff_Eastern Heath Buckler's Bluff Bucklers": RegionConnection("Eastern Heath Buckler's Bluff Cliff", "Eastern Heath Buckler's Bluff Bucklers", CanJumpTiles(distance=4)),
-    "Eastern Heath Buckler's Bluff Cliff_Eastern Heath Buckler's Bluff Start": RegionConnection("Eastern Heath Buckler's Bluff Cliff", "Eastern Heath Buckler's Bluff Start", CanJumpTiles(distance=4)),
-    "Eastern Heath Buckler's Bluff Start_Eastern Heath Buckler's Bluff Cliff": RegionConnection("Eastern Heath Buckler's Bluff Start", "Eastern Heath Buckler's Bluff Cliff", CanJumpTiles(distance=4)),
+    "Eastern Heath Buckler's Bluff Cliff_Eastern Heath Buckler's Bluff Bucklers": RegionConnection("Eastern Heath Buckler's Bluff Cliff", "Eastern Heath Buckler's Bluff Bucklers", CanJumpTiles(distance=4, has_wall=True)),
+    "Eastern Heath Buckler's Bluff Cliff_Eastern Heath Buckler's Bluff Start": RegionConnection("Eastern Heath Buckler's Bluff Cliff", "Eastern Heath Buckler's Bluff Start", CanJumpTiles(distance=4, has_wall=True)),
+    "Eastern Heath Buckler's Bluff Start_Eastern Heath Buckler's Bluff Cliff": RegionConnection("Eastern Heath Buckler's Bluff Start", "Eastern Heath Buckler's Bluff Cliff", CanJumpTiles(distance=4, has_wall=True)),
     'Eastern Heath Choppe Shoppe Entry Cliff_Eastern Heath Cliff Secret': RegionConnection('Eastern Heath Choppe Shoppe Entry Cliff', 'Eastern Heath Cliff Secret', HasKear(kear=SingleKears.EASTERN_HEATH_WATERFALL_KEAR.value)),
     'Eastern Heath Choppe Shoppe Entry_Eastern Heath Cliff Secret': RegionConnection('Eastern Heath Choppe Shoppe Entry', 'Eastern Heath Cliff Secret', HasKear(kear=SingleKears.EASTERN_HEATH_WATERFALL_KEAR.value) & CanBurrow()),
     'Eastern Heath Cliff Secret_Eastern Heath Choppe Shoppe Entry': RegionConnection('Eastern Heath Cliff Secret', 'Eastern Heath Choppe Shoppe Entry', HasKear(kear=SingleKears.EASTERN_HEATH_WATERFALL_KEAR.value) & CanBurrow()),

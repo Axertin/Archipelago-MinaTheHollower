@@ -66,7 +66,7 @@ connections: dict[str, RegionConnection] = {
     'Sandfalls Miners Den Entrance Top_Sandfalls Miners Den Entrance': RegionConnection('Sandfalls Miners Den Entrance Top', 'Sandfalls Miners Den Entrance', CanClimb()),
     'Sandfalls Miners Den Entrance_Sandfalls Miners Den Entrance Top': RegionConnection('Sandfalls Miners Den Entrance', 'Sandfalls Miners Den Entrance Top', CanClimb()),
     'Sandfalls Payload Passage Bottom_Sandfalls Payload Passage Chest': RegionConnection('Sandfalls Payload Passage Bottom', 'Sandfalls Payload Passage Chest', CanJumpTiles(distance=2)),
-    'Sandfalls Payload Passage Chest_Sandfalls Payload Passage Bottom': RegionConnection('Sandfalls Payload Passage Chest', 'Sandfalls Payload Passage Bottom', CanJumpTiles(distance=5)),
+    'Sandfalls Payload Passage Chest_Sandfalls Payload Passage Bottom': RegionConnection('Sandfalls Payload Passage Chest', 'Sandfalls Payload Passage Bottom', CanJumpTiles(distance=5, has_wall=True)),
     'Sandfalls Sifted Sands Funnel_Sandfalls Sifted Sands': RegionConnection('Sandfalls Sifted Sands Funnel', 'Sandfalls Sifted Sands', CanClimb()),
     'Sandfalls Sifted Sands Hidden Left Bomb_Sandfalls Sifted Sands': RegionConnection('Sandfalls Sifted Sands Hidden Left Bomb', 'Sandfalls Sifted Sands', CanCarry()),
     'Sandfalls Sifted Sands_Sandfalls Sifted Sands Funnel': RegionConnection('Sandfalls Sifted Sands', 'Sandfalls Sifted Sands Funnel', True_()),
