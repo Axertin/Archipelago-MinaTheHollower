@@ -228,5 +228,18 @@
                 "y": 352
             }
         ]
+    },
+    {
+        "name": "Fishing Rod",
+        "sections": [
+            {"name": "BW Fishing Hole Thalassian Pearl"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters East",
+                "x": 1681,
+                "y": 704
+            }
+        ]
     }
 ]
