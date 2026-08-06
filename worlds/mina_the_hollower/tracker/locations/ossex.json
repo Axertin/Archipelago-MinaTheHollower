@@ -407,6 +407,7 @@
     {
         "name": "Shop",
         "sections": [
+            {"name": "OS Atelier Chest"},
             {"name": "OS Atelier Vitality Vest"},
             {"name": "OS Atelier Custom Fit"}
         ],
