@@ -17,7 +17,7 @@ collectable_locations: dict[str, LocationData] = {
     "SB Below Crow Town Bridge Chest": LocationData(98, "Septemburg Crow Town Tunnel Top", HasKear(kear=SingleKears.SEPTEMBURG_CROW_TOWN_TUNNEL_KEAR.value)),
     "SB Crow Town Shop Trinket": LocationData(102, "Septemburg Crow Town"),
     "SB Crow Town Shop Kear": LocationData(103, "Septemburg Crow Town"),
-    "SB Crow Town Farmhouse Roof Chest": LocationData(99, "Septemburg Farm House Roof", CanBurrow() & CanCarry()),
+    "SB Crow Town Farmhouse Roof Weapon Chest": LocationData(99, "Septemburg Farm House Roof", CanBurrow() & CanCarry()),
     "SB Tangled Woods Hidden Grove Chest": LocationData(97, "Septemburg Tangled Woods Hidden Grove", CanBurrow()),
     "SB Galloway Room Chest": LocationData(100, "Septemburg Tangled Woods Kid Room", CanBurrow() & CanSpring()),
     "SB Stormwatch Way Chest": LocationData(101, "Septemburg Stormwatch Wind", CanBurrow()),

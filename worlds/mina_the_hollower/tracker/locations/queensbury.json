@@ -233,5 +233,31 @@
                 "y": 1006
             }
         ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "QC Royal Tomb Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Ancestral Chamber",
+                "x": 14,
+                "y": 207
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Castle Entry Weapon Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Foyer",
+                "x": 75,
+                "y": 525
+            }
+        ]
     }
 ]

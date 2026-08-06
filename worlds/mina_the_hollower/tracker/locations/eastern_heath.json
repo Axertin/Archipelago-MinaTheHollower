@@ -181,5 +181,100 @@
                 "y": 530
             }
         ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "EH Under The Bridge Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Heath",
+                "x": 770,
+                "y": 446
+            }
+        ]
+    },
+    {
+        "name": "Poppit Cave",
+        "sections": [
+            {"name": "EH Grassland Poppit Cave Chest"},
+            {"name": "EH Grassland Poppit Cave Willow"},
+            {"name": "EH Grassland Poppit Cave Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Heath",
+                "x": 1458,
+                "y": 853
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "EH Buckler's Bluff Joule Box"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Heath",
+                "x": 1137,
+                "y": 125
+            }
+        ]
+    },
+    {
+        "name": "Choppe Shoppe",
+        "sections": [
+            {"name": "EH Choppe Shoppe Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Heath Waterfall",
+                "x": 242,
+                "y": 1095
+            }
+        ]
+    },
+    {
+        "name": "Hidden Grotto",
+        "sections": [
+            {"name": "EH Hidden Grotto Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Heath Waterfall",
+                "x": 65,
+                "y": 702
+            }
+        ]
+    },
+    {
+        "name": "Frozen Pass",
+        "sections": [
+            {"name": "CTP Frozen Pass Rope Chest"},
+            {"name": "CTP Frozen Pass Chest"},
+            {"name": "CTP Frozen Pass Ice Block Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Heath Waterfall",
+                "x": 771,
+                "y": 13
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "EH Under the Bridge Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Eastern Heath",
+                "x": 774,
+                "y": 448
+            }
+        ]
     }
 ]

@@ -41,7 +41,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "CTP Frozen Pass IceBlock Trinket"}
+            {"name": "CTP Frozen Pass Ice Block Trinket"}
         ],
         "map_locations": [
             {
@@ -80,7 +80,7 @@
     {
         "name": "Reward",
         "sections": [
-            {"name": "CTP Frostbite Woods Blinking Glass"}
+            {"name": "CTP Frostbite Woods Mirren Trinket"}
         ],
         "map_locations": [
             {
@@ -119,7 +119,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "CTP Rail Yard Casket Chest"}
+            {"name": "CTP Rail Yard Weapon Chest"}
         ],
         "map_locations": [
             {
@@ -172,7 +172,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "CTP Agnes Express Bone Mimic"}
+            {"name": "CTP Agnes Express Bone Mimic Bonestone"}
         ],
         "map_locations": [
             {
@@ -192,6 +192,61 @@
                 "map": "Coltrane Peak Maelstorm",
                 "x": 256,
                 "y": 1784
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "CTP Dead Man's Gorge Passage Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Dead Man's Gorge",
+                "x": 995,
+                "y": 990
+            }
+        ]
+    },
+    {
+        "name": "Reward",
+        "sections": [
+            {"name": "CTP Frostbite Woods Mirren Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Frostbite Woods",
+                "x": 944,
+                "y": 623
+            }
+        ]
+    },
+    {
+        "name": "Shop",
+        "sections": [
+            {"name": "CTP Rail Yard Kear Room Rupert Shop Trinket"},
+            {"name": "CTP Rail Yard Kear Room Rupert Shop Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Rail Yard",
+                "x": 21,
+                "y": 364
+            }
+        ]
+    },
+    {
+        "name": "Frozen Pass",
+        "sections": [
+            {"name": "CTP Frozen Pass Rope Chest"},
+            {"name": "CTP Frozen Pass Chest"},
+            {"name": "CTP Frozen Pass Ice Block Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Coltrane Peak Train",
+                "x": 1313,
+                "y": 1116
             }
         ]
     }

@@ -7,7 +7,7 @@ from ...rules.state_rules import HasKear
 from ...rules.movement_rules import CanJumpTiles
 
 collectable_locations: dict[str, LocationData] = {
-    "RM Mimic Chamber Dodging Pendulum" : LocationData(140, "Radiant Manor Mimic Chamber", CanBurrow()),
+    "RM Mimic Chamber Trinket" : LocationData(140, "Radiant Manor Mimic Chamber", CanBurrow()),
     "RM Rafters Chest" : LocationData(143, "Radiant Manor Rafters", CanBurrow()),
     "RM Servant's Quarters Trinket" : LocationData(145, "Radiant Manor Servant's Quarters", CanBurrow()),
     "RM Ballroom Chest" : LocationData(144, "Radiant Manor Ballroom Balcony East"),

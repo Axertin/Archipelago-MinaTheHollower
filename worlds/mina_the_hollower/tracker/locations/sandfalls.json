@@ -167,5 +167,113 @@
                 "y": 840
             }
         ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SO Four Flowers Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 562,
+                "y": 92
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SO Mining Passage Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 1104,
+                "y": 212
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SF Shifty Seclusion Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 241,
+                "y": 434
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "SF Guiding Grains Trinket"},
+            {"name": "SF Guiding Grains Bonestone Left"},
+            {"name": "SF Guiding Grains Bonestone Right"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 1185,
+                "y": 465
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "SF Ring Dive Parlor Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 1410,
+                "y": 512
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SF Payload Passage Chest"},
+            {"name": "BB Sandwater Junction Angerl's Raft"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 33,
+                "y": 1135
+            }
+        ]
+    },
+    {
+        "name": "Item",
+        "sections": [
+            {"name": "SF Hidden Cave Vial Pouch"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 1055,
+                "y": 1343
+            }
+        ]
+    }
+    ,
+    {
+        "name": "Item",
+        "sections": [
+            {"name": "SF Hidden Cave Vial Pouch"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls",
+                "x": 1315,
+                "y": 1343
+            }
+        ]
     }
 ]
