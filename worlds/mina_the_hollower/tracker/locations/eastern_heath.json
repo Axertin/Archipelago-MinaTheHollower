@@ -2,7 +2,7 @@
     {
         "name": "Beat Maxi",
         "sections": [
-            {"name": "EH Grassland Maxi Trinket Bag"}
+            {"name": "EH Maxi Fight Reward"}
         ],
         "map_locations": [
             {
@@ -15,7 +15,7 @@
     {
         "name": "Bushroom Kear Chest",
         "sections": [
-            {"name": "EH Grassland Ossex Patio Chest"}
+            {"name": "EH Ossex Entry Chest"}
         ],
         "map_locations": [
             {
@@ -28,7 +28,7 @@
     {
         "name": "Locked Chest",
         "sections": [
-            {"name": "EH Grassland Bush Room Bonestone"}
+            {"name": "EH Bush Room Locked Bonestone"}
         ],
         "map_locations": [
             {
@@ -41,8 +41,8 @@
     {
         "name": "Poppit Shop",
         "sections": [
-            {"name": "EH Grassland Poppit Cave Willow"},
-            {"name": "EH Grassland Poppit Cave Kear"}
+            {"name": "EH Poppit Cave Willow"},
+            {"name": "EH Poppit Cave Kear"}
         ],
         "map_locations": [
             {
@@ -55,7 +55,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "EH Grassland Poppit Cave Chest"}
+            {"name": "EH Poppit Cave Chest"}
         ],
         "map_locations": [
             {
@@ -68,7 +68,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "EH Grassland Riverbed Chest"}
+            {"name": "EH Riverbed Chest"}
         ],
         "map_locations": [
             {
@@ -81,7 +81,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "EH Carry Head QB Chest"}
+            {"name": "EH Post Generator Head Escort Chest"}
         ],
         "map_locations": [
             {
@@ -94,7 +94,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "EH Grassland Waterfall Chest"}
+            {"name": "EH Beside Kite Chest"}
         ],
         "map_locations": [
             {
@@ -107,7 +107,7 @@
     {
         "name": "Kite Trinket",
         "sections": [
-            {"name": "EH Grassland Waterfall Kite Trinket"}
+            {"name": "EH Kite Trinket"}
         ],
         "map_locations": [
             {
@@ -146,7 +146,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "EH Under the Bridge Chest"}
+            {"name": "EH Mimic Chest"}
         ],
         "map_locations": [
             {
@@ -159,7 +159,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "EH Hidden Grotto Chest"}
+            {"name": "EH Hidden Slime Cave Chest"}
         ],
         "map_locations": [
             {
@@ -179,19 +179,6 @@
                 "map": "Eastern Heath",
                 "x": 780,
                 "y": 530
-            }
-        ]
-    },
-    {
-        "name": "Chest",
-        "sections": [
-            {"name": "EH Under The Bridge Chest"}
-        ],
-        "map_locations": [
-            {
-                "map": "Eastern Heath",
-                "x": 770,
-                "y": 446
             }
         ]
     },
@@ -237,9 +224,9 @@
         ]
     },
     {
-        "name": "Hidden Grotto",
+        "name": "Hidden Slime Cave",
         "sections": [
-            {"name": "EH Hidden Grotto Chest"}
+            {"name": "EH Hidden Slime Cave Chest"}
         ],
         "map_locations": [
             {
@@ -254,7 +241,7 @@
         "sections": [
             {"name": "CTP Frozen Pass Rope Chest"},
             {"name": "CTP Frozen Pass Chest"},
-            {"name": "CTP Frozen Pass Ice Block Trinket"}
+            {"name": "EH Frozen Pass Trinket"}
         ],
         "map_locations": [
             {
@@ -267,7 +254,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "EH Under the Bridge Chest"}
+            {"name": "EH Mimic Chest"}
         ],
         "map_locations": [
             {

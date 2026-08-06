@@ -2,8 +2,8 @@
     {
         "name": "Frog Fight",
         "sections": [
-            {"name": "BW Upper Shanty Swamp Plasma Jug"},
-            {"name": "BW Upper Shanty Swamp Frog Gift"}
+            {"name": "BW Buffo The Frog Fight Plasma Jug"},
+            {"name": "BW Buffo The Frog Gift"}
         ],
         "map_locations": [
             {
@@ -16,7 +16,7 @@
     {
         "name": "Frog Fight",
         "sections": [
-            {"name": "BW Upper Shanty Swamp Side Room Chest"}
+            {"name": "BW Side Room Chest"}
         ],
         "map_locations": [
             {
@@ -82,7 +82,7 @@
     {
         "name": "Locked Chest",
         "sections": [
-            {"name": "BW Lower Shanty Swamp Locked Chest"}
+            {"name": "BW Fishing Hole Entrance Locked Chest"}
         ],
         "map_locations": [
             {
@@ -95,7 +95,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "BW Lower Shanty Swamp Trinket"}
+            {"name": "BW Ladder Trinket"}
         ],
         "map_locations": [
             {
@@ -108,7 +108,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "BW Lower Shanty Swamp Bonestone"}
+            {"name": "BW Ladder Bonestone"}
         ],
         "map_locations": [
             {
@@ -121,7 +121,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "BW Lower Shanty Swamp Band Gift"}
+            {"name": "BW Band Gift Trinket"}
         ],
         "map_locations": [
             {
@@ -134,7 +134,7 @@
     {
         "name": "Gift",
         "sections": [
-            {"name": "BW Lucky's Lair Kear"}
+            {"name": "BW Rescue Cliff Band Reward"}
         ],
         "map_locations": [
             {
@@ -192,7 +192,7 @@
     {
         "name": "Lucky's Lair",
         "sections": [
-            {"name": "BW Lucky's Lair Kear"}
+            {"name": "BW Lucky's Lair Gift"}
         ],
         "map_locations": [
             {

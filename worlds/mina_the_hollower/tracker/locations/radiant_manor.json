@@ -80,7 +80,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "RM Tile Chamber Chest"}
+            {"name": "RM Ballroom Tile Chamber Chest"}
         ],
         "map_locations": [
             {

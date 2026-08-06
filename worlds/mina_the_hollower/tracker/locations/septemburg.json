@@ -2,7 +2,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SB Launch Pad Secret Room #1 Chest"}
+            {"name": "SB Launch Pad Secret Room Chest"}
         ],
         "map_locations": [
             {
@@ -15,7 +15,7 @@
     {
         "name": "Kear",
         "sections": [
-            {"name": "SB Launch Pad Secret Room #2 Kear"}
+            {"name": "SB Launch Pad Crow Fight Reward"}
         ],
         "map_locations": [
             {
@@ -28,7 +28,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SB Kid Room Chest"}
+            {"name": "SB Withered Farms Kid Room Chest"}
         ],
         "map_locations": [
             {
@@ -67,7 +67,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SB Rotten Barn Chest"}
+            {"name": "SB Rotten Barn Squealer Chest"}
         ],
         "map_locations": [
             {
@@ -80,7 +80,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SB Below Crow Town Bridge Chest"}
+            {"name": "SB Tunnel Locked Chest"}
         ],
         "map_locations": [
             {
@@ -133,7 +133,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SB Galloway Room Chest"}
+            {"name": "SB Tangled Woods Galloway Room Chest"}
         ],
         "map_locations": [
             {
@@ -159,7 +159,7 @@
     {
         "name": "Rose",
         "sections": [
-            {"name": "SB Carving Shack Health Rose"}
+            {"name": "SB Carving Man Fight Reward"}
         ],
         "map_locations": [
             {
@@ -172,7 +172,7 @@
     {
         "name": "Reward",
         "sections": [
-            {"name": "SB Dark Deluxy Spark Container"}
+            {"name": "SB Dark Deluxy Fight Reward"}
         ],
         "map_locations": [
             {

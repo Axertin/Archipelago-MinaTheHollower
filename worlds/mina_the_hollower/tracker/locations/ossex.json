@@ -2,7 +2,7 @@
     {
         "name": "Pay Back Loan",
         "sections": [
-            {"name": "OS Courtyard East Deboning Wand"}
+            {"name": "OS Elizabeth Trinket"}
         ],
         "map_locations": [
             {
@@ -15,7 +15,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "OS Courtyard West Weapon Upgrade"}
+            {"name": "OS Courtyard Weapon Chest"}
         ],
         "map_locations": [
             {
@@ -28,7 +28,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "OS Courtyard Garden Trinket"}
+            {"name": "OS Manor's Garden Trinket"}
         ],
         "map_locations": [
             {
@@ -41,7 +41,7 @@
     {
         "name": "Defeat Evra",
         "sections": [
-            {"name": "OS Evra's Rest Health Rose"}
+            {"name": "OS Evra Fight Reward"}
         ],
         "map_locations": [
             {
@@ -54,7 +54,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "OS City Center Steady Soles"}
+            {"name": "OS Fountain Balcony Trinket"}
         ],
         "map_locations": [
             {
@@ -219,7 +219,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "OS Couple's Quarter Thermal Pack"}
+            {"name": "OS Couple's Quarter Trinket"}
         ],
         "map_locations": [
             {
@@ -232,7 +232,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "OS Music Hall Pneumatic Armlet"}
+            {"name": "OS Music Hall Wonder Willis Trinket"}
         ],
         "map_locations": [
             {
@@ -245,7 +245,7 @@
     {
         "name": "Generosity",
         "sections": [
-            {"name": "OS Bowery Residence Kear"}
+            {"name": "OS Gift 3 Homeless Reward"}
         ],
         "map_locations": [
             {
@@ -271,7 +271,7 @@
     {
         "name": "Gift",
         "sections": [
-            {"name": "OS Bowery New House Bonestone"}
+            {"name": "OS Lindy Giraffe Bonestone"}
         ],
         "map_locations": [
             {
@@ -284,7 +284,7 @@
     {
         "name": "Gift",
         "sections": [
-            {"name": "OS Bowery New House Bonestone"}
+            {"name": "OS Lindy Giraffe Bonestone"}
         ],
         "map_locations": [
             {
@@ -365,8 +365,8 @@
     {
         "name": "Race Rewards",
         "sections": [
-            {"name": "OS City Center 2nd Race Kear"},
-            {"name": "OS City Center Final Race Bellows Bustle"}
+            {"name": "OS Blaise Second Race Reward"},
+            {"name": "OS Blaise Final Race Reward"}
         ],
         "map_locations": [
             {
@@ -471,9 +471,9 @@
         ]
     },
     {
-        "name": "Sidearm Permit",
+        "name": "Dual Sidearm Permit",
         "sections": [
-            {"name": "OS Bowery Double Sidearm Permit"}
+            {"name": "OS Bowery Brandish Dual Sidearm Permit"}
 
         ],
         "map_locations": [
@@ -501,9 +501,9 @@
     {
         "name": "Nose",
         "sections": [
-            {"name": "OS High Street Nose Trinket"},
+            {"name": "OS Furl Nose Trinket"},
             {"name": "OS High Street Sewer Chest"},
-            {"name": "SO Commons Ossex Entry Right Chest"}
+            {"name": "SO Commons Ossex Entry Wall Right Chest"}
             ],
         "map_locations": [
             {
@@ -516,7 +516,7 @@
     {
         "name": "Donate",
         "sections": [
-            {"name": "OS Station Underside Bell of Grace"}
+            {"name": "OS Station Underside Frayd Trinket"}
 
         ],
         "map_locations": [
@@ -567,7 +567,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "OS Train Private Cabin Chest"}
+            {"name": "OS Train Chest"}
         ],
         "map_locations": [
             {
@@ -580,7 +580,7 @@
     {
         "name": "Shroud",
         "sections": [
-            {"name": "OS Train Private Cabin Safety Shroud"}
+            {"name": "OS Train Safety Shroud"}
         ],
         "map_locations": [
             {
@@ -593,7 +593,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "OS Station Underside Bell of Grace"}
+            {"name": "OS Station Underside Frayd Trinket"}
         ],
         "map_locations": [
             {
@@ -619,8 +619,8 @@
     {
         "name": "Kear",
         "sections": [
-            {"name": "OS Bowery Residence Kear"},
-            {"name": "SO Commons Ossex Entry Left Chest"}
+            {"name": "OS Gift 3 Homeless Reward"},
+            {"name": "SO Commons Ossex Entry Wall Left Chest"}
         ],
         "map_locations": [
             {
@@ -647,7 +647,7 @@
         "name": "Music Hall",
         "sections": [
             {"name": "OS Music Hall Chest"},
-            {"name": "OS Music Hall Pneumatic Armlet"}
+            {"name": "OS Music Hall Wonder Willis Trinket"}
         ],
         "map_locations": [
             {
@@ -683,9 +683,9 @@
     {
         "name": "Bowery Upper",
         "sections": [
-            {"name": "OS Ossex Telescope Kear"},
+            {"name": "OS Ossex Telescope Meteor"},
             {"name": "OS Bowery Upper Chest"},
-            {"name": "OS City Center Steady Soles"}      
+            {"name": "OS Fountain Balcony Trinket"}
         ],
         "map_locations": [
             {
@@ -725,7 +725,7 @@
     {
         "name": "Defeat Evra",
         "sections": [
-            {"name": "OS Evra's Rest Health Rose"}
+            {"name": "OS Evra Reward"}
         ],
         "map_locations": [
             {
@@ -738,7 +738,7 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "OS Bowery New House Bonestone"}
+            {"name": "OS Lindy Giraffe Bonestone"}
         ],
         "map_locations": [
             {

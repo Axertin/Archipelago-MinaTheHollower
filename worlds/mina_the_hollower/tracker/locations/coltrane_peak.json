@@ -41,7 +41,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "CTP Frozen Pass Ice Block Trinket"}
+            {"name": "EH Frozen Pass Trinket"}
         ],
         "map_locations": [
             {
@@ -54,7 +54,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "CTP Dead Man's Gorge Passage Trinket"}
+            {"name": "CTP Dead Man's Gorge Trinket"}
         ],
         "map_locations": [
             {
@@ -80,7 +80,7 @@
     {
         "name": "Reward",
         "sections": [
-            {"name": "CTP Frostbite Woods Mirren Trinket"}
+            {"name": "CTP Mirren Fight Reward"}
         ],
         "map_locations": [
             {
@@ -93,7 +93,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "CTP Rail Yard Purple Structure Chest"}
+            {"name": "CTP Rail Yard Beside Pipe Chest"}
         ],
         "map_locations": [
             {
@@ -172,7 +172,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "CTP Agnes Express Bone Mimic Bonestone"}
+            {"name": "CTP Agnes Express Mimic Bonestone"}
         ],
         "map_locations": [
             {
@@ -185,7 +185,7 @@
     {
         "name": "Rose",
         "sections": [
-            {"name": "CTP Maelstrom Locomotress Health Rose"}
+            {"name": "CTP Locomotress Fight Reward"}
         ],
         "map_locations": [
             {
@@ -198,7 +198,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "CTP Dead Man's Gorge Passage Trinket"}
+            {"name": "CTP Dead Man's Gorge Trinket"}
         ],
         "map_locations": [
             {
@@ -211,7 +211,7 @@
     {
         "name": "Reward",
         "sections": [
-            {"name": "CTP Frostbite Woods Mirren Trinket"}
+            {"name": "CTP Mirren Fight Reward"}
         ],
         "map_locations": [
             {
@@ -240,7 +240,7 @@
         "sections": [
             {"name": "CTP Frozen Pass Rope Chest"},
             {"name": "CTP Frozen Pass Chest"},
-            {"name": "CTP Frozen Pass Ice Block Trinket"}
+            {"name": "EH Frozen Pass Trinket"}
         ],
         "map_locations": [
             {

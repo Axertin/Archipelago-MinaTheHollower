@@ -2,7 +2,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "AO Mirror's End Beach Room Chest"}
+            {"name": "AO Mirror's End Red Switch Chest"}
         ],
         "map_locations": [
             {
@@ -15,7 +15,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "AO Mirror's End Reckless Beastium"}
+            {"name": "AO Mirror's End Dr. Naught Reward"}
         ],
         "map_locations": [
             {
@@ -28,7 +28,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "AO Mirror's End West Ledge Trinket Bag"}
+            {"name": "AO Mirror's End Locked Trinket Bag"}
         ],
         "map_locations": [
             {
@@ -54,13 +54,26 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "AO Mirror's End Moving Platform Room Chest"}
+            {"name": "AO Mirror's End Blue Switch Path Chest"}
         ],
         "map_locations": [
             {
                 "map": "Mirror's End Top",
                 "x": 815,
                 "y": 1320
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "AO Mirror's End Blue Switch Path Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Mirror's End",
+                "x": 1182,
+                "y": 16
             }
         ]
     },
@@ -107,7 +120,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "AO Gravity Zone Secret Room #1 Kear"}
+            {"name": "AO Gravity Zone After Purple Switch Kear"}
         ],
         "map_locations": [
             {
@@ -120,7 +133,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "AO Gravity Zone Secret Room #2 Chest"}
+            {"name": "AO Gravity Zone Below Green Switch Chest"}
         ],
         "map_locations": [
             {
@@ -133,7 +146,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "AO Cog Chamber Secret Room #1 Chest"}
+            {"name": "AO Cog Chamber West Secret Room Chest"}
         ],
         "map_locations": [
             {
@@ -146,7 +159,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "AO Cog Chamber Secret Room #1 Kear"}
+            {"name": "AO Cog Chamber East Secret Room Kear"}
         ],
         "map_locations": [
             {
@@ -159,7 +172,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "AO Mutant Lab Secret Room #1 Chest"}
+            {"name": "AO Mutant Lab East Secret Room Chest"}
         ],
         "map_locations": [
             {
@@ -172,7 +185,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "AO Mutant Lab Secret Room #2 Trinket"}
+            {"name": "AO Mutant Lab West Secret Room Trinket"}
         ],
         "map_locations": [
             {
@@ -211,7 +224,7 @@
     {
         "name": "Rose",
         "sections": [
-            {"name": "AO Sealed Archive Health Rose"}
+            {"name": "AO The Congealed Fight Reward"}
         ],
         "map_locations": [
             {

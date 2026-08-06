@@ -15,7 +15,7 @@
     {
         "name": "Grave Digging",
         "sections": [
-            {"name": "QC Old Graveyard Kear"}
+            {"name": "QC Mrs. Sodsby Reward"}
         ],
         "map_locations": [
             {
@@ -80,7 +80,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "QC Smelly Secret Kear"}
+            {"name": "QC Midden 1 Kear"}
         ],
         "map_locations": [
             {
@@ -132,8 +132,8 @@
     {
         "name": "Shop",
         "sections": [
-            {"name": "QC Mirror Room Stolenoid"},
-            {"name": "QC Mirror Room Kear"}
+            {"name": "QC Mirror Room Belvedere Trinket"},
+            {"name": "QC Mirror Room Belvedere Kear"}
         ],
         "map_locations": [
             {
@@ -146,7 +146,20 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "QC Putrid Place Bonestone"}
+            {"name": "QC Midden 2 Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Queensbury Head Hall",
+                "x": 1456,
+                "y": 1035
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "QC Midden 2 Bonestone"}
         ],
         "map_locations": [
             {
@@ -170,22 +183,9 @@
         ]
     },
     {
-        "name": "Chest",
+        "name": "Midden Fight",
         "sections": [
-            {"name": "QC Putrid Place Bonestone"}
-        ],
-        "map_locations": [
-            {
-                "map": "Queensbury Head Hall",
-                "x": 1456,
-                "y": 1035
-            }
-        ]
-    },
-    {
-        "name": "Trinket",
-        "sections": [
-            {"name": "QC Rancid Room Trinket"}
+            {"name": "QC Midden Fight Reward"}
         ],
         "map_locations": [
             {
@@ -198,7 +198,7 @@
     {
         "name": "Rose",
         "sections": [
-            {"name": "QC Ancestral Chamber Health Rose"}
+            {"name": "QC The Duchess Fight Reward"}
         ],
         "map_locations": [
             {
@@ -211,7 +211,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "QC Royal Tomb Trinket"}
+            {"name": "QC The Duke Escort Reward"}
         ],
         "map_locations": [
             {
@@ -237,7 +237,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "QC Royal Tomb Trinket"}
+            {"name": "QC The Duke Escort Reward"}
         ],
         "map_locations": [
             {

@@ -16,7 +16,7 @@ collectable_locations: dict[str, LocationData] = {
     "SF Guiding Grains Bonestone Right" : LocationData(328, "Sandfalls Pachinko"),
     "SF Hidden Cave Vial Pouch" : LocationData(323, "Sandfalls Sifted Sands Hidden Cave", CanBurrow() & HasKear(kear=SingleKears.SANDFALLS_HIDDEN_CAVE_KEAR.value)),
     "SF Ring Dive Parlor Trinket" : LocationData(317, "Sandfalls Ring Dive Parlor", CanBurrow()),
-    "SF Shifty Seclusion Chest" : LocationData(327, "Sandfalls Shifty Seclusion"),
+    "SF Shifty Seclusion Mimic Chest" : LocationData(327, "Sandfalls Shifty Seclusion"),
     "SF Payload Passage Chest" : LocationData(332, "Sandfalls Payload Passage Chest", CanBurrow() & CanCarry()),
     "SF Bone Junction Chest" : LocationData(356, "Sandfalls Bone Junction"),
     "SF Train Vita's Shop" : LocationData(333, "Sandfalls Sandy Station", Has(PermanentUpgrades.TRAIN_PASS.value) & Has(PermanentUpgrades.BAYOU_TICKET.value)),

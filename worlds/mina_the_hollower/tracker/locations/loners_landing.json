@@ -2,7 +2,7 @@
     {
         "name": "Weapon Chest",
         "sections": [
-            {"name": "LL Belowdecks Unchosen Weapon #1"}
+            {"name": "LL Belowdecks Left Unchosen Weapon"}
         ],
         "map_locations": [
             {
@@ -15,7 +15,7 @@
     {
         "name": "Weapon Chest",
         "sections": [
-            {"name": "LL Belowdecks Unchosen Weapon #2"}
+            {"name": "LL Belowdecks Right Unchosen Weapon"}
         ],
         "map_locations": [
             {
@@ -67,7 +67,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "LL Blighted Docks Tall Room Chest"}
+            {"name": "LL Blighted Docks Fence Chest"}
         ],
         "map_locations": [
             {
@@ -80,7 +80,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "LL Blighted Docks Side Cave Chest"}
+            {"name": "LL Blighted Docks Side Room Chest"}
         ],
         "map_locations": [
             {
@@ -106,7 +106,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "LL Blighted Docks Residence Chest"}
+            {"name": "LL Blighted Docks Guard Room Chest"}
         ],
         "map_locations": [
             {
@@ -119,13 +119,26 @@
     {
         "name": "Bubble",
         "sections": [
-            {"name": "LL Blighted Docks Burrow Residence Bubble"}
+            {"name": "LL Blighted Docks Room Bubble"}
         ],
         "map_locations": [
             {
                 "map": "Blighted Docks Bridge",
                 "x": 1426,
                 "y": 390
+            }
+        ]
+    },
+    {
+        "name": "Geyser",
+        "sections": [
+            {"name": "LL Blighted Docks Room Bubble"}
+        ],
+        "map_locations": [
+            {
+                "map": "Blighted Docks Bridge",
+                "x": 1488,
+                "y": 721
             }
         ]
     },

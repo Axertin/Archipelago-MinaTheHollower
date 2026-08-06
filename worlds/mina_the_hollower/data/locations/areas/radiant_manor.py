@@ -11,7 +11,7 @@ collectable_locations: dict[str, LocationData] = {
     "RM Rafters Chest" : LocationData(143, "Radiant Manor Rafters", CanBurrow()),
     "RM Servant's Quarters Trinket" : LocationData(145, "Radiant Manor Servant's Quarters", CanBurrow()),
     "RM Ballroom Chest" : LocationData(144, "Radiant Manor Ballroom Balcony East"),
-    "RM Tile Chamber Chest" : LocationData(142, "Radiant Manor Balcony East Chamber", CanJumpTiles(distance=2)),
+    "RM Ballroom Tile Chamber Chest" : LocationData(142, "Radiant Manor Balcony East Chamber", CanJumpTiles(distance=2)),
     "RM Meowstro's Chamber Bonestone" : LocationData(139, "Radiant Manor Meowstro's Chamber", CanBurrow() & CanSwim() & CanCarry() & CanBounce() & CanClimb() & HasKear(kear=SingleKears.RADIANT_MANOR_MEOWSTRO_ROOM_KEAR.value)), #needs burrow, swim, carry, float, climb, kear,
 }
 

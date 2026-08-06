@@ -15,7 +15,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "BB Bone Rush Trail Furgus Tunnel Chest"}
+            {"name": "BB Behind Furgus Tunnel Chest"}
         ],
         "map_locations": [
             {
@@ -28,7 +28,7 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "BB Gold Grasp Bonestone"}
+            {"name": "BB Entrance Pit Handle Bonestone"}
         ],
         "map_locations": [
             {
@@ -41,20 +41,20 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "BB Large Conveyor Bonestone"}
+            {"name": "BB Conveyer Jump Bonestone"}
         ],
         "map_locations": [
             {
                 "map": "Bone Beach",
-                "x": 466,
-                "y": 880
+                "x": 1170,
+                "y": 685
             }
         ]
     },
     {
         "name": "Chest",
         "sections": [
-            {"name": "BB Split Room Chest"}
+            {"name": "BB Bounce Conveyer Challenge Chest"}
         ],
         "map_locations": [
             {
@@ -68,13 +68,13 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "BB Aquatic Conveyor Chest"}
+            {"name": "BB Message In a Bottle Chest"}
         ],
         "map_locations": [
             {
                 "map": "Bone Beach",
-                "x": 1170,
-                "y": 685
+                "x": 466,
+                "y": 880
             }
         ]
     },
@@ -121,7 +121,8 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "BB Calcified Caves Jail Bonestone"}
+            {"name": "BB Calcified Caves Jail Bonestone"},
+            {"name": "OS Couple's Quarter Trinket"}
         ],
         "map_locations": [
             {
@@ -147,7 +148,7 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "BB Pulsing Tract Bonestone"}
+            {"name": "BB Pulsing Tract Hidden Bonestone"}
         ],
         "map_locations": [
             {
@@ -160,7 +161,7 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "BB Worm's Back Battery Buster"}
+            {"name": "BB Worm's Back Weapon Chest"}
         ],
         "map_locations": [
             {
@@ -199,7 +200,7 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "BB Moving Stairs Bonestone"}
+            {"name": "BB Gut Depths Moving Stairs Bonestone"}
         ],
         "map_locations": [
             {
@@ -212,7 +213,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "BB Gut Passage Chest"}
+            {"name": "BB Gut Depths Passage Chest"}
         ],
         "map_locations": [
             {
@@ -225,7 +226,7 @@
     {
         "name": "Rose",
         "sections": [
-            {"name": "BB Brain Alcove Health Rose"}
+            {"name": "BB Mined Mind Fight Reward"}
         ],
         "map_locations": [
             {
@@ -290,7 +291,7 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "BB Gut Passage Chest"}
+            {"name": "BB Gut Depths Passage Chest"}
         ],
         "map_locations": [
             {

@@ -2,7 +2,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SO Commons Ossex Entry Left Chest"}
+            {"name": "SO Commons Ossex Entry Wall Left Chest"}
         ],
         "map_locations": [
             {
@@ -15,7 +15,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SO Commons Ossex Entry Right Chest"}
+            {"name": "SO Commons Ossex Entry Wall Right Chest"}
         ],
         "map_locations": [
             {
@@ -41,7 +41,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SO Commons Chest"}
+            {"name": "SO Commons Bounce Chest"}
         ],
         "map_locations": [
             {
@@ -107,7 +107,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SO Southern Pit Room Bonestone"}
+            {"name": "SO Pit Room Bonestone"}
         ],
         "map_locations": [
             {
@@ -120,7 +120,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SO Western Pit Room Chest"}
+            {"name": "SO Western Wilds Entrance Chest"}
         ],
         "map_locations": [
             {

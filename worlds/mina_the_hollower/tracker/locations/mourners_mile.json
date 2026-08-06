@@ -41,7 +41,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "MM Ring Tomb Trinket"}
+            {"name": "MM Spike Tomb Trinket"}
         ],
         "map_locations": [
             {
@@ -184,7 +184,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "MM Ring Tomb Trinket"}
+            {"name": "MM Spike Tomb Trinket"}
         ],
         "map_locations": [
             {

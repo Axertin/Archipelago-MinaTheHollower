@@ -2,7 +2,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "KW Overgrowth Bonfire Chest"}
+            {"name": "KW Campfire Chest"}
         ],
         "map_locations": [
             {
@@ -44,7 +44,7 @@
     {
         "name": "Bonestone",
         "sections": [
-            {"name": "KW Behind Madd House Bonestone"}
+            {"name": "KW Torch Escort Bonestone"}
         ],
         "map_locations": [
             {
@@ -57,7 +57,7 @@
     {
         "name": "Trinket",
         "sections": [
-            {"name": "KW Train Station Gourdan"}
+            {"name": "KW Gourdan Oozing Organ Reward"}
         ],
         "map_locations": [
             {
@@ -96,7 +96,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "KW Farm Crossing Shack Chest"}
+            {"name": "KW Shack Chest"}
         ],
         "map_locations": [
             {
@@ -161,7 +161,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "KW Farm Crossing Shack Chest"}
+            {"name": "KW Shack Chest"}
         ],
         "map_locations": [
             {
