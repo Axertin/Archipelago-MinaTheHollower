@@ -46,8 +46,8 @@
         "map_locations": [
             {
                 "map": "Bone Beach",
-                "x": 880,
-                "y": 113
+                "x": 466,
+                "y": 880
             }
         ]
     },
@@ -59,8 +59,9 @@
         "map_locations": [
             {
                 "map": "Bone Beach",
-                "x": 466,
-                "y": 880
+
+                "x": 880,
+                "y": 113
             }
         ]
     },
