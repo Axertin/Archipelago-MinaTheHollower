@@ -185,9 +185,9 @@
     {
         "name": "Poppit Cave",
         "sections": [
-            {"name": "EH Grassland Poppit Cave Chest"},
-            {"name": "EH Grassland Poppit Cave Willow"},
-            {"name": "EH Grassland Poppit Cave Kear"}
+            {"name": "EH Poppit Cave Chest"},
+            {"name": "EH Poppit Cave Willow"},
+            {"name": "EH Poppit Cave Kear"}
         ],
         "map_locations": [
             {
