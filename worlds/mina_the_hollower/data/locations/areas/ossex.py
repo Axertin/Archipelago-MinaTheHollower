@@ -72,7 +72,7 @@ collectable_locations: dict[str, LocationData] = {
         "OS Atelier Custom Fit" : LocationData(209, "Ossex Atelier", Has(PermanentUpgrades.VITALITY_VEST.value) & Has(PermanentUpgrades.SAFETY_SHROUD.value) & ShopPrice(cost=2000)),
         "OS Bowery Brandish Dual Sidearm Permit" : LocationData(219, "Ossex Bowery Main", Has(BoneUps.SIDEARM_BONE_UP_CAP.value, count=4) | Has(GenericBoneUp.ALL_BONE_UP_CAP.value, count=4)),
         "OS Bowery Upper Chest" : LocationData(173, "Ossex Bowery Upper", CanBurrow() & (HasReachingSideArm() | HasTrinket(trinket=Trinkets.SEISMIC_BELT.value) | HasBeastiumTransform())),
-        "OS Lindy Giraffe Bonestone" : LocationData(159, "Ossex Bowery Tall Residence Upper Main", CanBurrow()),
+        "OS Lindy The Giraffe Bonestone" : LocationData(159, "Ossex Bowery Tall Residence Upper Main", CanBurrow()),
         "OS Gift 3 Homeless Reward" : LocationData(156, "Ossex Bowery Begger Residence"),
         "OS Music Hall Chest" : LocationData(170, "Ossex Music Hall"),
         "OS Music Hall Wonder Willis Trinket" : LocationData(148, "Ossex Music Hall", CanCarry() & CanBurrow() & CanSwim() & CanClimb()),
