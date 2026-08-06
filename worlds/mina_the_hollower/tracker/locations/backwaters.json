@@ -14,7 +14,7 @@
         ]
     },
     {
-        "name": "Frog Fight",
+        "name": "Chest",
         "sections": [
             {"name": "BW Side Room Chest"}
         ],
@@ -27,7 +27,7 @@
         ]
     },
     {
-        "name": "BoneStone",
+        "name": "Bonestone",
         "sections": [
             {"name": "BW Lantern Cave Bonestone"}
         ],
