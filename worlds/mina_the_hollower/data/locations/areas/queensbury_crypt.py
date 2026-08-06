@@ -27,7 +27,7 @@ collectable_locations: dict[str, LocationData] = {
     "QC Ancestral Chamber Health Rose": LocationData(58, "Queensbury Crypt Ancestral Chamber"),
     "QC Royal Tomb Trinket": LocationData(60, "Queensbury Crypt Royal Tomb", HasVialsCount(count=2) & CanClimb()),
     "EH Carry Head QB Chest" : LocationData(238, "Eastern Heath East Corner", RepairedGenerator(event=QUEENSBURY_CRYPT_DATA) & HasKear(kear=SingleKears.MOURNERS_MILE_AFTER_GENERATOR_KEAR.value)),
-    "MM Knight's Rest Bonestone": LocationData(303, "Mourner's Mile Knight's Guard Hill", CanCarry()),
+    "MM Knight's Rest Post Generator Bonestone": LocationData(303, "Mourner's Mile Knight's Guard Hill", CanCarry()),
 }
 boss_locations: dict[str, LocationData] = {
     "QC Rancid Room Midden": LocationData(0, "Queensbury Crypt Rancid Room"),
