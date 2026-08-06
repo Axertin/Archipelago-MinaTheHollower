@@ -12,7 +12,7 @@ from ..items import Trinkets, Sidearms, PlayerUpgrades, Weapons, \
     Abilities, all_movement_items, movement_trinkets, movement_sidearms
 
 
-def base_movement_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
+def base_movement_calc(movement_loadout, has_walls: bool, no_sidearms: bool, over_water: bool):
     distance = 1
     if Abilities.BURROW in movement_loadout:
         distance+=1
@@ -33,7 +33,7 @@ def base_movement_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
         distance += 2
     return distance
 
-def shield_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
+def shield_calc(movement_loadout, has_walls: bool, no_sidearms: bool, over_water: bool):
     distance = 4
     if Trinkets.WALLOWERS_GAUNTLETS in movement_loadout and has_walls and Abilities.BURROW in movement_loadout:
         distance += 5
@@ -50,7 +50,9 @@ def shield_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
         distance += 4
     return distance
 
-def bridge_weaver_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
+def bridge_weaver_calc(movement_loadout, has_walls: bool, no_sidearms: bool, over_water: bool):
+    if over_water:
+        return 1
     distance = 3
     if Trinkets.WALLOWERS_GAUNTLETS in movement_loadout and has_walls and Abilities.BURROW in movement_loadout:
         distance += 5
@@ -68,7 +70,7 @@ def bridge_weaver_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
         distance += 2
     return distance
 
-def iron_steed_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
+def iron_steed_calc(movement_loadout, has_walls: bool, no_sidearms: bool, over_water: bool):
     if no_sidearms:
         return 1
     distance = 5
@@ -81,7 +83,7 @@ def iron_steed_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
     return distance
 
 
-def spring_heel_calc(movement_loadout, has_walls: bool, no_sidearms: bool):
+def spring_heel_calc(movement_loadout, has_walls: bool, no_sidearms: bool, over_water: bool):
     distance = 3
 
     if Trinkets.WALLOWERS_GAUNTLETS in movement_loadout and has_walls and Abilities.BURROW in movement_loadout:
@@ -164,26 +166,28 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
     distance: int
     has_wall: bool = False
     no_sidearms: bool = False
+    over_water: bool = False
     @override
     def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
         no_joules = not (Has(PlayerUpgrades.JOULE_BOX.value).resolve(world))
         # caching_enabled only needs to be passed in when your world inherits from CachedRuleBuilderWorld
-        return self.Resolved(distance=self.distance, no_sidearms=self.no_sidearms or no_joules, has_wall=self.has_wall, player=world.player, caching_enabled=True)
+        return self.Resolved(distance=self.distance, no_sidearms=self.no_sidearms or no_joules, has_wall=self.has_wall, over_water=self.over_water ,player=world.player, caching_enabled=True)
 
     class Resolved(Rule.Resolved):
         distance: int
         has_wall: bool
         no_sidearms: bool
+        over_water: bool
 
         @override
         def _evaluate(self, state: CollectionState) -> bool:
 
             for loadout in valid_loadouts(state, self.player):
-                distance = base_movement_calc(loadout, self.has_wall, self.no_sidearms)
+                distance = base_movement_calc(loadout, self.has_wall, self.no_sidearms, self.over_water)
 
                 for item, calc in exclusive_movements:
                     if item in loadout:
-                        distance = max(distance, calc(loadout, self.has_wall, self.no_sidearms))
+                        distance = max(distance, calc(loadout, self.has_wall, self.no_sidearms, self.over_water))
                 if distance >= self.distance:
                     return True
             return False
@@ -207,7 +211,7 @@ def max_jump(state: CollectionState, player: int, has_wall:bool, no_sidearms: bo
     loadout = None
     for new_loadout in valid_loadouts(state, player):
 
-        new_distance = base_movement_calc(new_loadout, has_wall, no_sidearms)
+        new_distance = base_movement_calc(new_loadout, has_wall, no_sidearms, False)
 
         if new_distance > distance:
             distance = new_distance
@@ -215,7 +219,7 @@ def max_jump(state: CollectionState, player: int, has_wall:bool, no_sidearms: bo
 
         for item, calc in exclusive_movements:
             if item in new_loadout:
-                new_distance = calc(new_loadout, has_wall, no_sidearms)
+                new_distance = calc(new_loadout, has_wall, no_sidearms, False)
                 if new_distance > distance:
                     distance = new_distance
                     loadout = new_loadout
