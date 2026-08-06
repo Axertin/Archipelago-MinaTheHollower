@@ -91,9 +91,10 @@
         ]
     },
     {
-        "name": "Fish",
+        "name": "Fish/Dugin",
         "sections": [
-            {"name": "WW Fish Glomper Stalk"}
+            {"name": "WW Fish Glomper Stalk"},
+            {"name": "Dugin Fight 2 Trinket"}
         ],
         "map_locations": [
             {
