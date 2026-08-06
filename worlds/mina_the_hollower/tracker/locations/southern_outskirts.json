@@ -59,8 +59,8 @@
         "map_locations": [
             {
                 "map": "Southern Outskirts",
-                "x": 550,
-                "y": 303
+                "x": 884,
+                "y": 596
             }
         ]
     },
@@ -168,6 +168,59 @@
                 "y": 138
             }
         ]
+    },
+    {
+        "name": "Cave Network",
+        "sections": [
+            {"name": "SO Cave Network Chest"},
+            {"name": "SO Cave Network Side Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Southern Outskirts",
+                "x": 2222,
+                "y": 308
+            }
+        ]
+    },
+    {
+        "name": "Cave Network",
+        "sections": [
+            {"name": "SO Cave Network Chest"},
+            {"name": "SO Cave Network Side Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Southern Outskirts",
+                "x": 2385,
+                "y": 402
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SO Mining Passage Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Southern Outskirts",
+                "x": 2432,
+                "y": 756
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "SO Thorne Residence Basement Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Southern Outskirts",
+                "x": 687,
+                "y": 306
+            }
+        ]
     }
-
 ]

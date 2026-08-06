@@ -59,8 +59,8 @@
         "map_locations": [
             {
                 "map": "Septemburg Farm Tractors",
-                "x": 48,
-                "y": 479
+                "x": 107,
+                "y": 333
             }
         ]
     },
@@ -72,8 +72,8 @@
         "map_locations": [
             {
                 "map": "Septemburg Barn",
-                "x": 121,
-                "y": 174
+                "x": 716,
+                "y": 169
             }
         ]
     },
@@ -107,7 +107,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SB Crow Town Farmhouse Roof Chest"}
+            {"name": "SB Crow Town Farmhouse Roof Weapon Chest"}
         ],
         "map_locations": [
             {
@@ -198,33 +198,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "SB Wastewater Canal Slime Room Chest"}
-        ],
-        "map_locations": [
-            {
-                "map": "Septemburg Wastewater Canal",
-                "x": 48,
-                "y": 335
-            }
-        ]
-    },
-    {
-        "name": "Chest",
-        "sections": [
             {"name": "SB Wastewater Canal Box Room Chest"}
-        ],
-        "map_locations": [
-            {
-                "map": "Septemburg Wastewater Canal",
-                "x": 1136,
-                "y": 432
-            }
-        ]
-    },
-    {
-        "name": "Chest",
-        "sections": [
-            {"name": "SB Wastewater Canal Well Entrance Chest"}
         ],
         "map_locations": [
             {
@@ -244,6 +218,58 @@
                 "map": "Kindlewood Interiors",
                 "x": 707,
                 "y": 351
+            }
+        ]
+    },
+    {
+        "name": "Item",
+        "sections": [
+            {"name": "SB Dark Deluxy Spark Container"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Canal",
+                "x": 1455,
+                "y": 822
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Wastewater Canal Well Entrance Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Well",
+                "x": 306,
+                "y": 622
+            }
+        ]
+    },
+    {
+        "name": "Fish",
+        "sections": [
+            {"name": "SB Fish Spincer Pincers"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Well",
+                "x": 174,
+                "y": 691
+            }
+        ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "SB Wastewater Canal Slime Room Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Septemburg Wastewater Canal",
+                "x": 55,
+                "y": 335
             }
         ]
     }

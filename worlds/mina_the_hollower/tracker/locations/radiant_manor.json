@@ -15,7 +15,7 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "RM Mimic Chamber Dodging Pendulum"}
+            {"name": "RM Mimic Chamber Trinket"}
         ],
         "map_locations": [
             {
@@ -87,6 +87,32 @@
                 "map": "Radiant Manor Ballroom",
                 "x": 1856,
                 "y": 500
+            }
+        ]
+    },
+    {
+        "name": "Trinket",
+        "sections": [
+            {"name": "RM Mimic Chamber Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Radiant Manor Ballroom",
+                "x": 1089,
+                "y": 722
+            }
+        ]
+    },
+    {
+        "name": "Bonestone",
+        "sections": [
+            {"name": "RM Meowstro's Chamber Bonestone"}
+        ],
+        "map_locations": [
+            {
+                "map": "Radiant Manor Ballroom",
+                "x": 1265,
+                "y": 980
             }
         ]
     }
