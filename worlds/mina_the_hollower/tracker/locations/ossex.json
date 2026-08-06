@@ -609,7 +609,8 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "OS Couple's Quarter Chest"}
+            {"name": "OS Couple's Quarter Chest"},
+            {"name": "OS Couple's Quarter Trinket"}
         ],
         "map_locations": [
             {
@@ -687,7 +688,7 @@
         "name": "Bowery Upper",
         "sections": [
             {"name": "OS Ossex Telescope Meteor"},
-            {"name": "OS Bowery Upper Chest"},
+            {"name": "OS Attic Chest"},
             {"name": "OS Fountain Balcony Trinket"}
         ],
         "map_locations": [
