@@ -275,5 +275,18 @@
                 "y": 1343
             }
         ]
+    },
+    {
+        "name": "Chest",
+        "sections": [
+            {"name": "BB Sandwater Junction Angler's Raft"}
+        ],
+        "map_locations": [
+            {
+                "map": "Sandfalls Interiors",
+                "x": 35,
+                "y": 879
+            }
+        ]
     }
 ]
