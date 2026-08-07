@@ -222,5 +222,19 @@
                 "y": 306
             }
         ]
+    },
+    {
+        "name": "Poppit Cave",
+        "sections": [
+            {"name": "SO Poppit Keri"},
+            {"name": "SO Poppit Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Southern Outskirts",
+                "x": 2065,
+                "y": 1063
+            }
+        ]
     }
 ]

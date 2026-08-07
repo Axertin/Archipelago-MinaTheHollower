@@ -245,7 +245,7 @@
     {
         "name": "Generosity",
         "sections": [
-            {"name": "OS Gift 3 Homeless Reward"}
+            {"name": "OS Gift Homeless Reward"}
         ],
         "map_locations": [
             {
@@ -271,20 +271,7 @@
     {
         "name": "Gift",
         "sections": [
-            {"name": "OS Lindy Giraffe Bonestone"}
-        ],
-        "map_locations": [
-            {
-                "map": "Ossex Bowery Interiors",
-                "x": 435,
-                "y": 575
-            }
-        ]
-    },
-    {
-        "name": "Gift",
-        "sections": [
-            {"name": "OS Lindy Giraffe Bonestone"}
+            {"name": "OS Lindy The Giraffe Bonestone"}
         ],
         "map_locations": [
             {
@@ -609,7 +596,8 @@
     {
         "name": "Chest",
         "sections": [
-            {"name": "OS Couple's Quarter Chest"}
+            {"name": "OS Couple's Quarter Chest"},
+            {"name": "OS Couple's Quarter Trinket"}
         ],
         "map_locations": [
             {
@@ -622,7 +610,7 @@
     {
         "name": "Kear",
         "sections": [
-            {"name": "OS Gift 3 Homeless Reward"},
+            {"name": "OS Gift Homeless Reward"},
             {"name": "SO Commons Ossex Entry Wall Left Chest"}
         ],
         "map_locations": [
@@ -687,7 +675,7 @@
         "name": "Bowery Upper",
         "sections": [
             {"name": "OS Ossex Telescope Meteor"},
-            {"name": "OS Bowery Upper Chest"},
+            {"name": "OS Attic Chest"},
             {"name": "OS Fountain Balcony Trinket"}
         ],
         "map_locations": [

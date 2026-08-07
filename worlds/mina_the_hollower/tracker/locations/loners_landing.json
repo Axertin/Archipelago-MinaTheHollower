@@ -167,5 +167,20 @@
                 "y": 586
             }
         ]
+    },
+    {
+        "name": "Weapon Chest",
+        "sections": [
+            {"name": "LL Belowdecks Chest"},
+            {"name": "LL Belowdecks Left Unchosen Weapon"},
+            {"name": "LL Belowdecks Right Unchosen Weapon"}
+        ],
+        "map_locations": [
+            {
+                "map": "ShipWreck",
+                "x": 1238,
+                "y": 627
+            }
+        ]
     }
 ]
