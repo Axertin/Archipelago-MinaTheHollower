@@ -241,5 +241,35 @@
                 "y": 635
             }
         ]
+    },
+    {
+        "name": "Weapon Chest",
+        "sections": [
+            {"name": "LL Belowdecks Chest"},
+            {"name": "LL Belowdecks Left Unchosen Weapon"},
+            {"name": "LL Belowdecks Right Unchosen Weapon"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters",
+                "x": 1515,
+                "y": 1260
+            }
+        ]
+    },
+    {
+        "name": "Weapon Chest",
+        "sections": [
+            {"name": "LL Belowdecks Chest"},
+            {"name": "LL Belowdecks Left Unchosen Weapon"},
+            {"name": "LL Belowdecks Right Unchosen Weapon"}
+        ],
+        "map_locations": [
+            {
+                "map": "Backwaters Interiors",
+                "x": 800,
+                "y": 750
+            }
+        ]
     }
 ]
