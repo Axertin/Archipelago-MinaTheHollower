@@ -235,6 +235,7 @@ RoomLookup: dict[GameState, RoomGroup] = {
         18:16,
         26:16,
         24:16,
+        25:16
     }),
     GameState.HUB: RoomGroup("OS", {
         10:17,
@@ -363,7 +364,7 @@ RoomLookup: dict[GameState, RoomGroup] = {
         6:40,
         7:40,
         8:40,
-        0:41,
+        0:42,
         12:43,
     }),
     GameState.CRYPT_OVERWORLD_HELL: RoomGroup("DP", {
@@ -489,6 +490,9 @@ RoomLookup: dict[GameState, RoomGroup] = {
         0:72,
         4:72,
         14:73,
+    }),
+    GameState.BONEBEACH_TOWER: RoomGroup("SF", {
+        3:74
     }),
     GameState.BONEBEACH_OVERWORLD: RoomGroup("SF", {
         8: 12,
@@ -654,7 +658,9 @@ RoomLookup: dict[GameState, RoomGroup] = {
     }),
     GameState.HUB_MANSION: RoomGroup("RM", {
         21:106,
+        0:106,
         1:106,
+        2:106,
     }),
     GameState.MANSION: RoomGroup("RM", {
         0:107,
