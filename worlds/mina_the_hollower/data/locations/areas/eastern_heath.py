@@ -19,7 +19,7 @@ collectable_locations: dict[str, LocationData] = {
     "EH Beside Kite Chest" : LocationData(234, "Eastern Heath Grassland Waterfall Second Level"),
     "EH Kite Trinket" : LocationData(223, "Eastern Heath Grassland Waterfall Second Level", HasReachingSideArm() & (
             (CanJumpTiles(distance=4, has_wall=True, no_sidearms=True) & CanClimb()) |
-            (CanJumpTiles(distance=4, has_wall=True) Has(PermanentUpgrades.DOUBLE_SIDEARM_PERMIT.value) & CanClimb()) |
+            (CanJumpTiles(distance=4, has_wall=True) & Has(PermanentUpgrades.DOUBLE_SIDEARM_PERMIT.value) & CanClimb()) |
             (CanBurrow() & CanClimb()) |
             (CanBurrow() & HasKear(kear=SingleKears.EASTERN_HEATH_WATERFALL_KEAR.value)) |
             (Has(PermanentUpgrades.COLTRANE_PEAK_TICKET.value) & Has(PermanentUpgrades.TRAIN_PASS.value) & CanClimb()))
