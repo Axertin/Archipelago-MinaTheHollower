@@ -233,5 +233,62 @@
                 "y": 952
             }
         ]
+    },
+    {
+        "name": "Hall of Scholars",
+        "sections": [
+            {"name": "AO Hall of Scholars Below Boss Chamber Bonestone"},
+            {"name": "AO Hall of Scholars Exit Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Stellarium",
+                "x": 119,
+                "y": 342
+            }
+        ]
+    },
+    {
+        "name": "Gravity Zone",
+        "sections": [
+            {"name": "AO Gravity Zone After Purple Switch Kear"},
+            {"name": "AO Gravity Zone Long Hallway Chest"},
+            {"name": "AO Gravity Zone Below Green Switch Chest"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Stellarium",
+                "x": 551,
+                "y": 342
+            }
+        ]
+    },
+    {
+        "name": "Mutant Lab",
+        "sections": [
+            {"name": "AO Mutant Lab East Secret Room Chest"},
+            {"name": "AO Mutant Lab West Secret Room Trinket"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Stellarium",
+                "x": 119,
+                "y": 776
+            }
+        ]
+    },
+    {
+        "name": "Cog Chamber",
+        "sections": [
+            {"name": "AO Cog Chamber West Secret Room Chest"},
+            {"name": "AO Cog Chamber East Secret Room Kear"}
+        ],
+        "map_locations": [
+            {
+                "map": "Astral Orrery Stellarium",
+                "x": 551,
+                "y": 776
+            }
+        ]
     }
 ]
