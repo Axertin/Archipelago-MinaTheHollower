@@ -35,7 +35,7 @@ class PermanentUpgrades(ItemTypeEnum):
     # WORLD_MAP = ("World Map", 75, ItemClassification.useful)
     # ENHANCED_MAP = ("Enhanced Map", 76, ItemClassification.useful)
     # RADAR_MAP = ("All-Seeing Skull", 77, ItemClassification.useful)
-    DOUBLE_SIDEARM_PERMIT = ("Double Sidearm Permit", 78, ItemClassification.progression)
+    DOUBLE_SIDEARM_PERMIT = ("Dual Sidearm Permit", 78, ItemClassification.progression)
     VITALITY_VEST = ("Vitality Vest", 79, ItemClassification.progression)
     SAFETY_SHROUD = ("Safety Shroud", 80, ItemClassification.progression)
     ARMOR_CUSTOM = ("Custom Fitting", 81, ItemClassification.useful)
