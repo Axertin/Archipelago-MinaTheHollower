@@ -108,6 +108,7 @@ movement_trinkets: list[ItemTypeEnum] = [
 #Raft?
 all_movement_items: list[ItemTypeEnum] = [
     Abilities.BURROW,
+    Abilities.SWIM,
     Weapons.GUARDIAN_CASKET,
     PlayerUpgrades.JOULE_BOX,
     PlayerUpgrades.TRINKET_BAG,

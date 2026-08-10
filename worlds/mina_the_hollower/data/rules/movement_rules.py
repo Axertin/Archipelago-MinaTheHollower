@@ -33,6 +33,22 @@ def base_movement_calc(movement_loadout, has_walls: bool, no_sidearms: bool, ove
         distance += 2
     return distance
 
+def swim_movement_calc(movement_loadout, has_walls: bool, no_sidearms: bool, over_water: bool):
+    distance = 0
+    if not over_water:
+        return distance
+    if Abilities.SWIM in movement_loadout:
+        distance += 3
+    if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout
+                                                      and not no_sidearms and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
+        distance += 2
+    if Sidearms.DRIVER_DRILL in movement_loadout and not no_sidearms:
+        distance+=4
+    if Trinkets.PIT_PRESERVER in movement_loadout:
+        distance += 1
+    return distance
+
+
 def shield_calc(movement_loadout, has_walls: bool, no_sidearms: bool, over_water: bool):
     distance = 4
     if Trinkets.WALLOWERS_GAUNTLETS in movement_loadout and has_walls and Abilities.BURROW in movement_loadout:
@@ -111,6 +127,7 @@ exclusive_movements = [
     (Sidearms.IRON_STEED, iron_steed_calc),
     (Trinkets.BRIDGE_WEAVER, bridge_weaver_calc),
     (Weapons.GUARDIAN_CASKET, shield_calc),
+    (Abilities.SWIM, swim_movement_calc),
 ]
 
 
@@ -138,6 +155,7 @@ def valid_loadouts(state: CollectionState, player: int):
     ]
 
     has_burrow = state.has(Abilities.BURROW.value, player)
+    has_swim = state.has(Abilities.SWIM.value, player)
 
     trinket_slots = state.count(PlayerUpgrades.TRINKET_BAG.value, player)
 
@@ -148,6 +166,8 @@ def valid_loadouts(state: CollectionState, player: int):
 
             if has_burrow:
                 base_loadout += (Abilities.BURROW,)
+            if has_swim:
+                base_loadout += (Abilities.SWIM,)
 
             loadout = frozenset(base_loadout)
             if is_valid_loadout(loadout):
