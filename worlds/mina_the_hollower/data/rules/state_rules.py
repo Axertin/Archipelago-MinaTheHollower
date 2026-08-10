@@ -26,6 +26,8 @@ class HasKear(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
     @override
     def _instantiate(self, world: MinaTheHollowerBase) -> Rule.Resolved:
         if world.options.kear_rando.value == 0:
+            if self.kear == SingleKears.LONERS_LANDING_BOARDWALK_KEAR.value:
+                return Has(Kear.UNIVERSAL_KEAR.value, 1).resolve(world)
             return Has(Kear.UNIVERSAL_KEAR.value, 42).resolve(world)
         elif world.options.kear_rando.value == 1:
             return Has(self.kear).resolve(world)
