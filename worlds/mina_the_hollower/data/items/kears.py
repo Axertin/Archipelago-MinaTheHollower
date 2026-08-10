@@ -48,7 +48,7 @@ class SingleKears(ItemTypeEnum):
     PINKY_BACK_KEAR = ("Backwaters Pinky's Parlor Back Lock", ITEMS_OFFSET_KEARS + 283, ItemClassification.progression)
     LONERS_LANDING_BELOWDECKS_RIGHT_WEAPON_KEAR = ("Loner's Landing Below Decks Right Weapon Lock", ITEMS_OFFSET_KEARS + 20, ItemClassification.progression)
     LONERS_LANDING_BELOWDECKS_LEFT_WEAPON_KEAR = ("Loner's Landing Below Decks Left Weapon Lock", ITEMS_OFFSET_KEARS + 21, ItemClassification.progression)
-    LONERS_LANDING_BELOWDECKS_BACK_KEAR = ("Loner's Landing Shipwreck Back Lock", ITEMS_OFFSET_KEARS + 22, ItemClassification.progression)
+    LONERS_LANDING_BELOWDECKS_BACK_KEAR = ("Loner's Landing Below Decks Path Lock", ITEMS_OFFSET_KEARS + 22, ItemClassification.progression)
     NOXS_BAYOU_SWAMP_SHACK_KEAR = ("Nox's Bayou Swamp Shack Lock", ITEMS_OFFSET_KEARS + 33, ItemClassification.progression) #find leading spac
     SANDFALL_CAVE_KEAR = ("Sandfalls Cave Lock", ITEMS_OFFSET_KEARS + 320, ItemClassification.progression)
     SANDFALLS_PAYLOAD_PASSAGE_BOTTOM_KEAR = ("Sandfalls Payload Passage Bottom Lock", ITEMS_OFFSET_KEARS + 318, ItemClassification.progression) #lower case kea

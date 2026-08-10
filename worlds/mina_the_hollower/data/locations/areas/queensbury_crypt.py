@@ -26,7 +26,7 @@ collectable_locations: dict[str, LocationData] = {
     "QC Midden Fight Reward": LocationData(59, "Queensbury Crypt Rancid Room"),
     "QC The Duchess Fight Reward": LocationData(58, "Queensbury Crypt Ancestral Chamber"),
     "QC The Duke Escort Reward": LocationData(60, "Queensbury Crypt Royal Tomb", HasVialsCount(count=2) & CanClimb()),
-    "EH Post Generator Head Escort Chest": LocationData(238, "Eastern Heath East Corner", CanCarry() & CanClimb() & RepairedGenerator(event=QUEENSBURY_CRYPT_DATA) & HasKear(kear=SingleKears.MOURNERS_MILE_AFTER_GENERATOR_KEAR.value)),
+    "EH Post Generator Head Escort Chest": LocationData(238, "Eastern Heath East Corner", RepairedGenerator(event=QUEENSBURY_CRYPT_DATA) & HasKear(kear=SingleKears.MOURNERS_MILE_AFTER_GENERATOR_KEAR.value) & CanCarry() & CanClimb()),
     "MM Knight's Rest Post Generator Bonestone": LocationData(303, "Mourner's Mile Knight's Guard Hill", CanCarry()),
 }
 boss_locations: dict[str, LocationData] = {
