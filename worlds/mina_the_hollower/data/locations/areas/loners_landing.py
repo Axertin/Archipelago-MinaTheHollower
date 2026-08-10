@@ -9,7 +9,7 @@ boss_locations: dict[str, LocationData] = {
 collectable_locations: dict[str, LocationData] = {
     "LL Blighted Docks Fence Chest": LocationData(29, "Loner's Landing Blighted Docks Fences Bottom"),
     "LL Blighted Docks Side Room Chest": LocationData(28, "Loner's Landing Blighted Docks Side Cave"),
-    "LL Blighted Docks Bridge Chest": LocationData(31, "Loner's Landing Blighted Docks Bridge", (CanBounce() | CanJumpTiles(distance=3))& CanClimb()),
+    "LL Blighted Docks Bridge Chest": LocationData(31, "Loner's Landing Blighted Docks Bridge Cliff", (CanBounce() | CanJumpTiles(distance=3)) & CanClimb()),
     "LL Blighted Docks Guard Room Chest": LocationData(26, "Loner's Landing Blighted Docks Residence", CanBurrow()),
     "LL Blighted Docks Room Bubble": LocationData(23, "Loner's Landing Blighted Docks Burrow", CanJumpTiles(distance=2)),
     "LL Boardwalk Fire Bounce Chest": LocationData(27, "Loner's Landing Boardwalk Fire Bounce", CanBounce()),

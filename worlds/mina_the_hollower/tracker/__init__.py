@@ -5,6 +5,120 @@ from enum import IntEnum
 def range_incl(a: int, b: int) -> range:
     return range(a, b+1)
 
+class MapName(IntEnum):
+    WORLD_MAP = 0
+    SHIPWRECK = 1
+    BLIGHTED_DOCKS_LANDING = 2
+    BLIGHTED_DOCKS_FENCES = 3
+    BLIGHTED_DOCKS_BRIDGE = 4
+    BOARDWALK = 5
+    SANDWATER_JUNCTION = 6
+    SOUTHERN_OUTSKIRTS = 7
+    REBEL_BARRACKS = 8
+    SOUTHERN_OUTSKIRTS_POPPIT = 9
+    SOUTHERN_OUTSKIRTS_RESIDENCE = 10
+    CAVE_NETWORK = 11
+    MINING_PASSAGE = 12
+    EASTERN_HEATH = 13
+    EASTERN_HEATH_WATERFALL = 14
+    EASTERN_HEATH_BUCKLERS_BLUFF = 15
+    EASTERN_HEATH_INTERIORS = 16
+    OSSEX_COURTYARD = 17
+    OSSEX = 18
+    OSSEX_GODDREDS_TOMB = 19
+    OSSEX_HIGH_STREET_INTERIORS = 20
+    OSSEX_MAIN_INTERIORS = 21
+    OSSEX_BOWERY_INTERIORS = 22
+    TRAIN = 23
+    WESTERN_WILDS = 24
+    MOLTEN_FOUNDRY = 25
+    WESTERN_OUTLOOK = 26
+    BACKWATERS = 27
+    BACKWATERS_EAST = 28
+    BACKWATERS_INTERIORS = 29
+    BAYOU_START = 30
+    BAYOU_BOAT_BOG = 31
+    BAYOU_BIG_LAGOON = 32
+    BAYOU_MOONLIT_PATH = 33
+    BAYOU_THICKET = 34
+    BAYOU_TAINTED = 35
+    BAYOU_LAIR = 36
+    BAYOU_INTERIORS = 37
+    MOURNERS_MILE_ENTRANCE = 38
+    MOURNERS_MILE_KNIGHTS_REST = 39
+    MOURNERS_MILE_SHALLOW_TOMB = 40
+    MOURNERS_MILE_GENERATOR = 41
+    MOURNERS_MILE_DEPRIVED_PATH = 42
+    MOURNERS_MILE_STAIRS = 43
+    QUEENSBURY_ENTRANCE = 44
+    QUEENSBURY_OLD_GRAVEYARD = 45
+    QUEENSBURY_BRIDGE = 46
+    QUEENSBURY_OUTSIDE_CRYPT = 47
+    QUEENSBURY_FOYER = 48
+    QUEENSBURY_ENTRYWAY = 49
+    QUEENSBURY_ENTRYWAY_END = 50
+    QUEENSBURY_HEAD_HALL = 51
+    QUEENSBURY_ANCESTRAL_CHAMBER = 52
+    QUEENSBURY_ANCESTRAL_CHAMBER_NPC = 53
+    QUEENSBURY_ANCESTRAL_CHAMBER_END = 54
+    KINDLEWOOD_OVERGROWTH = 55
+    KINDLEWOOD_OVERGROWTH_INTERIORS = 56
+    KINDLEWOOD_FARM_CROSSING = 57
+    KINDLEWOOD_INTERIORS = 58
+    KINDLEWOOD_WALLOWERS = 59
+    SEPTEMBURG_FARM = 60
+    SEPTEMBURG_FARM_END = 61
+    SEPTEMBURG_FARM_CHASE = 62
+    SEPTEMBURG_FARM_WIND = 63
+    SEPTEMBURG_FARM_TRACTORS = 64
+    SEPTEMBURG_BARN = 65
+    SEPTEMBURG_STORMY_TOWN = 66
+    SEPTEMBURG_TOWN = 67
+    SEPTEMBURG_FOREST = 68
+    SEPTEMBURG_STORMWATCH = 69
+    SEPTEMBURG_GENERATOR = 70
+    SEPTEMBURG_WASTEWATER_CANAL = 71
+    SEPTEMBURG_WASTEWATER_WELL = 72
+    SANDFALLS = 73
+    SANDFALLS_INTERIORS = 74
+    SANDFALLS_JUNCTION = 75
+    SANDFALLS_MINE = 76
+    BONE_BEACH_GENERATOR = 77
+    BONE_BEACH = 78
+    BONE_BEACH_CLIFFS = 79
+    BONE_BEACH_OCEAN = 80
+    BONE_BEACH_INTERIORS = 81
+    BONE_BEACH_PULSING_TRACT = 82
+    BONE_BEACH_STOMACH_MINE = 83
+    BONE_BEACH_GUT_DEPTHS = 84
+    BONE_BEACH_GUT_DARKNESS = 85
+    COLTRANE_PEAK_FROZEN_PASS = 86
+    COLTRANE_PEAK_TRAIN = 87
+    COLTRANE_PEAK_DEAD_MANS_GORGE = 88
+    COLTRANE_PEAK_GORGE_PASSAGE = 89
+    COLTRANE_PEAK_GORGE_RAILS = 90
+    COLTRANE_PEAK_FROSTBITE_WOODS = 91
+    COLTRANE_PEAK_RAIL_YARD = 92
+    COLTRANE_PEAK_ICEBOUND_CAVERN = 93
+    COLTRANE_PEAK_SPIRAL_SUMMIT = 94
+    COLTRANE_PEAK_AGNES_EXPRESS = 95
+    COLTRANE_PEAK_MAELSTORM = 96
+    MIRRORS_END = 97
+    MIRRORS_END_TOP = 98
+    ASTRAL_ORRERY_STELLARIUM = 99
+    ASTRAL_ORRERY_COG_CHAMBER = 100
+    ASTRAL_ORRERY_COG_CHAMBER_END = 101
+    ASTRAL_ORRERY_GRAVITY_ZONE = 102
+    ASTRAL_ORRERY_MUTANT_LAB = 103
+    ASTRAL_ORRERY_HALL_OF_SCHALARS = 104
+    ASTRAL_ORRERY_SEALED_ARCHIVE = 105
+    RADIANT_MANOR_FOYER = 106
+    RADIANT_MANOR_BALLROOM = 107
+    RADIANT_MANOR_BACKLIT_ROOFTOP = 108
+    RADIANT_MANOR_WEST_WING = 109
+    RADIANT_MANOR_RAFTERS = 110
+    RADIANT_MANOR_EAST_WING = 111
+    RADIANT_MANOR_GENERATOR = 112
 
 class GameState(IntEnum):
     DEVINIT = 0
@@ -172,7 +286,7 @@ class RoomGroup:
 
 RoomLookup: dict[GameState, RoomGroup] = {
     GameState.INTROBEACH: RoomGroup("LL", {
-        0: 1,
+        0: int(MapName.SHIPWRECK),
         2: 3,
         3: 3,
         4: 4,
@@ -186,8 +300,8 @@ RoomLookup: dict[GameState, RoomGroup] = {
         14: 5,
         15: 5,
         16: 3,
-        17: 1,
-        18: 1,
+        17: int(MapName.SHIPWRECK),
+        18: int(MapName.SHIPWRECK),
         19: 2,
         # 23: 6,
         # 22: 6,
@@ -235,15 +349,21 @@ RoomLookup: dict[GameState, RoomGroup] = {
         18:16,
         26:16,
         24:16,
-        25:16
+        25:16,
+        22:13,
+        28:13,
+        9:int(MapName.COLTRANE_PEAK_FROZEN_PASS)
+    }),
+    GameState.PUPPETMASTER: RoomGroup("PM", {
+        0:int(MapName.SOUTHERN_OUTSKIRTS_POPPIT)
     }),
     GameState.HUB: RoomGroup("OS", {
         10:17,
         4:18,
         15:17,
-        11: 17,
+        11: int(MapName.RADIANT_MANOR_BACKLIT_ROOFTOP),
         12: 17,
-        20: 17,
+        20: int(MapName.RADIANT_MANOR_BACKLIT_ROOFTOP),
         6: 18,
         5: 18,
         35:20,
@@ -255,7 +375,7 @@ RoomLookup: dict[GameState, RoomGroup] = {
         39:22,
         24:22,
         34:20,
-        17:20,
+        17:int(MapName.RADIANT_MANOR_BACKLIT_ROOFTOP),
         25:20,
         18:20,
         40:20,
@@ -270,6 +390,8 @@ RoomLookup: dict[GameState, RoomGroup] = {
         3:22, #music hall
         28:22,
         8:22,
+        7:21,#trinket bazaar below
+        0:21 #armond fight
     }),
     GameState.EVRAARENA: RoomGroup("EVRA", {
         0:19,
@@ -288,14 +410,14 @@ RoomLookup: dict[GameState, RoomGroup] = {
         6:24,
         9:24,
         7:24,
-        5:24,
-        10:24,
-        12:24,
-        13:24,
-        14:24,
+        5:25,
+        10:25,
+        12:25,
+        13:25,
+        14:25,
         3:24,
-        8:24,
-        11:24,
+        8:26,
+        11:26,
     }),
     GameState.HUB_BAYOU_OVERWORLD: RoomGroup("BW", {
         5:27,
@@ -306,23 +428,26 @@ RoomLookup: dict[GameState, RoomGroup] = {
         8:28,
         6:27,
         24:30,
-        0:28, #Fishing
-        3:28,
-        2:28,
         9:28, #pinky
         16:29,
         7:29,
         12:29
     }),
+    GameState.FISHING_HOLE: RoomGroup("FISHING", {
+        0:int(MapName.BACKWATERS_EAST),
+        3:int(MapName.BACKWATERS_EAST),
+        2:int(MapName.BACKWATERS_EAST),
+    }),
     GameState.BAYOU: RoomGroup("NB", {
         24:30,
         36:30,
         10:30,
-        23:31,
-        34:31,
-        31:31,
-        25:31,
-        32:31,
+        23:int(MapName.BAYOU_BOAT_BOG),
+        34:int(MapName.BAYOU_BOAT_BOG),
+        31:int(MapName.BAYOU_BOAT_BOG),
+        25:int(MapName.BAYOU_BOAT_BOG),
+        32:int(MapName.BAYOU_BOAT_BOG),
+        22:int(MapName.BAYOU_BOAT_BOG),
         28:32,
         27:32,
         26:37,
@@ -350,7 +475,14 @@ RoomLookup: dict[GameState, RoomGroup] = {
         19:35,
         39:36,
         0:36,
-        38:37
+        38:37,
+
+    }),
+    GameState.BAYOU_TOWER: RoomGroup("NBT", {
+        0:int(MapName.BAYOU_LAIR)
+    }),
+    GameState.CRYPT_TOWER: RoomGroup("MMG", {
+        0:41
     }),
     GameState.CRYPT_OVERWORLD: RoomGroup("MM", {
         2:38,
@@ -408,12 +540,13 @@ RoomLookup: dict[GameState, RoomGroup] = {
         32:51,
         9:51,
         13:51,
-        15:52,
-        16:52,
-        14:52,
-        4:52,
-        29:53,
-        30:53,
+        15:int(MapName.QUEENSBURY_ANCESTRAL_CHAMBER),
+        16:int(MapName.QUEENSBURY_ANCESTRAL_CHAMBER),
+        14:int(MapName.QUEENSBURY_ANCESTRAL_CHAMBER),
+        18:int(MapName.QUEENSBURY_ANCESTRAL_CHAMBER),
+        4:int(MapName.QUEENSBURY_ANCESTRAL_CHAMBER_NPC),
+        29:int(MapName.QUEENSBURY_ANCESTRAL_CHAMBER_NPC),
+        30:int(MapName.QUEENSBURY_ANCESTRAL_CHAMBER_NPC),
         1:54,
         17:54,
         3:54,
@@ -429,15 +562,16 @@ RoomLookup: dict[GameState, RoomGroup] = {
         19:56,
         12:56,
         10:58,
-        5:57,
-        8:57,
+        5:int(MapName.KINDLEWOOD_FARM_CROSSING),
+        8:int(MapName.KINDLEWOOD_FARM_CROSSING),
         18:58,
-        17:57,
+        17:int(MapName.KINDLEWOOD_FARM_CROSSING),
         1:58,
         2:58,
         20:58,
         9:58,
         11:59,
+        16:int(MapName.KINDLEWOOD_FARM_CROSSING)
     }),
     GameState.SEPTEMBURGA: RoomGroup("SBA", {
         4:60,
@@ -479,6 +613,10 @@ RoomLookup: dict[GameState, RoomGroup] = {
         1:70,
         0:70,
     }),
+    GameState.SEPTEMBURG_TOWER: RoomGroup("SBG", {
+        2:int(MapName.SEPTEMBURG_GENERATOR),
+        0:int(MapName.SEPTEMBURG_GENERATOR)
+    }),
     GameState.SEPTEMBURG_SEWER: RoomGroup("SBS", {
         3:71,
         2:71,
@@ -492,7 +630,10 @@ RoomLookup: dict[GameState, RoomGroup] = {
         14:73,
     }),
     GameState.BONEBEACH_TOWER: RoomGroup("SF", {
-        3:74
+        3:43,
+        4:int(MapName.SANDFALLS_JUNCTION),
+        2:int(MapName.SANDFALLS_JUNCTION),
+        0:int(MapName.BONE_BEACH_GENERATOR),
     }),
     GameState.BONEBEACH_OVERWORLD: RoomGroup("SF", {
         8: 12,
@@ -500,30 +641,34 @@ RoomLookup: dict[GameState, RoomGroup] = {
         6: 12,
         9: 12,
         15: 12,
-        12:73,
-        24:73,
+        12:int(MapName.SANDFALLS),
+        24:int(MapName.SANDFALLS),
         25:74,
         17:74,
         13:74,
         26:74,
-        2:73,
+        2:int(MapName.SANDFALLS),
         3:74,
-        4:75,
-        5:76,
-        1:76,
-        0:76,
+        14:int(MapName.SANDFALLS),
+        5:int(MapName.SANDFALLS_MINE),
+        1:int(MapName.SANDFALLS_MINE),
+        0:int(MapName.SANDFALLS_MINE),
+        21:int(MapName.SANDWATER_JUNCTION),
+        22:int(MapName.SANDWATER_JUNCTION),
+        23:int(MapName.SANDWATER_JUNCTION),
+        28:int(MapName.SANDWATER_JUNCTION),
+        4:int(MapName.SANDFALLS_MINE)
     }),
     GameState.BONEBEACHA: RoomGroup("BBA", {
-        0:77,
         5:77,
         1:79,
-        8:78,
-        7:78,
+        8:int(MapName.BONE_BEACH),
+        7:int(MapName.BONE_BEACH),
         16:77,
-        4:78,
-        6:78,
-        14:78,
-        9:78,
+        4:int(MapName.BONE_BEACH),
+        6:int(MapName.BONE_BEACH),
+        14:int(MapName.BONE_BEACH),
+        9:int(MapName.BONE_BEACH),
         2:79,
         3:80,
         20:83,
@@ -533,6 +678,8 @@ RoomLookup: dict[GameState, RoomGroup] = {
         12:81,
         15:81,
         11:81,
+        0:int(MapName.BONE_BEACH),
+        18:int(MapName.BONE_BEACH_STOMACH_MINE)
     }),
     GameState.BONEBEACHB: RoomGroup("BBB", {
         0:82,
@@ -554,10 +701,10 @@ RoomLookup: dict[GameState, RoomGroup] = {
         7:82,
     }),
     GameState.FROZENTRAINYARDA: RoomGroup("CTPA", {
-        9:86,
+        9:int(MapName.COLTRANE_PEAK_DEAD_MANS_GORGE),
         11:86,
-        2:87,
-        12:87,
+        2:int(MapName.COLTRANE_PEAK_TRAIN),
+        12:int(MapName.COLTRANE_PEAK_TRAIN),
         3:88,
         7:88,
         4:88,
@@ -568,6 +715,9 @@ RoomLookup: dict[GameState, RoomGroup] = {
         14:90,
         1:91,
         20:91,
+        10:int(MapName.COLTRANE_PEAK_TRAIN),
+        18:int(MapName.COLTRANE_PEAK_TRAIN),
+        16:int(MapName.COLTRANE_PEAK_TRAIN)
     }),
     GameState.FROZENTRAINYARDB: RoomGroup("CTPB", {
         6:91,
@@ -589,6 +739,7 @@ RoomLookup: dict[GameState, RoomGroup] = {
         20:94,
         18:94,
         11:94,
+        10:int(MapName.COLTRANE_PEAK_SPIRAL_SUMMIT)
     }),
     GameState.FROZENTRAINYARDC: RoomGroup("CTPC", {
         0:95,
@@ -597,6 +748,11 @@ RoomLookup: dict[GameState, RoomGroup] = {
         1:95,
         4:95,
         11:95,
+    }),
+    GameState.FROZENTRAINYARDBOSS: RoomGroup("CTPT", {
+        0:int(MapName.COLTRANE_PEAK_MAELSTORM),
+        15:int(MapName.COLTRANE_PEAK_MAELSTORM),
+
     }),
     GameState.FROZENTRAINYARD_TOWER: RoomGroup("CTPC", {
         0:96,
@@ -608,26 +764,27 @@ RoomLookup: dict[GameState, RoomGroup] = {
         3:97,
         4:97,
         1:97,
-        0:98
+        0:98,
+        22:97 #interior
     }),
     GameState.ASTRALORRERY: RoomGroup("AO", {
-        3:99,
-        1:99,
-        0:100,
-        14:100,
-        15:100,
-        20:100,
-        33:100,
-        32:10,
-        17:100,
-        18:100,
+        3:int(MapName.ASTRAL_ORRERY_GRAVITY_ZONE),
+        1:int(MapName.ASTRAL_ORRERY_GRAVITY_ZONE),
+        0:int(MapName.ASTRAL_ORRERY_GRAVITY_ZONE),
+        14:int(MapName.ASTRAL_ORRERY_COG_CHAMBER),
+        15:int(MapName.ASTRAL_ORRERY_COG_CHAMBER),
+        20:int(MapName.ASTRAL_ORRERY_COG_CHAMBER),
+        33:int(MapName.ASTRAL_ORRERY_COG_CHAMBER),
+        32:int(MapName.ASTRAL_ORRERY_COG_CHAMBER),
+        17:int(MapName.ASTRAL_ORRERY_COG_CHAMBER),
+        18:int(MapName.ASTRAL_ORRERY_COG_CHAMBER),
         19:101,
         16:101,
-        29: 102,
-        4: 102,
-        2: 102,
-        21: 102,
-        9: 102,
+        29:int(MapName.ASTRAL_ORRERY_GRAVITY_ZONE),
+        4:int(MapName.ASTRAL_ORRERY_GRAVITY_ZONE),
+        2:int(MapName.ASTRAL_ORRERY_GRAVITY_ZONE),
+        21:int(MapName.ASTRAL_ORRERY_GRAVITY_ZONE),
+        9:int(MapName.ASTRAL_ORRERY_GRAVITY_ZONE),
         25:103,
         5:103,
         22:103,
@@ -648,6 +805,7 @@ RoomLookup: dict[GameState, RoomGroup] = {
         10:105,
         11:105,
         34:105,
+        27:int(MapName.ASTRAL_ORRERY_STELLARIUM)
     }),
     GameState.ASTRAL_TOWER: RoomGroup("AO", {
         0:105
@@ -662,16 +820,21 @@ RoomLookup: dict[GameState, RoomGroup] = {
         1:106,
         2:106,
     }),
+    GameState.MANSION_TOWER: RoomGroup("RM", {
+        0:int(MapName.RADIANT_MANOR_GENERATOR),
+    }),
     GameState.MANSION: RoomGroup("RM", {
         0:107,
-        38:106,
+        1:int(MapName.RADIANT_MANOR_WEST_WING),
+        2:int(MapName.RADIANT_MANOR_WEST_WING),
+        38:int(MapName.RADIANT_MANOR_GENERATOR),
         6:106,
         21:107,
         39:107,
         29:107,
         28:107,
         20:107,
-        17:108,
+        17:int(MapName.RADIANT_MANOR_WEST_WING),
         7:108,
         16:109,
         13:109,
