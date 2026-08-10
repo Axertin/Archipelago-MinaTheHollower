@@ -38,7 +38,7 @@ def swim_movement_calc(movement_loadout, has_walls: bool, no_sidearms: bool, ove
     if not over_water:
         return distance
     if Abilities.SWIM in movement_loadout:
-        distance += 3
+        distance += 4
     if Trinkets.KERI_THE_WISP in movement_loadout or (Sidearms.DEFLECTOR_PARASOL in movement_loadout
                                                       and not no_sidearms and not Trinkets.BELLOWS_BUSTLE in movement_loadout):
         distance += 2
@@ -226,12 +226,12 @@ class CanJumpTiles(Rule[MinaTheHollowerBase], game=MINA_THE_HOLLOWER):
         def __str__(self) -> str:
             return "Jump x tiles"
 
-def max_jump(state: CollectionState, player: int, has_wall:bool, no_sidearms: bool)  -> tuple[int,frozenset[ItemTypeEnum]]:
+def max_jump(state: CollectionState, player: int, has_wall:bool, no_sidearms: bool, over_water:bool)  -> tuple[int,frozenset[ItemTypeEnum]]:
     distance = 0
     loadout = None
     for new_loadout in valid_loadouts(state, player):
 
-        new_distance = base_movement_calc(new_loadout, has_wall, no_sidearms, False)
+        new_distance = base_movement_calc(new_loadout, has_wall, no_sidearms, over_water)
 
         if new_distance > distance:
             distance = new_distance
@@ -239,7 +239,7 @@ def max_jump(state: CollectionState, player: int, has_wall:bool, no_sidearms: bo
 
         for item, calc in exclusive_movements:
             if item in new_loadout:
-                new_distance = calc(new_loadout, has_wall, no_sidearms, False)
+                new_distance = calc(new_loadout, has_wall, no_sidearms, over_water)
                 if new_distance > distance:
                     distance = new_distance
                     loadout = new_loadout

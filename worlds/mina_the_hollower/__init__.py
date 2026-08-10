@@ -218,17 +218,20 @@ class MinaTheHollowerWorld(MinaTheHollowerBase):
                 },
             ]
         if dest_name == "Max Jump" or dest_name == "max jump":
-            pure_distance, pure_loadout = max_jump(state, self.player, False, False)
-            wall_distance, wall_loadout = max_jump(state, self.player, True, False)
-            no_sides_distance, no_sides_loadout = max_jump(state, self.player, True, True)
+            pure_distance, pure_loadout = max_jump(state, self.player, False, False, False)
+            wall_distance, wall_loadout = max_jump(state, self.player, True, False, False)
+            no_sides_distance, no_sides_loadout = max_jump(state, self.player, True, True, False)
+            swim_distance, swim_loadout = max_jump(state, self.player, False, False, True)
 
             pure_loadout_message = "" if  pure_loadout is None else f" Loadout is {", ".join([x.value for x in pure_loadout])}"
             wall_loadout_message = "" if  wall_loadout is None else f" Loadout is {", ".join([x.value for x in wall_loadout])}"
             no_sides_loadout_message = "" if  no_sides_loadout is None else f" Loadout is {", ".join([x.value for x in no_sides_loadout])}"
+            swim_loadout_message = "" if  swim_loadout is None else f" Loadout is {", ".join([x.value for x in swim_loadout])}"
             return [
                 {"type": "color", "color": "green", "text": f"Can Jump {pure_distance} Tiles.{pure_loadout_message}\n"},
                 {"type": "color", "color": "green", "text": f"Can Jump With Wallower {wall_distance} Tiles.{wall_loadout_message}\n"},
                 {"type": "color", "color": "green", "text": f"Can Jump With No Sidarms {no_sides_distance} Tiles.{no_sides_loadout_message}\n"},
+                {"type": "color", "color": "green", "text": f"Can Jump Over Water {swim_distance} Tiles.{swim_loadout_message}\n"},
             ]
         if dest_name == "Generators" or dest_name == "generators":
             repairable_generators = [
